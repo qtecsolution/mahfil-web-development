@@ -1,0 +1,44 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+.errormain {
+  @include flex-center;
+  @include w100;
+  min-height: 100vh;
+  margin-bottom: size(48);
+  overflow: hidden;
+
+  @include breakpoint(mobile768) {
+    margin-bottom: size(64);
+  }
+
+  .errorthumbnail {
+    @include flex-center;
+    @include w100;
+    overflow: hidden;
+    
+    @include breakpoint(mobile576) {
+      height: size(300);
+    }
+
+    @include breakpoint(mobile768) {
+      max-height: size(460);
+    }
+  }
+
+  .details {
+    max-width: size(330);
+    @include flex-center-column;
+    gap: size(16);
+    text-align: center;
+
+    .text {
+      // color: $headingtext;
+    }
+
+    .linkbox {
+      max-width: size(120);
+      margin-inline: auto;
+    }
+  }
+}

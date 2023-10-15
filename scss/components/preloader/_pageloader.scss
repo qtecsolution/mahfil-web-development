@@ -1,0 +1,125 @@
+@use '../../global' as *;
+@use '../../partials' as *;
+
+.preloader {
+  background: #EFF3F8;
+  @include flex-center;
+  position: fixed;
+  inset: size(0);
+  @include w100;
+  min-height: 100vh;
+  overflow: hidden;
+  z-index: 9999;
+
+  .loader {
+    @include flex-center;
+    width: size(164);
+    height: size(156);
+  }
+}
+
+#solNotes {
+  width: size(164);
+  height: size(156);
+  animation: n-all 1s linear 0s 1 alternate;
+  animation-fill-mode: backwards;
+
+  path {
+    fill: blue;
+  }
+}
+
+.nScale0 {
+  animation: n-main 1s linear 0s infinite alternate;
+  transform-origin: 50% 50%;
+}
+
+.nScale1 {
+  animation: n-scale 4s linear 0.5s infinite alternate;
+  animation-fill-mode: backwards;
+  transform-origin: 62.8% 7.69%;
+}
+
+.nScale2 {
+  animation: n-scale 4s linear 1s infinite alternate;
+  animation-fill-mode: backwards;
+  transform-origin: 37.8% 21.15%;
+}
+
+.nScale3 {
+  animation: n-scale 4s linear 1.5s infinite alternate;
+  animation-fill-mode: backwards;
+  transform-origin: 19.51% 48.08%;
+}
+
+.nScale4 {
+  animation: n-scale 4s linear 2s infinite alternate;
+  animation-fill-mode: backwards;
+  transform-origin: 31.1% 69.23%;
+}
+
+.nScale5 {
+  animation: n-scale 4s linear 2.5s infinite alternate;
+  animation-fill-mode: backwards;
+  transform-origin: 46.95% 91.03%;
+}
+
+.nScale6 {
+  animation: n-scale 4s linear 3s infinite alternate;
+  animation-fill-mode: backwards;
+  transform-origin: 79.27% 75.64%;
+}
+
+.nScale7 {
+  animation: n-scale 4s linear 3.5s infinite alternate;
+  animation-fill-mode: backwards;
+  transform-origin: 84.76% 45.51%;
+}
+
+.nScale8 {
+  animation: n-scale 4s linear 4s infinite alternate;
+  animation-fill-mode: backwards;
+  transform-origin: 73.17% 22.44%;
+}
+
+@keyframes n-scale {
+  0% {
+    transform: scale(0);
+  }
+  35% {
+    transform: scale(0);
+  }
+  45% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  55% {
+    transform: scale(0.5);
+  }
+  65% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes n-main {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(4deg);
+  }
+}
+
+@keyframes n-all {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

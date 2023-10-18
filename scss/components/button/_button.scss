@@ -17,3 +17,39 @@ button,
     outline: none;
   }
 }
+  
+.btn-burger,
+.btn-show,
+.btn-hamburger {
+  @include square(24);
+  @include flex-center;
+  overflow: hidden;
+}
+
+.btn-login {
+  background: $primary;
+  @include flex-center;
+  gap: size(4);
+  @include radius(6);
+  padding: size(4) size(8);
+  height: size(36);
+  max-width: size(120);
+  @include transitionsbackground;
+
+  .icon {
+    @include square(17);
+    @include circle;
+    @include flex-center;
+    overflow: hidden;
+  }
+
+  .linktext {
+    color: $white;
+    font-size: size(14);
+    font-weight: 600;
+  }
+
+  @include hover {
+    background: darken($primary, 10%);
+  }
+}

@@ -31,8 +31,8 @@
       @include transitionsall;
 
       i {
-        color: $primary;
-        font-size: size(24);
+        color: $headingtext;
+        font-size: size(20);
       }
 
       @include hover {
@@ -48,7 +48,8 @@
 
   &-body {
     background: $white;
-    padding-bottom: size(48);
+    @include flex-column;
+    gap: size(12);
 
     &::-webkit-scrollbar {
       background: transparent;

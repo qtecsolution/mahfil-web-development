@@ -1,3 +1,37 @@
 @use '../../global' as *;
 @use '../../partials' as *;
 
+.searchform {
+  background: $white;
+  @include border(solid, 1, $searchborder);
+  @include radius(10);
+  @include flex-center-vert;
+  padding: size(8) size(16);
+  @include transitionsall;
+
+  .searchfield {
+    @include setBgColor(transparent, $headingtext);
+    width: calc(100% - size(24));
+
+    &::placeholder {
+      color: $textplaceholder;
+    }
+  }
+
+  .btn-search {
+    @include square(24);
+    @include flex-center;
+
+    @include hover {
+      svg {
+        path {
+          fill: $primary;
+        }
+      }
+    }
+  }
+
+  &:focus-within {
+    border-color: $primary;
+  }
+}

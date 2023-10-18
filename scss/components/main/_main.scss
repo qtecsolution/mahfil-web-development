@@ -1,3 +1,18 @@
 @use "../../global" as *;
 @use "../../partials" as *;
 
+.main {
+  @include flex-column;
+  @include w100;
+  padding: size(20);
+
+  @include breakpoint(tab992) {
+    width: calc(100% - size(244));
+    margin-left: auto;
+    padding: size(20) size(40);
+  }
+}
+
+.maincollapsed {
+  width: calc(100% - size(72));
+}

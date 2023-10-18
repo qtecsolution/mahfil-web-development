@@ -2,7 +2,7 @@
 @use '../../partials' as *;
 
 .preloader {
-  background: #EFF3F8;
+  background: $linkhoverbg;
   @include flex-center;
   position: fixed;
   inset: size(0);
@@ -25,7 +25,7 @@
   animation-fill-mode: backwards;
 
   path {
-    fill: blue;
+    fill: $primary;
   }
 }
 

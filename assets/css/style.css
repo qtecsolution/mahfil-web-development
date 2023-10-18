@@ -4,7 +4,8 @@
 	- Version: 1.0
 	- Website: https://www.qtecsolution.com
 ================================= */
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 /**=====================================================**
                 ANIMATION-STYLES
 =======================================================**/
@@ -321,18 +322,15 @@ video::selection {
 }
 
 body {
+  background: hsl(0, 0%, 100%);
+  color: hsl(216, 15%, 52%);
+  font-family: "Hind Siliguri", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   overflow: hidden;
   scroll-snap-type: y mandatory;
-  margin: 4rem 0 0;
-}
-@media screen and (min-width: 62rem) {
-  body {
-    margin: 6.25rem 0 0;
-  }
 }
 
 h1,
@@ -341,8 +339,10 @@ h3,
 h4,
 h5,
 h6 {
+  color: hsl(216, 17%, 12%);
   margin: 0;
   font-family: inherit;
+  text-wrap: balance;
 }
 h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection {
   background: hsl(211, 97%, 60%);
@@ -356,6 +356,10 @@ h5::selection,
 h6::selection {
   background: hsl(211, 97%, 60%);
   color: hsl(0, 0%, 100%);
+}
+
+p, span {
+  text-wrap: balance;
 }
 
 img {
@@ -404,12 +408,19 @@ select {
 .display-4,
 .display-5,
 .display-6 {
+  color: hsl(216, 17%, 12%);
   font-family: inherit;
 }
 
 h1 img, h2 img, h3 img, h4 img {
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+hr {
+  border-color: hsl(214, 17%, 92%);
+  margin: 0rem;
+  opacity: 1;
 }
 
 button,
@@ -430,6 +441,131 @@ button:focus,
 [type=submit]:focus {
   box-shadow: none;
   outline: none;
+}
+
+.btn-burger,
+.btn-show,
+.btn-hamburger {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.btn-login {
+  background: hsl(211, 97%, 60%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  border-radius: 0.375rem;
+  padding: 0.25rem 0.5rem;
+  height: 2.25rem;
+  max-width: 7.5rem;
+  transition: background 350ms ease-in-out;
+}
+.btn-login .icon {
+  width: 1.0625rem;
+  height: 1.0625rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.btn-login .linktext {
+  color: hsl(0, 0%, 100%);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.btn-login:not([disabled]):hover {
+  background: #047bfb;
+}
+
+.header {
+  border-bottom: solid 0.0625rem hsl(214, 17%, 92%);
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-nav .searchreminder {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+@media screen and (min-width: 75rem) {
+  .header-nav .searchreminder .searchform {
+    min-width: 28.75rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .header-nav .searchreminder .searchform {
+    min-width: 35rem;
+  }
+}
+@media screen and (min-width: 100rem) {
+  .header-nav .searchreminder .searchform {
+    min-width: 46.25rem;
+  }
+}
+.header-nav .reminder {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.header-nav .reminder .prayer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.header-nav .reminder .prayer .prayericon {
+  background: hsl(213, 39%, 95%);
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.625rem;
+}
+.header-nav .reminder .prayer .details {
+  display: flex;
+  flex-direction: column;
+}
+.header-nav .reminder .prayer .details .waqtname {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.header-nav .reminder .prayer .details .waqtdurations {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.header-nav .reminder .remaining {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.header-nav .reminder .remaining-title, .header-nav .reminder .remaining-text {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.header-nav .reminder .remaining .progress {
+  background: hsl(0, 0%, 92%);
+  height: 0.3125rem;
+  border-radius: 1.25rem;
+}
+.header-nav .reminder .remaining .progress-bar {
+  background: hsl(211, 97%, 60%);
+  border-radius: 1.25rem;
 }
 
 input,
@@ -573,8 +709,8 @@ input[type=search]::-webkit-search-results-decoration:focus {
   transition: all 350ms ease-in-out;
 }
 .offcanvas-header .btn-close i {
-  color: hsl(211, 97%, 60%);
-  font-size: 1.5rem;
+  color: hsl(216, 17%, 12%);
+  font-size: 1.25rem;
 }
 .offcanvas-header .btn-close:not([disabled]):hover {
   opacity: 1;
@@ -585,7 +721,9 @@ input[type=search]::-webkit-search-results-decoration:focus {
 }
 .offcanvas-body {
   background: hsl(0, 0%, 100%);
-  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 .offcanvas-body::-webkit-scrollbar {
   background: transparent;
@@ -647,7 +785,7 @@ input[type=search]::-webkit-search-results-decoration:focus {
 }
 
 .preloader {
-  background: #EFF3F8;
+  background: hsl(213, 39%, 95%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -673,7 +811,7 @@ input[type=search]::-webkit-search-results-decoration:focus {
   animation-fill-mode: backwards;
 }
 #solNotes path {
-  fill: blue;
+  fill: hsl(211, 97%, 60%);
 }
 
 .nScale0 {
@@ -768,12 +906,207 @@ input[type=search]::-webkit-search-results-decoration:focus {
     transform: scale(1);
   }
 }
+.sidebar {
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0 0 0.875rem 0 rgba(0, 0, 0, 0.1);
+  width: 15.25rem;
+  position: fixed;
+  min-height: 100vh;
+  padding: 1.125rem 0.875rem;
+  z-index: 100;
+}
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.sidebar .nav-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+}
+.sidebar .nav-header .btn-show {
+  position: absolute;
+  top: 50%;
+  right: -1.5rem;
+  transform: translateY(-50%);
+}
+.sidebar .nav-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: calc(100vh - 6.0625rem);
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.sidebar .nav-body::-webkit-scrollbar {
+  background: transparent;
+  width: 0rem;
+}
+.sidebar .nav-body::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+}
+.sidebar.sidecollapsed {
+  width: 4.5rem;
+}
+
+.loginfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.loginfo .logtitle {
+  color: hsl(216, 15%, 52%);
+  font-weight: 500;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1.25rem;
+}
+@media screen and (min-width: 62rem) {
+  .main {
+    width: calc(100% - 15.25rem);
+    margin-left: auto;
+    padding: 1.25rem 2.5rem;
+  }
+}
+
+.maincollapsed {
+  width: calc(100% - 4.5rem);
+}
+
 table tr {
   vertical-align: middle;
 }
 table tr th,
 table tr td {
   vertical-align: middle;
+}
+
+.searchform {
+  background: hsl(0, 0%, 100%);
+  border: solid 0.0625rem hsl(214, 32%, 91%);
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  transition: all 350ms ease-in-out;
+}
+.searchform .searchfield {
+  background: transparent;
+  color: hsl(216, 17%, 12%);
+  width: calc(100% - 1.5rem);
+}
+.searchform .searchfield::-moz-placeholder {
+  color: hsl(240, 6%, 73%);
+}
+.searchform .searchfield::placeholder {
+  color: hsl(240, 6%, 73%);
+}
+.searchform .btn-search {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.searchform .btn-search:not([disabled]):hover svg path {
+  fill: hsl(211, 97%, 60%);
+}
+.searchform:focus-within {
+  border-color: hsl(211, 97%, 60%);
+}
+
+.mainlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.mainlist-link {
+  background: hsl(0, 0%, 100%);
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+}
+.mainlist-link .icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.mainlist-link .linktext {
+  color: hsl(216, 15%, 52%);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+}
+.mainlist-link:hover:not(.active) {
+  background: hsl(213, 39%, 95%);
+}
+.mainlist-link:hover:not(.active) .icon svg path {
+  fill: hsl(211, 97%, 60%);
+}
+.mainlist-link:hover:not(.active) .linktext {
+  color: hsl(216, 17%, 12%);
+}
+.mainlist-link.active {
+  background: hsl(213, 39%, 95%);
+}
+.mainlist-link.active .icon svg path {
+  fill: hsl(211, 97%, 60%);
+}
+.mainlist-link.active .linktext {
+  color: hsl(216, 17%, 12%);
+}
+
+.mobilelist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.mobilelist-link {
+  background: hsl(213, 39%, 95%);
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.625rem;
+}
+
+.desktoplist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.desktoplist-link {
+  background: hsl(213, 39%, 95%);
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.625rem;
 }
 
 .categoryradio .radioinput:checked ~ .radiolabel {

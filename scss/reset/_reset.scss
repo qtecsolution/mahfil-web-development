@@ -110,19 +110,19 @@ video {
 }
 
 body {
-  // @include setBgColor($white, $primarytext);
-  // font-family: $primaryFont;
+  @include setBgColor($white, $textprimary);
+  font-family: $primaryFont;
   font-size: size(16);
   font-weight: 400;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   overflow: hidden;
   scroll-snap-type: y mandatory;
-  margin: size(64) 0 0;
+  // margin: size(64) 0 0;
 
-  @include breakpoint(tab992) {
-    margin: size(100) 0 0;
-  }
+  // @include breakpoint(tab992) {
+  //   margin: size(100) 0 0;
+  // }
 }
 
 h1,
@@ -131,13 +131,18 @@ h3,
 h4,
 h5,
 h6 {
+  color: $headingtext;
   margin: 0;
   font-family: inherit;
-  // text-wrap: balance;
+  text-wrap: balance;
 
   &::selection {
     @include setBgColor($primary, $white);
   }
+}
+
+p, span {
+  text-wrap: balance;
 }
 
 img {
@@ -184,7 +189,7 @@ select {
 .display-4,
 .display-5,
 .display-6 {
-  // color: $headingtext;
+  color: $headingtext;
   font-family: inherit;
 }
 
@@ -192,4 +197,10 @@ h1, h2, h3, h4 {
   img {
     object-fit: contain;
   }
+}
+
+hr {
+  border-color: $menudivider;
+  margin: size(0);
+  opacity: 1;
 }

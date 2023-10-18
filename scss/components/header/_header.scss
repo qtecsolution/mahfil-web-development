@@ -1,3 +1,89 @@
 @use '../../global' as *;
 @use '../../partials' as *;
 
+.header {
+  @include border-single(bottom, solid, 1, $menudivider);
+  padding-bottom: size(20);
+  margin-bottom: size(20);
+
+  &-nav {
+    @include flex-center-between;
+
+    .searchreminder {
+      @include flex-center-vert;
+      gap: size(20);
+
+      .searchform {
+        @include breakpoint(desktop1200) {
+          min-width: size(460);
+        }
+
+        @include breakpoint(desktop1400) {
+          min-width: size(560);
+        }
+
+        @include breakpoint(desktop1600) {
+          min-width: size(740);
+        }
+      }
+    }
+
+    .reminder {
+      @include flex-center-vert;
+      gap: size(12);
+
+      .prayer {
+        @include flex-center-vert;
+        gap: size(12);
+
+        .prayericon {
+          background: $linkhoverbg;
+          @include square(44);
+          @include circle;
+          @include flex-center;
+          overflow: hidden;
+          padding: size(10);
+        }
+        
+        .details {
+          @include flex-column;
+  
+          .waqtname {
+            font-size: size(20);
+            font-weight: 600;
+          }
+  
+          .waqtdurations {
+            color: $textprimary;
+            font-size: size(12);
+            font-weight: 500;
+          }
+        }
+      }
+
+      .remaining {
+        @include flex-column;
+        gap: size(4);
+
+        &-title,
+        &-text {
+          color: $textprimary;
+          font-size: size(12);
+          font-weight: 500;
+        }
+
+        .progress {
+          background: $progressbg;
+          // width: size(140);
+          height: size(5);
+          @include radius(20);
+          
+          &-bar {
+            background: $primary;
+            @include radius(20);
+          }
+        }
+      }
+    }
+  }
+}

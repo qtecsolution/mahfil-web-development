@@ -41,6 +41,11 @@
       }
     }
 
+    .favoriteslist {
+      @include flex-column;
+      gap: size(12);
+    }
+
     .rightinfo {
       @include flex-column;
       gap: size(32);
@@ -50,5 +55,15 @@
         gap: size(24);
       }
     }
+  }
+}
+
+.reminderthumb {
+  @include radius(20);
+  @include flex-center;
+  overflow: hidden;
+  
+  img {
+    @include wh100;
   }
 }

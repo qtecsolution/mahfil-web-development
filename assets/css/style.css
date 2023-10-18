@@ -9,7 +9,7 @@
 /**=====================================================**
                 ANIMATION-STYLES
 =======================================================**/
-.cardvideo-body .videodropdown-info {
+.cardvideo-body .videodropdown-info, .cardfavorite-details .favdropdown-info {
   animation-duration: 350ms;
   animation-fill-mode: both;
 }
@@ -47,7 +47,7 @@
     transform: translateY(1.25rem);
   }
 }
-.cardvideo-body .videodropdown-info {
+.cardvideo-body .videodropdown-info, .cardfavorite-details .favdropdown-info {
   animation-name: slideUpIn;
 }
 
@@ -684,6 +684,148 @@ button:focus,
 }
 .cardchannel-body .subscribebox {
   max-width: 7rem;
+}
+
+.cardfavorite {
+  background: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.625rem;
+  overflow: hidden;
+  transition: background 350ms ease-in-out;
+}
+@media screen and (min-width: 36rem) {
+  .cardfavorite {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+.cardfavorite .favoritethumb {
+  width: 100%;
+  height: 10.5rem;
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+@media screen and (min-width: 36rem) {
+  .cardfavorite .favoritethumb {
+    width: 11.875rem;
+    height: 7.5rem;
+  }
+}
+.cardfavorite .favoritethumb img {
+  width: 100%;
+  height: 100%;
+}
+.cardfavorite-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.875rem;
+}
+@media screen and (min-width: 36rem) {
+  .cardfavorite-details {
+    align-items: center;
+    width: calc(100% - 11.875rem);
+  }
+}
+.cardfavorite-details .describe {
+  width: calc(100% - 2rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.cardfavorite-details .describe .videotitle {
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  transition: color 350ms ease-in-out;
+}
+.cardfavorite-details .describe .videotitle:not([disabled]):hover {
+  color: hsl(211, 97%, 60%);
+}
+.cardfavorite-details .describe .detail .channelname,
+.cardfavorite-details .describe .detail .videotext {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.cardfavorite-details .favdropdown {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+.cardfavorite-details .favdropdown .dropdownicon {
+  background: hsl(0, 0%, 100%);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  transition: background 350ms ease-in-out;
+}
+.cardfavorite-details .favdropdown-info {
+  position: absolute;
+  top: 100%;
+  right: 0rem;
+  padding-top: 0.5rem;
+  display: none;
+}
+.cardfavorite-details .favdropdown-info .dropdownlist {
+  background: hsl(0, 0%, 100%);
+  border: solid 0.0625rem hsl(214, 17%, 92%);
+  border-radius: 0.625rem;
+  box-shadow: 0.25rem 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.04);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 13.125rem;
+  overflow: hidden;
+}
+.cardfavorite-details .favdropdown-info .dropdownlist-link {
+  background: hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.5rem 1rem;
+  transition: background 350ms ease-in-out;
+}
+.cardfavorite-details .favdropdown-info .dropdownlist-link .droplinkicon {
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.cardfavorite-details .favdropdown-info .dropdownlist-link .droplinktext {
+  color: hsl(218, 17%, 35%);
+  font-size: 0.9375rem;
+}
+.cardfavorite-details .favdropdown-info .dropdownlist-link:not([disabled]):hover {
+  background: hsl(213, 39%, 95%);
+}
+.cardfavorite-details .favdropdown:not([disabled]):hover .dropdownicon {
+  background: hsl(213, 39%, 95%);
+}
+.cardfavorite-details .favdropdown:not([disabled]):hover .favdropdown-info {
+  display: block;
+}
+.cardfavorite:not([disabled]):hover {
+  background: hsl(214, 100%, 99%);
 }
 
 .header {
@@ -1483,6 +1625,11 @@ table tr td {
 .favorites-body .emptyfavorites .info .text {
   font-weight: 500;
 }
+.favorites-body .favoriteslist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
 .favorites-body .rightinfo {
   display: flex;
   flex-direction: column;
@@ -1492,6 +1639,18 @@ table tr td {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+.reminderthumb {
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.reminderthumb img {
+  width: 100%;
+  height: 100%;
 }
 
 .salatreminder {

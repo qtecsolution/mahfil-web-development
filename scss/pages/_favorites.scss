@@ -10,13 +10,35 @@
     @include flex-column;
     gap: size(16);
 
-    .reminder-title {
+    .favorites-title {
       font-size: size(20);
       font-weight: 600;
     }
   }
 
   &-body {
+    .emptyfavorites {
+      @include flex-center-column;
+      gap: size(24);
+      max-width: size(310);
+      margin-inline: auto;
+      padding: size(44) size(0) size(64);
 
+      .favoriteicon {
+        width: size(150);
+        height: size(178);
+        @include flex-column;
+        overflow: hidden;
+      }
+
+      .info {
+        @include flex-center-column;
+        text-align: center;
+
+        .text {
+          font-weight: 500;
+        }
+      }
+    }
   }
 }

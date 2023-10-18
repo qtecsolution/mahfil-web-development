@@ -40,5 +40,15 @@
         }
       }
     }
+
+    .rightinfo {
+      @include flex-column;
+      gap: size(32);
+      
+      .descriptions {
+        @include flex-column;
+        gap: size(24);
+      }
+    }
   }
 }

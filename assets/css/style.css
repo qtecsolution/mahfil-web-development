@@ -1483,6 +1483,16 @@ table tr td {
 .favorites-body .emptyfavorites .info .text {
   font-weight: 500;
 }
+.favorites-body .rightinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.favorites-body .rightinfo .descriptions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 
 .salatreminder {
   display: flex;

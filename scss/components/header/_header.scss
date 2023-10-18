@@ -2,7 +2,9 @@
 @use '../../partials' as *;
 
 .header {
+  background: $white;
   @include border-single(bottom, solid, 1, $menudivider);
+  padding-top: size(20);
   padding-bottom: size(20);
   margin-bottom: size(20);
 

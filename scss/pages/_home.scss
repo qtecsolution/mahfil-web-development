@@ -35,3 +35,18 @@
     }
   }
 }
+
+.trendingvideos {
+  @include flex-column;
+  gap: size(20);
+
+  &-header {
+    @include flex-column;
+    gap: size(16);
+
+    .trending-title {
+      font-size: size(20);
+      font-weight: 600;
+    }
+  }
+}

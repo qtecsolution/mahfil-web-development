@@ -338,7 +338,6 @@ body {
   font-weight: 400;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
-  overflow: hidden;
   scroll-snap-type: y mandatory;
 }
 
@@ -626,7 +625,9 @@ button:focus,
 }
 
 .header {
+  background: hsl(0, 0%, 100%);
   border-bottom: solid 0.0625rem hsl(214, 17%, 92%);
+  padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   margin-bottom: 1.25rem;
 }
@@ -1106,13 +1107,13 @@ input[type=search]::-webkit-search-results-decoration:focus {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 1.25rem;
+  padding: 0rem 1.25rem 1.25rem;
 }
 @media screen and (min-width: 62rem) {
   .main {
     width: calc(100% - 15.25rem);
     margin-left: auto;
-    padding: 1.25rem 2.5rem;
+    padding: 0rem 2.5rem 1.25rem;
   }
 }
 
@@ -1316,6 +1317,21 @@ table tr td {
   .homevideos .cardvideo {
     width: calc(20% - 0.875rem);
   }
+}
+
+.trendingvideos {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.trendingvideos-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.trendingvideos-header .trending-title {
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
 .errormain {

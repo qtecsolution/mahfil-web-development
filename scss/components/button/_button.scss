@@ -17,13 +17,22 @@ button,
     outline: none;
   }
 }
-  
+
 .btn-burger,
-.btn-show,
 .btn-hamburger {
   @include square(24);
   @include flex-center;
   overflow: hidden;
+}
+
+.btn-show {
+  @include square(36);
+  @include flex-center;
+  overflow: hidden;
+
+  img {
+    @include wh100;
+  }
 }
 
 .btn-login {

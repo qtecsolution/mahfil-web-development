@@ -18,14 +18,6 @@
   .nav-header {
     @include flex-center-vert;
     gap: size(12);
-    position: relative;
-
-    .btn-show {
-      position: absolute;
-      top: 50%;
-      right: size(-24);
-      @include translateY(-50%);
-    }
   }
 
   .nav-body {
@@ -47,6 +39,19 @@
 
   &.sidecollapsed {
     width: size(72);
+
+    .logobox {
+      position: relative;
+      @include w100;
+
+      .logo {
+        @include flex-center;
+      }
+
+      .btn-show {
+        margin-inline: auto;
+      }
+    }
   }
 }
 

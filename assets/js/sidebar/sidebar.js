@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const brandLogo = document.querySelector('.brandlogo')
-  const iconLogo = document.querySelector('.iconlogo')
+  const brandLogo = document.querySelector('.logo')
   const sidebar = document.querySelector('.sidebar')
   const linkTexts = document.querySelectorAll('.linktext')
   const logTitle = document.querySelector('.logtitle')
@@ -11,12 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function collapseSidebar() {
     buttonHamburger.classList.add('d-none')
+    buttonShow.classList.remove('d-none')
     brandLogo.classList.add('d-none')
     sidebar.classList.add('sidecollapsed')
     logTitle.classList.add('d-none')
     main.classList.add('maincollapsed')
-    iconLogo.classList.remove('d-none')
-    buttonShow.classList.remove('d-none')
 
     linkTexts.forEach((link) => {
       link.classList.add('d-none')
@@ -28,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
     brandLogo.classList.remove('d-none')
     sidebar.classList.remove('sidecollapsed')
     main.classList.remove('maincollapsed')
-    iconLogo.classList.add('d-none')
     buttonHamburger.classList.remove('d-none')
     logTitle.classList.remove('d-none')
 

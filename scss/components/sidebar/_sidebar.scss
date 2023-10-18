@@ -7,7 +7,7 @@
   width: size(244);
   position: fixed;
   min-height: 100vh;
-  padding: size(18) size(14);
+  padding: size(18) size(14) size(0);
   z-index: 100;
 
   &-nav {
@@ -47,6 +47,35 @@
 
   &.sidecollapsed {
     width: size(72);
+  }
+}
+
+.publisher {
+  background: $publisherbg;
+  @include border(solid, 1, $menudivider);
+  @include radius(40);
+  overflow: hidden;
+  position: relative;
+  min-height: size(170);
+  @include flex-center;
+  margin: size(96) size(0) size(20);
+
+  .publisherinfo {
+    @include flex-center-column;
+    gap: size(14);
+    text-align: center;
+    position: relative;
+    z-index: 100;
+  }
+
+  .publishertitle {
+    font-size: size(18);
+    font-weight: 600;
+  }
+  
+  .publishericon {
+    position: absolute;
+    bottom: 0;
   }
 }
 

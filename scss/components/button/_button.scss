@@ -78,3 +78,18 @@ button,
     background: darken($primary, 10%);
   }
 }
+
+.btn-learnmore {
+  @include setBgColor($primary, $white);
+  font-size: size(14);
+  font-weight: 600;
+  @include flex-center;
+  @include radius(48);
+  padding: size(7.75) size(16);
+  text-align: center;
+  @include transitionsbackground;
+
+  @include hover {
+    background: darken($primary, 10%);
+  }
+}

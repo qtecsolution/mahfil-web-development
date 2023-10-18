@@ -135,3 +135,42 @@
     }
   }
 }
+
+.cardchannel {
+  @include flex-column;
+  gap: size(16);
+
+  &-header {
+    .channelthumb {
+      @include square(72);
+      @include circle;
+      @include flex-center;
+      overflow: hidden;
+
+      img {
+        @include wh100;
+      }
+    }
+  }
+
+  &-body {
+    @include flex-column;
+    gap: size(14);
+
+    .channelinfo {
+      .title {
+        font-size: size(18);
+        font-weight: 600;
+      }
+
+      .text {
+        font-size: size(14);
+        font-weight: 500;
+      }
+    }
+  
+    .subscribebox {
+      max-width: size(112);
+    }
+  }
+}

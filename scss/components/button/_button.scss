@@ -53,3 +53,28 @@ button,
     background: darken($primary, 10%);
   }
 }
+
+.btn-subscribe {
+  background: $primary;
+  @include flex-center;
+  @include radius(6);
+  gap: size(4);
+  padding: size(7.5) size(16);
+  @include transitionsbackground;
+
+  .icon {
+    @include square(15);
+    @include flex-center;
+    overflow: hidden;
+  }
+
+  .text {
+    color: $white;
+    font-size: size(14);
+    font-weight: 600;
+  }
+
+  @include hover {
+    background: darken($primary, 10%);
+  }
+}

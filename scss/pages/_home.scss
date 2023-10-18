@@ -36,9 +36,60 @@
   }
 }
 
+.popularchannel {
+  @include flex-column;
+  gap: size(20);
+  padding-bottom: size(80);
+
+  &-header {
+    @include flex-column;
+    gap: size(16);
+
+    .popular-title {
+      font-size: size(20);
+      font-weight: 600;
+    }
+  }
+
+  &-body {
+    .swiper {
+      &-button-next,
+      &-button-prev {
+        background: $white;
+        @include circle;
+        @include square(44);
+        @include flex-center;
+        overflow: hidden;
+        padding: size(10);
+        @include transitionsall;
+
+        @include hover {
+          filter: $arrowshadow;
+        }
+
+        &::after {
+          content: '';
+          @include square(0);
+          margin: 0;
+          display: none;
+        }
+      }
+
+      &-button-next {
+        right: size(0);
+      }
+
+      &-button-prev {
+        left: size(0);
+      }
+    }
+  }
+}
+
 .trendingvideos {
   @include flex-column;
   gap: size(20);
+  padding-bottom: size(80);
 
   &-header {
     @include flex-column;

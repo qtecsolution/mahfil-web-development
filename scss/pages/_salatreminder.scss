@@ -1,3 +1,41 @@
 @use '../global' as *;
 @use '../partials' as *;
 
+.salatreminder {
+  @include flex-column;
+  gap: size(20);
+  padding-bottom: size(80);
+
+  &-header {
+    @include flex-column;
+    gap: size(16);
+
+    .reminder-title {
+      font-size: size(20);
+      font-weight: 600;
+    }
+  }
+
+  &-body {
+    .leftcontent {
+      @include flex-column;
+      gap: size(32);
+  
+      .reminderlogo {
+        width: size(137);
+        height: size(38);
+        @include flex-center;
+        overflow: hidden;
+      }
+  
+      .getapp {
+        .applink {
+          width: size(125);
+          height: size(36);
+          @include flex-center;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}

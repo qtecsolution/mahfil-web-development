@@ -1441,6 +1441,58 @@ table tr td {
   font-weight: 600;
 }
 
+.favorites {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-bottom: 5rem;
+}
+.favorites-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.favorites-header .reminder-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.salatreminder {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-bottom: 5rem;
+}
+.salatreminder-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.salatreminder-header .reminder-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.salatreminder-body .leftcontent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.salatreminder-body .leftcontent .reminderlogo {
+  width: 8.5625rem;
+  height: 2.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.salatreminder-body .leftcontent .getapp .applink {
+  width: 7.8125rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
 .errormain {
   display: flex;
   align-items: center;

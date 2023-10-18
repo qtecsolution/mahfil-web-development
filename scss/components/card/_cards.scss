@@ -1,3 +1,137 @@
 @use '../../global' as *;
 @use '../../partials' as *;
 
+.cardvideo {
+  @include flex-column;
+  gap: size(14);
+
+  &-header {    
+    .video-thumbnail {
+      @include radius(10);
+      @include flex-center;
+      @include w100;
+      height: size(176);
+      overflow: hidden;
+
+      img {
+        @include wh100;
+        @include transitiontransform;
+
+        @include hover {
+          @include scale(1.05);
+        }
+      }
+    }
+  }
+
+  &-body {
+    @include flex;
+    gap: size(8);
+
+    .channelthumb {
+      @include square(40);
+      @include circle;
+      @include flex-center;
+      overflow: hidden;
+
+      img {
+        @include wh100;
+      }
+    }
+
+    .details {
+      @include flex-column;
+      gap: size(12);
+      width: calc(100% - size(72));
+
+      .videotitle {
+        cursor: pointer;
+        font-size: size(16);
+        font-weight: 500;
+        @include line-clamp;
+        @include transitionscolor;
+
+        @include hover {
+          color: $primary;
+        }
+      }
+
+      .detail {
+        .channelname,
+        .videotext {
+          font-size: size(14);
+          font-weight: 500;
+        }
+      }
+    }
+
+    .videodropdown {
+      position: relative;
+      @include square(24);
+      cursor: pointer;
+
+      .dropdownicon {
+        background: $white;
+        @include square(24);
+        @include circle;
+        @include flex-center;
+        padding: size(4);
+        @include transitionsbackground;
+      }
+
+      &-info {
+        position: absolute;
+        top: 100%;
+        right: size(0);
+        padding-top: size(8);
+        display: none;
+        @extend %animation;
+        @extend %slideUpIn;
+
+        .dropdownlist {
+          background: $white;
+          @include border(solid, 1, $menudivider);
+          @include radius(10);
+          box-shadow: $dropdownshadow;
+          @include list-vertical;
+          width: size(180);
+          min-height: size(110);
+          overflow: hidden;
+
+          &-link {
+            background: $white;
+            @include flex-center-vert;
+            gap: size(10);
+            padding: size(8) size(16);
+            @include transitionsbackground;
+
+            .droplinkicon {
+              @include square(16);
+              @include flex-center;
+              overflow: hidden;
+            }
+
+            .droplinktext {
+              color: $dropdowntext;
+              font-size: size(15);
+            }
+
+            @include hover {
+              background: $linkhoverbg;
+            }
+          }
+        }
+      }
+
+      @include hover {
+        .dropdownicon {
+          background: $linkhoverbg;
+        }
+
+        .videodropdown-info {
+          display: block;
+        }
+      }
+    }
+  }
+}

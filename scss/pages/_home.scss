@@ -1,2 +1,37 @@
 @use '../global' as *;
 @use '../partials' as *;
+
+.homevideos {
+  @include flex-center-vert;
+  gap: size(30) size(14);
+  flex-wrap: wrap;
+  padding-bottom: size(64);
+
+  .cardvideo {
+    @include w100;
+
+    @include breakpoint(mobile576) {
+      width: calc((100% / 2) - size(14));
+    }
+
+    @include breakpoint(mobile768) {
+      width: calc((100% / 3) - size(14));
+    }
+
+    @include breakpoint(tab992) {
+      width: calc((100% / 2) - size(14));
+    }
+
+    @include breakpoint(desktop1200) {
+      width: calc((100% / 3) - size(14));
+    }
+
+    @include breakpoint(desktop1367) {
+      width: calc((100% / 4) - size(14));
+    }
+
+    @include breakpoint(desktop1600) {
+      width: calc((100% / 5) - size(14));
+    }
+  }
+}

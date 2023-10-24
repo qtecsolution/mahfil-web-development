@@ -1,0 +1,58 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+.subscribedchannel {
+  @include flex-column;
+  gap: size(20);
+  padding-bottom: size(80);
+
+  &-header {
+    @include flex-column;
+    gap: size(16);
+
+    .subscribedchannel-title {
+      font-size: size(20);
+      font-weight: 600;
+    }
+  }
+
+  &-body {
+    .emptysubscribed {
+      @include flex-center-column;
+      gap: size(24);
+      max-width: size(410);
+      margin-inline: auto;
+      padding: size(44) size(0) size(64);
+
+      .subscribedicon {
+        @include square(150);
+        @include flex-column;
+        overflow: hidden;
+      }
+
+      .info {
+        @include flex-center-column;
+        text-align: center;
+
+        .text {
+          font-weight: 500;
+        }
+      }
+    }
+
+    .subscribedlist {
+      @include flex-column;
+      gap: size(12);
+    }
+
+    .rightinfo {
+      @include flex-column;
+      gap: size(32);
+
+      .descriptions {
+        @include flex-column;
+        gap: size(24);
+      }
+    }
+  }
+}

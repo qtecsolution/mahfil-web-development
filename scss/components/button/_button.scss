@@ -102,3 +102,36 @@ button,
     background: darken($primary, 10%);
   }
 }
+
+.btn-subscribed {
+  @include setBgColor($white, $textprimary);
+  @include border(solid, 1, $menudivider);
+  @include radius(6);
+  padding: size(8);
+  @include flex-center;
+  gap: size(4);
+
+  .icon {
+    @include square(15);
+    @include flex-center;
+    overflow: hidden;
+  }
+
+  .text {
+    color: inherit;
+    font: inherit;
+  }
+
+  @include hover {
+    @include setBgColor($textprimary, $menudivider);
+    border-color: $textprimary;
+
+    .icon {
+      svg {
+        path {
+          stroke: $menudivider;
+        }
+      }
+    }
+  }
+}

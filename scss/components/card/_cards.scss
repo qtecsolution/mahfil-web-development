@@ -321,3 +321,55 @@
     background: $favhoverbg;
   }
 }
+
+.cardsubscribed {
+  @include flex-column;
+  gap: size(24);
+
+  @include breakpoint(mobile768) {
+    flex-direction: row;
+  }
+
+  &-thumbnail {
+    @include square(106);
+    @include circle;
+    @include flex-center;
+    overflow: hidden;
+
+    img {
+      @include wh100;
+    }
+  }
+
+  &-body {
+    @include flex-column;
+    gap: size(32);
+
+    @include breakpoint(mobile768) {
+      width: calc(100% - size(130));
+    }
+
+    .detail {
+      @include flex-column;
+      gap: size(16);
+
+      .title {
+        color: $headingtext;
+        font-size: size(16);
+        font-weight: 600;
+      }
+
+      .info {
+        .text {
+          color: $textprimary;
+          font-size: size(16);
+
+          strong {
+            color: $dropdowntext;
+            font-size: inherit;
+          }
+        }
+      }
+    }
+  }
+}

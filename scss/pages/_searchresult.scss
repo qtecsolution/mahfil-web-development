@@ -1,2 +1,59 @@
 @use '../global' as *;
 @use '../partials' as *;
+
+.popularsearch {
+  @include flex-column;
+  gap: size(20);
+  padding-bottom: size(80);
+
+  &-header {
+    .popularsearch-title {
+      font-size: size(20);
+      font-weight: 600;
+    }
+  }
+
+  &-body {
+    @include flex-center-vert;
+    gap: size(8);
+    flex-wrap: wrap;
+  }
+}
+
+.videoschannels {
+  padding-bottom: size(160);
+
+  .subscribedlist {
+    @include flex-column;
+    gap: size(40);
+  }
+
+  .videoslist {
+    @include flex-column;
+    gap: size(16);
+  }
+
+  .nav-tabs {
+    border-color: $menudivider;
+    margin-bottom: size(16);
+
+    .nav-link {
+      color: $textprimary;
+      font-size: size(16);
+      font-weight: 600;
+      margin-bottom: 0;
+      padding: size(16) size(24);
+      border: none;
+      @include border-single(bottom, solid, 4, transparent);
+
+      &.active {
+        color: $headingtext;
+        border-color: $primary;
+      }
+
+      &:hover:not(.active) {
+        color: $headingtext;
+      }
+    }
+  }
+}

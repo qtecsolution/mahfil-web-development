@@ -135,3 +135,52 @@ button,
     }
   }
 }
+
+.btn-subscribe {
+  @include setBgColor($primary, $white);
+  @include border(solid, 2, $primary);
+  @include radius(6);
+  font-weight: 600;
+  padding: size(8) size(16);
+  @include flex-center;
+  gap: size(4);
+
+  .icon {
+    @include square(15);
+    @include flex-center;
+    overflow: hidden;
+  }
+
+  .text {
+    color: inherit;
+    font: inherit;
+  }
+
+  @include hover {
+    @include setBgColor($white, $primary);
+
+    .icon {
+      svg {
+        path {
+          stroke: $primary;
+        }
+      }
+    }
+  }
+}
+
+.btn-searchtag {
+  @include setBgColor($white, $dropdowntext);
+  @include border(solid, 1, $menudivider);
+  @include radius(33);
+  display: inline-block;
+  font-size: size(14);
+  font-weight: 500;
+  padding: size(8) size(20);
+  text-align: center;
+
+  @include hover {
+    @include setBgColor($dropdowntext, $white);
+    border-color: $dropdowntext;
+  }
+}

@@ -9,7 +9,7 @@
 /**=====================================================**
                 ANIMATION-STYLES
 =======================================================**/
-.cardvideo-body .videodropdown-info, .cardfavorite-details .favdropdown-info {
+.cardvideo-body .videodropdown-info, .cardfavorite-details .favdropdown-info, .cardvid-info {
   animation-duration: 350ms;
   animation-fill-mode: both;
 }
@@ -47,7 +47,7 @@
     transform: translateY(1.25rem);
   }
 }
-.cardvideo-body .videodropdown-info, .cardfavorite-details .favdropdown-info {
+.cardvideo-body .videodropdown-info, .cardfavorite-details .favdropdown-info, .cardvid-info {
   animation-name: slideUpIn;
 }
 
@@ -580,6 +580,55 @@ button:focus,
   stroke: hsl(214, 17%, 92%);
 }
 
+.btn-subscribe {
+  background: hsl(211, 97%, 60%);
+  color: hsl(0, 0%, 100%);
+  border: solid 0.125rem hsl(211, 97%, 60%);
+  border-radius: 0.375rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+.btn-subscribe .icon {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.btn-subscribe .text {
+  color: inherit;
+  font: inherit;
+}
+.btn-subscribe:not([disabled]):hover {
+  background: hsl(0, 0%, 100%);
+  color: hsl(211, 97%, 60%);
+}
+.btn-subscribe:not([disabled]):hover .icon svg path {
+  stroke: hsl(211, 97%, 60%);
+}
+
+.btn-searchtag {
+  background: hsl(0, 0%, 100%);
+  color: hsl(218, 17%, 35%);
+  border: solid 0.0625rem hsl(214, 17%, 92%);
+  border-radius: 2.0625rem;
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem;
+  text-align: center;
+}
+.btn-searchtag:not([disabled]):hover {
+  background: hsl(218, 17%, 35%);
+  color: hsl(0, 0%, 100%);
+  border-color: hsl(218, 17%, 35%);
+}
+
 .cardvideo {
   display: flex;
   flex-direction: column;
@@ -894,6 +943,156 @@ button:focus,
   display: block;
 }
 .cardfavorite:not([disabled]):hover {
+  background: hsl(214, 100%, 99%);
+}
+
+.cardvid {
+  background: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.625rem;
+  position: relative;
+  transition: background 350ms ease-in-out;
+}
+@media screen and (min-width: 36rem) {
+  .cardvid {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+.cardvid .videothumb {
+  width: 100%;
+  height: 10.5rem;
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+@media screen and (min-width: 36rem) {
+  .cardvid .videothumb {
+    width: 11.875rem;
+    height: 7.5rem;
+  }
+}
+.cardvid .videothumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.cardvid-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.875rem;
+}
+@media screen and (min-width: 36rem) {
+  .cardvid-details {
+    align-items: center;
+    width: calc(100% - 11.875rem);
+  }
+}
+.cardvid-details .describe {
+  width: calc(100% - 3rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.cardvid-details .describe .videotitle {
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  transition: color 350ms ease-in-out;
+}
+.cardvid-details .describe .videotitle:not([disabled]):hover {
+  color: hsl(211, 97%, 60%);
+}
+.cardvid-details .describe .detail .channelname,
+.cardvid-details .describe .detail .videotext {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.cardvid-details .vidropdown {
+  cursor: pointer;
+  width: 3rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0.25rem;
+}
+.cardvid-details .vidropdown .dropdownicon {
+  background: hsl(0, 0%, 100%);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  transition: background 350ms ease-in-out;
+}
+.cardvid-details .vidropdown:not([disabled]):hover .cardvid-info {
+  display: block;
+}
+.cardvid-details .vidropdown:not([disabled]):hover .dropdownicon {
+  background: hsl(213, 39%, 95%);
+}
+.cardvid-info {
+  position: absolute;
+  top: 100%;
+  right: 0rem;
+  padding-top: 1rem;
+  display: none;
+  z-index: 200;
+}
+.cardvid-info .dropdownlist {
+  background: hsl(0, 0%, 100%);
+  border: solid 0.0625rem hsl(214, 17%, 92%);
+  border-radius: 0.625rem;
+  box-shadow: 0.25rem 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.04);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 13.125rem;
+  overflow: hidden;
+}
+.cardvid-info .dropdownlist-link {
+  background: hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.5rem 1rem;
+  transition: background 350ms ease-in-out;
+}
+.cardvid-info .dropdownlist-link .droplinkicon {
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.cardvid-info .dropdownlist-link .droplinktext {
+  color: hsl(218, 17%, 35%);
+  font-size: 0.9375rem;
+}
+.cardvid-info .dropdownlist-link:not([disabled]):hover {
+  background: hsl(213, 39%, 95%);
+}
+.cardvid:not([disabled]):hover {
   background: hsl(214, 100%, 99%);
 }
 
@@ -1845,6 +2044,57 @@ table tr td {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+.popularsearch {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-bottom: 5rem;
+}
+.popularsearch-header .popularsearch-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.popularsearch-body {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.videoschannels {
+  padding-bottom: 10rem;
+}
+.videoschannels .subscribedlist {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.videoschannels .videoslist {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.videoschannels .nav-tabs {
+  border-color: hsl(214, 17%, 92%);
+  margin-bottom: 1rem;
+}
+.videoschannels .nav-tabs .nav-link {
+  color: hsl(216, 15%, 52%);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-bottom: solid 0.25rem transparent;
+}
+.videoschannels .nav-tabs .nav-link.active {
+  color: hsl(216, 17%, 12%);
+  border-color: hsl(211, 97%, 60%);
+}
+.videoschannels .nav-tabs .nav-link:hover:not(.active) {
+  color: hsl(216, 17%, 12%);
 }
 
 .errormain {

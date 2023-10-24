@@ -5,7 +5,7 @@
   @include flex-column;
   gap: size(14);
 
-  &-header {    
+  &-header {
     .video-thumbnail {
       @include radius(10);
       @include flex-center;
@@ -16,6 +16,10 @@
       img {
         @include wh100;
         @include transitiontransform;
+
+        @include breakpoint(desktop1367) {
+          object-fit: fill;
+        }
 
         @include hover {
           @include scale(1.05);
@@ -57,6 +61,7 @@
       }
 
       .detail {
+
         .channelname,
         .videotext {
           font-size: size(14);
@@ -168,7 +173,7 @@
         font-weight: 500;
       }
     }
-  
+
     .subscribebox {
       max-width: size(112);
     }
@@ -201,6 +206,7 @@
 
     img {
       @include wh100;
+      object-fit: fill;
     }
   }
 
@@ -233,6 +239,7 @@
       }
 
       .detail {
+
         .channelname,
         .videotext {
           font-size: size(14);
@@ -240,7 +247,7 @@
         }
       }
     }
-    
+
     .favdropdown {
       position: relative;
       @include square(24);

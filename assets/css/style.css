@@ -567,6 +567,12 @@ button:focus,
   height: 100%;
   transition: transform 350ms ease-in-out;
 }
+@media screen and (min-width: 85.4375rem) {
+  .cardvideo-header .video-thumbnail img {
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+}
 .cardvideo-header .video-thumbnail img:not([disabled]):hover {
   transform: scale(1.05);
 }
@@ -747,6 +753,8 @@ button:focus,
 .cardfavorite .favoritethumb img {
   width: 100%;
   height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 .cardfavorite-details {
   display: flex;

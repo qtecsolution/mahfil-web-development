@@ -2,7 +2,8 @@
                 BREAKPOINT-VARIABLES
 =======================================================**/
 
-$breakpoints: (break-321: 321,
+$breakpoints: (
+	break-321: 321,
 	break-360: 360,
 	break-375: 375,
 	break-414: 414,
@@ -33,7 +34,7 @@ $breakpoints: (break-321: 321,
 }
 
 @function break($point, $base: 16) {
-	@return calc(breakpoint($point) / $base) + rem;
+	@return calc(breakpoint($point) / $base)+rem;
 }
 
 /**=====================================================**
@@ -70,6 +71,7 @@ $breakpoints: (break-321: 321,
 			@content;
 		}
 	}
+
 	@else if $breakpoints==phone500 {
 		@media screen and (max-width: break(break-500)) {
 			@content;
@@ -123,6 +125,7 @@ $breakpoints: (break-321: 321,
 			@content;
 		}
 	}
+
 	@else if $breakpoints==desktop1199 {
 		@media screen and (max-width: break(break-1199)) {
 			@content;
@@ -191,7 +194,7 @@ $breakpoints: (break-321: 321,
 // @include breakpoint(desktop1100) {}
 // @include breakpoint(desktop1199) {}
 // @include breakpoint(desktop1200) {}
-// 
+// @include breakpoint(desktop1367) {}
 // @include breakpoint(desktop1400) {}
 // @include breakpoint(desktop1600) {}
 // @include breakpoint(desktop1800) {}

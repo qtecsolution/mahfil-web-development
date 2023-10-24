@@ -42,7 +42,7 @@
 
     .subscribedlist {
       @include flex-column;
-      gap: size(12);
+      gap: size(48);
     }
 
     .rightinfo {

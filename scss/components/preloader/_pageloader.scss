@@ -1,6 +1,11 @@
 @use '../../global' as *;
 @use '../../partials' as *;
 
+%border {
+  @include border(solid, 4, transparent);
+  border-radius: 50%;
+}
+
 .preloader {
   background: $linkhoverbg;
   @include flex-center;
@@ -13,113 +18,82 @@
 
   .loader {
     @include flex-center;
-    width: size(164);
-    height: size(156);
+    @include square(300);
+
+    .reverse-spinner {
+      position: relative;
+      @include square(100);
+      @extend %border;
+      border-top-color: $primary;
+      border-left-color: $primary;
+      -webkit-animation: spin 1.5s linear infinite;
+      animation: spin 1.5s linear infinite;
+
+      &::before {
+        position: absolute;
+        top: size(15);
+        left: size(15);
+        right: size(15);
+        bottom: size(15);
+        content: "";
+        @extend %border;
+        border-top-color: $primarydark;
+        border-left-color: $primarydark;
+        -webkit-animation: spinBack 1s linear infinite;
+        animation: spinBack 1s linear infinite;
+      }
+    }
   }
 }
 
-#solNotes {
-  width: size(164);
-  height: size(156);
-  animation: n-all 1s linear 0s 1 alternate;
-  animation-fill-mode: backwards;
-
-  path {
-    fill: $primary;
-  }
-}
-
-.nScale0 {
-  animation: n-main 1s linear 0s infinite alternate;
-  transform-origin: 50% 50%;
-}
-
-.nScale1 {
-  animation: n-scale 4s linear 0.5s infinite alternate;
-  animation-fill-mode: backwards;
-  transform-origin: 62.8% 7.69%;
-}
-
-.nScale2 {
-  animation: n-scale 4s linear 1s infinite alternate;
-  animation-fill-mode: backwards;
-  transform-origin: 37.8% 21.15%;
-}
-
-.nScale3 {
-  animation: n-scale 4s linear 1.5s infinite alternate;
-  animation-fill-mode: backwards;
-  transform-origin: 19.51% 48.08%;
-}
-
-.nScale4 {
-  animation: n-scale 4s linear 2s infinite alternate;
-  animation-fill-mode: backwards;
-  transform-origin: 31.1% 69.23%;
-}
-
-.nScale5 {
-  animation: n-scale 4s linear 2.5s infinite alternate;
-  animation-fill-mode: backwards;
-  transform-origin: 46.95% 91.03%;
-}
-
-.nScale6 {
-  animation: n-scale 4s linear 3s infinite alternate;
-  animation-fill-mode: backwards;
-  transform-origin: 79.27% 75.64%;
-}
-
-.nScale7 {
-  animation: n-scale 4s linear 3.5s infinite alternate;
-  animation-fill-mode: backwards;
-  transform-origin: 84.76% 45.51%;
-}
-
-.nScale8 {
-  animation: n-scale 4s linear 4s infinite alternate;
-  animation-fill-mode: backwards;
-  transform-origin: 73.17% 22.44%;
-}
-
-@keyframes n-scale {
-  0% {
-    transform: scale(0);
-  }
-  35% {
-    transform: scale(0);
-  }
-  45% {
-    transform: scale(0.5);
-  }
-  50% {
-    transform: scale(1);
-  }
-  55% {
-    transform: scale(0.5);
-  }
-  65% {
-    transform: scale(0);
-  }
+@-webkit-keyframes rotate {
   100% {
-    transform: scale(0);
+    @include rotate(360);
   }
 }
 
-@keyframes n-main {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(4deg);
+@keyframes rotate {
+  100% {
+    @include rotate(360);
   }
 }
 
-@keyframes n-all {
+@-webkit-keyframes spin {
   from {
-    transform: scale(0);
+    @include rotate(0);
   }
+
   to {
-    transform: scale(1);
+    @include rotate(360);
+  }
+}
+
+@keyframes spin {
+  from {
+    @include rotate(0);
+  }
+
+  to {
+    @include rotate(360);
+  }
+}
+
+@-webkit-keyframes spinBack {
+  from {
+    @include rotate(0);
+  }
+
+  to {
+    @include rotate(-720);
+  }
+}
+
+@keyframes spinBack {
+  from {
+    @include rotate(0);
+  }
+
+  to {
+    @include rotate(-720);
   }
 }

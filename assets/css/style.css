@@ -1159,6 +1159,11 @@ input[type=search]::-webkit-search-results-decoration:focus {
   border-right-color: hsl(211, 97%, 60%);
 }
 
+.preloader .loader .reverse-spinner::before, .preloader .loader .reverse-spinner {
+  border: solid 0.25rem transparent;
+  border-radius: 50%;
+}
+
 .preloader {
   background: hsl(213, 39%, 95%);
   display: flex;
@@ -1175,110 +1180,47 @@ input[type=search]::-webkit-search-results-decoration:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 10.25rem;
-  height: 9.75rem;
+  width: 18.75rem;
+  height: 18.75rem;
 }
-
-#solNotes {
-  width: 10.25rem;
-  height: 9.75rem;
-  animation: n-all 1s linear 0s 1 alternate;
-  animation-fill-mode: backwards;
+.preloader .loader .reverse-spinner {
+  position: relative;
+  width: 6.25rem;
+  height: 6.25rem;
+  border-top-color: hsl(211, 97%, 60%);
+  border-left-color: hsl(211, 97%, 60%);
+  animation: spin 1.5s linear infinite;
 }
-#solNotes path {
-  fill: hsl(211, 97%, 60%);
+.preloader .loader .reverse-spinner::before {
+  position: absolute;
+  top: 0.9375rem;
+  left: 0.9375rem;
+  right: 0.9375rem;
+  bottom: 0.9375rem;
+  content: "";
+  border-top-color: hsl(207, 100%, 28%);
+  border-left-color: hsl(207, 100%, 28%);
+  animation: spinBack 1s linear infinite;
 }
-
-.nScale0 {
-  animation: n-main 1s linear 0s infinite alternate;
-  transform-origin: 50% 50%;
-}
-
-.nScale1 {
-  animation: n-scale 4s linear 0.5s infinite alternate;
-  animation-fill-mode: backwards;
-  transform-origin: 62.8% 7.69%;
-}
-
-.nScale2 {
-  animation: n-scale 4s linear 1s infinite alternate;
-  animation-fill-mode: backwards;
-  transform-origin: 37.8% 21.15%;
-}
-
-.nScale3 {
-  animation: n-scale 4s linear 1.5s infinite alternate;
-  animation-fill-mode: backwards;
-  transform-origin: 19.51% 48.08%;
-}
-
-.nScale4 {
-  animation: n-scale 4s linear 2s infinite alternate;
-  animation-fill-mode: backwards;
-  transform-origin: 31.1% 69.23%;
-}
-
-.nScale5 {
-  animation: n-scale 4s linear 2.5s infinite alternate;
-  animation-fill-mode: backwards;
-  transform-origin: 46.95% 91.03%;
-}
-
-.nScale6 {
-  animation: n-scale 4s linear 3s infinite alternate;
-  animation-fill-mode: backwards;
-  transform-origin: 79.27% 75.64%;
-}
-
-.nScale7 {
-  animation: n-scale 4s linear 3.5s infinite alternate;
-  animation-fill-mode: backwards;
-  transform-origin: 84.76% 45.51%;
-}
-
-.nScale8 {
-  animation: n-scale 4s linear 4s infinite alternate;
-  animation-fill-mode: backwards;
-  transform-origin: 73.17% 22.44%;
-}
-
-@keyframes n-scale {
-  0% {
-    transform: scale(0);
-  }
-  35% {
-    transform: scale(0);
-  }
-  45% {
-    transform: scale(0.5);
-  }
-  50% {
-    transform: scale(1);
-  }
-  55% {
-    transform: scale(0.5);
-  }
-  65% {
-    transform: scale(0);
-  }
+@keyframes rotate {
   100% {
-    transform: scale(0);
+    transform: rotate(360deg);
   }
 }
-@keyframes n-main {
+@keyframes spin {
   from {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(4deg);
+    transform: rotate(360deg);
   }
 }
-@keyframes n-all {
+@keyframes spinBack {
   from {
-    transform: scale(0);
+    transform: rotate(0deg);
   }
   to {
-    transform: scale(1);
+    transform: rotate(-720deg);
   }
 }
 .sidebar {
@@ -1815,4 +1757,4 @@ table tr td {
   .shipcontainer {
     padding-inline: 9.375rem;
   }
-}
+}/*# sourceMappingURL=style.css.map */

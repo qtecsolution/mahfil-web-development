@@ -9,7 +9,7 @@
 /**=====================================================**
                 ANIMATION-STYLES
 =======================================================**/
-.cardvideo-body .videodropdown-info, .cardfavorite-details .favdropdown-info, .cardvid-info {
+.desktoplist .desktopdropdown-menu, .cardvideo-body .videodropdown-info, .cardfavorite-details .favdropdown-info, .cardvid-info {
   animation-duration: 350ms;
   animation-fill-mode: both;
 }
@@ -47,7 +47,7 @@
     transform: translateY(1.25rem);
   }
 }
-.cardvideo-body .videodropdown-info, .cardfavorite-details .favdropdown-info, .cardvid-info {
+.desktoplist .desktopdropdown-menu, .cardvideo-body .videodropdown-info, .cardfavorite-details .favdropdown-info, .cardvid-info {
   animation-name: slideUpIn;
 }
 
@@ -1752,6 +1752,108 @@ table tr td {
   overflow: hidden;
   padding: 0.625rem;
 }
+.desktoplist .darkmodeitem:not([disabled]):hover .desktoplist-link,
+.desktoplist .useritem:not([disabled]):hover .desktoplist-link {
+  background: hsl(211, 97%, 60%);
+}
+.desktoplist .darkmodeitem:not([disabled]):hover .desktoplist-link svg path,
+.desktoplist .useritem:not([disabled]):hover .desktoplist-link svg path {
+  stroke: hsl(0, 0%, 100%);
+}
+.desktoplist .desktopdropdown {
+  position: relative;
+}
+.desktoplist .desktopdropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 18.75rem;
+  padding-top: 1.25rem;
+  display: none;
+}
+@media screen and (min-width: 36rem) {
+  .desktoplist .desktopdropdown-menu {
+    min-width: 26.375rem;
+  }
+}
+.desktoplist .desktopdropdown:not([disabled]):hover .desktoplist-link {
+  background: hsl(211, 97%, 60%);
+}
+.desktoplist .desktopdropdown:not([disabled]):hover .desktoplist-link svg path {
+  fill: hsl(0, 0%, 100%);
+}
+.desktoplist .desktopdropdown:not([disabled]):hover .desktopdropdown-menu {
+  display: block;
+}
+
+.desktopdropdownlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  background: hsl(0, 0%, 100%);
+  border: solid 0.0625rem hsl(214, 17%, 92%);
+  border-radius: 0.625rem;
+  box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.1);
+  padding: 0.625rem 0.625rem 0.8125rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  max-height: 21.25rem;
+}
+.desktopdropdownlist::-webkit-scrollbar {
+  background: transparent;
+  width: 0rem;
+}
+.desktopdropdownlist-link {
+  display: flex;
+  gap: 0.75rem;
+  padding-bottom: 0.625rem;
+}
+.desktopdropdownlist-link .leftcontent {
+  display: flex;
+  gap: 0.75rem;
+  width: calc(100% - 6.5rem);
+}
+.desktopdropdownlist-link .leftcontent .logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.desktopdropdownlist-link .leftcontent .details {
+  width: calc(100% - 3.25rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.desktopdropdownlist-link .leftcontent .details .title {
+  color: hsl(216, 17%, 12%);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  transition: color 350ms ease-in-out;
+}
+.desktopdropdownlist-link .leftcontent .details .title:not([disabled]):hover {
+  color: hsl(211, 97%, 60%);
+}
+.desktopdropdownlist-link .leftcontent .details .time {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.6875rem;
+  font-weight: 500;
+}
+.desktopdropdownlist-link .notification-thumbnail {
+  border-radius: 0.25rem;
+  width: 5.75rem;
+  height: 3.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 
 .categoryradio .radioinput:checked ~ .radiolabel {
   border-color: hsl(211, 97%, 60%);
@@ -2097,6 +2199,21 @@ table tr td {
   color: hsl(216, 17%, 12%);
 }
 
+.settings {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-bottom: 5rem;
+}
+.settings-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.settings-header .settings-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
 .errormain {
   display: flex;
   align-items: center;

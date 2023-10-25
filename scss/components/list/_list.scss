@@ -84,4 +84,122 @@
     overflow: hidden;
     padding: size(10);
   }
+
+  .darkmodeitem,
+  .useritem {
+    @include hover {
+      .desktoplist-link {
+        background: $primary;
+
+        svg {
+          path {
+            stroke: $white;
+          }
+        }
+      }
+    }
+  }
+
+  .desktopdropdown {
+    position: relative;
+
+    &-menu {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      min-width: size(300);
+      padding-top: size(20);
+      display: none;
+      @extend %animation;
+      @extend %slideUpIn;
+
+      @include breakpoint(mobile576) {
+        min-width: size(422);
+      }
+    }
+
+    @include hover {
+      .desktoplist-link {
+        background: $primary;
+
+        svg {
+          path {
+            fill: $white;
+          }
+        }
+      }
+
+      .desktopdropdown-menu {
+        display: block;
+      }
+    }
+  }
+}
+
+.desktopdropdownlist {
+  @include list-vertical;
+  gap: size(10);
+  background: $white;
+  @include border(solid, 1, $menudivider);
+  @include radius(10);
+  box-shadow: $dropshadow;
+  padding: size(10) size(10) size(13);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  max-height: size(340);
+
+  &::-webkit-scrollbar {
+    background: transparent;
+    width: size(0);
+  }
+
+  &-link {
+    @include flex;
+    gap: size(12);
+    padding-bottom: size(10);
+
+    .leftcontent {
+      @include flex;
+      gap: size(12);
+      width: calc(100% - size(104));
+
+      .logo {
+        @include square(40);
+        @include circle;
+        @include flex-center;
+        overflow: hidden;
+      }
+
+      .details {
+        width: calc(100% - size(52));
+        @include flex-column;
+        gap: size(8);
+
+        .title {
+          color: $headingtext;
+          font-size: size(13);
+          font-weight: 500;
+          @include transitionscolor;
+
+          @include hover {
+            color: $primary;
+          }
+        }
+
+        .time {
+          color: $textprimary;
+          font-size: size(11);
+          font-weight: 500;
+        }
+      }
+    }
+
+    .notification-thumbnail {
+      @include radius(4);
+      width: size(92);
+      height: size(52);
+      @include flex-center;
+      overflow: hidden;
+    }
+  }
 }

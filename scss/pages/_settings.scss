@@ -1,0 +1,20 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+.settings {
+  @include flex-column;
+  gap: size(20);
+  padding-bottom: size(80);
+
+  &-header {
+    @include flex-column;
+    gap: size(16);
+
+    .settings-title {
+      font-size: size(20);
+      font-weight: 600;
+    }
+  }
+
+  &-body {}
+}

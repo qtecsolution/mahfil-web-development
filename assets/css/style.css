@@ -2219,6 +2219,33 @@ table tr td {
 .videoschannels {
   padding-bottom: 10rem;
 }
+.videoschannels .emptysubscribed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 19.375rem;
+  margin-inline: auto;
+  padding: 2.75rem 0rem 4rem;
+}
+.videoschannels .emptysubscribed .subscribedicon {
+  width: 11.6875rem;
+  height: 9.375rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.videoschannels .emptysubscribed .info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.videoschannels .emptysubscribed .info .text {
+  font-weight: 500;
+}
 .videoschannels .subscribedlist {
   display: flex;
   flex-direction: column;

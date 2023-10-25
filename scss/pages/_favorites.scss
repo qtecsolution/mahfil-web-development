@@ -49,7 +49,7 @@
     .rightinfo {
       @include flex-column;
       gap: size(32);
-      
+
       .descriptions {
         @include flex-column;
         gap: size(24);
@@ -62,7 +62,7 @@
   @include radius(20);
   @include flex-center;
   overflow: hidden;
-  
+
   img {
     @include wh100;
   }

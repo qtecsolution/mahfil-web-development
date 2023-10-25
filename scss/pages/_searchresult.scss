@@ -23,6 +23,30 @@
 .videoschannels {
   padding-bottom: size(160);
 
+  .emptysubscribed {
+    @include flex-center-column;
+    gap: size(24);
+    max-width: size(310);
+    margin-inline: auto;
+    padding: size(44) size(0) size(64);
+
+    .subscribedicon {
+      width: size(187);
+      height: size(150);
+      @include flex-column;
+      overflow: hidden;
+    }
+
+    .info {
+      @include flex-center-column;
+      text-align: center;
+
+      .text {
+        font-weight: 500;
+      }
+    }
+  }
+
   .subscribedlist {
     @include flex-column;
     gap: size(40);

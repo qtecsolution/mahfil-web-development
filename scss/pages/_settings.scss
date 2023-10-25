@@ -16,5 +16,29 @@
     }
   }
 
-  &-body {}
+  &-body {
+    .form-label {
+      color: $dropdowntext;
+      font-size: size(14);
+      font-weight: 500;
+    }
+
+    .form-control {
+      @include border(solid, 1, $searchborder);
+      @include radius(8);
+      color: $headingtext;
+      font-size: size(14);
+      font-weight: 500;
+      padding: size(12.5) size(16);
+
+      &::placeholder {
+        color: $textprimary;
+        font-weight: 400;
+      }
+
+      &:focus {
+        border-color: $primary;
+      }
+    }
+  }
 }

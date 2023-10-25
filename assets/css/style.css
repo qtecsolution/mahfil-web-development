@@ -2214,6 +2214,31 @@ table tr td {
   font-size: 1.25rem;
   font-weight: 600;
 }
+.settings-body .form-label {
+  color: hsl(218, 17%, 35%);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.settings-body .form-control {
+  border: solid 0.0625rem hsl(214, 32%, 91%);
+  border-radius: 0.5rem;
+  color: hsl(216, 17%, 12%);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.78125rem 1rem;
+}
+.settings-body .form-control::-moz-placeholder {
+  color: hsl(216, 15%, 52%);
+  font-weight: 400;
+}
+.settings-body .form-control::placeholder {
+  color: hsl(216, 15%, 52%);
+  font-weight: 400;
+}
+.settings-body .form-control:focus {
+  border-color: hsl(211, 97%, 60%);
+}
+
 .errormain {
   display: flex;
   align-items: center;

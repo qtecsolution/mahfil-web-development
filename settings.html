@@ -946,19 +946,84 @@
     <!-- FAVORITES-SECTION START -->
     <section class="settings">
       <div class="settings-header">
-        <h1 class="settings-title">Settings</h1>
+        <h1 class="settings-title">Profile Settings</h1>
         <hr />
       </div>
 
       <div class="settings-body">
         <div class="row g-4 w-100">
           <div class="col-lg-8">
+            <form class="row g-3 needs-validation" novalidate>
+              <div class="col-12">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter full name" autocomplete="off"
+                  required>
+                <div class="invalid-feedback">
+                  Please provide a name.
+                </div>
+              </div>
 
+              <div class="col-12">
+                <label for="emailaddress" class="form-label">Email</label>
+                <input type="email" class="form-control" id="emailaddress" placeholder="Enter email address"
+                  autocomplete="off" required>
+                <div class="invalid-feedback">
+                  Please provide a valid email.
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="phonenumber" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phonenumber" placeholder="Enter phone number"
+                  autocomplete="off" required>
+                <div class="invalid-feedback">
+                  Please provide a phone number.
+                </div>
+              </div>
+
+              <div class="col-12 mt-5">
+                <button class="btn-subscribe px-5" type="submit">Save</button>
+              </div>
+            </form>
           </div>
 
           <div class="col-lg-4">
             <div class="rightinfo">
+              <div class="row g-3">
+                <div class="col-6">
+                  <figure class="reminderthumb">
+                    <img src="assets/images/salat-reminder/reminder-1.png" alt="reminder-thumbnail" />
+                  </figure>
+                </div>
 
+                <div class="col-6">
+                  <figure class="reminderthumb">
+                    <img src="assets/images/salat-reminder/reminder-2.png" alt="reminder-thumbnail" />
+                  </figure>
+                </div>
+              </div>
+
+              <div class="descriptions">
+                <figure class="reminderlogo">
+                  <img src="assets/images/logo/logo.svg" alt="brand-logo" />
+                </figure>
+
+                <div class="info">
+                  <p class="text">
+                    আপনার দ্বীনকে পরবর্তী স্তরে নিয়ে যেতে সম্পূর্ণ হালাল
+                    সামগ্রী সহ বিশ্বের প্রথম ইসলামিক সোশ্যাল মিডিয়া
+                    প্ল্যাটফর্ম উপভোগ করুন। এখানে মাহফিল অ্যাপে আপনি দৈনিক
+                    ছালাত অনুস্মারক বৈশিষ্ট্য সেট করতে পারেন আপনাকে কখনই আপনার
+                    সালাত মিস করতে দেবে না।
+                  </p>
+                </div>
+
+                <div class="getapp">
+                  <a href="#" class="applink">
+                    <img src="assets/images/icons/playstore.svg" alt="google-play-store-icon" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -974,6 +1039,8 @@
   <script src="assets/js/bootsrap/bootstrap.bundle.min.js"></script>
   <!-- SIDEBAR-JS -->
   <script src="assets/js/sidebar/sidebar.js"></script>
+  <!-- VALIDATION-JS -->
+  <script src="assets/js/validation/validation.js"></script>
 </body>
 
 </html>

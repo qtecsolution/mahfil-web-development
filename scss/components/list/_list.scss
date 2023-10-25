@@ -134,6 +134,68 @@
       }
     }
   }
+
+  .useritem {
+    position: relative;
+
+    .userdropdown {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      min-width: size(110);
+      padding-top: size(20);
+      display: none;
+      @extend %animation;
+      @extend %slideUpIn;
+
+      .userlist {
+        background: $white;
+        @include border(solid, 1, $menudivider);
+        @include radius(10);
+        box-shadow: $dropshadow;
+        @include list-vertical;
+        gap: size(10);
+
+        &-link {
+          @include flex-center-vert;
+          gap: size(8);
+          padding: size(10) size(12);
+          @include w100;
+
+          .icon {
+            @include square(16);
+            @include flex-center;
+          }
+
+          .text {
+            color: $dropdowntext;
+            font-size: size(15);
+            font-weight: 400;
+          }
+
+          @include hover {
+            .icon {
+              svg {
+                path {
+                  fill: $primary;
+                }
+              }
+            }
+
+            .text {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+
+    @include hover {
+      .userdropdown {
+        display: block;
+      }
+    }
+  }
 }
 
 .desktopdropdownlist {

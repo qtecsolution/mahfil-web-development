@@ -265,3 +265,24 @@
     }
   }
 }
+
+.videolist {
+  @include list-horizontal;
+  gap: size(8);
+
+  &-link {
+    @include flex-center-vert;
+    gap: size(8);
+
+    .icon {
+      @include square(24);
+      @include flex-center;
+      overflow: hidden;
+    }
+
+    .text {
+      color: $textprimary;
+      font-size: size(12);
+    }
+  }
+}

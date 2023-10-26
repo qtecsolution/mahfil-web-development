@@ -1,0 +1,22 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+.videoplay {
+  // padding: size(20) size(0);
+
+  &-rightcontent {
+    @include flex-column;
+    gap: size(20);
+
+    .searchtags {
+      @include flex-center-vert;
+      gap: size(8);
+      flex-wrap: wrap;
+    }
+
+    .videoslist {
+      @include flex-column;
+      gap: size(16);
+    }
+  }
+}

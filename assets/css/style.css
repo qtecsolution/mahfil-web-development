@@ -618,13 +618,18 @@ button:focus,
   display: inline-block;
   font-size: 0.875rem;
   font-weight: 500;
-  padding: 0.5rem 1.25rem;
+  padding: 0.3125rem 0.9375rem;
   text-align: center;
 }
-.btn-searchtag:not([disabled]):hover {
+.btn-searchtag:hover:not(.active) {
   background: hsl(218, 17%, 35%);
   color: hsl(0, 0%, 100%);
   border-color: hsl(218, 17%, 35%);
+}
+.btn-searchtag.active {
+  background: hsl(216, 17%, 12%);
+  color: hsl(0, 0%, 100%);
+  border-color: hsl(216, 17%, 12%);
 }
 
 .cardvideo {
@@ -1912,6 +1917,32 @@ table tr td {
   overflow: hidden;
 }
 
+.videolist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.videolist-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.videolist-link .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.videolist-link .text {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.75rem;
+}
+
 .categoryradio .radioinput:checked ~ .radiolabel {
   border-color: hsl(211, 97%, 60%);
 }
@@ -2378,6 +2409,23 @@ table tr td {
   color: hsl(218, 17%, 35%);
   font-size: 1rem;
   font-weight: 400;
+}
+
+.videoplay-rightcontent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.videoplay-rightcontent .searchtags {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.videoplay-rightcontent .videoslist {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .errormain {

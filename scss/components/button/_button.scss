@@ -176,11 +176,16 @@ button,
   display: inline-block;
   font-size: size(14);
   font-weight: 500;
-  padding: size(8) size(20);
+  padding: size(5) size(15);
   text-align: center;
 
-  @include hover {
+  &:hover:not(.active) {
     @include setBgColor($dropdowntext, $white);
     border-color: $dropdowntext;
+  }
+
+  &.active {
+    @include setBgColor($headingtext, $white);
+    border-color: $headingtext;
   }
 }

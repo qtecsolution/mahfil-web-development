@@ -519,5 +519,11 @@
         }
       }
     }
+
+    .cardicon {
+      @include square(20);
+      @include flex-center;
+      overflow: hidden;
+    }
   }
 }

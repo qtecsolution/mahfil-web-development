@@ -1,2 +1,67 @@
 @use '../global' as *;
 @use '../partials' as *;
+
+.channelsection {
+  &-content {
+    @include flex-column;
+    gap: size(48);
+
+    .channel-thumbnail {
+      @include w100;
+      height: size(160);
+      @include radius(5);
+      overflow: hidden;
+
+      @include breakpoint(mobile768) {
+        height: size(230);
+      }
+
+      img {
+        @include wh100;
+        object-fit: fill;
+        @include transitiontransform;
+
+        @include hover {
+          @include scale(1.05);
+        }
+      }
+    }
+  }
+
+  .channeldescription {
+    .nav-tabs {
+      border-color: $menudivider;
+      margin-bottom: size(24);
+
+      .nav-link {
+        color: $textprimary;
+        font-size: size(16);
+        font-weight: 600;
+        margin-bottom: 0;
+        padding: size(16) size(24);
+        border: none;
+        @include border-single(bottom, solid, 4, transparent);
+
+        &.active {
+          color: $headingtext;
+          border-color: $primary;
+        }
+
+        &:hover:not(.active) {
+          color: $headingtext;
+        }
+      }
+    }
+
+    .aboutchannel {
+      @include flex-column;
+      gap: size(24);
+
+      .text {
+        color: $dropdowntext;
+        font-size: size(16);
+        font-weight: 400;
+      }
+    }
+  }
+}

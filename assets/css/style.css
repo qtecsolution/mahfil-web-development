@@ -350,7 +350,6 @@ h6 {
   color: hsl(216, 17%, 12%);
   margin: 0;
   font-family: inherit;
-  text-wrap: balance;
 }
 h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection {
   background: hsl(211, 97%, 60%);
@@ -364,10 +363,6 @@ h5::selection,
 h6::selection {
   background: hsl(211, 97%, 60%);
   color: hsl(0, 0%, 100%);
-}
-
-p, span {
-  text-wrap: balance;
 }
 
 img {
@@ -420,7 +415,10 @@ select {
   font-family: inherit;
 }
 
-h1 img, h2 img, h3 img, h4 img {
+h1 img,
+h2 img,
+h3 img,
+h4 img {
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -1146,6 +1144,14 @@ button:focus,
 .cardsubscribed-body .detail .info .text strong {
   color: hsl(218, 17%, 35%);
   font-size: inherit;
+}
+.cardsubscribed-body .cardicon {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .header {
@@ -2315,6 +2321,63 @@ table tr td {
 }
 .settings-body .form-control:focus {
   border-color: hsl(211, 97%, 60%);
+}
+
+.channelsection-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.channelsection-content .channel-thumbnail {
+  width: 100%;
+  height: 10rem;
+  border-radius: 0.3125rem;
+  overflow: hidden;
+}
+@media screen and (min-width: 48rem) {
+  .channelsection-content .channel-thumbnail {
+    height: 14.375rem;
+  }
+}
+.channelsection-content .channel-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  transition: transform 350ms ease-in-out;
+}
+.channelsection-content .channel-thumbnail img:not([disabled]):hover {
+  transform: scale(1.05);
+}
+.channelsection .channeldescription .nav-tabs {
+  border-color: hsl(214, 17%, 92%);
+  margin-bottom: 1.5rem;
+}
+.channelsection .channeldescription .nav-tabs .nav-link {
+  color: hsl(216, 15%, 52%);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-bottom: solid 0.25rem transparent;
+}
+.channelsection .channeldescription .nav-tabs .nav-link.active {
+  color: hsl(216, 17%, 12%);
+  border-color: hsl(211, 97%, 60%);
+}
+.channelsection .channeldescription .nav-tabs .nav-link:hover:not(.active) {
+  color: hsl(216, 17%, 12%);
+}
+.channelsection .channeldescription .aboutchannel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.channelsection .channeldescription .aboutchannel .text {
+  color: hsl(218, 17%, 35%);
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .errormain {

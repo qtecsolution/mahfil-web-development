@@ -128,15 +128,11 @@ h6 {
   color: $headingtext;
   margin: 0;
   font-family: inherit;
-  text-wrap: balance;
+  // text-wrap: balance;
 
   &::selection {
     @include setBgColor($primary, $white);
   }
-}
-
-p, span {
-  text-wrap: balance;
 }
 
 img {
@@ -187,7 +183,10 @@ select {
   font-family: inherit;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   img {
     object-fit: contain;
   }

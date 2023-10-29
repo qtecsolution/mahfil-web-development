@@ -19,4 +19,444 @@
       gap: size(16);
     }
   }
+
+  &-info {
+    @include flex-column;
+    gap: size(32);
+  }
+
+  .videoheader {
+    @include flex-column;
+    gap: size(24);
+
+    .videobox {
+      @include radius(8);
+      overflow: hidden;
+    }
+
+    .details {
+      @include flex-column;
+      gap: size(20);
+
+      .videotitle {
+        font-size: size(20);
+        font-weight: 500;
+      }
+
+      .info {
+        @include flex-column;
+        gap: size(20);
+
+        .text {
+          color: $dropdowntext;
+
+          .seemore {
+            color: $textblue;
+            font-weight: 500;
+
+
+            @include hover {
+              color: $primarydark;
+            }
+          }
+        }
+
+        .time {
+          color: $headingtext;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .leftinfo {
+    @include flex;
+    gap: size(20);
+
+    .channeldetail {
+      @include breakpoint(desktop1600) {
+        display: flex;
+      }
+
+      @include breakpoint(desktop1800) {
+        gap: size(16);
+      }
+    }
+  }
+
+  .comments {
+    @include flex-column;
+    gap: size(32);
+
+    &-header {
+      .commenttitle {
+        font-size: size(16);
+        font-weight: 500;
+      }
+    }
+
+    &-body {
+      @include flex-column;
+      gap: size(32);
+
+      .commentbox {
+        @include flex-center-vert;
+        gap: size(12);
+        @include w100;
+
+        .commenter {
+          @include square(40);
+          @include flex-center;
+          @include circle;
+          overflow: hidden;
+        }
+
+        .commentinput {
+          width: calc(100% - size(52));
+
+          .commentfield {
+            @include setBgColor($white, $headingtext);
+            @include border-single(bottom, solid, 1, $menudivider);
+            font-size: size(14);
+            padding: size(6) size(12);
+            @include w100;
+            @include transitionsall;
+
+            &::placeholder {
+              color: $commentplaceholder;
+            }
+
+            &:focus {
+              border-color: $primary;
+            }
+          }
+        }
+      }
+
+      .commenterbox {
+        @include border-single(bottom, solid, 1, $menudivider);
+        font-size: size(14);
+        @include flex;
+        gap: size(10);
+        padding-bottom: size(24);
+
+        &-left {
+          width: calc(100% - size(42));
+          @include flex;
+          gap: size(16);
+
+          .replyer {
+            @include square(40);
+            @include circle;
+            @include flex-center;
+            overflow: hidden;
+          }
+
+          .commenterdetails {
+            width: calc(100% - size(56));
+            @include flex-column;
+            gap: size(10);
+
+            .topinfo {
+              @include flex-column;
+              gap: size(10);
+
+              .user {
+                @include flex-center-vert;
+                gap: size(16);
+
+                .username {
+                  color: $headingtext;
+                  font-size: size(14);
+                  font-weight: 500;
+                }
+
+                .time {
+                  color: $textprimary;
+                  font-size: size(12);
+                }
+              }
+
+              .textcomment {
+                color: $textprimary;
+                font-size: size(14);
+              }
+            }
+
+            .commentlist {
+              @include flex-center-vert;
+              gap: size(16);
+
+              .btnlike {
+                @include flex-center-vert;
+                gap: size(4);
+
+                .icon {
+                  @include square(14);
+                  @include flex-center;
+                }
+
+                .text {
+                  color: $textprimary;
+                  font-size: size(14);
+                }
+              }
+
+              .btn-replies {
+                color: $primary;
+                font-size: size(14);
+
+                @include hover {
+                  color: $primarydark;
+                }
+              }
+            }
+          }
+        }
+
+        &-right {
+          @include square(32);
+          position: relative;
+
+          .btn-dropdown {
+            @include square(24);
+            @include circle;
+          }
+
+          .replydropdown {
+            position: absolute;
+            top: 100%;
+            right: size(0);
+            padding-top: size(8);
+            display: none;
+            @extend %animation;
+            @extend %slideUpIn;
+
+            .replylist {
+              background: $white;
+              @include border(solid, 1, $menudivider);
+              @include radius(10);
+              box-shadow: $dropdownshadow;
+              @include list-vertical;
+              overflow: hidden;
+
+              &-link {
+                background: $white;
+                @include flex-center-vert;
+                gap: size(10);
+                padding: size(8) size(16);
+                @include w100;
+                @include transitionsbackground;
+
+                .icon {
+                  @include square(16);
+                  @include flex-center;
+                  overflow: hidden;
+                }
+
+                .text {
+                  color: $dropdowntext;
+                  font-size: size(15);
+                }
+
+                @include hover {
+                  background: $linkhoverbg;
+                }
+              }
+            }
+          }
+
+          @include hover {
+            .btn-dropdown {
+              background: $linkhoverbg;
+            }
+
+            .replydropdown {
+              display: block;
+            }
+          }
+        }
+      }
+
+      .myreply {
+        @include flex-column;
+        gap: size(24);
+      }
+
+      .myreplybox {
+        font-size: size(14);
+        @include flex;
+        gap: size(10);
+
+        &-left {
+          width: calc(100% - size(42));
+          @include flex;
+          gap: size(16);
+
+          .replyer {
+            @include square(40);
+            @include circle;
+            @include flex-center;
+            overflow: hidden;
+          }
+
+          .myreplydetails {
+            width: calc(100% - size(56));
+            @include flex-column;
+            gap: size(10);
+
+            .topinfo {
+              @include flex-column;
+              gap: size(10);
+
+              .user {
+                @include flex-center-vert;
+                gap: size(16);
+
+                .username {
+                  color: $headingtext;
+                  font-size: size(14);
+                  font-weight: 500;
+                }
+
+                .time {
+                  color: $textprimary;
+                  font-size: size(12);
+                }
+              }
+
+              .textcomment {
+                color: $textprimary;
+                font-size: size(14);
+              }
+            }
+
+            .commentlist {
+              @include flex-center-vert;
+              gap: size(16);
+
+              .btnlike {
+                @include flex-center-vert;
+                gap: size(4);
+
+                .icon {
+                  @include square(14);
+                  @include flex-center;
+                }
+
+                .text {
+                  color: $textprimary;
+                  font-size: size(14);
+                }
+              }
+
+              .btn-replies {
+                color: $primary;
+                font-size: size(14);
+
+                @include hover {
+                  color: $primarydark;
+                }
+              }
+            }
+          }
+        }
+
+        &-right {
+          @include square(32);
+          position: relative;
+
+          .btn-dropdown {
+            @include square(24);
+            @include circle;
+          }
+
+          .replydropdown {
+            position: absolute;
+            top: 100%;
+            right: size(0);
+            padding-top: size(8);
+            display: none;
+            @extend %animation;
+            @extend %slideUpIn;
+
+            .replylist {
+              background: $white;
+              @include border(solid, 1, $menudivider);
+              @include radius(10);
+              box-shadow: $dropdownshadow;
+              @include list-vertical;
+              overflow: hidden;
+
+              &-link {
+                background: $white;
+                @include flex-center-vert;
+                gap: size(10);
+                padding: size(8) size(16);
+                @include w100;
+                @include transitionsbackground;
+
+                .icon {
+                  @include square(16);
+                  @include flex-center;
+                  overflow: hidden;
+                }
+
+                .text {
+                  color: $dropdowntext;
+                  font-size: size(15);
+                }
+
+                @include hover {
+                  background: $linkhoverbg;
+                }
+              }
+            }
+          }
+
+          @include hover {
+            .btn-dropdown {
+              background: $linkhoverbg;
+            }
+
+            .replydropdown {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.reportlist {
+  @include flex-column;
+  gap: size(12);
+  margin-bottom: size(32);
+}
+
+.btn-mycancel,
+.btn-myreport {
+  @include flex-center;
+  padding: size(6) size(12);
+  @include radius(48);
+  font-size: size(15);
+  font-weight: 500;
+  text-align: center;
+}
+
+.btn-mycancel {
+  @include setBgColor($white, $dropdowntext);
+
+  @include hover {
+    @include setBgColor(rgba($black, 0.15), $dropdowntext);
+  }
+}
+
+.btn-myreport {
+  @include setBgColor($white, $primary);
+
+  @include hover {
+    @include setBgColor(lighten($primary, 30%), $primary);
+  }
 }

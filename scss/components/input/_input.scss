@@ -77,12 +77,12 @@ input[type='search']::-webkit-search-results-decoration {
 
 .customcheck {
   .checkprivacy {
-    &:checked ~ .checklabel {
+    &:checked~.checklabel {
       &::before {
         // background: $headingtext;
         // border-color: $headingtext;
       }
-      
+
       &::after {
         opacity: 1;
         visibility: visible;
@@ -141,6 +141,55 @@ input[type='search']::-webkit-search-results-decoration {
       &::selection {
         // @include setBgColor(transparent, $headingtext);
       }
+    }
+  }
+}
+
+.reportinput {
+  .reportinputfield {
+    &:checked~.reportlabel {
+      &::before {
+        border-color: $primary;
+      }
+
+      &::after {
+        background: $primary;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .reportlabel {
+    color: $headingtext;
+    cursor: pointer;
+    font-size: size(15);
+    position: relative;
+    padding-left: size(32);
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      @include translateY(-50%);
+      @include circle;
+    }
+
+    &::before {
+      @include square(20);
+      @include border(solid, 2, $headingtext);
+      left: 0;
+    }
+
+    &::after {
+      @include square(10);
+      background: $primary;
+      left: size(5);
+      background: $white;
+      opacity: 0;
+      visibility: hidden;
+      @include transitionsall;
     }
   }
 }

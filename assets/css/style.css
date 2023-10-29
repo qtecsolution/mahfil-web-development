@@ -9,7 +9,7 @@
 /**=====================================================**
                 ANIMATION-STYLES
 =======================================================**/
-.desktoplist .desktopdropdown-menu, .desktoplist .useritem .userdropdown, .cardvideo-body .videodropdown-info, .cardfavorite-details .favdropdown-info, .cardvid-info {
+.videoplay .comments-body .commenterbox-right .replydropdown, .videoplay .comments-body .myreplybox-right .replydropdown, .desktoplist .desktopdropdown-menu, .desktoplist .useritem .userdropdown, .cardvideo-body .videodropdown-info, .cardfavorite-details .favdropdown-info, .cardvid-info {
   animation-duration: 350ms;
   animation-fill-mode: both;
 }
@@ -47,7 +47,7 @@
     transform: translateY(1.25rem);
   }
 }
-.desktoplist .desktopdropdown-menu, .desktoplist .useritem .userdropdown, .cardvideo-body .videodropdown-info, .cardfavorite-details .favdropdown-info, .cardvid-info {
+.videoplay .comments-body .commenterbox-right .replydropdown, .videoplay .comments-body .myreplybox-right .replydropdown, .desktoplist .desktopdropdown-menu, .desktoplist .useritem .userdropdown, .cardvideo-body .videodropdown-info, .cardfavorite-details .favdropdown-info, .cardvid-info {
   animation-name: slideUpIn;
 }
 
@@ -643,7 +643,6 @@ button:focus,
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 11rem;
   overflow: hidden;
 }
 .cardvideo-header .video-thumbnail img {
@@ -1358,6 +1357,45 @@ input[type=search]::-webkit-search-results-decoration:focus {
 .customcheck .checklabel .checklink:not([disabled]):hover {
   color: hsl(211, 97%, 60%);
 }
+.reportinput .reportinputfield:checked ~ .reportlabel::before {
+  border-color: hsl(211, 97%, 60%);
+}
+.reportinput .reportinputfield:checked ~ .reportlabel::after {
+  background: hsl(211, 97%, 60%);
+  opacity: 1;
+  visibility: visible;
+}
+.reportinput .reportlabel {
+  color: hsl(216, 17%, 12%);
+  cursor: pointer;
+  font-size: 0.9375rem;
+  position: relative;
+  padding-left: 2rem;
+}
+.reportinput .reportlabel::before, .reportinput .reportlabel::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 100%;
+}
+.reportinput .reportlabel::before {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: solid 0.125rem hsl(216, 17%, 12%);
+  left: 0;
+}
+.reportinput .reportlabel::after {
+  width: 0.625rem;
+  height: 0.625rem;
+  background: hsl(211, 97%, 60%);
+  left: 0.3125rem;
+  background: hsl(0, 0%, 100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 350ms ease-in-out;
+}
+
 .offcanvas {
   background: hsl(0, 0%, 100%);
   min-height: 100vh;
@@ -1924,6 +1962,7 @@ table tr td {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  justify-content: flex-end;
 }
 .videolist-link {
   display: flex;
@@ -2426,6 +2465,426 @@ table tr td {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+.videoplay-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.videoplay .videoheader {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.videoplay .videoheader .videobox {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.videoplay .videoheader .details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.videoplay .videoheader .details .videotitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.videoplay .videoheader .details .info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.videoplay .videoheader .details .info .text {
+  color: hsl(218, 17%, 35%);
+}
+.videoplay .videoheader .details .info .text .seemore {
+  color: hsl(211, 100%, 65%);
+  font-weight: 500;
+}
+.videoplay .videoheader .details .info .text .seemore:not([disabled]):hover {
+  color: hsl(207, 100%, 28%);
+}
+.videoplay .videoheader .details .info .time {
+  color: hsl(216, 17%, 12%);
+  font-weight: 500;
+}
+.videoplay .leftinfo {
+  display: flex;
+  gap: 1.25rem;
+}
+@media screen and (min-width: 100rem) {
+  .videoplay .leftinfo .channeldetail {
+    display: flex;
+  }
+}
+@media screen and (min-width: 112.5rem) {
+  .videoplay .leftinfo .channeldetail {
+    gap: 1rem;
+  }
+}
+.videoplay .comments {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.videoplay .comments-header .commenttitle {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.videoplay .comments-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.videoplay .comments-body .commentbox {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+.videoplay .comments-body .commentbox .commenter {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.videoplay .comments-body .commentbox .commentinput {
+  width: calc(100% - 3.25rem);
+}
+.videoplay .comments-body .commentbox .commentinput .commentfield {
+  background: hsl(0, 0%, 100%);
+  color: hsl(216, 17%, 12%);
+  border-bottom: solid 0.0625rem hsl(214, 17%, 92%);
+  font-size: 0.875rem;
+  padding: 0.375rem 0.75rem;
+  width: 100%;
+  transition: all 350ms ease-in-out;
+}
+.videoplay .comments-body .commentbox .commentinput .commentfield::-moz-placeholder {
+  color: hsl(0, 0%, 38%);
+}
+.videoplay .comments-body .commentbox .commentinput .commentfield::placeholder {
+  color: hsl(0, 0%, 38%);
+}
+.videoplay .comments-body .commentbox .commentinput .commentfield:focus {
+  border-color: hsl(211, 97%, 60%);
+}
+.videoplay .comments-body .commenterbox {
+  border-bottom: solid 0.0625rem hsl(214, 17%, 92%);
+  font-size: 0.875rem;
+  display: flex;
+  gap: 0.625rem;
+  padding-bottom: 1.5rem;
+}
+.videoplay .comments-body .commenterbox-left {
+  width: calc(100% - 2.625rem);
+  display: flex;
+  gap: 1rem;
+}
+.videoplay .comments-body .commenterbox-left .replyer {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.videoplay .comments-body .commenterbox-left .commenterdetails {
+  width: calc(100% - 3.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.videoplay .comments-body .commenterbox-left .commenterdetails .topinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.videoplay .comments-body .commenterbox-left .commenterdetails .topinfo .user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.videoplay .comments-body .commenterbox-left .commenterdetails .topinfo .user .username {
+  color: hsl(216, 17%, 12%);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.videoplay .comments-body .commenterbox-left .commenterdetails .topinfo .user .time {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.75rem;
+}
+.videoplay .comments-body .commenterbox-left .commenterdetails .topinfo .textcomment {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.875rem;
+}
+.videoplay .comments-body .commenterbox-left .commenterdetails .commentlist {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.videoplay .comments-body .commenterbox-left .commenterdetails .commentlist .btnlike {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.videoplay .comments-body .commenterbox-left .commenterdetails .commentlist .btnlike .icon {
+  width: 0.875rem;
+  height: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.videoplay .comments-body .commenterbox-left .commenterdetails .commentlist .btnlike .text {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.875rem;
+}
+.videoplay .comments-body .commenterbox-left .commenterdetails .commentlist .btn-replies {
+  color: hsl(211, 97%, 60%);
+  font-size: 0.875rem;
+}
+.videoplay .comments-body .commenterbox-left .commenterdetails .commentlist .btn-replies:not([disabled]):hover {
+  color: hsl(207, 100%, 28%);
+}
+.videoplay .comments-body .commenterbox-right {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+}
+.videoplay .comments-body .commenterbox-right .btn-dropdown {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+}
+.videoplay .comments-body .commenterbox-right .replydropdown {
+  position: absolute;
+  top: 100%;
+  right: 0rem;
+  padding-top: 0.5rem;
+  display: none;
+}
+.videoplay .comments-body .commenterbox-right .replydropdown .replylist {
+  background: hsl(0, 0%, 100%);
+  border: solid 0.0625rem hsl(214, 17%, 92%);
+  border-radius: 0.625rem;
+  box-shadow: 0.25rem 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.04);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.videoplay .comments-body .commenterbox-right .replydropdown .replylist-link {
+  background: hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  transition: background 350ms ease-in-out;
+}
+.videoplay .comments-body .commenterbox-right .replydropdown .replylist-link .icon {
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.videoplay .comments-body .commenterbox-right .replydropdown .replylist-link .text {
+  color: hsl(218, 17%, 35%);
+  font-size: 0.9375rem;
+}
+.videoplay .comments-body .commenterbox-right .replydropdown .replylist-link:not([disabled]):hover {
+  background: hsl(213, 39%, 95%);
+}
+.videoplay .comments-body .commenterbox-right:not([disabled]):hover .btn-dropdown {
+  background: hsl(213, 39%, 95%);
+}
+.videoplay .comments-body .commenterbox-right:not([disabled]):hover .replydropdown {
+  display: block;
+}
+.videoplay .comments-body .myreply {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.videoplay .comments-body .myreplybox {
+  font-size: 0.875rem;
+  display: flex;
+  gap: 0.625rem;
+}
+.videoplay .comments-body .myreplybox-left {
+  width: calc(100% - 2.625rem);
+  display: flex;
+  gap: 1rem;
+}
+.videoplay .comments-body .myreplybox-left .replyer {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.videoplay .comments-body .myreplybox-left .myreplydetails {
+  width: calc(100% - 3.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.videoplay .comments-body .myreplybox-left .myreplydetails .topinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.videoplay .comments-body .myreplybox-left .myreplydetails .topinfo .user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.videoplay .comments-body .myreplybox-left .myreplydetails .topinfo .user .username {
+  color: hsl(216, 17%, 12%);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.videoplay .comments-body .myreplybox-left .myreplydetails .topinfo .user .time {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.75rem;
+}
+.videoplay .comments-body .myreplybox-left .myreplydetails .topinfo .textcomment {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.875rem;
+}
+.videoplay .comments-body .myreplybox-left .myreplydetails .commentlist {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.videoplay .comments-body .myreplybox-left .myreplydetails .commentlist .btnlike {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.videoplay .comments-body .myreplybox-left .myreplydetails .commentlist .btnlike .icon {
+  width: 0.875rem;
+  height: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.videoplay .comments-body .myreplybox-left .myreplydetails .commentlist .btnlike .text {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.875rem;
+}
+.videoplay .comments-body .myreplybox-left .myreplydetails .commentlist .btn-replies {
+  color: hsl(211, 97%, 60%);
+  font-size: 0.875rem;
+}
+.videoplay .comments-body .myreplybox-left .myreplydetails .commentlist .btn-replies:not([disabled]):hover {
+  color: hsl(207, 100%, 28%);
+}
+.videoplay .comments-body .myreplybox-right {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+}
+.videoplay .comments-body .myreplybox-right .btn-dropdown {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+}
+.videoplay .comments-body .myreplybox-right .replydropdown {
+  position: absolute;
+  top: 100%;
+  right: 0rem;
+  padding-top: 0.5rem;
+  display: none;
+}
+.videoplay .comments-body .myreplybox-right .replydropdown .replylist {
+  background: hsl(0, 0%, 100%);
+  border: solid 0.0625rem hsl(214, 17%, 92%);
+  border-radius: 0.625rem;
+  box-shadow: 0.25rem 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.04);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.videoplay .comments-body .myreplybox-right .replydropdown .replylist-link {
+  background: hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  transition: background 350ms ease-in-out;
+}
+.videoplay .comments-body .myreplybox-right .replydropdown .replylist-link .icon {
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.videoplay .comments-body .myreplybox-right .replydropdown .replylist-link .text {
+  color: hsl(218, 17%, 35%);
+  font-size: 0.9375rem;
+}
+.videoplay .comments-body .myreplybox-right .replydropdown .replylist-link:not([disabled]):hover {
+  background: hsl(213, 39%, 95%);
+}
+.videoplay .comments-body .myreplybox-right:not([disabled]):hover .btn-dropdown {
+  background: hsl(213, 39%, 95%);
+}
+.videoplay .comments-body .myreplybox-right:not([disabled]):hover .replydropdown {
+  display: block;
+}
+
+.reportlist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.btn-mycancel,
+.btn-myreport {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.375rem 0.75rem;
+  border-radius: 3rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.btn-mycancel {
+  background: hsl(0, 0%, 100%);
+  color: hsl(218, 17%, 35%);
+}
+.btn-mycancel:not([disabled]):hover {
+  background: rgba(0, 0, 0, 0.15);
+  color: hsl(218, 17%, 35%);
+}
+
+.btn-myreport {
+  background: hsl(0, 0%, 100%);
+  color: hsl(211, 97%, 60%);
+}
+.btn-myreport:not([disabled]):hover {
+  background: #cde5fe;
+  color: hsl(211, 97%, 60%);
 }
 
 .errormain {

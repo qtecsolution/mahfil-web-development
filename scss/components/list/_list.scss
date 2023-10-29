@@ -269,6 +269,7 @@
 .videolist {
   @include list-horizontal;
   gap: size(8);
+  justify-content: flex-end;
 
   &-link {
     @include flex-center-vert;

@@ -1676,6 +1676,14 @@ input[type=search]::-webkit-search-results-decoration:focus {
 .sidebar.sidecollapsed .logobox .btn-show {
   margin-inline: auto;
 }
+.sidebar.sidecollapsed .publisher {
+  border: none;
+  min-height: 6.625rem;
+}
+.sidebar.sidecollapsed .publisher .btn-learnmore,
+.sidebar.sidecollapsed .publisher .publishertitle {
+  display: none;
+}
 
 .publisher {
   background: hsl(216, 45%, 98%);

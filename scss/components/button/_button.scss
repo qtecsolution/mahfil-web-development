@@ -189,3 +189,50 @@ button,
     border-color: $headingtext;
   }
 }
+
+.btn-social {
+  @include flex-center;
+  gap: size(10);
+  background: $white;
+  @include border(solid, 1, $searchborder);
+  @include radius(6);
+  padding: size(10.5) size(16);
+
+  .icon {
+    @include square(19);
+    @include flex-center;
+    overflow: hidden;
+  }
+
+  .text {
+    color: $textprimary;
+    font-size: size(14);
+    font-weight: 500;
+  }
+
+  @include hover {
+    background: $searchborder;
+  }
+}
+
+.btn-skip {
+  color: $textprimary;
+  font-size: size(16);
+  font-style: normal;
+  font-weight: 400;
+
+  @include hover {
+    color: $primary;
+  }
+}
+
+.btn-resend {
+  color: $textprimary;
+  font-size: size(14);
+  font-style: normal;
+  font-weight: 500;
+
+  @include hover {
+    color: $primary;
+  }
+}

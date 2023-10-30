@@ -153,6 +153,23 @@ a:hover {
   text-decoration: none;
 }
 
+a {
+  color: $headingtext;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $headingtext;
+  }
+
+  p {
+    color: $textprimary;
+  }
+}
+
 strong,
 i {
   font-weight: bolder;

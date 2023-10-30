@@ -4,6 +4,7 @@
 .myauth {
   @include flex-column;
   gap: size(36);
+  padding-bottom: size(48);
 
   &-header {
     @include flex-center-column;
@@ -12,6 +13,19 @@
     .authicon {
       width: size(231);
       height: size(168);
+      @include flex-center;
+      overflow: hidden;
+    }
+
+    .regicon {
+      width: size(180);
+      height: size(150);
+      @include flex-center;
+      overflow: hidden;
+    }
+
+    .otpicon {
+      @include square(180);
       @include flex-center;
       overflow: hidden;
     }
@@ -27,7 +41,108 @@
       font-weight: 500;
       text-align: center;
     }
+
+    .authbox {
+      @include flex-column;
+      gap: size(8);
+
+      label {
+        color: $labeltext;
+        font-size: size(14);
+        font-weight: 500;
+      }
+    }
+
+    .iti {
+      @include w100;
+
+      input {
+        @include setBgColor($white, $headingtext);
+        @include border(solid, 1, $inputbg);
+        @include radius(6);
+        font-size: size(14);
+        @include w100;
+        height: size(48);
+        @include transitionsall;
+
+        &::placeholder {
+          color: $textplaceholder;
+        }
+
+        &:focus {
+          border-color: $primary;
+        }
+      }
+    }
+
+    .otpbox {
+      @include flex-center;
+      gap: size(24);
+
+      .otpfield {
+        @include setBgColor($white, $headingtext);
+        @include square(60);
+        @include border(solid, 1, $white);
+        @include circle;
+        @include flex-center;
+        text-align: center;
+        @include transitionsall;
+
+        &:focus {
+          border-color: $textprimary;
+        }
+      }
+    }
+
+    .remainingtime {
+      color: $textprimary;
+      font-size: size(15);
+    }
   }
 
-  &-footer {}
+  &-footer {
+    .titlebox {
+      @include flex-center-vert;
+      gap: size(8);
+
+      .title {
+        font-size: size(16);
+      }
+    }
+  }
+}
+
+.regform {
+  @include flex-column;
+  gap: size(16);
+
+  .inputbox {
+    @include flex-column;
+    gap: size(8);
+
+    label {
+      color: $labeltext;
+      font-size: size(14);
+      font-weight: 500;
+    }
+
+    input {
+      @include setBgColor($white, $headingtext);
+      @include border(solid, 1, $inputbg);
+      @include radius(6);
+      font-size: size(14);
+      @include w100;
+      height: size(48);
+      padding-inline: size(16);
+      @include transitionsall;
+
+      &::placeholder {
+        color: $textplaceholder;
+      }
+
+      &:focus {
+        border-color: $textprimary;
+      }
+    }
+  }
 }

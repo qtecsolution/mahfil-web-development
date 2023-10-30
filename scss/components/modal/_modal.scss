@@ -44,7 +44,16 @@
 }
 
 .authmodal {
+  overflow: hidden;
+
   .modal-content {
     background: $modalbg;
+  }
+
+  .modal-body {
+    &::-webkit-scrollbar {
+      background: transparent;
+      width: size(0);
+    }
   }
 }

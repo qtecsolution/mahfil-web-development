@@ -1,24 +1,23 @@
-/** DEFINE MODALS **/
-const paymentModal = document.querySelector('#paymentModal');
-const payModal = document.querySelector('#payModal');
-const paymentConfirmed = document.querySelector('#paymentConfirmed');
+const loginModal = document.querySelector('#loginModal');
+const sendOTPModal = document.querySelector('#sendOTPModal');
+const registerModal = document.querySelector('#registerModal');
 
-const payment = new bootstrap.Modal(paymentModal);
-const pay = new bootstrap.Modal(payModal);
-const confirmed = new bootstrap.Modal(paymentConfirmed);
+const login = new bootstrap.Modal(loginModal);
+const sendOTP = new bootstrap.Modal(sendOTPModal);
+const register = new bootstrap.Modal(registerModal);
 
-const proceedButton = document.querySelector('#btn-proceed');
-const statementButton = document.querySelector('#btn-statement');
+const loginButton = document.querySelector('#btn-login');
+const otpButton = document.querySelector('#btn-otp');
 
-proceedButton.addEventListener('click', showPay);
-statementButton.addEventListener('click', showConfirmed);
+loginButton.addEventListener('click', showOTPModal);
+otpButton.addEventListener('click', showRegisterModal);
 
-function showPay() {
-    payment.hide();
-    pay.show();
+function showOTPModal() {
+    login.hide();
+    sendOTP.show();
 }
 
-function showConfirmed() {
-    pay.hide();
-    confirmed.show();
+function showRegisterModal() {
+    sendOTP.hide();
+    register.show();
 }

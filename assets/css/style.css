@@ -385,6 +385,21 @@ a:hover {
   text-decoration: none;
 }
 
+a {
+  color: hsl(216, 17%, 12%);
+}
+a h1,
+a h2,
+a h3,
+a h4,
+a h5,
+a h6 {
+  color: hsl(216, 17%, 12%);
+}
+a p {
+  color: hsl(216, 15%, 52%);
+}
+
 strong,
 i {
   font-weight: bolder;
@@ -630,6 +645,53 @@ button:focus,
   background: hsl(216, 17%, 12%);
   color: hsl(0, 0%, 100%);
   border-color: hsl(216, 17%, 12%);
+}
+
+.btn-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  background: hsl(0, 0%, 100%);
+  border: solid 0.0625rem hsl(214, 32%, 91%);
+  border-radius: 0.375rem;
+  padding: 0.65625rem 1rem;
+}
+.btn-social .icon {
+  width: 1.1875rem;
+  height: 1.1875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.btn-social .text {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.btn-social:not([disabled]):hover {
+  background: hsl(214, 32%, 91%);
+}
+
+.btn-skip {
+  color: hsl(216, 15%, 52%);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+}
+.btn-skip:not([disabled]):hover {
+  color: hsl(211, 97%, 60%);
+}
+
+.btn-resend {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+}
+.btn-resend:not([disabled]):hover {
+  color: hsl(211, 97%, 60%);
 }
 
 .cardvideo {
@@ -1348,47 +1410,6 @@ input[type=search]::-webkit-search-results-decoration:focus {
   outline: none;
 }
 
-.customcheck .checkprivacy:checked ~ .checklabel::after {
-  opacity: 1;
-  visibility: visible;
-}
-.customcheck .checklabel {
-  cursor: pointer;
-  position: relative;
-  padding-left: 1.875rem;
-}
-.customcheck .checklabel::before, .customcheck .checklabel::after {
-  content: "";
-  position: absolute;
-}
-.customcheck .checklabel::before {
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 1.125rem;
-  height: 1.125rem;
-  border-radius: 0.25rem;
-  transition: all 350ms ease-in-out;
-}
-.customcheck .checklabel::after {
-  width: 0.625rem;
-  height: 0.3125rem;
-  border: solid 0.0625rem hsl(0, 0%, 100%);
-  border-top: 0;
-  left: 0.28125rem;
-  border-right: 0;
-  top: 50%;
-  transform: translateY(-70%) rotate(-45deg);
-  opacity: 0;
-  visibility: hidden;
-  transition: transform 350ms ease-in-out;
-}
-.customcheck .checklabel .checklink {
-  transition: color 350ms ease-in-out;
-}
-.customcheck .checklabel .checklink:not([disabled]):hover {
-  color: hsl(211, 97%, 60%);
-}
 .reportinput .reportinputfield:checked ~ .reportlabel::before {
   border-color: hsl(211, 97%, 60%);
 }
@@ -1514,8 +1535,15 @@ input[type=search]::-webkit-search-results-decoration:focus {
   stroke: hsl(0, 91%, 54%);
 }
 
+.authmodal {
+  overflow: hidden;
+}
 .authmodal .modal-content {
   background: hsl(204, 45%, 98%);
+}
+.authmodal .modal-body::-webkit-scrollbar {
+  background: transparent;
+  width: 0rem;
 }
 
 .tooltip-inner {
@@ -2016,6 +2044,73 @@ table tr td {
 .videolist-link .text {
   color: hsl(216, 15%, 52%);
   font-size: 0.75rem;
+}
+
+.customcheck .checkprivacy:checked ~ .checklabel::before {
+  background: hsl(211, 97%, 60%);
+  border-color: hsl(211, 97%, 60%);
+}
+.customcheck .checkprivacy:checked ~ .checklabel::after {
+  opacity: 1;
+  visibility: visible;
+}
+.customcheck .checklabel {
+  color: hsl(228, 11%, 46%);
+  cursor: pointer;
+  position: relative;
+  padding-left: 1.875rem;
+}
+.customcheck .checklabel::before, .customcheck .checklabel::after {
+  content: "";
+  position: absolute;
+}
+.customcheck .checklabel::before {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: hsl(214, 32%, 91%);
+  width: 1.125rem;
+  height: 1.125rem;
+  border: solid 0.0625rem hsl(214, 17%, 92%);
+  border-radius: 0.25rem;
+  transition: all 350ms ease-in-out;
+}
+.customcheck .checklabel::after {
+  width: 0.625rem;
+  height: 0.3125rem;
+  border: solid 0.0625rem hsl(0, 0%, 100%);
+  border-top: 0;
+  left: 0.28125rem;
+  border-right: 0;
+  top: 50%;
+  transform: translateY(-70%) rotate(-45deg);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 350ms ease-in-out;
+}
+.customcheck .checklabel::-moz-selection {
+  background: transparent;
+  color: hsl(211, 97%, 60%);
+}
+.customcheck .checklabel::selection {
+  background: transparent;
+  color: hsl(211, 97%, 60%);
+}
+.customcheck .checklabel .checklink {
+  color: hsl(211, 97%, 60%);
+  transition: color 350ms ease-in-out;
+  text-decoration: none;
+}
+.customcheck .checklabel .checklink:not([disabled]):hover {
+  color: hsl(207, 100%, 28%);
+}
+.customcheck .checklabel .checklink::-moz-selection {
+  background: transparent;
+  color: hsl(211, 97%, 60%);
+}
+.customcheck .checklabel .checklink::selection {
+  background: transparent;
+  color: hsl(211, 97%, 60%);
 }
 
 .categoryradio .radioinput:checked ~ .radiolabel {
@@ -2927,6 +3022,7 @@ table tr td {
   display: flex;
   flex-direction: column;
   gap: 2.25rem;
+  padding-bottom: 3rem;
 }
 .myauth-header {
   display: flex;
@@ -2943,6 +3039,22 @@ table tr td {
   justify-content: center;
   overflow: hidden;
 }
+.myauth-header .regicon {
+  width: 11.25rem;
+  height: 9.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.myauth-header .otpicon {
+  width: 11.25rem;
+  height: 11.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 .myauth-body {
   display: flex;
   flex-direction: column;
@@ -2954,6 +3066,109 @@ table tr td {
   font-weight: 500;
   text-align: center;
 }
+.myauth-body .authbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.myauth-body .authbox label {
+  color: hsl(210, 21%, 33%);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.myauth-body .iti {
+  width: 100%;
+}
+.myauth-body .iti input {
+  background: hsl(0, 0%, 100%);
+  color: hsl(216, 17%, 12%);
+  border: solid 0.0625rem hsl(214, 32%, 91%);
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  width: 100%;
+  height: 3rem;
+  transition: all 350ms ease-in-out;
+}
+.myauth-body .iti input::-moz-placeholder {
+  color: hsl(240, 6%, 73%);
+}
+.myauth-body .iti input::placeholder {
+  color: hsl(240, 6%, 73%);
+}
+.myauth-body .iti input:focus {
+  border-color: hsl(211, 97%, 60%);
+}
+.myauth-body .otpbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.myauth-body .otpbox .otpfield {
+  background: hsl(0, 0%, 100%);
+  color: hsl(216, 17%, 12%);
+  width: 3.75rem;
+  height: 3.75rem;
+  border: solid 0.0625rem hsl(0, 0%, 100%);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 350ms ease-in-out;
+}
+.myauth-body .otpbox .otpfield:focus {
+  border-color: hsl(216, 15%, 52%);
+}
+.myauth-body .remainingtime {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.9375rem;
+}
+.myauth-footer .titlebox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.myauth-footer .titlebox .title {
+  font-size: 1rem;
+}
+
+.regform {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.regform .inputbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.regform .inputbox label {
+  color: hsl(210, 21%, 33%);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.regform .inputbox input {
+  background: hsl(0, 0%, 100%);
+  color: hsl(216, 17%, 12%);
+  border: solid 0.0625rem hsl(214, 32%, 91%);
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  width: 100%;
+  height: 3rem;
+  padding-inline: 1rem;
+  transition: all 350ms ease-in-out;
+}
+.regform .inputbox input::-moz-placeholder {
+  color: hsl(240, 6%, 73%);
+}
+.regform .inputbox input::placeholder {
+  color: hsl(240, 6%, 73%);
+}
+.regform .inputbox input:focus {
+  border-color: hsl(216, 15%, 52%);
+}
+
 .errormain {
   display: flex;
   align-items: center;

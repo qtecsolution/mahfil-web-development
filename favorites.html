@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mahfil | Favorites</title>
   <!-- FAVICON-ICON -->
-  <link rel="shortcut icon" href="assets/images/logo/favicon.svg" type="image/svg+xml" />
+  <link rel="shortcut icon" href="assets/images/logo/favicon.ico" type="image/x-icon" />
+  <!-- INTLTELINPUT-CSS -->
+  <link rel="stylesheet" href="assets/css/intlTelInput/intlTelInput.css">
   <!-- BOOTSTRAP-CSS -->
   <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
   <!-- CUSTOM-CSS -->
@@ -146,7 +148,7 @@
               Sign in to like videos, comment, and subscribe.
             </span>
 
-            <a href="#" class="btn-login">
+            <a href="#" class="btn-login" data-bs-toggle="modal" data-bs-target="#loginModal">
               <span class="icon">
                 <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -476,7 +478,7 @@
                 Sign in to like videos, comment, and subscribe.
               </span>
 
-              <a href="#" class="btn-login">
+              <a href="#" class="btn-login" data-bs-toggle="modal" data-bs-target="#loginModal">
                 <span class="icon">
                   <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -940,7 +942,7 @@
               <div class="userdropdown">
                 <ul class="userlist">
                   <li class="userlist-item">
-                    <a href="#" class="userlist-link">
+                    <a href="#" class="userlist-link" data-bs-toggle="modal" data-bs-target="#loginModal">
                       <span class="icon">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <g>
@@ -1580,6 +1582,10 @@
   <script src="assets/js/bootsrap/bootstrap.bundle.min.js"></script>
   <!-- SIDEBAR-JS -->
   <script src="assets/js/sidebar/sidebar.js"></script>
+  <!-- INTLTELINPUT-JS -->
+  <script src="assets/js/intlTelInput/intlTelInput.min.js"></script>
+  <!-- PHONE-JS -->
+  <script src="assets/js/intlTelInput/phone.js"></script>
 </body>
 
 </html>

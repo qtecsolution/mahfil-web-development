@@ -696,6 +696,12 @@ button:focus,
 .cardvideo-body .details .videotitle:not([disabled]):hover {
   color: hsl(211, 97%, 60%);
 }
+.cardvideo-body .details .detail .channelname {
+  max-width: 99%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .cardvideo-body .details .detail .channelname,
 .cardvideo-body .details .detail .videotext {
   font-size: 0.875rem;
@@ -795,10 +801,24 @@ button:focus,
 .cardchannel-body .channelinfo .title {
   font-size: 1.125rem;
   font-weight: 600;
+  min-height: 2.25rem;
+  max-height: 2.5rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
 }
-.cardchannel-body .channelinfo .text {
+.cardchannel-body .channelinfo .text,
+.cardchannel-body .channelinfo .channelname {
   font-size: 0.875rem;
   font-weight: 500;
+}
+.cardchannel-body .channelinfo .channelname {
+  max-width: 99%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .cardchannel-body .subscribebox {
   max-width: 7rem;
@@ -872,6 +892,12 @@ button:focus,
 }
 .cardfavorite-details .describe .videotitle:not([disabled]):hover {
   color: hsl(211, 97%, 60%);
+}
+.cardfavorite-details .describe .detail .channelname {
+  max-width: 99%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .cardfavorite-details .describe .detail .channelname,
 .cardfavorite-details .describe .detail .videotext {
@@ -1016,6 +1042,12 @@ button:focus,
 }
 .cardvid-details .describe .videotitle:not([disabled]):hover {
   color: hsl(211, 97%, 60%);
+}
+.cardvid-details .describe .detail .channelname {
+  max-width: 99%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .cardvid-details .describe .detail .channelname,
 .cardvid-details .describe .detail .videotext {
@@ -1480,6 +1512,10 @@ input[type=search]::-webkit-search-results-decoration:focus {
 }
 .modal-header .btn-close:not([disabled]):hover svg path {
   stroke: hsl(0, 91%, 54%);
+}
+
+.authmodal .modal-content {
+  background: hsl(204, 45%, 98%);
 }
 
 .tooltip-inner {
@@ -2887,6 +2923,37 @@ table tr td {
   color: hsl(211, 97%, 60%);
 }
 
+.myauth {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+.myauth-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.myauth-header .authicon {
+  width: 14.4375rem;
+  height: 10.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.myauth-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.myauth-body .authtitle {
+  color: hsl(220, 26%, 14%);
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-align: center;
+}
 .errormain {
   display: flex;
   align-items: center;

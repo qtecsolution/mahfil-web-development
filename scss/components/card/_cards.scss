@@ -60,6 +60,9 @@
       }
 
       .detail {
+        .channelname {
+          @include text-overflow;
+        }
 
         .channelname,
         .videotext {
@@ -165,11 +168,19 @@
       .title {
         font-size: size(18);
         font-weight: 600;
+        min-height: size(36);
+        max-height: size(40);
+        @include line-clamp;
       }
 
-      .text {
+      .text,
+      .channelname {
         font-size: size(14);
         font-weight: 500;
+      }
+
+      .channelname {
+        @include text-overflow;
       }
     }
 
@@ -238,6 +249,9 @@
       }
 
       .detail {
+        .channelname {
+          @include text-overflow;
+        }
 
         .channelname,
         .videotext {
@@ -380,6 +394,9 @@
       }
 
       .detail {
+        .channelname {
+          @include text-overflow;
+        }
 
         .channelname,
         .videotext {

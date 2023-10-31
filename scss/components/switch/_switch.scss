@@ -1,3 +1,53 @@
 @use "../../global" as *;
 @use "../../partials" as *;
 
+.switch {
+  position: relative;
+  display: inline-block;
+  width: size(60);
+  height: size(34);
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: $switchbg;
+  transition: .4s;
+}
+
+.slider:before {
+  background: $white;
+  content: "";
+  @include square(26);
+  position: absolute;
+  left: size(4);
+  bottom: size(4);
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background: $primary;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 .0625rem $primary;
+}
+
+input:checked+.slider:before {
+  @include translateX(size(26));
+}
+
+.slider.round {
+  @include radius(34);
+}
+
+.slider.round:before {
+  @include circle;
+}

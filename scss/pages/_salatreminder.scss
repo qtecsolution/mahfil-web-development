@@ -19,21 +19,195 @@
   &-body {
     .leftcontent {
       @include flex-column;
-      gap: size(32);
-  
-      .reminderlogo {
-        width: size(137);
-        height: size(38);
-        @include flex-center;
-        overflow: hidden;
-      }
-  
-      .getapp {
-        .applink {
-          width: size(125);
-          height: size(36);
+      gap: size(24);
+
+      .topinfo {
+        .datetitle {
+          color: $dropdowntext;
+          font-size: size(18);
+          font-weight: 700;
+        }
+
+        .date {
+          color: $textprimary;
+          font-size: size(15);
+        }
+
+        .location {
+          @include flex-center-vert;
+          gap: size(8);
+
+          .locicon {
+            @include square(20);
+            @include flex-center;
+            overflow: hidden;
+          }
+
+          .locname {
+            color: $dropdowntext;
+            font-size: size(18);
+            font-weight: 600;
+          }
+        }
+
+        .btn-refresh {
+          @include square(20);
           @include flex-center;
           overflow: hidden;
+
+          @include hover {
+            svg {
+              path {
+                stroke: $primary;
+              }
+            }
+          }
+        }
+      }
+
+      .downinfo {
+        @include flex-column;
+        gap: size(24);
+
+        .salatremind {
+          background: $linkhoverbg;
+          @include radius(10);
+          padding: size(14);
+
+          @include breakpoint(mobile768) {
+            padding: size(24);
+          }
+
+          .waqtname {
+            color: $headingtext;
+            font-size: size(24);
+            font-weight: 600;
+            margin-bottom: size(8);
+          }
+
+          .waqtduration {
+            color: $headingtext;
+            font-size: size(13);
+            font-weight: 500;
+
+            @include breakpoint(desktop1400) {
+              font-size: size(16);
+            }
+          }
+
+          .remaining {
+            @include flex-column;
+            gap: size(24);
+
+            &-title {
+              color: $headingtext;
+              font-size: size(16);
+              font-weight: 500;
+            }
+
+            .progress {
+              background: $white;
+              @include radius(48);
+              height: size(6);
+
+              &-bar {
+                background: $primary;
+                @include radius(48);
+              }
+            }
+          }
+
+          .clock {
+            @include flex;
+            gap: size(10);
+
+            @include breakpoint(desktop1400) {
+              gap: size(20);
+            }
+
+            .divide {
+              color: $dropdowntext;
+              font-size: size(27);
+              font-weight: 700;
+              @include flex-center-vert;
+              height: size(40);
+            }
+
+            .hours,
+            .minutes,
+            .seconds {
+              @include flex-center-column;
+              gap: size(5);
+              text-align: center;
+
+              .time {
+                color: $dropdowntext;
+                font-size: size(27);
+                font-weight: 700;
+              }
+
+              .title {
+                color: $timetext;
+                font-size: size(16);
+                font-weight: 500;
+              }
+            }
+          }
+        }
+
+        .salatlist {
+          @include flex-column;
+          gap: size(48);
+
+          @include breakpoint(mobile768) {
+            max-width: 75%;
+          }
+
+          &-header {
+            @include flex-center-between;
+
+            .title {
+              color: $headingtext;
+              font-size: size(16);
+              font-weight: 600;
+              width: calc(100% - size(64));
+            }
+
+            .switchbox {
+              width: size(64);
+              @include flex-center;
+            }
+          }
+
+          &-body {
+            @include flex-column;
+            gap: size(24);
+
+            .salatinfo {
+              @include flex-center-between;
+
+              .salatwaqt {
+                width: calc(100% - size(64));
+
+                .waqtname {
+                  color: $headingtext;
+                  font-size: size(16);
+                  font-weight: 600;
+                }
+
+                .waqtduration {
+                  color: $textprimary;
+                  font-size: size(14);
+                  font-weight: 500;
+                }
+              }
+
+              .switchbox {
+                width: size(64);
+                @include flex-center;
+              }
+            }
+          }
         }
       }
     }

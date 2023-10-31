@@ -5,7 +5,6 @@
 	- Website: https://www.qtecsolution.com
 ================================= */
 @import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 /**=====================================================**
                 ANIMATION-STYLES
 =======================================================**/
@@ -2054,6 +2053,58 @@ table tr td {
   font-size: 0.75rem;
 }
 
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3.75rem;
+  height: 2.125rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: hsl(211, 25%, 84%);
+  transition: 0.4s;
+}
+
+.slider:before {
+  background: hsl(0, 0%, 100%);
+  content: "";
+  width: 1.625rem;
+  height: 1.625rem;
+  position: absolute;
+  left: 0.25rem;
+  bottom: 0.25rem;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background: hsl(211, 97%, 60%);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 0.0625rem hsl(211, 97%, 60%);
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.625rem);
+}
+
+.slider.round {
+  border-radius: 2.125rem;
+}
+
+.slider.round:before {
+  border-radius: 100%;
+}
+
 .customcheck .checkprivacy:checked ~ .checklabel::before {
   background: hsl(211, 97%, 60%);
   border-color: hsl(211, 97%, 60%);
@@ -2337,23 +2388,192 @@ table tr td {
 .salatreminder-body .leftcontent {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
-.salatreminder-body .leftcontent .reminderlogo {
-  width: 8.5625rem;
-  height: 2.375rem;
+.salatreminder-body .leftcontent .topinfo .datetitle {
+  color: hsl(218, 17%, 35%);
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.salatreminder-body .leftcontent .topinfo .date {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.9375rem;
+}
+.salatreminder-body .leftcontent .topinfo .location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.salatreminder-body .leftcontent .topinfo .location .locicon {
+  width: 1.25rem;
+  height: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
-.salatreminder-body .leftcontent .getapp .applink {
-  width: 7.8125rem;
-  height: 2.25rem;
+.salatreminder-body .leftcontent .topinfo .location .locname {
+  color: hsl(218, 17%, 35%);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+.salatreminder-body .leftcontent .topinfo .btn-refresh {
+  width: 1.25rem;
+  height: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+.salatreminder-body .leftcontent .topinfo .btn-refresh:not([disabled]):hover svg path {
+  stroke: hsl(211, 97%, 60%);
+}
+.salatreminder-body .leftcontent .downinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.salatreminder-body .leftcontent .downinfo .salatremind {
+  background: hsl(213, 39%, 95%);
+  border-radius: 0.625rem;
+  padding: 0.875rem;
+}
+@media screen and (min-width: 48rem) {
+  .salatreminder-body .leftcontent .downinfo .salatremind {
+    padding: 1.5rem;
+  }
+}
+.salatreminder-body .leftcontent .downinfo .salatremind .waqtname {
+  color: hsl(216, 17%, 12%);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.salatreminder-body .leftcontent .downinfo .salatremind .waqtduration {
+  color: hsl(216, 17%, 12%);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+@media screen and (min-width: 87.5rem) {
+  .salatreminder-body .leftcontent .downinfo .salatremind .waqtduration {
+    font-size: 1rem;
+  }
+}
+.salatreminder-body .leftcontent .downinfo .salatremind .remaining {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.salatreminder-body .leftcontent .downinfo .salatremind .remaining-title {
+  color: hsl(216, 17%, 12%);
+  font-size: 1rem;
+  font-weight: 500;
+}
+.salatreminder-body .leftcontent .downinfo .salatremind .remaining .progress {
+  background: hsl(0, 0%, 100%);
+  border-radius: 3rem;
+  height: 0.375rem;
+}
+.salatreminder-body .leftcontent .downinfo .salatremind .remaining .progress-bar {
+  background: hsl(211, 97%, 60%);
+  border-radius: 3rem;
+}
+.salatreminder-body .leftcontent .downinfo .salatremind .clock {
+  display: flex;
+  gap: 0.625rem;
+}
+@media screen and (min-width: 87.5rem) {
+  .salatreminder-body .leftcontent .downinfo .salatremind .clock {
+    gap: 1.25rem;
+  }
+}
+.salatreminder-body .leftcontent .downinfo .salatremind .clock .divide {
+  color: hsl(218, 17%, 35%);
+  font-size: 1.6875rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+}
+.salatreminder-body .leftcontent .downinfo .salatremind .clock .hours,
+.salatreminder-body .leftcontent .downinfo .salatremind .clock .minutes,
+.salatreminder-body .leftcontent .downinfo .salatremind .clock .seconds {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.3125rem;
+  text-align: center;
+}
+.salatreminder-body .leftcontent .downinfo .salatremind .clock .hours .time,
+.salatreminder-body .leftcontent .downinfo .salatremind .clock .minutes .time,
+.salatreminder-body .leftcontent .downinfo .salatremind .clock .seconds .time {
+  color: hsl(218, 17%, 35%);
+  font-size: 1.6875rem;
+  font-weight: 700;
+}
+.salatreminder-body .leftcontent .downinfo .salatremind .clock .hours .title,
+.salatreminder-body .leftcontent .downinfo .salatremind .clock .minutes .title,
+.salatreminder-body .leftcontent .downinfo .salatremind .clock .seconds .title {
+  color: hsl(214, 20%, 69%);
+  font-size: 1rem;
+  font-weight: 500;
+}
+.salatreminder-body .leftcontent .downinfo .salatlist {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media screen and (min-width: 48rem) {
+  .salatreminder-body .leftcontent .downinfo .salatlist {
+    max-width: 75%;
+  }
+}
+.salatreminder-body .leftcontent .downinfo .salatlist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.salatreminder-body .leftcontent .downinfo .salatlist-header .title {
+  color: hsl(216, 17%, 12%);
+  font-size: 1rem;
+  font-weight: 600;
+  width: calc(100% - 4rem);
+}
+.salatreminder-body .leftcontent .downinfo .salatlist-header .switchbox {
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.salatreminder-body .leftcontent .downinfo .salatlist-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.salatreminder-body .leftcontent .downinfo .salatlist-body .salatinfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.salatreminder-body .leftcontent .downinfo .salatlist-body .salatinfo .salatwaqt {
+  width: calc(100% - 4rem);
+}
+.salatreminder-body .leftcontent .downinfo .salatlist-body .salatinfo .salatwaqt .waqtname {
+  color: hsl(216, 17%, 12%);
+  font-size: 1rem;
+  font-weight: 600;
+}
+.salatreminder-body .leftcontent .downinfo .salatlist-body .salatinfo .salatwaqt .waqtduration {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.salatreminder-body .leftcontent .downinfo .salatlist-body .salatinfo .switchbox {
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .subscribedchannel {

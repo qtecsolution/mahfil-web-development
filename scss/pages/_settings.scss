@@ -1,22 +1,32 @@
 @use '../global' as *;
 @use '../partials' as *;
 
-.settings {
-  @include flex-column;
-  gap: size(20);
-  padding-bottom: size(80);
+.settingsection {
+  .settingdescription {
+    .nav-tabs {
+      border-color: $menudivider;
+      margin-bottom: size(24);
 
-  &-header {
-    @include flex-column;
-    gap: size(16);
+      .nav-link {
+        color: $textprimary;
+        font-size: size(16);
+        font-weight: 600;
+        margin-bottom: 0;
+        padding: size(16) size(24);
+        border: none;
+        @include border-single(bottom, solid, 4, transparent);
 
-    .settings-title {
-      font-size: size(20);
-      font-weight: 600;
+        &.active {
+          color: $headingtext;
+          border-color: $primary;
+        }
+
+        &:hover:not(.active) {
+          color: $headingtext;
+        }
+      }
     }
-  }
 
-  &-body {
     .form-label {
       color: $dropdowntext;
       font-size: size(14);
@@ -39,6 +49,106 @@
       &:focus {
         border-color: $primary;
       }
+    }
+  }
+
+  .deleteacc {
+    @include flex-column;
+    gap: size(18);
+    max-width: size(611);
+
+    &-header {
+      .title {
+        color: $headingtext;
+        font-size: size(16);
+        font-weight: 500;
+      }
+    }
+
+    &-body {
+      @include flex-column;
+      gap: size(32);
+
+      .deleteinfo {
+        @include flex-column;
+        gap: size(24);
+
+        .text {
+          color: $textprimary;
+          font-size: size(14);
+        }
+      }
+
+      .btn-delete {
+        color: $red;
+        font-size: size(14);
+        font-weight: 500;
+        text-decoration: underline;
+
+        @include hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .notificationlist {
+    @include flex-column;
+    gap: size(32);
+
+    .notificationsingle {
+      @include flex-center-between;
+
+      .leftinfo {
+        @include flex-column;
+        gap: size(10);
+        width: calc(100% - size(64));
+
+        .title {
+          color: $dropdowntext;
+          font-size: size(16);
+          font-weight: 600;
+        }
+
+        .brows {
+          @include flex-center-vert;
+          gap: size(8);
+
+          &-icon {
+            @include square(22);
+            @include flex-center;
+            overflow: hidden;
+          }
+
+          &-text {
+            color: $textprimary;
+            font-size: size(14);
+            font-weight: 500;
+          }
+        }
+
+        .text {
+          color: $textprimary;
+          font-size: size(14);
+          font-weight: 500;
+          margin-top: size(5);
+        }
+      }
+
+      .switchbox {
+        width: size(64);
+        @include flex-center;
+      }
+    }
+  }
+
+  .rightinfo {
+    @include flex-column;
+    gap: size(32);
+
+    .descriptions {
+      @include flex-column;
+      gap: size(24);
     }
   }
 }

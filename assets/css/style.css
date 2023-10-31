@@ -1545,6 +1545,55 @@ input[type=search]::-webkit-search-results-decoration:focus {
   width: 0rem;
 }
 
+.deletemodal .modal-content {
+  padding: 1.5rem;
+}
+.deletemodal .modal-header {
+  border-bottom: solid 0.0625rem hsl(214, 17%, 92%);
+  padding: 0;
+  padding-bottom: 0.875rem;
+  margin-bottom: 0.875rem;
+}
+.deletemodal .modal-body {
+  padding: 0;
+}
+.deletemodal .deltitle {
+  color: hsl(220, 26%, 14%);
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.deletemodal .deletebox {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.deletemodal .deletebox-body {
+  display: flex;
+  justify-content: flex-end;
+}
+.deletemodal .deletebox-body button {
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+}
+.deletemodal .deletebox-body .btn-cancel {
+  background: hsl(0, 0%, 100%);
+  color: hsl(218, 17%, 35%);
+}
+.deletemodal .deletebox-body .btn-cancel:not([disabled]):hover {
+  color: hsl(0, 0%, 0%);
+}
+.deletemodal .deletebox-body .btn-continue {
+  background: hsl(0, 100%, 63%);
+  color: hsl(0, 0%, 100%);
+}
+.deletemodal .deletebox-body .btn-continue:not([disabled]):hover {
+  background: hsl(0, 91%, 54%);
+  color: hsl(0, 0%, 100%);
+}
+
 .tooltip-inner {
   background: hsl(211, 97%, 60%);
   font-size: 0.75rem;
@@ -2712,27 +2761,32 @@ input:checked + .slider:before {
   color: hsl(216, 17%, 12%);
 }
 
-.settings {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  padding-bottom: 5rem;
+.settingsection .settingdescription .nav-tabs {
+  border-color: hsl(214, 17%, 92%);
+  margin-bottom: 1.5rem;
 }
-.settings-header {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.settings-header .settings-title {
-  font-size: 1.25rem;
+.settingsection .settingdescription .nav-tabs .nav-link {
+  color: hsl(216, 15%, 52%);
+  font-size: 1rem;
   font-weight: 600;
+  margin-bottom: 0;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-bottom: solid 0.25rem transparent;
 }
-.settings-body .form-label {
+.settingsection .settingdescription .nav-tabs .nav-link.active {
+  color: hsl(216, 17%, 12%);
+  border-color: hsl(211, 97%, 60%);
+}
+.settingsection .settingdescription .nav-tabs .nav-link:hover:not(.active) {
+  color: hsl(216, 17%, 12%);
+}
+.settingsection .settingdescription .form-label {
   color: hsl(218, 17%, 35%);
   font-size: 0.875rem;
   font-weight: 500;
 }
-.settings-body .form-control {
+.settingsection .settingdescription .form-control {
   border: solid 0.0625rem hsl(214, 32%, 91%);
   border-radius: 0.5rem;
   color: hsl(216, 17%, 12%);
@@ -2740,16 +2794,111 @@ input:checked + .slider:before {
   font-weight: 500;
   padding: 0.78125rem 1rem;
 }
-.settings-body .form-control::-moz-placeholder {
+.settingsection .settingdescription .form-control::-moz-placeholder {
   color: hsl(216, 15%, 52%);
   font-weight: 400;
 }
-.settings-body .form-control::placeholder {
+.settingsection .settingdescription .form-control::placeholder {
   color: hsl(216, 15%, 52%);
   font-weight: 400;
 }
-.settings-body .form-control:focus {
+.settingsection .settingdescription .form-control:focus {
   border-color: hsl(211, 97%, 60%);
+}
+.settingsection .deleteacc {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+  max-width: 38.1875rem;
+}
+.settingsection .deleteacc-header .title {
+  color: hsl(216, 17%, 12%);
+  font-size: 1rem;
+  font-weight: 500;
+}
+.settingsection .deleteacc-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.settingsection .deleteacc-body .deleteinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.settingsection .deleteacc-body .deleteinfo .text {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.875rem;
+}
+.settingsection .deleteacc-body .btn-delete {
+  color: hsl(0, 100%, 63%);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.settingsection .deleteacc-body .btn-delete:not([disabled]):hover {
+  text-decoration: none;
+}
+.settingsection .notificationlist {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.settingsection .notificationlist .notificationsingle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.settingsection .notificationlist .notificationsingle .leftinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  width: calc(100% - 4rem);
+}
+.settingsection .notificationlist .notificationsingle .leftinfo .title {
+  color: hsl(218, 17%, 35%);
+  font-size: 1rem;
+  font-weight: 600;
+}
+.settingsection .notificationlist .notificationsingle .leftinfo .brows {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.settingsection .notificationlist .notificationsingle .leftinfo .brows-icon {
+  width: 1.375rem;
+  height: 1.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.settingsection .notificationlist .notificationsingle .leftinfo .brows-text {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.settingsection .notificationlist .notificationsingle .leftinfo .text {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 0.3125rem;
+}
+.settingsection .notificationlist .notificationsingle .switchbox {
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.settingsection .rightinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.settingsection .rightinfo .descriptions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .channelsection-content {
@@ -3442,19 +3591,8 @@ input:checked + .slider:before {
   margin-inline: auto;
 }
 
-.shipcontainer {
-  min-width: 100%;
-  max-width: 100%;
-  padding-inline: 1.25rem;
-  margin-inline: auto;
-}
-@media screen and (min-width: 62rem) {
-  .shipcontainer {
-    padding-inline: 5rem;
-  }
-}
-@media screen and (min-width: 87.5rem) {
-  .shipcontainer {
-    padding-inline: 9.375rem;
+@media screen and (max-width: 47.9375rem) {
+  .settingstext {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */

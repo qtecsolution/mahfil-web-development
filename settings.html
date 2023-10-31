@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body>
+<body class="p-0">
   <!-- PRELOADER-START -->
   <div class="preloader" id="preloader">
     <div class="loader">
@@ -969,48 +969,184 @@
     </header>
     <!-- HEADER-SECTION END -->
 
-    <!-- FAVORITES-SECTION START -->
-    <section class="settings">
-      <div class="settings-header">
-        <h1 class="settings-title">Profile Settings</h1>
-        <hr />
-      </div>
-
-      <div class="settings-body">
-        <div class="row g-4 w-100">
+    <!-- SETTINGS-START -->
+    <section class="settingsection">
+      <div class="container">
+        <div class="row g-4">
           <div class="col-lg-8">
-            <form class="row g-3 needs-validation" novalidate>
-              <div class="col-12">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter full name" autocomplete="off"
-                  required>
-                <div class="invalid-feedback">
-                  Please provide a name.
+            <div class="settingdescription">
+              <ul class="nav nav-tabs" id="videoChannelTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="profilesettings-tab" data-bs-toggle="tab"
+                    data-bs-target="#profilesettings-tab-pane" type="button" role="tab"
+                    aria-controls="profilesettings-tab-pane" aria-selected="true">
+                    Profile <span class="settingstext">Settings</span>
+                  </button>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="notificationsettings-tab" data-bs-toggle="tab"
+                    data-bs-target="#notificationsettings-tab-pane" type="button" role="tab"
+                    aria-controls="notificationsettings-tab-pane" aria-selected="false">
+                    Notification <span class="settingstext">Settings</span>
+                  </button>
+                </li>
+              </ul>
+
+              <div class="tab-content" id="videoChannelTabContent">
+                <!-- PROFILE-SETTINGS -->
+                <div class="tab-pane fade show active" id="profilesettings-tab-pane" role="tabpanel"
+                  aria-labelledby="profilesettings-tab" tabindex="0">
+                  <div class="d-flex flex-column gap-5">
+                    <form class="row g-3 needs-validation w-100" novalidate>
+                      <div class="col-12">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter full name"
+                          autocomplete="off" required>
+                        <div class="invalid-feedback">
+                          Please provide a name.
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <label for="emailaddress" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="emailaddress" placeholder="Enter email address"
+                          autocomplete="off" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid email.
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <label for="phonenumber" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phonenumber" placeholder="Enter phone number"
+                          autocomplete="off" required>
+                        <div class="invalid-feedback">
+                          Please provide a phone number.
+                        </div>
+                      </div>
+
+                      <div class="col-12 mt-5">
+                        <button class="btn-subscribe px-5" type="submit">Save</button>
+                      </div>
+                    </form>
+
+                    <div class="deleteacc">
+                      <div class="deleteacc-header">
+                        <h5 class="title">Want to delete your account?</h5>
+                      </div>
+
+                      <div class="deleteacc-body">
+                        <div class="deleteinfo">
+                          <p class="text">
+                            Are you sure you want to delete your account? This action is irreversible and all your data
+                            will be permanently deleted. Please ensure you have saved any important information before
+                            proceeding.
+                          </p>
+
+                          <p class="text">
+                            If you are certain about this decision, please click "Delete Account" below.
+                          </p>
+                        </div>
+
+                        <div class="deletebox">
+                          <button class="btn-delete" type="button" data-bs-toggle="modal"
+                            data-bs-target="#deleteModal">Delete Account</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- NOTIFICATIONS-SETTINGS -->
+                <div class="tab-pane fade" id="notificationsettings-tab-pane" role="tabpanel"
+                  aria-labelledby="notificationsettings-tab" tabindex="0">
+                  <div class="notificationlist">
+                    <div class="notificationsingle">
+                      <div class="leftinfo">
+                        <h5 class="title">Get notifications in this browser</h5>
+
+                        <div class="brows">
+                          <figure class="brows-icon">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                              <rect width="22" height="22" fill="url(#chromepattern)" />
+                              <defs>
+                                <pattern id="chromepattern" patternContentUnits="objectBoundingBox" width="1"
+                                  height="1">
+                                  <use xlink:href="#chromeicon" transform="scale(0.0208333)" />
+                                </pattern>
+                                <image id="chromeicon" width="48" height="48"
+                                  xlink:href="data:image/png;base64,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" />
+                              </defs>
+                            </svg>
+                          </figure>
+
+                          <p class="brows-text">Chrome</p>
+                        </div>
+
+                        <p class="text">Receive notifications on your computer, even if you're not watching
+                          Mahfil.</p>
+                      </div>
+
+                      <div class="switchbox">
+                        <label class="switch">
+                          <input type="checkbox">
+                          <span class="slider round"></span>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="notificationsingle">
+                      <div class="leftinfo">
+                        <h5 class="title">Subscriptions</h5>
+
+                        <p class="text">Notify me about activity from the channels I'm subscribed to</p>
+                      </div>
+
+                      <div class="switchbox">
+                        <label class="switch">
+                          <input type="checkbox" checked>
+                          <span class="slider round"></span>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="notificationsingle">
+                      <div class="leftinfo">
+                        <h5 class="title">Recommended videos</h5>
+
+                        <p class="text">
+                          Notify me of videos I might like based on what I watch
+                        </p>
+                      </div>
+
+                      <div class="switchbox">
+                        <label class="switch">
+                          <input type="checkbox" checked>
+                          <span class="slider round"></span>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="notificationsingle">
+                      <div class="leftinfo">
+                        <h5 class="title">Replies to my comments</h5>
+
+                        <p class="text">Notify me about replies to my comments</p>
+                      </div>
+
+                      <div class="switchbox">
+                        <label class="switch">
+                          <input type="checkbox">
+                          <span class="slider round"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-
-              <div class="col-12">
-                <label for="emailaddress" class="form-label">Email</label>
-                <input type="email" class="form-control" id="emailaddress" placeholder="Enter email address"
-                  autocomplete="off" required>
-                <div class="invalid-feedback">
-                  Please provide a valid email.
-                </div>
-              </div>
-
-              <div class="col-12">
-                <label for="phonenumber" class="form-label">Phone Number</label>
-                <input type="tel" class="form-control" id="phonenumber" placeholder="Enter phone number"
-                  autocomplete="off" required>
-                <div class="invalid-feedback">
-                  Please provide a phone number.
-                </div>
-              </div>
-
-              <div class="col-12 mt-5">
-                <button class="btn-subscribe px-5" type="submit">Save</button>
-              </div>
-            </form>
+            </div>
           </div>
 
           <div class="col-lg-4">
@@ -1055,7 +1191,7 @@
         </div>
       </div>
     </section>
-    <!-- FAVORITES-SECTION END -->
+    <!-- SETTINGS-END -->
   </main>
   <!-- MAIN-SECTION END -->
 
@@ -2323,6 +2459,43 @@
     </div>
   </div>
   <!-- REGISTER-MODAL END -->
+
+  <!-- DELETE-MODAL START -->
+  <div class="modal fade pe-0 deletemodal" id="deleteModal" tabindex="-1" aria-labelledby="deleteModal"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="deltitle">Delete Account</h5>
+
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 5L5 19M5 5L19 19" stroke="#1A202C" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div class="deletebox">
+            <div class="deletebox-header">
+              <p class="deletetext">
+                Are you sure you want to delete your account? This action is irreversible and all your data will be
+                permanently deleted.
+              </p>
+            </div>
+
+            <div class="deletebox-body">
+              <button type="button" class="btn-cancel" data-bs-dismiss="modal">Cancel</button>
+
+              <button class="btn-continue">Continue</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- DELETE-MODAL END -->
 
   <!-- PRELOADER-JS -->
   <script src="assets/js/loader/loader.js"></script>

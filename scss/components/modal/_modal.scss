@@ -57,3 +57,63 @@
     }
   }
 }
+
+.deletemodal {
+  .modal-content {
+    padding: size(24);
+  }
+
+  .modal-header {
+    @include border-single(bottom, solid, 1, $menudivider);
+    padding: 0;
+    padding-bottom: size(14);
+    margin-bottom: size(14);
+  }
+
+  .modal-body {
+    padding: 0;
+  }
+
+  .deltitle {
+    color: $textdark;
+    font-size: size(18);
+    font-weight: 500;
+  }
+
+  .deletebox {
+    @include flex-column;
+    gap: size(48);
+
+    &-header {
+      .deletetext {}
+    }
+
+    &-body {
+      @include flex-end;
+
+      button {
+        @include radius(6);
+        font-size: size(14);
+        font-weight: 600;
+        padding: size(12) size(24);
+        text-align: center;
+      }
+
+      .btn-cancel {
+        @include setBgColor($white, $dropdowntext);
+
+        @include hover {
+          color: $black;
+        }
+      }
+
+      .btn-continue {
+        @include setBgColor($red, $white);
+
+        @include hover {
+          @include setBgColor($danger, $white);
+        }
+      }
+    }
+  }
+}

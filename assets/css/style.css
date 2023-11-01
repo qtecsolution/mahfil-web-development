@@ -1241,6 +1241,7 @@ button:focus,
 .cardsubscribed-body .detail .info .text strong {
   color: hsl(218, 17%, 35%);
   font-size: inherit;
+  font-weight: 500;
 }
 .cardsubscribed-body .cardicon {
   width: 1.25rem;
@@ -2029,7 +2030,9 @@ table tr td {
 .desktopdropdownlist-link {
   display: flex;
   gap: 0.75rem;
-  padding-bottom: 0.625rem;
+  border-radius: 0.375rem;
+  padding: 0.625rem;
+  transition: all 350ms ease-in-out;
 }
 .desktopdropdownlist-link .leftcontent {
   display: flex;
@@ -2073,6 +2076,9 @@ table tr td {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+.desktopdropdownlist-link:not([disabled]):hover {
+  background: hsl(213, 39%, 95%);
 }
 
 .videolist {
@@ -2306,6 +2312,7 @@ input:checked + .slider:before {
 }
 .popularchannel-body .swiper-button-next, .popularchannel-body .swiper-button-prev {
   background: hsl(0, 0%, 100%);
+  filter: drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 0.1));
   border-radius: 100%;
   width: 2.75rem;
   height: 2.75rem;
@@ -2314,10 +2321,9 @@ input:checked + .slider:before {
   justify-content: center;
   overflow: hidden;
   padding: 0.625rem;
+  opacity: 0;
+  visibility: hidden;
   transition: all 350ms ease-in-out;
-}
-.popularchannel-body .swiper-button-next:not([disabled]):hover, .popularchannel-body .swiper-button-prev:not([disabled]):hover {
-  filter: drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 0.1));
 }
 .popularchannel-body .swiper-button-next::after, .popularchannel-body .swiper-button-prev::after {
   content: "";
@@ -2331,6 +2337,11 @@ input:checked + .slider:before {
 }
 .popularchannel-body .swiper-button-prev {
   left: 0rem;
+}
+.popularchannel-body .swiper:not([disabled]):hover .swiper-button-next,
+.popularchannel-body .swiper:not([disabled]):hover .swiper-button-prev {
+  opacity: 1;
+  visibility: visible;
 }
 
 .trendingvideos {

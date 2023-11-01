@@ -218,7 +218,9 @@
   &-link {
     @include flex;
     gap: size(12);
-    padding-bottom: size(10);
+    @include radius(6);
+    padding: size(10);
+    @include transitionsall;
 
     .leftcontent {
       @include flex;
@@ -262,6 +264,10 @@
       height: size(52);
       @include flex-center;
       overflow: hidden;
+    }
+
+    @include hover {
+      background: $linkhoverbg;
     }
   }
 }

@@ -53,19 +53,19 @@
 
   &-body {
     .swiper {
+
       &-button-next,
       &-button-prev {
         background: $white;
+        filter: $arrowshadow;
         @include circle;
         @include square(44);
         @include flex-center;
         overflow: hidden;
         padding: size(10);
+        opacity: 0;
+        visibility: hidden;
         @include transitionsall;
-
-        @include hover {
-          filter: $arrowshadow;
-        }
 
         &::after {
           content: '';
@@ -81,6 +81,15 @@
 
       &-button-prev {
         left: size(0);
+      }
+
+      @include hover {
+
+        .swiper-button-next,
+        .swiper-button-prev {
+          opacity: 1;
+          visibility: visible;
+        }
       }
     }
   }

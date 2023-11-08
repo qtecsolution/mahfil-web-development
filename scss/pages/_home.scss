@@ -53,6 +53,7 @@
 
   &-body {
     .swiper {
+
       &-button-next,
       &-button-prev {
         background: $white;
@@ -83,6 +84,10 @@
       }
 
       @include hover {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9bd05edc49f119aa651d099b3b55028fa3ee0a4b
         .swiper-button-next,
         .swiper-button-prev {
           opacity: 1;

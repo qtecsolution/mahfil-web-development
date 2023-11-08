@@ -1,8 +1,9 @@
-@use '../../global' as *;
-@use '../../partials' as *;
+@use "../../global" as *;
+@use "../../partials" as *;
 
 .mainlist {
   @include list-vertical;
+  gap: size(5);
 
   &-link {
     background: $white;
@@ -37,6 +38,7 @@
 
       .linktext {
         color: $headingtext;
+        font-weight: 600;
       }
     }
 
@@ -53,6 +55,7 @@
 
       .linktext {
         color: $headingtext;
+        font-weight: 600;
       }
     }
   }

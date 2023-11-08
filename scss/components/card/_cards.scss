@@ -1,9 +1,10 @@
-@use '../../global' as *;
-@use '../../partials' as *;
+@use "../../global" as *;
+@use "../../partials" as *;
 
 .cardvideo {
   @include flex-column;
   gap: size(14);
+  @include h100;
 
   &-header {
     .video-thumbnail {
@@ -51,6 +52,8 @@
         cursor: pointer;
         font-size: size(16);
         font-weight: 500;
+        min-height: size(38.4);
+        max-height: size(39);
         @include line-clamp;
         @include transitionscolor;
 
@@ -62,10 +65,15 @@
       .detail {
         .channelname {
           @include text-overflow;
+
+          @include hover {
+            color: $primary;
+          }
         }
 
         .channelname,
         .videotext {
+          color: $textprimary;
           font-size: size(14);
           font-weight: 500;
         }
@@ -74,12 +82,12 @@
 
     .videodropdown {
       position: relative;
-      @include square(24);
+      @include square(32);
       cursor: pointer;
 
       .dropdownicon {
         background: $white;
-        @include square(24);
+        @include square(32);
         @include circle;
         @include flex-center;
         padding: size(4);
@@ -232,7 +240,7 @@
     }
 
     .describe {
-      width: calc(100% - size(32));
+      width: calc(100% - size(40));
       @include flex-column;
       gap: size(12);
 
@@ -263,12 +271,12 @@
 
     .favdropdown {
       position: relative;
-      @include square(24);
+      @include square(32);
       cursor: pointer;
 
       .dropdownicon {
         background: $white;
-        @include square(24);
+        @include square(32);
         @include circle;
         @include flex-center;
         padding: size(4);
@@ -279,7 +287,7 @@
         position: absolute;
         top: 100%;
         right: size(0);
-        padding-top: size(8);
+        padding-top: size(4);
         display: none;
         @extend %animation;
         @extend %slideUpIn;
@@ -355,8 +363,13 @@
     overflow: hidden;
 
     @include breakpoint(mobile576) {
-      width: size(190);
+      width: size(180);
       height: size(120);
+    }
+
+    @include breakpoint(desktop1400) {
+      width: size(172);
+      height: size(96);
     }
 
     img {
@@ -369,11 +382,15 @@
     @include flex-center-between;
     align-items: flex-start;
     gap: size(8);
-    padding: size(14);
+    padding: size(4) size(8);
 
     @include breakpoint(mobile576) {
       align-items: center;
-      width: calc(100% - size(190));
+      width: calc(100% - size(180));
+    }
+
+    @include breakpoint(desktop1400) {
+      width: calc(100% - size(172));
     }
 
     .describe {
@@ -418,7 +435,7 @@
 
       .dropdownicon {
         background: $white;
-        @include square(24);
+        @include square(32);
         @include circle;
         @include flex-center;
         padding: size(4);
@@ -439,9 +456,8 @@
 
   &-info {
     position: absolute;
-    top: 100%;
+    top: 80%;
     right: size(0);
-    padding-top: size(16);
     display: none;
     @extend %animation;
     @extend %slideUpIn;

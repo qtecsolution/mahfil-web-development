@@ -1,5 +1,5 @@
-@use '../global' as *;
-@use '../partials' as *;
+@use "../global" as *;
+@use "../partials" as *;
 
 .settingsection {
   .settingdescription {
@@ -50,12 +50,16 @@
         border-color: $primary;
       }
     }
+
+    .formbox {
+      max-width: size(320);
+    }
   }
 
   .deleteacc {
     @include flex-column;
     gap: size(18);
-    max-width: size(611);
+    max-width: size(600);
 
     &-header {
       .title {
@@ -151,4 +155,9 @@
       gap: size(24);
     }
   }
+}
+
+.iti__country-list {
+  max-width: size(304);
+  overflow-x: hidden;
 }

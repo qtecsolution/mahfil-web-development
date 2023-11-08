@@ -1,5 +1,5 @@
-@use '../global' as *;
-@use '../partials' as *;
+@use "../global" as *;
+@use "../partials" as *;
 
 .salatreminder {
   @include flex-column;
@@ -73,6 +73,7 @@
           background: $linkhoverbg;
           @include radius(10);
           padding: size(14);
+          max-width: size(730);
 
           @include breakpoint(mobile768) {
             padding: size(24);
@@ -87,7 +88,7 @@
 
           .waqtduration {
             color: $headingtext;
-            font-size: size(13);
+            font-size: size(12);
             font-weight: 500;
 
             @include breakpoint(desktop1400) {
@@ -142,14 +143,22 @@
 
               .time {
                 color: $dropdowntext;
-                font-size: size(27);
+                font-size: size(24);
                 font-weight: 700;
+
+                @include breakpoint(desktop1400) {
+                  font-size: size(27);
+                }
               }
 
               .title {
                 color: $timetext;
-                font-size: size(16);
+                font-size: size(14);
                 font-weight: 500;
+
+                @include breakpoint(desktop1400) {
+                  font-size: size(16);
+                }
               }
             }
           }
@@ -160,7 +169,7 @@
           gap: size(48);
 
           @include breakpoint(mobile768) {
-            max-width: 75%;
+            max-width: size(320);
           }
 
           &-header {
@@ -191,14 +200,22 @@
 
                 .waqtname {
                   color: $headingtext;
-                  font-size: size(16);
+                  font-size: size(14);
                   font-weight: 600;
+
+                  @include breakpoint(desktop1400) {
+                    font-size: size(16);
+                  }
                 }
 
                 .waqtduration {
                   color: $textprimary;
-                  font-size: size(14);
+                  font-size: size(12);
                   font-weight: 500;
+
+                  @include breakpoint(desktop1400) {
+                    font-size: size(14);
+                  }
                 }
               }
 
@@ -209,6 +226,16 @@
             }
           }
         }
+      }
+    }
+
+    .rightinfo {
+      @include flex-column;
+      gap: size(32);
+
+      .descriptions {
+        @include flex-column;
+        gap: size(24);
       }
     }
   }

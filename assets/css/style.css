@@ -697,6 +697,7 @@ button:focus,
   display: flex;
   flex-direction: column;
   gap: 0.875rem;
+  height: 100%;
 }
 .cardvideo-header .video-thumbnail {
   border-radius: 0.625rem;
@@ -747,6 +748,8 @@ button:focus,
   cursor: pointer;
   font-size: 1rem;
   font-weight: 500;
+  min-height: 2.4rem;
+  max-height: 2.4375rem;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -763,21 +766,25 @@ button:focus,
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.cardvideo-body .details .detail .channelname:not([disabled]):hover {
+  color: hsl(211, 97%, 60%);
+}
 .cardvideo-body .details .detail .channelname,
 .cardvideo-body .details .detail .videotext {
+  color: hsl(216, 15%, 52%);
   font-size: 0.875rem;
   font-weight: 500;
 }
 .cardvideo-body .videodropdown {
   position: relative;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   cursor: pointer;
 }
 .cardvideo-body .videodropdown .dropdownicon {
   background: hsl(0, 0%, 100%);
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 100%;
   display: flex;
   align-items: center;
@@ -935,7 +942,7 @@ button:focus,
   }
 }
 .cardfavorite-details .describe {
-  width: calc(100% - 2rem);
+  width: calc(100% - 2.5rem);
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -967,14 +974,14 @@ button:focus,
 }
 .cardfavorite-details .favdropdown {
   position: relative;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   cursor: pointer;
 }
 .cardfavorite-details .favdropdown .dropdownicon {
   background: hsl(0, 0%, 100%);
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 100%;
   display: flex;
   align-items: center;
@@ -986,7 +993,7 @@ button:focus,
   position: absolute;
   top: 100%;
   right: 0rem;
-  padding-top: 0.5rem;
+  padding-top: 0.25rem;
   display: none;
 }
 .cardfavorite-details .favdropdown-info .dropdownlist {
@@ -1060,8 +1067,14 @@ button:focus,
 }
 @media screen and (min-width: 36rem) {
   .cardvid .videothumb {
-    width: 11.875rem;
+    width: 11.25rem;
     height: 7.5rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .cardvid .videothumb {
+    width: 10.75rem;
+    height: 6rem;
   }
 }
 .cardvid .videothumb img {
@@ -1076,12 +1089,17 @@ button:focus,
   align-items: center;
   align-items: flex-start;
   gap: 0.5rem;
-  padding: 0.875rem;
+  padding: 0.25rem 0.5rem;
 }
 @media screen and (min-width: 36rem) {
   .cardvid-details {
     align-items: center;
-    width: calc(100% - 11.875rem);
+    width: calc(100% - 11.25rem);
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .cardvid-details {
+    width: calc(100% - 10.75rem);
   }
 }
 .cardvid-details .describe {
@@ -1128,8 +1146,8 @@ button:focus,
 }
 .cardvid-details .vidropdown .dropdownicon {
   background: hsl(0, 0%, 100%);
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 100%;
   display: flex;
   align-items: center;
@@ -1145,9 +1163,8 @@ button:focus,
 }
 .cardvid-info {
   position: absolute;
-  top: 100%;
+  top: 80%;
   right: 0rem;
-  padding-top: 1rem;
   display: none;
   z-index: 200;
 }
@@ -1840,6 +1857,7 @@ table tr td {
   list-style: none;
   display: flex;
   flex-direction: column;
+  gap: 0.3125rem;
 }
 .mainlist-link {
   background: hsl(0, 0%, 100%);
@@ -1871,6 +1889,7 @@ table tr td {
 }
 .mainlist-link:hover:not(.active) .linktext {
   color: hsl(216, 17%, 12%);
+  font-weight: 600;
 }
 .mainlist-link.active {
   background: hsl(213, 39%, 95%);
@@ -1880,6 +1899,7 @@ table tr td {
 }
 .mainlist-link.active .linktext {
   color: hsl(216, 17%, 12%);
+  font-weight: 600;
 }
 
 .mobilelist {
@@ -2306,6 +2326,7 @@ input:checked + .slider:before {
 }
 .popularchannel-body .swiper-button-next, .popularchannel-body .swiper-button-prev {
   background: hsl(0, 0%, 100%);
+  filter: drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 0.1));
   border-radius: 100%;
   width: 2.75rem;
   height: 2.75rem;
@@ -2314,10 +2335,9 @@ input:checked + .slider:before {
   justify-content: center;
   overflow: hidden;
   padding: 0.625rem;
+  opacity: 0;
+  visibility: hidden;
   transition: all 350ms ease-in-out;
-}
-.popularchannel-body .swiper-button-next:not([disabled]):hover, .popularchannel-body .swiper-button-prev:not([disabled]):hover {
-  filter: drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 0.1));
 }
 .popularchannel-body .swiper-button-next::after, .popularchannel-body .swiper-button-prev::after {
   content: "";
@@ -2331,6 +2351,11 @@ input:checked + .slider:before {
 }
 .popularchannel-body .swiper-button-prev {
   left: 0rem;
+}
+.popularchannel-body .swiper:not([disabled]):hover .swiper-button-next,
+.popularchannel-body .swiper:not([disabled]):hover .swiper-button-prev {
+  opacity: 1;
+  visibility: visible;
 }
 
 .trendingvideos {
@@ -2486,6 +2511,7 @@ input:checked + .slider:before {
   background: hsl(213, 39%, 95%);
   border-radius: 0.625rem;
   padding: 0.875rem;
+  max-width: 45.625rem;
 }
 @media screen and (min-width: 48rem) {
   .salatreminder-body .leftcontent .downinfo .salatremind {
@@ -2500,7 +2526,7 @@ input:checked + .slider:before {
 }
 .salatreminder-body .leftcontent .downinfo .salatremind .waqtduration {
   color: hsl(216, 17%, 12%);
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   font-weight: 500;
 }
 @media screen and (min-width: 87.5rem) {
@@ -2558,15 +2584,29 @@ input:checked + .slider:before {
 .salatreminder-body .leftcontent .downinfo .salatremind .clock .minutes .time,
 .salatreminder-body .leftcontent .downinfo .salatremind .clock .seconds .time {
   color: hsl(218, 17%, 35%);
-  font-size: 1.6875rem;
+  font-size: 1.5rem;
   font-weight: 700;
+}
+@media screen and (min-width: 87.5rem) {
+  .salatreminder-body .leftcontent .downinfo .salatremind .clock .hours .time,
+  .salatreminder-body .leftcontent .downinfo .salatremind .clock .minutes .time,
+  .salatreminder-body .leftcontent .downinfo .salatremind .clock .seconds .time {
+    font-size: 1.6875rem;
+  }
 }
 .salatreminder-body .leftcontent .downinfo .salatremind .clock .hours .title,
 .salatreminder-body .leftcontent .downinfo .salatremind .clock .minutes .title,
 .salatreminder-body .leftcontent .downinfo .salatremind .clock .seconds .title {
   color: hsl(214, 20%, 69%);
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 500;
+}
+@media screen and (min-width: 87.5rem) {
+  .salatreminder-body .leftcontent .downinfo .salatremind .clock .hours .title,
+  .salatreminder-body .leftcontent .downinfo .salatremind .clock .minutes .title,
+  .salatreminder-body .leftcontent .downinfo .salatremind .clock .seconds .title {
+    font-size: 1rem;
+  }
 }
 .salatreminder-body .leftcontent .downinfo .salatlist {
   display: flex;
@@ -2575,7 +2615,7 @@ input:checked + .slider:before {
 }
 @media screen and (min-width: 48rem) {
   .salatreminder-body .leftcontent .downinfo .salatlist {
-    max-width: 75%;
+    max-width: 20rem;
   }
 }
 .salatreminder-body .leftcontent .downinfo .salatlist-header {
@@ -2610,19 +2650,39 @@ input:checked + .slider:before {
 }
 .salatreminder-body .leftcontent .downinfo .salatlist-body .salatinfo .salatwaqt .waqtname {
   color: hsl(216, 17%, 12%);
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 600;
+}
+@media screen and (min-width: 87.5rem) {
+  .salatreminder-body .leftcontent .downinfo .salatlist-body .salatinfo .salatwaqt .waqtname {
+    font-size: 1rem;
+  }
 }
 .salatreminder-body .leftcontent .downinfo .salatlist-body .salatinfo .salatwaqt .waqtduration {
   color: hsl(216, 15%, 52%);
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 500;
+}
+@media screen and (min-width: 87.5rem) {
+  .salatreminder-body .leftcontent .downinfo .salatlist-body .salatinfo .salatwaqt .waqtduration {
+    font-size: 0.875rem;
+  }
 }
 .salatreminder-body .leftcontent .downinfo .salatlist-body .salatinfo .switchbox {
   width: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.salatreminder-body .rightinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.salatreminder-body .rightinfo .descriptions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .subscribedchannel {
@@ -2805,11 +2865,14 @@ input:checked + .slider:before {
 .settingsection .settingdescription .form-control:focus {
   border-color: hsl(211, 97%, 60%);
 }
+.settingsection .settingdescription .formbox {
+  max-width: 20rem;
+}
 .settingsection .deleteacc {
   display: flex;
   flex-direction: column;
   gap: 1.125rem;
-  max-width: 38.1875rem;
+  max-width: 37.5rem;
 }
 .settingsection .deleteacc-header .title {
   color: hsl(216, 17%, 12%);
@@ -2899,6 +2962,11 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+.iti__country-list {
+  max-width: 19rem;
+  overflow-x: hidden;
 }
 
 .channelsection-content {
@@ -3164,9 +3232,10 @@ input:checked + .slider:before {
   position: relative;
 }
 .videoplay .comments-body .commenterbox-right .btn-dropdown {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 100%;
+  padding: 0.25rem;
 }
 .videoplay .comments-body .commenterbox-right .replydropdown {
   position: absolute;
@@ -3595,4 +3664,4 @@ input:checked + .slider:before {
   .settingstext {
     display: none;
   }
-}/*# sourceMappingURL=style.css.map */
+}

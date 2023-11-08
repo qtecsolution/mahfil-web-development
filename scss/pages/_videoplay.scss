@@ -1,5 +1,5 @@
-@use '../global' as *;
-@use '../partials' as *;
+@use "../global" as *;
+@use "../partials" as *;
 
 .videoplay {
   // padding: size(20) size(0);
@@ -53,7 +53,6 @@
           .seemore {
             color: $textblue;
             font-weight: 500;
-
 
             @include hover {
               color: $primarydark;
@@ -219,8 +218,9 @@
           position: relative;
 
           .btn-dropdown {
-            @include square(24);
+            @include square(32);
             @include circle;
+            padding: size(4);
           }
 
           .replydropdown {

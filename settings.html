@@ -973,7 +973,7 @@
     <section class="settingsection">
       <div class="container">
         <div class="row g-4">
-          <div class="col-lg-8">
+          <div class="col-xxl-7 offset-xxl-1 offset-0 col-lg-8">
             <div class="settingdescription">
               <ul class="nav nav-tabs" id="videoChannelTab" role="tablist">
                 <li class="nav-item" role="presentation">
@@ -998,38 +998,40 @@
                 <div class="tab-pane fade show active" id="profilesettings-tab-pane" role="tabpanel"
                   aria-labelledby="profilesettings-tab" tabindex="0">
                   <div class="d-flex flex-column gap-5">
-                    <form class="row g-3 needs-validation w-100" novalidate>
-                      <div class="col-12">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter full name"
-                          autocomplete="off" required>
-                        <div class="invalid-feedback">
-                          Please provide a name.
+                    <div class="formbox">
+                      <form class="row g-3 needs-validation w-100" novalidate>
+                        <div class="col-12">
+                          <label for="name" class="form-label">Name</label>
+                          <input type="text" class="form-control" id="name" placeholder="Enter full name"
+                            autocomplete="off" required>
+                          <div class="invalid-feedback">
+                            Please provide a name.
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="col-12">
-                        <label for="emailaddress" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="emailaddress" placeholder="Enter email address"
-                          autocomplete="off" required>
-                        <div class="invalid-feedback">
-                          Please provide a valid email.
+                        <div class="col-12">
+                          <label for="emailaddress" class="form-label">Email</label>
+                          <input type="email" class="form-control" id="emailaddress" placeholder="Enter email address"
+                            autocomplete="off" required>
+                          <div class="invalid-feedback">
+                            Please provide a valid email.
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="col-12">
-                        <label for="phonenumber" class="form-label">Phone Number</label>
-                        <input type="tel" class="form-control" id="phonenumber" placeholder="Enter phone number"
-                          autocomplete="off" required>
-                        <div class="invalid-feedback">
-                          Please provide a phone number.
+                        <div class="col-12">
+                          <label for="phonenumber" class="form-label">Phone Number</label>
+                          <input type="tel" class="form-control" id="phonenumber" placeholder="Enter phone number"
+                            autocomplete="off" required>
+                          <div class="invalid-feedback">
+                            Please provide a phone number.
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="col-12 mt-5">
-                        <button class="btn-subscribe px-5" type="submit">Save</button>
-                      </div>
-                    </form>
+                        <div class="col-12 mt-5">
+                          <button class="btn-subscribe px-5" type="submit">Save</button>
+                        </div>
+                      </form>
+                    </div>
 
                     <div class="deleteacc">
                       <div class="deleteacc-header">
@@ -1149,7 +1151,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4">
+          <div class="col-xxl-4 col-lg-4">
             <div class="rightinfo">
               <div class="row g-3">
                 <div class="col-6">

@@ -2309,7 +2309,7 @@ input:checked + .slider:before {
     width: calc(25% - 0.875rem);
   }
 }
-@media screen and (min-width: 100rem) {
+@media screen and (min-width: 120rem) {
   .homevideos .cardvideo {
     width: calc(20% - 0.875rem);
   }

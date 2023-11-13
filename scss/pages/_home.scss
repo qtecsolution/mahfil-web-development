@@ -5,10 +5,10 @@
   @include flex-center-vert;
   gap: size(30) size(14);
   flex-wrap: wrap;
-  padding: size(0) size(14) size(64);
+  padding: size(0) size(0) size(64);
 
   @include breakpoint(mobile768) {
-    padding: size(0) size(24) size(64);
+    padding: size(0) size(0) size(64);
   }
 
   @include breakpoint(tab992) {

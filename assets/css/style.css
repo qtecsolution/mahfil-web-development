@@ -798,6 +798,7 @@ button:focus,
 .cardvideo-body {
   display: flex;
   gap: 0.5rem;
+  padding-inline: 0.875rem;
 }
 .cardvideo-body .channelthumb {
   width: 2.5rem;
@@ -2525,11 +2526,11 @@ input:checked + .slider:before {
   align-items: center;
   gap: 1.875rem 0.875rem;
   flex-wrap: wrap;
-  padding: 0rem 0.875rem 4rem;
+  padding: 0rem 0rem 4rem;
 }
 @media screen and (min-width: 48rem) {
   .homevideos {
-    padding: 0rem 1.5rem 4rem;
+    padding: 0rem 0rem 4rem;
   }
 }
 @media screen and (min-width: 62rem) {

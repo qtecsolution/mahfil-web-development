@@ -34,6 +34,7 @@
   &-body {
     @include flex;
     gap: size(8);
+    padding-inline: size(14);
 
     .channelthumb {
       @include square(40);

@@ -1,10 +1,10 @@
-@use '../../global' as *;
-@use '../../partials' as *;
+@use "../../global" as *;
+@use "../../partials" as *;
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   @include transparent-button;
   cursor: pointer;
   opacity: 1;
@@ -81,6 +81,10 @@ button,
     color: $white;
     font-size: size(14);
     font-weight: 600;
+
+    @include breakpoint(tab992) {
+      font-size: inherit;
+    }
   }
 
   @include hover {
@@ -107,7 +111,7 @@ button,
   @include setBgColor($white, $textprimary);
   @include border(solid, 1, $menudivider);
   @include radius(6);
-  padding: size(8);
+  padding: size(11) size(24);
   @include flex-center;
   gap: size(4);
 
@@ -120,6 +124,11 @@ button,
   .text {
     color: inherit;
     font: inherit;
+    font-size: size(14);
+
+    @include breakpoint(tab992) {
+      font-size: inherit;
+    }
   }
 
   @include hover {

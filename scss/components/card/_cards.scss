@@ -152,8 +152,14 @@
 }
 
 .cardchannel {
-  @include flex-column;
+  @include flex-center-column;
   gap: size(16);
+  text-align: center;
+
+  @include breakpoint(tab992) {
+    align-items: flex-start;
+    text-align: left;
+  }
 
   &-header {
     .channelthumb {
@@ -185,6 +191,11 @@
       .channelname {
         font-size: size(14);
         font-weight: 500;
+        display: none;
+
+        @include breakpoint(tab992) {
+          @include flex;
+        }
       }
 
       .channelname {

@@ -539,6 +539,11 @@ button:focus,
   font-size: 0.875rem;
   font-weight: 600;
 }
+@media screen and (min-width: 62rem) {
+  .btn-subscribe .text {
+    font-size: inherit;
+  }
+}
 .btn-subscribe:not([disabled]):hover {
   background: #047bfb;
 }
@@ -565,7 +570,7 @@ button:focus,
   color: hsl(216, 15%, 52%);
   border: solid 0.0625rem hsl(214, 17%, 92%);
   border-radius: 0.375rem;
-  padding: 0.5rem;
+  padding: 0.6875rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -582,6 +587,12 @@ button:focus,
 .btn-subscribed .text {
   color: inherit;
   font: inherit;
+  font-size: 0.875rem;
+}
+@media screen and (min-width: 62rem) {
+  .btn-subscribed .text {
+    font-size: inherit;
+  }
 }
 .btn-subscribed:not([disabled]):hover {
   background: hsl(216, 15%, 52%);
@@ -845,8 +856,17 @@ button:focus,
 
 .cardchannel {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   gap: 1rem;
+  text-align: center;
+}
+@media screen and (min-width: 62rem) {
+  .cardchannel {
+    align-items: flex-start;
+    text-align: left;
+  }
 }
 .cardchannel-header .channelthumb {
   width: 4.5rem;
@@ -881,6 +901,13 @@ button:focus,
 .cardchannel-body .channelinfo .channelname {
   font-size: 0.875rem;
   font-weight: 500;
+  display: none;
+}
+@media screen and (min-width: 62rem) {
+  .cardchannel-body .channelinfo .text,
+  .cardchannel-body .channelinfo .channelname {
+    display: flex;
+  }
 }
 .cardchannel-body .channelinfo .channelname {
   max-width: 99%;

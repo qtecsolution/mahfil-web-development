@@ -86,3 +86,70 @@
     }
   }
 }
+
+.appmenu {
+  background: $white;
+  @include border-single(top, solid, 1, $searchborder);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  @include w100;
+  height: size(74);
+  padding: size(4) size(10) size(16);
+  z-index: 200;
+}
+
+.applist {
+  @include list-horizontal;
+
+  &-item {
+    width: calc(100% / 5);
+  }
+
+  &-link {
+    @include flex-center-column;
+    text-align: center;
+
+    .icon {
+      @include square(40);
+      @include flex-center;
+      overflow: hidden;
+      padding: size(10);
+    }
+
+    .text {
+      color: $textprimary;
+      font-size: size(13);
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    &:hover:not(.active) {
+      .icon {
+        svg {
+          path {
+            fill: $primary;
+          }
+        }
+      }
+
+      .text {
+        color: $textdark;
+      }
+    }
+
+    &.active {
+      .icon {
+        svg {
+          path {
+            fill: $primary;
+          }
+        }
+      }
+
+      .text {
+        color: $textdark;
+      }
+    }
+  }
+}

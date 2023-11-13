@@ -1411,13 +1411,13 @@ button:focus,
   fill: hsl(211, 97%, 60%);
 }
 .applist-link:hover:not(.active) .text {
-  color: hsl(220, 26%, 14%);
+  color: hsl(211, 97%, 60%);
 }
 .applist-link.active .icon svg path {
   fill: hsl(211, 97%, 60%);
 }
 .applist-link.active .text {
-  color: hsl(220, 26%, 14%);
+  color: hsl(211, 97%, 60%);
 }
 
 input,

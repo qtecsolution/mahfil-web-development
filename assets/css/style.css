@@ -5,6 +5,55 @@
 	- Website: https://www.qtecsolution.com
 ================================= */
 @import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
+@font-face {
+  font-family: "Clash Display";
+  src: url("../fonts/ClashDisplay-Variable.woff2") format("woff2"), url("../fonts/ClashDisplay-Variable.woff") format("woff"), url("../fonts/ClashDisplay-Variable.ttf") format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url("../fonts/ClashDisplay-Extralight.woff2") format("woff2"), url("../fonts/ClashDisplay-Extralight.woff") format("woff"), url("../fonts/ClashDisplay-Extralight.ttf") format("truetype");
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url("../fonts/ClashDisplay-Light.woff2") format("woff2"), url("../fonts/ClashDisplay-Light.woff") format("woff"), url("../fonts/ClashDisplay-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url("../fonts/ClashDisplay-Regular.woff2") format("woff2"), url("../fonts/ClashDisplay-Regular.woff") format("woff"), url("../fonts/ClashDisplay-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url("../fonts/ClashDisplay-Medium.woff2") format("woff2"), url("../fonts/ClashDisplay-Medium.woff") format("woff"), url("../fonts/ClashDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url("../fonts/ClashDisplay-Semibold.woff2") format("woff2"), url("../fonts/ClashDisplay-Semibold.woff") format("woff"), url("../fonts/ClashDisplay-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url("../fonts/ClashDisplay-Bold.woff2") format("woff2"), url("../fonts/ClashDisplay-Bold.woff") format("woff"), url("../fonts/ClashDisplay-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
 /**=====================================================**
                 ANIMATION-STYLES
 =======================================================**/
@@ -2416,7 +2465,12 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
+}
+@media screen and (min-width: 62rem) {
+  .popularchannel {
+    padding-bottom: 5rem;
+  }
 }
 .popularchannel-header {
   display: flex;
@@ -2502,6 +2556,105 @@ input:checked + .slider:before {
   height: 0.5rem;
   background: hsl(211, 97%, 60%);
   border-radius: 1.25rem;
+}
+
+.prayer-reminder {
+  background: hsl(207, 100%, 28%);
+  border-radius: 0.75rem;
+  width: 95%;
+  margin: 0 auto 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.prayer-reminder-header {
+  display: flex;
+  gap: 2.5rem;
+  padding: 1rem 1rem 1.25rem 3rem;
+}
+.prayer-reminder-header .leftcontent {
+  display: flex;
+  flex-direction: column;
+}
+.prayer-reminder-header .leftcontent .waqttitle {
+  color: hsl(0, 0%, 100%);
+  font-family: "Clash Display";
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.prayer-reminder-header .leftcontent .waqtname {
+  color: hsl(0, 0%, 100%);
+  font-family: "Clash Display";
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.prayer-reminder-header .leftcontent .waqttime {
+  color: hsl(0, 0%, 100%);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: -0.015rem;
+}
+.prayer-reminder-header .rightcontent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.prayer-reminder-header .rightcontent .title {
+  color: hsl(0, 0%, 100%);
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 500;
+}
+.prayer-reminder-header .rightcontent .timer {
+  display: flex;
+  gap: 0.5rem;
+}
+.prayer-reminder-header .rightcontent .timer .timerbox {
+  background: hsl(0, 0%, 100%);
+  border-radius: 0.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0.25rem 0.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
+}
+.prayer-reminder-header .rightcontent .timer .timerbox .time {
+  color: hsl(218, 17%, 35%);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.prayer-reminder-header .rightcontent .timer .timerbox .timetitle {
+  color: hsl(214, 20%, 69%);
+  font-size: 0.625rem;
+  font-weight: 700;
+}
+.prayer-reminder-body {
+  border-top: solid 0.0625rem hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+.prayer-reminder-body .remindlink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.prayer-reminder-body .remindlink .text {
+  color: hsl(0, 0%, 100%);
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 500;
+}
+.prayer-reminder-body .remindlink .icon {
+  width: 0.75rem;
+  height: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .favorites {

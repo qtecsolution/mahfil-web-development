@@ -43,7 +43,11 @@
 .popularchannel {
   @include flex-column;
   gap: size(20);
-  padding-bottom: size(80);
+  padding-bottom: size(32);
+
+  @include breakpoint(tab992) {
+    padding-bottom: size(80);
+  }
 
   &-header {
     @include flex-column;
@@ -137,6 +141,106 @@
       height: size(8);
       background: $primary;
       @include radius(20);
+    }
+  }
+}
+
+.prayer-reminder {
+  background: $primarydark;
+  @include radius(12);
+  width: 95%;
+  margin: 0 auto size(32);
+  @include flex-column;
+
+  &-header {
+    @include flex;
+    gap: size(40);
+    padding: size(16) size(16) size(20) size(48);
+
+    .leftcontent {
+      @include flex-column;
+
+      .waqttitle {
+        color: $white;
+        font-family: $clashDisplay;
+        font-size: size(12);
+        font-weight: 600;
+      }
+
+      .waqtname {
+        color: $white;
+        font-family: $clashDisplay;
+        font-size: size(24);
+        font-weight: 600;
+      }
+
+      .waqttime {
+        color: $white;
+        font-size: size(12);
+        font-weight: 500;
+        letter-spacing: size(-0.24);
+      }
+    }
+
+    .rightcontent {
+      @include flex-column;
+      gap: size(4);
+
+      .title {
+        color: $white;
+        font-size: size(10);
+        font-style: normal;
+        font-weight: 500;
+      }
+
+      .timer {
+        @include flex;
+        gap: size(8);
+
+        .timerbox {
+          background: $white;
+          @include radius(6);
+          @include flex-center-column;
+          padding: size(4) size(8);
+          @include square(44);
+
+          .time {
+            color: $dropdowntext;
+            font-size: size(14);
+            font-weight: 700;
+          }
+
+          .timetitle {
+            color: $timetext;
+            font-size: size(10);
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  &-body {
+    @include border-single(top, solid, 1, $white);
+    @include flex-center;
+    padding: size(8);
+
+    .remindlink {
+      @include flex-center;
+      gap: size(8);
+
+      .text {
+        color: $white;
+        font-size: size(12);
+        font-style: normal;
+        font-weight: 500;
+      }
+
+      .icon {
+        @include square(12);
+        @include flex-center;
+        overflow: hidden;
+      }
     }
   }
 }

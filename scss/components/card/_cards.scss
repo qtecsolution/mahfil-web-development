@@ -85,15 +85,6 @@
       @include square(32);
       cursor: pointer;
 
-      .dropdownicon {
-        background: $white;
-        @include square(32);
-        @include circle;
-        @include flex-center;
-        padding: size(4);
-        @include transitionsbackground;
-      }
-
       &-info {
         position: absolute;
         top: 100%;
@@ -102,40 +93,6 @@
         display: none;
         @extend %animation;
         @extend %slideUpIn;
-
-        .dropdownlist {
-          background: $white;
-          @include border(solid, 1, $menudivider);
-          @include radius(10);
-          box-shadow: $dropdownshadow;
-          @include list-vertical;
-          width: size(180);
-          min-height: size(110);
-          overflow: hidden;
-
-          &-link {
-            background: $white;
-            @include flex-center-vert;
-            gap: size(10);
-            padding: size(8) size(16);
-            @include transitionsbackground;
-
-            .droplinkicon {
-              @include square(16);
-              @include flex-center;
-              overflow: hidden;
-            }
-
-            .droplinktext {
-              color: $dropdowntext;
-              font-size: size(15);
-            }
-
-            @include hover {
-              background: $linkhoverbg;
-            }
-          }
-        }
       }
 
       @include hover {
@@ -146,6 +103,53 @@
         .videodropdown-info {
           display: block;
         }
+      }
+    }
+
+    .dropdownlist {
+      background: $white;
+      @include border(solid, 1, $menudivider);
+      @include radius(10);
+      box-shadow: $dropdownshadow;
+      @include list-vertical;
+      width: size(180);
+      min-height: size(110);
+      overflow: hidden;
+
+      &-link {
+        background: $white;
+        @include flex-center-vert;
+        gap: size(10);
+        padding: size(8) size(16);
+        @include transitionsbackground;
+
+        .droplinkicon {
+          @include square(16);
+          @include flex-center;
+          overflow: hidden;
+        }
+
+        .droplinktext {
+          color: $dropdowntext;
+          font-size: size(15);
+        }
+
+        @include hover {
+          background: $linkhoverbg;
+        }
+      }
+    }
+
+    .dropdownicon {
+      background: $white;
+      @include square(32);
+      @include circle;
+      @include flex-center;
+      padding: size(4);
+      @include transitionsbackground;
+
+      @include hover {
+        background: $linkhoverbg;
       }
     }
   }

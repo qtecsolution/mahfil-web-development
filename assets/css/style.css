@@ -2328,6 +2328,52 @@ table tr td {
   font-size: 0.75rem;
 }
 
+.listmobile {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-inline: 0.5rem;
+}
+.listmobile-link {
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0 0 1.875rem 0 rgba(43, 39, 41, 0.04);
+  border-radius: 0.9375rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem;
+  overflow: hidden;
+}
+.listmobile-link .icon {
+  background: hsl(210, 38%, 95%);
+  width: 2.75rem;
+  height: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  border-radius: 100%;
+}
+.listmobile-link .detail {
+  width: calc(100% - 3.25rem);
+  display: flex;
+  flex-direction: column;
+}
+.listmobile-link .detail .title {
+  color: hsl(220, 26%, 14%);
+  font-size: 1rem;
+  font-weight: 500;
+}
+.listmobile-link .detail .count {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: -0.0125rem;
+}
+
 .switch {
   position: relative;
   display: inline-block;

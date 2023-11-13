@@ -296,3 +296,45 @@
     }
   }
 }
+
+.listmobile {
+  @include list-vertical;
+  gap: size(12);
+  padding-inline: size(8);
+
+  &-link {
+    background: $white;
+    box-shadow: $linkshadow;
+    @include radius(15);
+    @include flex-center-vert;
+    gap: size(12);
+    padding: size(14);
+    overflow: hidden;
+
+    .icon {
+      background: $iconbg;
+      @include square(44);
+      @include flex-center;
+      padding: size(12);
+      @include circle;
+    }
+
+    .detail {
+      width: calc(100% - size(52));
+      @include flex-column;
+
+      .title {
+        color: $textdark;
+        font-size: size(16);
+        font-weight: 500;
+      }
+
+      .count {
+        color: $textprimary;
+        font-size: size(10);
+        font-weight: 500;
+        letter-spacing: size(-0.2);
+      }
+    }
+  }
+}

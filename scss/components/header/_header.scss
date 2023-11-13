@@ -1,13 +1,10 @@
-@use '../../global' as *;
-@use '../../partials' as *;
+@use "../../global" as *;
+@use "../../partials" as *;
 
 .header {
   background: $white;
   @include border-single(bottom, solid, 1, $menudivider);
-  padding-top: size(20);
-  padding-bottom: size(20);
-  margin-bottom: size(20);
-
+  padding: size(17.75) size(8);
   &-nav {
     @include flex-center-between;
 
@@ -46,15 +43,15 @@
           overflow: hidden;
           padding: size(10);
         }
-        
+
         .details {
           @include flex-column;
-  
+
           .waqtname {
             font-size: size(20);
             font-weight: 600;
           }
-  
+
           .waqtdurations {
             color: $textprimary;
             font-size: size(12);
@@ -79,7 +76,7 @@
           // width: size(140);
           height: size(5);
           @include radius(20);
-          
+
           &-bar {
             background: $primary;
             @include radius(20);

@@ -4,7 +4,7 @@
 .main {
   @include flex-column;
   @include w100;
-  padding: size(0) size(20) size(20);
+  padding: size(0);
 
   @include breakpoint(tab992) {
     width: calc(100% - size(244));

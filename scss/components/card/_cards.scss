@@ -560,3 +560,14 @@
     }
   }
 }
+
+.cardslider {
+  &-thumbnail {
+    @include flex-center;
+    overflow: hidden;
+
+    img {
+      @include w100;
+    }
+  }
+}

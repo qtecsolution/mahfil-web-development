@@ -7,6 +7,10 @@
   flex-wrap: wrap;
   padding-bottom: size(64);
 
+  @include breakpoint(tab992) {
+    padding-top: size(20);
+  }
+
   .cardvideo {
     @include w100;
 
@@ -105,6 +109,34 @@
     .trending-title {
       font-size: size(20);
       font-weight: 600;
+    }
+  }
+}
+
+.homeslider {
+  padding: 0 0 size(32);
+
+  .swiper {
+    padding-bottom: size(24);
+  }
+
+  .swiper-pagination {
+    @include flex-center;
+    gap: size(5);
+
+    .swiper-pagination-bullet {
+      margin: 0;
+      background: $bulletbg;
+      @include square(8);
+      @include circle;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      width: size(24);
+      height: size(8);
+      background: $primary;
+      @include radius(20);
     }
   }
 }

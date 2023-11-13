@@ -8,10 +8,13 @@
 
   &-header {
     .video-thumbnail {
-      @include radius(10);
       @include flex-center;
       @include w100;
       overflow: hidden;
+
+      @include breakpoint(tab992) {
+        @include radius(10);
+      }
 
       img {
         @include wh100;
@@ -216,13 +219,17 @@
 .cardfavorite {
   background: $white;
   @include flex-column;
-  @include radius(10);
+  // @include radius(10);
   overflow: hidden;
   @include transitionsbackground;
 
   @include breakpoint(mobile576) {
     flex-direction: row;
     align-items: flex-start;
+  }
+
+  @include breakpoint(tab992) {
+    @include radius(10);
   }
 
   .favoritethumb {

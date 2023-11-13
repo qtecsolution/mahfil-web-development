@@ -65,10 +65,12 @@ button,
 
 .btn-subscribe {
   background: $primary;
+  @include border(solid, 2, $primary);
   @include flex-center;
   @include radius(6);
   gap: size(4);
-  padding: size(7.5) size(16);
+  height: size(40);
+  padding-inline: size(24);
   @include transitionsbackground;
 
   .icon {
@@ -109,11 +111,12 @@ button,
 
 .btn-subscribed {
   @include setBgColor($white, $textprimary);
-  @include border(solid, 1, $menudivider);
+  @include border(solid, 2, $menudivider);
   @include radius(6);
-  padding: size(11) size(24);
   @include flex-center;
   gap: size(4);
+  height: size(40);
+  padding-inline: size(24);
 
   .icon {
     @include square(15);
@@ -123,8 +126,8 @@ button,
 
   .text {
     color: inherit;
-    font: inherit;
     font-size: size(14);
+    font-weight: 600;
 
     @include breakpoint(tab992) {
       font-size: inherit;
@@ -150,9 +153,10 @@ button,
   @include border(solid, 2, $primary);
   @include radius(6);
   font-weight: 600;
-  padding: size(8) size(16);
   @include flex-center;
   gap: size(4);
+  height: size(40);
+  padding-inline: size(24);
 
   .icon {
     @include square(15);
@@ -162,7 +166,12 @@ button,
 
   .text {
     color: inherit;
-    font: inherit;
+    font-size: size(14);
+    font-weight: 600;
+
+    @include breakpoint(tab992) {
+      font-size: inherit;
+    }
   }
 
   @include hover {

@@ -1169,6 +1169,7 @@ button:focus,
   align-items: flex-start;
   gap: 0.5rem;
   padding: 0.25rem 0.5rem;
+  position: relative;
 }
 @media screen and (min-width: 36rem) {
   .cardvid-details {
@@ -1212,7 +1213,14 @@ button:focus,
   font-size: 0.875rem;
   font-weight: 500;
 }
-.cardvid-details .vidropdown {
+.cardvid-info {
+  position: absolute;
+  top: 80%;
+  right: 0rem;
+  display: none;
+  z-index: 200;
+}
+.cardvid .vidropdown {
   cursor: pointer;
   width: 3rem;
   height: 100%;
@@ -1223,7 +1231,13 @@ button:focus,
   top: 0;
   right: 0.25rem;
 }
-.cardvid-details .vidropdown .dropdownicon {
+.cardvid .vidropdown:not([disabled]):hover .cardvid-info {
+  display: block;
+}
+.cardvid .vidropdown:not([disabled]):hover .dropdownicon {
+  background: hsl(213, 39%, 95%);
+}
+.cardvid .dropdownicon {
   background: hsl(0, 0%, 100%);
   width: 2rem;
   height: 2rem;
@@ -1234,20 +1248,7 @@ button:focus,
   padding: 0.25rem;
   transition: background 350ms ease-in-out;
 }
-.cardvid-details .vidropdown:not([disabled]):hover .cardvid-info {
-  display: block;
-}
-.cardvid-details .vidropdown:not([disabled]):hover .dropdownicon {
-  background: hsl(213, 39%, 95%);
-}
-.cardvid-info {
-  position: absolute;
-  top: 80%;
-  right: 0rem;
-  display: none;
-  z-index: 200;
-}
-.cardvid-info .dropdownlist {
+.cardvid .dropdownlist {
   background: hsl(0, 0%, 100%);
   border: solid 0.0625rem hsl(214, 17%, 92%);
   border-radius: 0.625rem;
@@ -1260,7 +1261,7 @@ button:focus,
   width: 13.125rem;
   overflow: hidden;
 }
-.cardvid-info .dropdownlist-link {
+.cardvid .dropdownlist-link {
   background: hsl(0, 0%, 100%);
   display: flex;
   align-items: center;
@@ -1268,7 +1269,7 @@ button:focus,
   padding: 0.5rem 1rem;
   transition: background 350ms ease-in-out;
 }
-.cardvid-info .dropdownlist-link .droplinkicon {
+.cardvid .dropdownlist-link .droplinkicon {
   width: 1rem;
   height: 1rem;
   display: flex;
@@ -1276,15 +1277,52 @@ button:focus,
   justify-content: center;
   overflow: hidden;
 }
-.cardvid-info .dropdownlist-link .droplinktext {
+.cardvid .dropdownlist-link .droplinktext {
   color: hsl(218, 17%, 35%);
   font-size: 0.9375rem;
 }
-.cardvid-info .dropdownlist-link:not([disabled]):hover {
+.cardvid .dropdownlist-link:not([disabled]):hover {
   background: hsl(213, 39%, 95%);
 }
 .cardvid:not([disabled]):hover {
   background: hsl(214, 100%, 99%);
+}
+.cardvid .offcanvas {
+  min-height: 17.5rem;
+  height: 17.5rem;
+  max-height: 17.5rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  overflow: hidden;
+  padding-top: 0.875rem;
+}
+.cardvid .offcanvas-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.875rem 0rem 1.5rem;
+}
+.cardvid .offcanvas-header .icon {
+  width: 2.5625rem;
+  height: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.cardvid .offcanvas-body .dropdownlist {
+  border: none;
+  box-shadow: none;
+  width: 100%;
+  border-radius: 0rem;
+}
+.cardvid .offcanvas-body .dropdownlist-link {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.cardvid .offcanvas-body .dropdownlist-link:not([disabled]):hover {
+  background: hsl(204, 45%, 98%);
 }
 
 .cardsubscribed {
@@ -1361,7 +1399,7 @@ button:focus,
 .header {
   background: hsl(0, 0%, 100%);
   border-bottom: solid 0.0625rem hsl(214, 17%, 92%);
-  padding: 1.109375rem 0.5rem;
+  padding: 1.109375rem 0.875rem;
 }
 .header-nav {
   display: flex;
@@ -2423,11 +2461,16 @@ input:checked + .slider:before {
   align-items: center;
   gap: 1.875rem 0.875rem;
   flex-wrap: wrap;
-  padding-bottom: 4rem;
+  padding: 0rem 0.875rem 4rem;
+}
+@media screen and (min-width: 48rem) {
+  .homevideos {
+    padding: 0rem 1.5rem 4rem;
+  }
 }
 @media screen and (min-width: 62rem) {
   .homevideos {
-    padding-top: 1.25rem;
+    padding: 0rem;
   }
 }
 .homevideos .cardvideo {
@@ -2505,11 +2548,16 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  padding-bottom: 2rem;
+  padding: 0rem 0.875rem 2rem;
+}
+@media screen and (min-width: 48rem) {
+  .popularchannel {
+    padding: 0rem 1.5rem 4rem;
+  }
 }
 @media screen and (min-width: 62rem) {
   .popularchannel {
-    padding-bottom: 5rem;
+    padding: 0rem 0rem 5rem;
   }
 }
 .popularchannel-header {
@@ -2559,7 +2607,17 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  padding-bottom: 5rem;
+  padding: 0rem 0.875rem 2rem;
+}
+@media screen and (min-width: 48rem) {
+  .trendingvideos {
+    padding: 0rem 1.5rem 5rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .trendingvideos {
+    padding: 0rem;
+  }
 }
 .trendingvideos-header {
   display: flex;
@@ -2572,7 +2630,17 @@ input:checked + .slider:before {
 }
 
 .homeslider {
-  padding: 0 0 2rem;
+  padding: 0 0rem 2rem;
+}
+@media screen and (min-width: 48rem) {
+  .homeslider {
+    padding: 0rem 0rem 4rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .homeslider {
+    padding: 0rem;
+  }
 }
 .homeslider .swiper {
   padding-bottom: 1.5rem;
@@ -2701,7 +2769,17 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  padding-bottom: 5rem;
+  padding: 0rem 0.875rem 4rem;
+}
+@media screen and (min-width: 48rem) {
+  .favorites {
+    padding: 0rem 1.5rem 5rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .favorites {
+    padding: 0rem;
+  }
 }
 .favorites-header {
   display: flex;
@@ -2771,7 +2849,17 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  padding-bottom: 5rem;
+  padding: 0rem 0.875rem 4rem;
+}
+@media screen and (min-width: 48rem) {
+  .salatreminder {
+    padding: 0rem 1.5rem 5rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .salatreminder {
+    padding: 0rem;
+  }
 }
 .salatreminder-header {
   display: flex;
@@ -3012,7 +3100,17 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  padding-bottom: 5rem;
+  padding: 0rem 0.875rem 4rem;
+}
+@media screen and (min-width: 48rem) {
+  .subscribedchannel {
+    padding: 0rem 1.5rem 5rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .subscribedchannel {
+    padding: 0rem;
+  }
 }
 .subscribedchannel-header {
   display: flex;
@@ -3070,7 +3168,17 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  padding-bottom: 5rem;
+  padding: 0rem 0.875rem 4rem;
+}
+@media screen and (min-width: 48rem) {
+  .popularsearch {
+    padding: 0rem 1.5rem 5rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .popularsearch {
+    padding: 0rem;
+  }
 }
 .popularsearch-header .popularsearch-title {
   font-size: 1.25rem;
@@ -3084,7 +3192,17 @@ input:checked + .slider:before {
 }
 
 .videoschannels {
-  padding-bottom: 10rem;
+  padding: 0rem 0.875rem 4rem;
+}
+@media screen and (min-width: 48rem) {
+  .videoschannels {
+    padding: 0rem 1.5rem 5rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .videoschannels {
+    padding: 0rem 0rem 10rem;
+  }
 }
 .videoschannels .emptysubscribed {
   display: flex;
@@ -3791,7 +3909,17 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 2.25rem;
-  padding-bottom: 3rem;
+  padding: 0rem 0.875rem 3rem;
+}
+@media screen and (min-width: 48rem) {
+  .myauth {
+    padding: 0rem 1.5rem 4rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .myauth {
+    padding: 0rem 0rem 4rem;
+  }
 }
 .myauth-header {
   display: flex;

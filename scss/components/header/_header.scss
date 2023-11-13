@@ -4,7 +4,7 @@
 .header {
   background: $white;
   @include border-single(bottom, solid, 1, $menudivider);
-  padding: size(17.75) size(8);
+  padding: size(17.75) size(14);
   &-nav {
     @include flex-center-between;
 

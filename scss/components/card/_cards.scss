@@ -398,6 +398,7 @@
     align-items: flex-start;
     gap: size(8);
     padding: size(4) size(8);
+    position: relative;
 
     @include breakpoint(mobile576) {
       align-items: center;
@@ -437,36 +438,6 @@
         }
       }
     }
-
-    .vidropdown {
-      cursor: pointer;
-      width: size(48);
-      @include h100;
-      // min-height: size(120);
-      @include flex-center;
-      position: absolute;
-      top: 0;
-      right: size(4);
-
-      .dropdownicon {
-        background: $white;
-        @include square(32);
-        @include circle;
-        @include flex-center;
-        padding: size(4);
-        @include transitionsbackground;
-      }
-
-      @include hover {
-        .cardvid-info {
-          display: block;
-        }
-
-        .dropdownicon {
-          background: $linkhoverbg;
-        }
-      }
-    }
   }
 
   &-info {
@@ -477,43 +448,113 @@
     @extend %animation;
     @extend %slideUpIn;
     z-index: 200;
+  }
 
-    .dropdownlist {
+  .vidropdown {
+    cursor: pointer;
+    width: size(48);
+    @include h100;
+    // min-height: size(120);
+    @include flex-center;
+    position: absolute;
+    top: 0;
+    right: size(4);
+
+    @include hover {
+      .cardvid-info {
+        display: block;
+      }
+
+      .dropdownicon {
+        background: $linkhoverbg;
+      }
+    }
+  }
+
+  .dropdownicon {
+    background: $white;
+    @include square(32);
+    @include circle;
+    @include flex-center;
+    padding: size(4);
+    @include transitionsbackground;
+  }
+
+  .dropdownlist {
+    background: $white;
+    @include border(solid, 1, $menudivider);
+    @include radius(10);
+    box-shadow: $dropdownshadow;
+    @include list-vertical;
+    width: size(210);
+    overflow: hidden;
+
+    &-link {
       background: $white;
-      @include border(solid, 1, $menudivider);
-      @include radius(10);
-      box-shadow: $dropdownshadow;
-      @include list-vertical;
-      width: size(210);
-      overflow: hidden;
+      @include flex-center-vert;
+      gap: size(10);
+      padding: size(8) size(16);
+      @include transitionsbackground;
 
-      &-link {
-        background: $white;
-        @include flex-center-vert;
-        gap: size(10);
-        padding: size(8) size(16);
-        @include transitionsbackground;
+      .droplinkicon {
+        @include square(16);
+        @include flex-center;
+        overflow: hidden;
+      }
 
-        .droplinkicon {
-          @include square(16);
-          @include flex-center;
-          overflow: hidden;
-        }
+      .droplinktext {
+        color: $dropdowntext;
+        font-size: size(15);
+      }
 
-        .droplinktext {
-          color: $dropdowntext;
-          font-size: size(15);
-        }
-
-        @include hover {
-          background: $linkhoverbg;
-        }
+      @include hover {
+        background: $linkhoverbg;
       }
     }
   }
 
   @include hover {
     background: $favhoverbg;
+  }
+
+  .offcanvas {
+    min-height: size(280);
+    height: size(280);
+    max-height: size(280);
+    @include double-radius(top, left, 16, top, right, 16);
+    overflow: hidden;
+    padding-top: size(14);
+
+    &-header {
+      @include flex-center;
+      overflow: hidden;
+      padding: size(14) size(0) size(24);
+
+      .icon {
+        width: size(41);
+        height: size(4);
+        @include flex-center;
+        overflow: hidden;
+      }
+    }
+
+    &-body {
+      .dropdownlist {
+        border: none;
+        box-shadow: none;
+        @include w100;
+        @include radius(0);
+
+        &-link {
+          padding-left: size(24);
+          padding-right: size(24);
+
+          @include hover {
+            background: $modalbg;
+          }
+        }
+      }
+    }
   }
 }
 

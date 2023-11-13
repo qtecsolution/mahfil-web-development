@@ -1,10 +1,18 @@
-@use '../global' as *;
-@use '../partials' as *;
+@use "../global" as *;
+@use "../partials" as *;
 
 .popularsearch {
   @include flex-column;
   gap: size(20);
-  padding-bottom: size(80);
+  padding: size(0) size(14) size(64);
+
+  @include breakpoint(mobile768) {
+    padding: size(0) size(24) size(80);
+  }
+
+  @include breakpoint(tab992) {
+    padding: size(0);
+  }
 
   &-header {
     .popularsearch-title {
@@ -21,7 +29,15 @@
 }
 
 .videoschannels {
-  padding-bottom: size(160);
+  padding: size(0) size(14) size(64);
+
+  @include breakpoint(mobile768) {
+    padding: size(0) size(24) size(80);
+  }
+
+  @include breakpoint(tab992) {
+    padding: size(0) size(0) size(160);
+  }
 
   .emptysubscribed {
     @include flex-center-column;

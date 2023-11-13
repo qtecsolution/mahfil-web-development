@@ -5,10 +5,14 @@
   @include flex-center-vert;
   gap: size(30) size(14);
   flex-wrap: wrap;
-  padding-bottom: size(64);
+  padding: size(0) size(14) size(64);
+
+  @include breakpoint(mobile768) {
+    padding: size(0) size(24) size(64);
+  }
 
   @include breakpoint(tab992) {
-    padding-top: size(20);
+    padding: size(0);
   }
 
   .cardvideo {
@@ -83,10 +87,14 @@
 .popularchannel {
   @include flex-column;
   gap: size(20);
-  padding-bottom: size(32);
+  padding: size(0) size(14) size(32);
+
+  @include breakpoint(mobile768) {
+    padding: size(0) size(24) size(64);
+  }
 
   @include breakpoint(tab992) {
-    padding-bottom: size(80);
+    padding: size(0) size(0) size(80);
   }
 
   &-header {
@@ -144,7 +152,15 @@
 .trendingvideos {
   @include flex-column;
   gap: size(20);
-  padding-bottom: size(80);
+  padding: size(0) size(14) size(32);
+
+  @include breakpoint(mobile768) {
+    padding: size(0) size(24) size(80);
+  }
+
+  @include breakpoint(tab992) {
+    padding: size(0);
+  }
 
   &-header {
     @include flex-column;
@@ -158,7 +174,15 @@
 }
 
 .homeslider {
-  padding: 0 0 size(32);
+  padding: 0 size(0) size(32);
+
+  @include breakpoint(mobile768) {
+    padding: size(0) size(0) size(64);
+  }
+
+  @include breakpoint(tab992) {
+    padding: size(0);
+  }
 
   .swiper {
     padding-bottom: size(24);

@@ -99,7 +99,7 @@
 }
 
 .searchresults {
-  background: $modalbg;
+  // background: $modalbg;
   @include flex-column;
   gap: size(24);
   padding: size(20) size(14) size(64);

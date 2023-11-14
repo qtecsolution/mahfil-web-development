@@ -1,2 +1,99 @@
 @use "../global" as *;
 @use "../partials" as *;
+
+.helpandfeedback {
+  background: $modalbg;
+  padding: size(20) size(14) size(64);
+  min-height: 100vh;
+
+  @include breakpoint(mobile768) {
+    padding: size(20) size(24) size(80);
+  }
+
+  @include breakpoint(tab992) {
+    padding: size(20) size(24) size(80);
+  }
+
+  &-body {
+    @include flex-column;
+    gap: size(32);
+
+    .helpandfeedbacktitle {
+      color: $textprimary;
+      font-family: $clashDisplay;
+      font-size: size(16);
+      font-weight: 600;
+    }
+  }
+
+  .help {
+    @include flex-column;
+    gap: size(24);
+
+    &-header {
+      .helptitle {
+        font-family: $clashDisplay;
+        color: $textprimary;
+        font-size: size(20);
+        font-weight: 700;
+      }
+    }
+
+    &-body {
+      .accordion {
+        @include flex-column;
+        gap: size(8);
+
+        &-item {
+          background: transparent;
+          @include radius(0);
+          border-color: $inputbg;
+
+          &:first-of-type,
+          &:last-of-type {
+            .accordion-button {
+              @include radius(0);
+            }
+          }
+        }
+
+        &-button {
+          border: none;
+          color: $textprimary;
+          font-size: size(14);
+          font-weight: 400;
+          padding: size(14);
+
+          &:not(.collapsed) {
+            @include setBgColor(transparent, $textdark);
+            box-shadow: none;
+          }
+        }
+
+        &-body {
+          padding: size(0) size(14) size(14);
+
+          .faqtext {
+            color: $textprimary;
+            font-size: size(12);
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+
+  .feedback {
+    @include flex-column;
+    gap: size(24);
+
+    &-header {
+      .feedbacktitle {
+        font-family: $clashDisplay;
+        color: $textprimary;
+        font-size: size(20);
+        font-weight: 700;
+      }
+    }
+  }
+}

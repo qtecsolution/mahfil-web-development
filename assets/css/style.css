@@ -3582,6 +3582,88 @@ input:checked + .slider:before {
   font-weight: 400;
 }
 
+.helpandfeedback {
+  background: hsl(204, 45%, 98%);
+  padding: 1.25rem 0.875rem 4rem;
+  min-height: 100vh;
+}
+@media screen and (min-width: 48rem) {
+  .helpandfeedback {
+    padding: 1.25rem 1.5rem 5rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .helpandfeedback {
+    padding: 1.25rem 1.5rem 5rem;
+  }
+}
+.helpandfeedback-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.helpandfeedback-body .helpandfeedbacktitle {
+  color: hsl(216, 15%, 52%);
+  font-family: "Clash Display";
+  font-size: 1rem;
+  font-weight: 600;
+}
+.helpandfeedback .help {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.helpandfeedback .help-header .helptitle {
+  font-family: "Clash Display";
+  color: hsl(216, 15%, 52%);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.helpandfeedback .help-body .accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.helpandfeedback .help-body .accordion-item {
+  background: transparent;
+  border-radius: 0rem;
+  border-color: hsl(214, 32%, 91%);
+}
+.helpandfeedback .help-body .accordion-item:first-of-type .accordion-button, .helpandfeedback .help-body .accordion-item:last-of-type .accordion-button {
+  border-radius: 0rem;
+}
+.helpandfeedback .help-body .accordion-button {
+  border: none;
+  color: hsl(216, 15%, 52%);
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding: 0.875rem;
+}
+.helpandfeedback .help-body .accordion-button:not(.collapsed) {
+  background: transparent;
+  color: hsl(220, 26%, 14%);
+  box-shadow: none;
+}
+.helpandfeedback .help-body .accordion-body {
+  padding: 0rem 0.875rem 0.875rem;
+}
+.helpandfeedback .help-body .accordion-body .faqtext {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.helpandfeedback .feedback {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.helpandfeedback .feedback-header .feedbacktitle {
+  font-family: "Clash Display";
+  color: hsl(216, 15%, 52%);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
 .settingsection .settingdescription .nav-tabs {
   border-color: hsl(214, 17%, 92%);
   margin-bottom: 1.5rem;

@@ -629,6 +629,8 @@
   &-thumbnail {
     @include flex-center;
     overflow: hidden;
+    @include w100;
+    min-height: size(230);
 
     img {
       @include w100;

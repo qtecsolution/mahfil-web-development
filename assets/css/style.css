@@ -1410,6 +1410,8 @@ button:focus,
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  width: 100%;
+  min-height: 14.375rem;
 }
 .cardslider-thumbnail img {
   width: 100%;

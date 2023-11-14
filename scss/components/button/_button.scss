@@ -254,3 +254,19 @@ button,
     color: $primary;
   }
 }
+
+.btn-sumbit {
+  @include setBgColor($primary, $white);
+  @include radius(8);
+  @include flex-center;
+  text-align: center;
+  font-size: size(14);
+  font-weight: 600;
+  padding: size(13.5) size(14);
+  @include w100;
+  @include transitionsall;
+
+  @include hover {
+    @include setBgColor($primarydark, $white);
+  }
+}

@@ -17,6 +17,7 @@
   &-body {
     @include flex-column;
     gap: size(32);
+    padding-bottom: size(64);
 
     .helpandfeedbacktitle {
       color: $textprimary;
@@ -93,6 +94,40 @@
         color: $textprimary;
         font-size: size(20);
         font-weight: 700;
+      }
+    }
+  }
+}
+
+.feedbackform {
+  @include flex-column;
+  gap: size(16);
+
+  .inputbox {
+    @include flex-column;
+    gap: size(8);
+
+    .inputlabel {
+      color: $labeltext;
+      font-size: size(14);
+      font-weight: 500;
+    }
+
+    .inputfield {
+      @include setBgColor($white, $textdark);
+      @include border(solid, 1, $inputbg);
+      @include radius(6);
+      font-size: size(14);
+      font-weight: 400;
+      padding: size(12) size(16);
+      @include transitionsall;
+
+      &::placeholder {
+        color: $textplaceholder;
+      }
+
+      &:focus {
+        border-color: $primary;
       }
     }
   }

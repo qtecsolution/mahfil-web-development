@@ -764,6 +764,25 @@ button:focus,
   color: hsl(211, 97%, 60%);
 }
 
+.btn-sumbit {
+  background: hsl(211, 97%, 60%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.84375rem 0.875rem;
+  width: 100%;
+  transition: all 350ms ease-in-out;
+}
+.btn-sumbit:not([disabled]):hover {
+  background: hsl(207, 100%, 28%);
+  color: hsl(0, 0%, 100%);
+}
+
 .cardvideo {
   display: flex;
   flex-direction: column;
@@ -3601,6 +3620,7 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding-bottom: 4rem;
 }
 .helpandfeedback-body .helpandfeedbacktitle {
   color: hsl(216, 15%, 52%);
@@ -3662,6 +3682,41 @@ input:checked + .slider:before {
   color: hsl(216, 15%, 52%);
   font-size: 1.25rem;
   font-weight: 700;
+}
+
+.feedbackform {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.feedbackform .inputbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.feedbackform .inputbox .inputlabel {
+  color: hsl(210, 21%, 33%);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.feedbackform .inputbox .inputfield {
+  background: hsl(0, 0%, 100%);
+  color: hsl(220, 26%, 14%);
+  border: solid 0.0625rem hsl(214, 32%, 91%);
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding: 0.75rem 1rem;
+  transition: all 350ms ease-in-out;
+}
+.feedbackform .inputbox .inputfield::-moz-placeholder {
+  color: hsl(240, 6%, 73%);
+}
+.feedbackform .inputbox .inputfield::placeholder {
+  color: hsl(240, 6%, 73%);
+}
+.feedbackform .inputbox .inputfield:focus {
+  border-color: hsl(211, 97%, 60%);
 }
 
 .settingsection .settingdescription .nav-tabs {

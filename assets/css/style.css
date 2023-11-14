@@ -3566,6 +3566,17 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  padding-inline: 0.875rem;
+}
+@media screen and (min-width: 48rem) {
+  .videoplay .videoheader .details {
+    padding-inline: 1.5rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .videoplay .videoheader .details {
+    padding-inline: 0rem;
+  }
 }
 .videoplay .videoheader .details .videotitle {
   font-size: 1.25rem;
@@ -3593,6 +3604,17 @@ input:checked + .slider:before {
 .videoplay .leftinfo {
   display: flex;
   gap: 1.25rem;
+  padding-inline: 0.875rem;
+}
+@media screen and (min-width: 48rem) {
+  .videoplay .leftinfo {
+    padding-inline: 1.5rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .videoplay .leftinfo {
+    padding-inline: 0rem;
+  }
 }
 @media screen and (min-width: 100rem) {
   .videoplay .leftinfo .channeldetail {
@@ -3608,6 +3630,17 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding-inline: 0.875rem;
+}
+@media screen and (min-width: 48rem) {
+  .videoplay .comments {
+    padding-inline: 1.5rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .videoplay .comments {
+    padding-inline: 0rem;
+  }
 }
 .videoplay .comments-header .commenttitle {
   font-size: 1rem;

@@ -37,6 +37,15 @@
     .details {
       @include flex-column;
       gap: size(20);
+      padding-inline: size(14);
+
+      @include breakpoint(mobile768) {
+        padding-inline: size(24);
+      }
+
+      @include breakpoint(tab992) {
+        padding-inline: size(0);
+      }
 
       .videotitle {
         font-size: size(20);
@@ -71,6 +80,15 @@
   .leftinfo {
     @include flex;
     gap: size(20);
+    padding-inline: size(14);
+
+    @include breakpoint(mobile768) {
+      padding-inline: size(24);
+    }
+
+    @include breakpoint(tab992) {
+      padding-inline: size(0);
+    }
 
     .channeldetail {
       @include breakpoint(desktop1600) {
@@ -86,6 +104,15 @@
   .comments {
     @include flex-column;
     gap: size(32);
+    padding-inline: size(14);
+
+    @include breakpoint(mobile768) {
+      padding-inline: size(24);
+    }
+
+    @include breakpoint(tab992) {
+      padding-inline: size(0);
+    }
 
     &-header {
       .commenttitle {

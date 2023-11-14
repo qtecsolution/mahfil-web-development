@@ -97,3 +97,91 @@
     }
   }
 }
+
+.searchresults {
+  background: $modalbg;
+  @include flex-column;
+  gap: size(24);
+  padding: size(20) size(14) size(64);
+  min-height: 100vh;
+
+  @include breakpoint(mobile768) {
+    padding: size(20) size(24) size(80);
+  }
+
+  @include breakpoint(tab992) {
+    padding: size(20) size(24) size(80);
+  }
+
+  &-header {
+    @include flex-center-vert;
+    gap: size(16);
+
+    .btn-back {
+      @include square(24);
+      @include flex-center;
+      overflow: hidden;
+    }
+
+    .searchbox {
+      background: $white;
+      @include border(solid, 1, $searchborder);
+      @include radius(4);
+      @include flex-center-vert;
+      gap: size(16);
+      padding-right: size(16);
+      width: calc(100% - size(40));
+      @include transitionsall;
+
+      .searchfield {
+        background: transparent;
+        color: $textdark;
+        border: none;
+        padding: size(11.25) size(16);
+        font-size: size(15);
+        font-weight: 400;
+        width: calc(100% - size(40));
+
+        &::placeholder {
+          color: $textplaceholder;
+        }
+      }
+
+      .btn-search {
+        @include square(24);
+        @include flex-center;
+        overflow: hidden;
+
+        svg {
+          path {
+            @include transitionsall;
+          }
+        }
+
+        @include hover {
+          svg {
+            path {
+              fill: $primary;
+            }
+          }
+        }
+      }
+
+      &:focus-within {
+        border-color: $primary;
+      }
+    }
+  }
+
+  &-body {
+    @include flex-column;
+    gap: size(12);
+
+    .searchtitle {
+      color: $textprimary;
+      font-family: $clashDisplay;
+      font-size: size(16);
+      font-weight: 600;
+    }
+  }
+}

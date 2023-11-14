@@ -338,3 +338,22 @@
     }
   }
 }
+
+.popularlist {
+  @include list-horizontal;
+  gap: size(8);
+  flex-wrap: wrap;
+
+  &-link {
+    @include setBgColor($white, $textprimary);
+    @include radius(33);
+    box-shadow: $popularshadow;
+    @include flex-center;
+    font-size: size(12);
+    font-style: normal;
+    font-weight: 400;
+    padding: size(8) size(20);
+    text-align: center;
+    overflow: hidden;
+  }
+}

@@ -192,11 +192,20 @@
 
     .channelinfo {
       .title {
-        font-size: size(18);
+        font-size: size(14);
         font-weight: 600;
-        min-height: size(36);
+        min-height: size(32);
         max-height: size(40);
+        height: size(34);
         @include line-clamp;
+
+        @include breakpoint(mobile768) {
+          font-size: size(16);
+        }
+
+        @include breakpoint(tab992) {
+          font-size: size(18);
+        }
       }
 
       .text,
@@ -204,14 +213,11 @@
         font-size: size(14);
         font-weight: 500;
         display: none;
+        @include text-overflow;
 
         @include breakpoint(tab992) {
-          @include flex;
+          display: -webkit-box;
         }
-      }
-
-      .channelname {
-        @include text-overflow;
       }
     }
 

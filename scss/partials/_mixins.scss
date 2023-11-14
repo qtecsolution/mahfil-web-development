@@ -92,6 +92,7 @@
 
 @mixin text-overflow {
   max-width: 99%;
+  width: 99%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -218,7 +219,6 @@
 }
 
 @mixin hideScrollbar {
-
   &::-webkit-scrollbar {
     width: 0;
     height: 0;

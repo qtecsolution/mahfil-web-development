@@ -36,6 +36,10 @@
     gap: size(8);
     padding-inline: size(14);
 
+    @include breakpoint(tab992) {
+      padding-inline: size(0);
+    }
+
     .channelthumb {
       @include square(40);
       @include circle;

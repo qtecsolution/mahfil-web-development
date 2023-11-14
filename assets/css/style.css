@@ -820,6 +820,11 @@ button:focus,
   gap: 0.5rem;
   padding-inline: 0.875rem;
 }
+@media screen and (min-width: 62rem) {
+  .cardvideo-body {
+    padding-inline: 0rem;
+  }
+}
 .cardvideo-body .channelthumb {
   width: 2.5rem;
   height: 2.5rem;

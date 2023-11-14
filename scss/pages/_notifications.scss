@@ -1,0 +1,87 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.notifications {
+  background: $modalbg;
+  padding: size(20) size(14) size(64);
+  min-height: 100vh;
+
+  @include breakpoint(mobile768) {
+    padding: size(20) size(24) size(80);
+  }
+
+  @include breakpoint(tab992) {
+    padding: size(20) size(24) size(80);
+  }
+
+  &-body {
+    @include flex-column;
+    gap: size(12);
+
+    .notificationtitle {
+      color: $textprimary;
+      font-family: $clashDisplay;
+      font-size: size(16);
+      font-weight: 600;
+    }
+
+    .notificationlist {
+      @include flex-column;
+      gap: size(8);
+    }
+
+    .notification {
+      background: $white;
+      @include radius(15);
+      box-shadow: $linkshadow;
+      @include flex;
+      gap: size(8);
+      padding: size(16) size(14);
+      @include transitionsall;
+
+      &-info {
+        @include flex;
+        gap: size(8);
+        width: calc(100% - size(100));
+
+        .thumb {
+          @include square(40);
+          @include circle;
+          @include flex-center;
+          overflow: hidden;
+        }
+
+        .info {
+          width: calc(100% - size(48));
+          @include flex-column;
+          gap: size(8);
+
+          .notifytitle {
+            color: $textdark;
+            font-size: size(12);
+            font-weight: 500;
+            @include line-clamp;
+          }
+
+          .notifytime {
+            color: $textprimary;
+            font-size: size(10);
+            font-weight: 500;
+            letter-spacing: size(-0.2);
+          }
+        }
+      }
+
+      &-thumbnail {
+        width: size(92);
+        height: size(51);
+        @include flex-center;
+        overflow: hidden;
+      }
+
+      @include hover {
+        background: $notificationhoverbg;
+      }
+    }
+  }
+}

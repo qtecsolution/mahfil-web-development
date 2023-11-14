@@ -1,11 +1,14 @@
-@forward './home';
-@forward './favorites';
-@forward './salatreminder';
-@forward './subscribedchannel';
-@forward './searchresult';
-@forward './settings';
-@forward './channel';
-@forward './videoplay';
-@forward './authentications';
+@forward "./home";
+@forward "./favorites";
+@forward "./salatreminder";
+@forward "./subscribedchannel";
+@forward "./searchresult";
+@forward "./notifications";
+@forward "./privacy";
+@forward "./help";
+@forward "./settings";
+@forward "./channel";
+@forward "./videoplay";
+@forward "./authentications";
 
-@forward './error';
+@forward "./error";

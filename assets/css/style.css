@@ -1520,6 +1520,20 @@ button:focus,
   background: hsl(211, 97%, 60%);
   border-radius: 1.25rem;
 }
+.header-nav .logo {
+  width: 9.4375rem;
+  height: 2.4375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1.25rem;
+  overflow: hidden;
+}
+@media screen and (min-width: 48rem) {
+  .header-nav .logo {
+    margin-left: 0;
+  }
+}
 
 .appmenu {
   background: hsl(0, 0%, 100%);
@@ -2132,18 +2146,26 @@ table tr td {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 0.625rem;
+  gap: 0.5rem;
 }
 .mobilelist-link {
   background: hsl(213, 39%, 95%);
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 0.625rem;
+  padding: 0.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .mobilelist-link {
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0.625rem;
+    gap: 0.625rem;
+  }
 }
 
 .desktoplist {

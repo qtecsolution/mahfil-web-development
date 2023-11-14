@@ -63,15 +63,21 @@
 
 .mobilelist {
   @include list-horizontal;
-  gap: size(10);
+  gap: size(8);
 
   &-link {
     background: $linkhoverbg;
-    @include square(44);
+    @include square(32);
     @include circle;
     @include flex-center;
     overflow: hidden;
-    padding: size(10);
+    padding: size(8);
+
+    @include breakpoint(mobile768) {
+      @include square(44);
+      padding: size(10);
+      gap: size(10);
+    }
   }
 }
 

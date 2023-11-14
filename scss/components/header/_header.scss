@@ -5,6 +5,7 @@
   background: $white;
   @include border-single(bottom, solid, 1, $menudivider);
   padding: size(17.75) size(14);
+
   &-nav {
     @include flex-center-between;
 
@@ -82,6 +83,18 @@
             @include radius(20);
           }
         }
+      }
+    }
+
+    .logo {
+      width: size(151);
+      height: size(39);
+      @include flex-center;
+      margin-left: size(20);
+      overflow: hidden;
+
+      @include breakpoint(mobile768) {
+        margin-left: 0;
       }
     }
   }

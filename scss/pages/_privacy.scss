@@ -1,2 +1,58 @@
 @use "../global" as *;
 @use "../partials" as *;
+
+.privacysection {
+  background: $modalbg;
+  padding: size(20) size(14) size(64);
+  min-height: 100vh;
+
+  @include breakpoint(mobile768) {
+    padding: size(20) size(24) size(80);
+  }
+
+  @include breakpoint(tab992) {
+    padding: size(20) size(24) size(80);
+  }
+
+  &-body {
+    @include flex-column;
+    gap: size(32);
+
+    .privacytitle {
+      color: $textprimary;
+      font-family: $clashDisplay;
+      font-size: size(16);
+      font-weight: 600;
+    }
+
+    .privacydetails {
+      @include flex-column;
+      gap: size(40);
+    }
+
+    .privacy {
+      @include flex-column;
+      gap: size(16);
+
+      &-header {
+        .title {
+          font-family: $clashDisplay;
+          color: $textprimary;
+          font-size: size(20);
+          font-weight: 700;
+        }
+      }
+
+      &-body {
+        @include flex-column;
+        gap: size(20);
+
+        .privacytext {
+          color: $textprimary;
+          font-size: size(12);
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

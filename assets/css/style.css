@@ -2733,16 +2733,16 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  padding: 0rem 0.875rem 2rem;
+  padding: 2rem 0.875rem 2rem;
 }
 @media screen and (min-width: 48rem) {
   .popularchannel {
-    padding: 0rem 1.5rem 4rem;
+    padding: 3rem 1.5rem 4rem;
   }
 }
 @media screen and (min-width: 62rem) {
   .popularchannel {
-    padding: 0rem 0rem 5rem;
+    padding: 4rem 0rem 5rem;
   }
 }
 .popularchannel-header {

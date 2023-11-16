@@ -740,14 +740,14 @@ button:focus,
   text-align: center;
 }
 .btn-searchtag:hover:not(.active) {
-  background: hsl(218, 17%, 35%);
+  background: hsl(211, 97%, 60%);
   color: hsl(0, 0%, 100%);
-  border-color: hsl(218, 17%, 35%);
+  border-color: hsl(211, 97%, 60%);
 }
 .btn-searchtag.active {
-  background: hsl(216, 17%, 12%);
+  background: hsl(211, 97%, 60%);
   color: hsl(0, 0%, 100%);
-  border-color: hsl(216, 17%, 12%);
+  border-color: hsl(211, 97%, 60%);
 }
 
 .btn-social {
@@ -2655,7 +2655,7 @@ input:checked + .slider:before {
 }
 @media screen and (min-width: 62rem) {
   .homevideos {
-    padding: 0rem;
+    padding: 1.25rem 0rem 0rem;
   }
 }
 .homevideos .cardvideo {
@@ -2954,16 +2954,16 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  padding: 0rem 0.875rem 4rem;
+  padding: 1.25rem 0.875rem 4rem;
 }
 @media screen and (min-width: 48rem) {
   .favorites {
-    padding: 0rem 1.5rem 5rem;
+    padding: 1.25rem 1.5rem 5rem;
   }
 }
 @media screen and (min-width: 62rem) {
   .favorites {
-    padding: 0rem;
+    padding: 1.25rem 0rem 0rem;
   }
 }
 .favorites-header {
@@ -3034,16 +3034,16 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  padding: 0rem 0.875rem 4rem;
+  padding: 1.25rem 0.875rem 4rem;
 }
 @media screen and (min-width: 48rem) {
   .salatreminder {
-    padding: 0rem 1.5rem 5rem;
+    padding: 1.25rem 1.5rem 5rem;
   }
 }
 @media screen and (min-width: 62rem) {
   .salatreminder {
-    padding: 0rem;
+    padding: 1.25rem 0rem 0rem;
   }
 }
 .salatreminder-header {
@@ -3285,16 +3285,16 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  padding: 0rem 0.875rem 4rem;
+  padding: 1.25rem 0.875rem 4rem;
 }
 @media screen and (min-width: 48rem) {
   .subscribedchannel {
-    padding: 0rem 1.5rem 5rem;
+    padding: 1.25rem 1.5rem 5rem;
   }
 }
 @media screen and (min-width: 62rem) {
   .subscribedchannel {
-    padding: 0rem;
+    padding: 1.25rem 0rem 0rem;
   }
 }
 .subscribedchannel-header {
@@ -3353,16 +3353,16 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  padding: 0rem 0.875rem 4rem;
+  padding: 1.25rem 0.875rem 4rem;
 }
 @media screen and (min-width: 48rem) {
   .popularsearch {
-    padding: 0rem 1.5rem 5rem;
+    padding: 1.25rem 1.5rem 5rem;
   }
 }
 @media screen and (min-width: 62rem) {
   .popularsearch {
-    padding: 0rem;
+    padding: 1.25rem 0rem 0rem;
   }
 }
 .popularsearch-header .popularsearch-title {

@@ -12,7 +12,7 @@
   }
 
   @include breakpoint(tab992) {
-    padding: size(0);
+    padding: size(20) size(0) size(0);
   }
 
   .cardvideo {

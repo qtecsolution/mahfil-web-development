@@ -225,13 +225,13 @@ button,
   text-align: center;
 
   &:hover:not(.active) {
-    @include setBgColor($dropdowntext, $white);
-    border-color: $dropdowntext;
+    @include setBgColor($primary, $white);
+    border-color: $primary;
   }
 
   &.active {
-    @include setBgColor($headingtext, $white);
-    border-color: $headingtext;
+    @include setBgColor($primary, $white);
+    border-color: $primary;
   }
 }
 

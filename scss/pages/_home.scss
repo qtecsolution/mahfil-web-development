@@ -87,7 +87,7 @@
 .popularchannel {
   @include flex-column;
   gap: size(20);
-  padding: size(32) size(14) size(32);
+  padding: size(0) size(14) size(16);
 
   @include breakpoint(mobile768) {
     padding: size(48) size(24) size(64);

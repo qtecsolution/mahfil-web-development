@@ -2733,7 +2733,7 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  padding: 2rem 0.875rem 2rem;
+  padding: 0rem 0.875rem 1rem;
 }
 @media screen and (min-width: 48rem) {
   .popularchannel {

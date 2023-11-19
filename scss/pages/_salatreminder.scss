@@ -104,6 +104,16 @@
             }
           }
 
+          .upcomingprayer {
+            color: $headingtext;
+            font-size: size(14);
+            font-weight: 500;
+
+            @include breakpoint(desktop1400) {
+              font-size: size(16);
+            }
+          }
+
           .remaining {
             @include flex-column;
             gap: size(24);

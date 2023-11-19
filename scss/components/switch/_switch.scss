@@ -4,8 +4,8 @@
 .switch {
   position: relative;
   display: inline-block;
-  width: size(60);
-  height: size(34);
+  width: size(40);
+  height: size(24);
 }
 
 .switch input {
@@ -19,29 +19,29 @@
   cursor: pointer;
   inset: 0;
   background: $switchbg;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .slider:before {
   background: $white;
   content: "";
-  @include square(26);
+  @include square(16);
   position: absolute;
   left: size(4);
   bottom: size(4);
-  transition: .4s;
+  transition: 0.4s;
 }
 
-input:checked+.slider {
+input:checked + .slider {
   background: $primary;
 }
 
-input:focus+.slider {
-  box-shadow: 0 0 .0625rem $primary;
+input:focus + .slider {
+  box-shadow: 0 0 0.0625rem $primary;
 }
 
-input:checked+.slider:before {
-  @include translateX(size(26));
+input:checked + .slider:before {
+  @include translateX(size(16));
 }
 
 .slider.round {

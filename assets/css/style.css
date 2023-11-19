@@ -2498,8 +2498,8 @@ table tr td {
 .switch {
   position: relative;
   display: inline-block;
-  width: 3.75rem;
-  height: 2.125rem;
+  width: 2.5rem;
+  height: 1.5rem;
 }
 
 .switch input {
@@ -2519,8 +2519,8 @@ table tr td {
 .slider:before {
   background: hsl(0, 0%, 100%);
   content: "";
-  width: 1.625rem;
-  height: 1.625rem;
+  width: 1rem;
+  height: 1rem;
   position: absolute;
   left: 0.25rem;
   bottom: 0.25rem;
@@ -2536,7 +2536,7 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  transform: translateX(1.625rem);
+  transform: translateX(1rem);
 }
 
 .slider.round {
@@ -3187,6 +3187,16 @@ input:checked + .slider:before {
 }
 @media screen and (min-width: 87.5rem) {
   .salatreminder-body .leftcontent .downinfo .salatremind .waqtduration {
+    font-size: 1rem;
+  }
+}
+.salatreminder-body .leftcontent .downinfo .salatremind .upcomingprayer {
+  color: hsl(216, 17%, 12%);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+@media screen and (min-width: 87.5rem) {
+  .salatreminder-body .leftcontent .downinfo .salatremind .upcomingprayer {
     font-size: 1rem;
   }
 }

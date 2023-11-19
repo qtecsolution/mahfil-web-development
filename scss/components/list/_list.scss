@@ -284,7 +284,12 @@
 .videolist {
   @include list-horizontal;
   gap: size(8);
-  justify-content: flex-end;
+  padding-left: size(14);
+
+  @include breakpoint(mobile768) {
+    justify-content: flex-end;
+    padding-left: size(0);
+  }
 
   &-link {
     @include flex-center-vert;

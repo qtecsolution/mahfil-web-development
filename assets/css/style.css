@@ -2404,7 +2404,13 @@ table tr td {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  justify-content: flex-end;
+  padding-left: 0.875rem;
+}
+@media screen and (min-width: 48rem) {
+  .videolist {
+    justify-content: flex-end;
+    padding-left: 0rem;
+  }
 }
 .videolist-link {
   display: flex;

@@ -12,7 +12,7 @@
   }
 
   @include breakpoint(tab992) {
-    padding: size(20) size(0) size(0);
+    padding: size(0) size(0) size(0);
   }
 
   .cardvideo {
@@ -174,6 +174,7 @@
 }
 
 .homeslider {
+  margin-top: size(-34);
   padding: 0 size(0) size(32);
 
   @include breakpoint(mobile768) {

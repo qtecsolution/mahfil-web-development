@@ -5,6 +5,7 @@
   background: $white;
   @include border-single(bottom, solid, 1, $menudivider);
   padding: size(17.75) size(14);
+  margin-bottom: size(20);
 
   &-nav {
     @include flex-center-between;

@@ -1492,6 +1492,7 @@ button:focus,
   background: hsl(0, 0%, 100%);
   border-bottom: solid 0.0625rem hsl(214, 17%, 92%);
   padding: 1.109375rem 0.875rem;
+  margin-bottom: 1.25rem;
 }
 .header-nav {
   display: flex;
@@ -2661,7 +2662,7 @@ input:checked + .slider:before {
 }
 @media screen and (min-width: 62rem) {
   .homevideos {
-    padding: 1.25rem 0rem 0rem;
+    padding: 0rem 0rem 0rem;
   }
 }
 .homevideos .cardvideo {
@@ -2821,6 +2822,7 @@ input:checked + .slider:before {
 }
 
 .homeslider {
+  margin-top: -2.125rem;
   padding: 0 0rem 2rem;
 }
 @media screen and (min-width: 48rem) {
@@ -3020,16 +3022,16 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  padding: 1.25rem 0.875rem 4rem;
+  padding: 0rem 0.875rem 4rem;
 }
 @media screen and (min-width: 48rem) {
   .favorites {
-    padding: 1.25rem 1.5rem 5rem;
+    padding: 0rem 1.5rem 5rem;
   }
 }
 @media screen and (min-width: 62rem) {
   .favorites {
-    padding: 1.25rem 0rem 0rem;
+    padding: 0rem 0rem 0rem;
   }
 }
 .favorites-header {
@@ -3100,16 +3102,16 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  padding: 1.25rem 0.875rem 4rem;
+  padding: 0rem 0.875rem 4rem;
 }
 @media screen and (min-width: 48rem) {
   .salatreminder {
-    padding: 1.25rem 1.5rem 5rem;
+    padding: 0rem 1.5rem 5rem;
   }
 }
 @media screen and (min-width: 62rem) {
   .salatreminder {
-    padding: 1.25rem 0rem 0rem;
+    padding: 0rem 0rem 0rem;
   }
 }
 .salatreminder-header {
@@ -3361,16 +3363,16 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  padding: 1.25rem 0.875rem 4rem;
+  padding: 0rem 0.875rem 4rem;
 }
 @media screen and (min-width: 48rem) {
   .subscribedchannel {
-    padding: 1.25rem 1.5rem 5rem;
+    padding: 0rem 1.5rem 5rem;
   }
 }
 @media screen and (min-width: 62rem) {
   .subscribedchannel {
-    padding: 1.25rem 0rem 0rem;
+    padding: 0rem 0rem 0rem;
   }
 }
 .subscribedchannel-header {
@@ -3429,16 +3431,16 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  padding: 1.25rem 0.875rem 4rem;
+  padding: 0rem 0.875rem 4rem;
 }
 @media screen and (min-width: 48rem) {
   .popularsearch {
-    padding: 1.25rem 1.5rem 5rem;
+    padding: 0rem 1.5rem 5rem;
   }
 }
 @media screen and (min-width: 62rem) {
   .popularsearch {
-    padding: 1.25rem 0rem 0rem;
+    padding: 0rem 0rem 0rem;
   }
 }
 .popularsearch-header .popularsearch-title {
@@ -3609,17 +3611,17 @@ input:checked + .slider:before {
 }
 
 .notifications {
-  padding: 1.25rem 0.875rem 4rem;
+  padding: 0rem 0.875rem 4rem;
   min-height: 100vh;
 }
 @media screen and (min-width: 48rem) {
   .notifications {
-    padding: 1.25rem 1.5rem 5rem;
+    padding: 0rem 1.5rem 5rem;
   }
 }
 @media screen and (min-width: 62rem) {
   .notifications {
-    padding: 1.25rem 1.5rem 5rem;
+    padding: 0rem 1.5rem 5rem;
   }
 }
 .notifications-body {
@@ -3696,17 +3698,17 @@ input:checked + .slider:before {
 }
 
 .privacysection {
-  padding: 1.25rem 0.875rem 4rem;
+  padding: 0rem 0.875rem 4rem;
   min-height: 100vh;
 }
 @media screen and (min-width: 48rem) {
   .privacysection {
-    padding: 1.25rem 1.5rem 5rem;
+    padding: 0rem 1.5rem 5rem;
   }
 }
 @media screen and (min-width: 62rem) {
   .privacysection {
-    padding: 1.25rem 1.5rem 5rem;
+    padding: 0rem 1.5rem 5rem;
   }
 }
 .privacysection-body {
@@ -3748,17 +3750,17 @@ input:checked + .slider:before {
 }
 
 .helpandfeedback {
-  padding: 1.25rem 0.875rem 4rem;
+  padding: 0rem 0.875rem 4rem;
   min-height: 100vh;
 }
 @media screen and (min-width: 48rem) {
   .helpandfeedback {
-    padding: 1.25rem 1.5rem 5rem;
+    padding: 0rem 1.5rem 5rem;
   }
 }
 @media screen and (min-width: 62rem) {
   .helpandfeedback {
-    padding: 1.25rem 1.5rem 5rem;
+    padding: 0rem 1.5rem 5rem;
   }
 }
 .helpandfeedback-body {

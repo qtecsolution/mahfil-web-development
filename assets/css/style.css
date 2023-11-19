@@ -2792,11 +2792,11 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  padding: 0rem 0.875rem 2rem;
+  padding: 0rem 0.875rem 7rem;
 }
 @media screen and (min-width: 48rem) {
   .trendingvideos {
-    padding: 0rem 1.5rem 5rem;
+    padding: 0rem 1.5rem 7rem;
   }
 }
 @media screen and (min-width: 62rem) {

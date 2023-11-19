@@ -152,10 +152,10 @@
 .trendingvideos {
   @include flex-column;
   gap: size(20);
-  padding: size(0) size(14) size(32);
+  padding: size(0) size(14) size(112);
 
   @include breakpoint(mobile768) {
-    padding: size(0) size(24) size(80);
+    padding: size(0) size(24) size(112);
   }
 
   @include breakpoint(tab992) {

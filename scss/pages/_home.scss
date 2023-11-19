@@ -224,17 +224,17 @@
     .leftcontent {
       @include flex-column;
 
-      .waqttitle {
-        color: $white;
-        font-family: $clashDisplay;
-        font-size: size(12);
-        font-weight: 600;
-      }
-
       .waqtname {
         color: $white;
         font-family: $clashDisplay;
         font-size: size(24);
+        font-weight: 600;
+      }
+
+      .waqttitle {
+        color: $white;
+        font-family: $clashDisplay;
+        font-size: size(12);
         font-weight: 600;
       }
 
@@ -255,6 +255,13 @@
         font-size: size(10);
         font-style: normal;
         font-weight: 500;
+      }
+
+      .waqttitle {
+        color: $white;
+        font-family: $clashDisplay;
+        font-size: size(24);
+        font-weight: 600;
       }
 
       .timer {
@@ -281,6 +288,59 @@
           }
         }
       }
+    }
+  }
+
+  &-body {
+    @include border-single(top, solid, 1, $white);
+    @include flex-center;
+    padding: size(8);
+
+    .remindlink {
+      @include flex-center;
+      gap: size(8);
+
+      .text {
+        color: $white;
+        font-size: size(12);
+        font-style: normal;
+        font-weight: 500;
+      }
+
+      .icon {
+        @include square(12);
+        @include flex-center;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+.nextprayer {
+  background: $primarydark;
+  @include radius(12);
+  width: 95%;
+  margin: 0 auto size(32);
+  @include flex-column;
+  padding: size(16) size(0) size(20);
+
+  &-title {
+    color: $white;
+    font-family: $primaryFont;
+    font-size: size(12);
+    font-weight: 600;
+    padding-left: size(16);
+  }
+
+  &-content {
+    @include flex-column;
+    padding-bottom: size(8);
+
+    .waqttitle {
+      color: $white;
+      // font-family: $clashDisplay;
+      font-size: size(20);
+      font-weight: 600;
     }
   }
 

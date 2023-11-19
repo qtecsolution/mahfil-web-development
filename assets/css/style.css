@@ -2868,16 +2868,16 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
 }
-.prayer-reminder-header .leftcontent .waqttitle {
-  color: hsl(0, 0%, 100%);
-  font-family: "Clash Display";
-  font-size: 0.75rem;
-  font-weight: 600;
-}
 .prayer-reminder-header .leftcontent .waqtname {
   color: hsl(0, 0%, 100%);
   font-family: "Clash Display";
   font-size: 1.5rem;
+  font-weight: 600;
+}
+.prayer-reminder-header .leftcontent .waqttitle {
+  color: hsl(0, 0%, 100%);
+  font-family: "Clash Display";
+  font-size: 0.75rem;
   font-weight: 600;
 }
 .prayer-reminder-header .leftcontent .waqttime {
@@ -2896,6 +2896,12 @@ input:checked + .slider:before {
   font-size: 0.625rem;
   font-style: normal;
   font-weight: 500;
+}
+.prayer-reminder-header .rightcontent .waqttitle {
+  color: hsl(0, 0%, 100%);
+  font-family: "Clash Display";
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 .prayer-reminder-header .rightcontent .timer {
   display: flex;
@@ -2942,6 +2948,60 @@ input:checked + .slider:before {
   font-weight: 500;
 }
 .prayer-reminder-body .remindlink .icon {
+  width: 0.75rem;
+  height: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.nextprayer {
+  background: hsl(207, 100%, 28%);
+  border-radius: 0.75rem;
+  width: 95%;
+  margin: 0 auto 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0rem 1.25rem;
+}
+.nextprayer-title {
+  color: hsl(0, 0%, 100%);
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding-left: 1rem;
+}
+.nextprayer-content {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0.5rem;
+}
+.nextprayer-content .waqttitle {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.nextprayer-body {
+  border-top: solid 0.0625rem hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+.nextprayer-body .remindlink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.nextprayer-body .remindlink .text {
+  color: hsl(0, 0%, 100%);
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 500;
+}
+.nextprayer-body .remindlink .icon {
   width: 0.75rem;
   height: 0.75rem;
   display: flex;

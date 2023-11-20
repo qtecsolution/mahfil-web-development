@@ -58,7 +58,7 @@
 /**=====================================================**
                 ANIMATION-STYLES
 =======================================================**/
-.videoplay .comments-body .commenterbox-right .replydropdown, .videoplay .comments-body .myreplybox-right .replydropdown, .desktoplist .desktopdropdown-menu, .desktoplist .useritem .userdropdown, .cardvideo-body .videodropdown-info, .cardfavorite-details .favdropdown-info, .cardvid-info {
+.videoplay .comments-body .commenterbox-right .replydropdown, .videoplay .comments-body .myreplybox-right .replydropdown, .mobilevideoplay-body .mobilecommentbox .commentdetail .commentdropdown .dropdownmenu, .desktoplist .desktopdropdown-menu, .desktoplist .useritem .userdropdown, .cardvideo-body .videodropdown-info, .cardfavorite-details .favdropdown-info, .cardvid-info {
   animation-duration: 350ms;
   animation-fill-mode: both;
 }
@@ -96,7 +96,7 @@
     transform: translateY(1.25rem);
   }
 }
-.videoplay .comments-body .commenterbox-right .replydropdown, .videoplay .comments-body .myreplybox-right .replydropdown, .desktoplist .desktopdropdown-menu, .desktoplist .useritem .userdropdown, .cardvideo-body .videodropdown-info, .cardfavorite-details .favdropdown-info, .cardvid-info {
+.videoplay .comments-body .commenterbox-right .replydropdown, .videoplay .comments-body .myreplybox-right .replydropdown, .mobilevideoplay-body .mobilecommentbox .commentdetail .commentdropdown .dropdownmenu, .desktoplist .desktopdropdown-menu, .desktoplist .useritem .userdropdown, .cardvideo-body .videodropdown-info, .cardfavorite-details .favdropdown-info, .cardvid-info {
   animation-name: slideUpIn;
 }
 
@@ -493,6 +493,31 @@ hr {
   opacity: 1;
 }
 
+.livebadge {
+  background: hsl(0, 46%, 95%);
+  border-radius: 2.4375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.3125rem 0.5rem;
+  max-width: 4rem;
+}
+.livebadge .icon {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.livebadge .text {
+  color: hsl(0, 100%, 53%);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
 button,
 [type=button],
 [type=reset],
@@ -813,6 +838,112 @@ button:focus,
 }
 .btn-sumbit:not([disabled]):hover {
   background: hsl(207, 100%, 28%);
+  color: hsl(0, 0%, 100%);
+}
+
+.btn-reaction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.25rem;
+  border: solid 0.0625rem hsl(214, 32%, 91%);
+  border-radius: 0.625rem;
+  padding: 0.375rem 0.75rem;
+}
+.btn-reaction .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-reaction .text {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.625rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 36rem) {
+  .btn-reaction .text {
+    font-size: 0.75rem;
+  }
+}
+.btn-reaction:not([disabled]):hover {
+  border-color: hsl(211, 97%, 60%);
+}
+.btn-reaction:not([disabled]):hover .icon svg path {
+  fill: hsl(211, 97%, 60%);
+}
+.btn-reaction:not([disabled]):hover .text {
+  color: hsl(211, 97%, 60%);
+}
+
+.btn-subscriber {
+  background: hsl(211, 97%, 60%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+}
+.btn-subscriber .icon {
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.btn-subscriber .text {
+  color: hsl(0, 0%, 100%);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.btn-subscriber:not([disabled]):hover {
+  background: hsl(207, 100%, 28%);
+}
+
+.btn-arrow {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.25rem;
+}
+
+.btn-notify {
+  background: hsl(211, 97%, 60%);
+  color: hsl(0, 0%, 100%);
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: -0.02rem;
+  transition: all 350ms ease-in-out;
+}
+.btn-notify:not([disabled]):hover {
+  background: hsl(207, 100%, 28%);
+  color: hsl(0, 0%, 100%);
+}
+
+.btn-reminder {
+  background: hsl(0, 0%, 100%);
+  color: hsl(211, 97%, 60%);
+  border: solid 0.0625rem hsl(211, 97%, 60%);
+  width: 100%;
+  padding: 0.7125rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: -0.02rem;
+  transition: all 350ms ease-in-out;
+}
+.btn-reminder:not([disabled]):hover {
+  background: hsl(211, 97%, 60%);
   color: hsl(0, 0%, 100%);
 }
 
@@ -4540,6 +4671,394 @@ input:checked + .slider:before {
 .btn-myreport:not([disabled]):hover {
   background: #cde5fe;
   color: hsl(211, 97%, 60%);
+}
+
+.mobilevideoplay {
+  margin-top: -1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.mobilevideoplay-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.mobilevideoplay-header .videobox img {
+  width: 100%;
+}
+.mobilevideoplay-header .videoinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-inline: 0.875rem;
+}
+.mobilevideoplay-header .videoinfo .videotitle {
+  color: hsl(220, 26%, 14%);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+}
+.mobilevideoplay-header .videoinfo .watchertime {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.mobilevideoplay-header .videoinfo .watchertime span {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.mobilevideoplay-header .reactions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-inline: 0.875rem;
+}
+.mobilevideoplay-header .subscriberbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 0.875rem 1rem;
+  border-bottom: solid 0.0625rem hsl(214, 32%, 91%);
+}
+.mobilevideoplay-header .subscriberbox .mychannel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.mobilevideoplay-header .subscriberbox .mychannel .channelthumb {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.mobilevideoplay-header .subscriberbox .mychannel .channelthumb img {
+  width: 100%;
+  height: 100%;
+}
+.mobilevideoplay-header .subscriberbox .mychannel .details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.mobilevideoplay-header .subscriberbox .mychannel .details .title {
+  color: hsl(220, 26%, 14%);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.mobilevideoplay-header .subscriberbox .mychannel .details .text {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.6875rem;
+  font-weight: 400;
+  letter-spacing: -0.01375rem;
+}
+.mobilevideoplay-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0rem 0.875rem 0rem;
+}
+.mobilevideoplay-body .mobilecommentbox {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.mobilevideoplay-body .mobilecommentbox .commentbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.mobilevideoplay-body .mobilecommentbox .commentbox .commentcount {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.mobilevideoplay-body .mobilecommentbox .commentdetail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.mobilevideoplay-body .mobilecommentbox .commentdetail .leftinfo {
+  width: calc(100% - 2rem);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.mobilevideoplay-body .mobilecommentbox .commentdetail .leftinfo .userthumb {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.mobilevideoplay-body .mobilecommentbox .commentdetail .leftinfo .userthumb img {
+  width: 100%;
+  height: 100%;
+}
+.mobilevideoplay-body .mobilecommentbox .commentdetail .leftinfo .detail {
+  width: calc(100% - 2.5rem);
+}
+.mobilevideoplay-body .mobilecommentbox .commentdetail .leftinfo .detail .commenttext {
+  color: hsl(218, 17%, 35%);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: -0.015rem;
+}
+.mobilevideoplay-body .mobilecommentbox .commentdetail .leftinfo .detail .commenttext span {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.mobilevideoplay-body .mobilecommentbox .commentdetail .commentdropdown {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: relative;
+}
+.mobilevideoplay-body .mobilecommentbox .commentdetail .commentdropdown .btn-dropdown {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  pad: 0.5rem;
+}
+.mobilevideoplay-body .mobilecommentbox .commentdetail .commentdropdown .dropdownmenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: hsl(0, 0%, 100%);
+  box-sizing: 0 1.875rem 2.5rem 0 rgba(20, 37, 63, 0.08), 0 0 0.0625rem 0 rgba(12, 26, 75, 0.1);
+  padding: 0.75rem;
+  min-width: 8.5rem;
+  display: none;
+}
+.mobilevideoplay-body .mobilecommentbox .commentdetail .commentdropdown .dropdownlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+.mobilevideoplay-body .mobilecommentbox .commentdetail .commentdropdown .dropdownlist-link {
+  background: hsl(0, 0%, 100%);
+  color: hsl(210, 21%, 33%);
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  width: 100%;
+  padding: 0.625rem;
+  transition: all 350ms ease-in-out;
+}
+.mobilevideoplay-body .mobilecommentbox .commentdetail .commentdropdown .dropdownlist-link:not([disabled]):hover {
+  background: hsl(210, 38%, 95%);
+  color: hsl(210, 21%, 33%);
+}
+.mobilevideoplay-body .mobilecommentbox .commentdetail .commentdropdown:not([disabled]):hover .dropdownmenu {
+  display: block;
+}
+.mobilevideoplay-body .relatedvideos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 6.5rem;
+}
+.mobilevideoplay-body .relatedvideos-header .title {
+  color: hsl(220, 26%, 14%);
+  font-family: "Clash Display";
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.mobilevideoplay-body .relatedvideos-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.commentform {
+  background: hsl(0, 0%, 100%);
+  border: solid 0.0625rem hsl(214, 32%, 91%);
+  border-radius: 0.375rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0.5625rem 0.75rem 1rem;
+  transition: all 350ms ease-in-out;
+}
+.commentform .commentfield {
+  color: hsl(220, 26%, 14%);
+  width: calc(100% - 2.25rem);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.commentform .commentfield::-moz-placeholder {
+  color: hsl(211, 25%, 84%);
+}
+.commentform .commentfield::placeholder {
+  color: hsl(211, 25%, 84%);
+}
+.commentform .btn-submit {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.125rem;
+}
+.commentform .btn-submit:not([disabled]):hover svg path {
+  fill: hsl(211, 97%, 60%);
+}
+.commentform:focus-within {
+  border-color: hsl(211, 97%, 60%);
+}
+
+.notifybox {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.notifybox .offcanvas {
+  min-height: 17.5rem;
+  height: 17.5rem;
+  max-height: 17.5rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  overflow: hidden;
+  padding-top: 0.875rem;
+}
+.notifybox .offcanvas-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.875rem 0rem 1.5rem;
+}
+.notifybox .offcanvas-header .icon {
+  width: 2.5625rem;
+  height: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.notifybox .offcanvas-body {
+  padding-bottom: 3rem;
+}
+.notifybox .offcanvas-body .notifytitle {
+  color: hsl(220, 26%, 14%);
+  font-family: "Clash Display";
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+}
+.notifybox .offcanvas-body .selecttime {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.notifybox .offcanvas-body .selecttime-header .selecttitle {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.notifybox .offcanvas-body .selecttime-body {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.timebox {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.timebox .timethumb {
+  background: hsl(210, 38%, 95%);
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.625rem;
+}
+.timebox .detail {
+  width: calc(100% - 3rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+.timebox .detail .subtitle {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.625rem;
+  font-weight: 500;
+}
+.timebox .detail .title {
+  color: hsl(218, 17%, 35%);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.remainingbox {
+  background: hsl(0, 0%, 100%);
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: center;
+}
+.remainingbox .title {
+  color: hsl(218, 17%, 35%);
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.remainingbox .text {
+  color: hsl(214, 20%, 69%);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.customradio .radioinput:checked ~ .radiolabel {
+  background: hsl(216, 50%, 92%);
+  color: hsl(211, 97%, 60%);
+  border-color: hsl(216, 50%, 92%);
+  font-weight: 700;
+}
+.customradio .radiolabel {
+  background: hsl(0, 0%, 100%);
+  color: hsl(218, 23%, 23%);
+  border: solid 0.0625rem hsl(214, 32%, 91%);
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: -0.015rem;
+  padding: 0.5rem 0.75rem;
+  text-align: center;
+}
+@media screen and (min-width: 36rem) {
+  .customradio .radiolabel {
+    padding: 0.75rem 0.875rem;
+  }
 }
 
 .myauth {

@@ -18,6 +18,7 @@ $inputbg: hsl(214, 32%, 91%); //#E2E8F0
 $switchbg: hsl(211, 25%, 84%); //#CBD5E0
 $bulletbg: hsl(216, 10%, 90%); //#E3E5E8
 $notificationhoverbg: hsl(201, 41%, 93%); //#E7F0F5
+$badgebg: hsl(0, 46%, 95%); //#F8ECEC
 
 // TEXT-COLORS
 $textprimary: hsl(216, 15%, 52%); //#718096
@@ -32,6 +33,9 @@ $linktext: hsl(228, 11%, 46%); //#686D82
 $timetext: hsl(214, 20%, 69%); //#A0AEC0
 $red: hsl(0, 100%, 63%); //#FF4040
 $iconbg: hsl(210, 38%, 95%); //#EDF2F7
+$redcolor: hsl(0, 100%, 53%); //#FF1010
+$labelcolor: hsl(218, 23%, 23%); //#2D3748
+$labelbg: hsl(216, 50%, 92%); //#E1E9F5
 
 $danger: hsl(0, 91%, 54%); //#F51F1F
 
@@ -41,6 +45,8 @@ $searchborder: hsl(214, 32%, 91%); //#E2E8F0
 
 // SHADOWS
 $shade-1: rgba(43, 39, 41, 0.04);
+$shade-2: rgba(20, 37, 63, 0.08);
+$shade-3: rgba(12, 26, 75, 0.1);
 
 // BOX-SHADOWS
 $sidebarshadow: 0 0 0.875rem 0 rgba($black, 0.1);
@@ -50,3 +56,4 @@ $dropshadow: 0 0.25rem 0.25rem 0 rgba($black, 0.1);
 
 $linkshadow: 0 0 1.875rem 0 $shade-1;
 $popularshadow: 0 0 0.625rem 0 $shade-1;
+$dropmenu: 0 1.875rem 2.5rem 0 $shade-2, 0 0 0.0625rem 0 $shade-3;

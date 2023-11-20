@@ -297,3 +297,103 @@ button,
     @include setBgColor($primarydark, $white);
   }
 }
+
+.btn-reaction {
+  @include flex-center-column;
+  gap: size(4);
+  @include border(solid, 1, $searchborder);
+  @include radius(10);
+  padding: size(6) size(12);
+
+  .icon {
+    @include square(24);
+    @include flex-center;
+  }
+
+  .text {
+    color: $textprimary;
+    font-size: size(10);
+    font-weight: 500;
+    text-transform: uppercase;
+
+    @include breakpoint(mobile576) {
+      font-size: size(12);
+    }
+  }
+
+  @include hover {
+    border-color: $primary;
+
+    .icon {
+      svg {
+        path {
+          fill: $primary;
+        }
+      }
+    }
+    .text {
+      color: $primary;
+    }
+  }
+}
+
+.btn-subscriber {
+  background: $primary;
+  @include flex-center;
+  gap: size(8);
+  padding: size(8) size(12);
+
+  .icon {
+    @include square(16);
+    @include flex-center;
+    overflow: hidden;
+  }
+
+  .text {
+    color: $white;
+    font-size: size(12);
+    font-weight: 500;
+  }
+
+  @include hover {
+    background: $primarydark;
+  }
+}
+
+.btn-arrow {
+  @include square(24);
+  @include flex-center;
+  overflow: hidden;
+  padding: size(4);
+}
+
+.btn-notify {
+  @include setBgColor($primary, $white);
+  @include w100;
+  padding: size(12);
+  @include radius(8);
+  font-size: size(16);
+  font-weight: 500;
+  letter-spacing: size(-0.32);
+  @include transitionsall;
+
+  @include hover {
+    @include setBgColor($primarydark, $white);
+  }
+}
+
+.btn-reminder {
+  @include setBgColor($white, $primary);
+  @include border(solid, 1, $primary);
+  @include w100;
+  padding: size(11.4);
+  @include radius(8);
+  font-size: size(16);
+  font-weight: 500;
+  letter-spacing: size(-0.32);
+  @include transitionsall;
+
+  @include hover {
+    @include setBgColor($primary, $white);
+  }
+}

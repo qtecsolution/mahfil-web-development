@@ -487,3 +487,397 @@
     @include setBgColor(lighten($primary, 30%), $primary);
   }
 }
+
+.mobilevideoplay {
+  margin-top: size(-20);
+  @include flex-column;
+  gap: size(24);
+
+  &-header {
+    @include flex-column;
+    gap: size(16);
+
+    .videobox {
+      img {
+        @include w100;
+      }
+    }
+
+    .videoinfo {
+      @include flex-column;
+      gap: size(8);
+      padding-inline: size(14);
+
+      .videotitle {
+        color: $textdark;
+        font-size: size(15);
+        font-weight: 600;
+        @include line-clamp;
+      }
+
+      .watchertime {
+        @include flex-center-vert;
+        gap: size(10);
+
+        span {
+          color: $textprimary;
+          font-size: size(12);
+          font-weight: 400;
+        }
+      }
+    }
+
+    .reactions {
+      @include flex-center-vert;
+      gap: size(8);
+      padding-inline: size(14);
+    }
+
+    .subscriberbox {
+      @include flex-center-between;
+      padding: size(0) size(14) size(16);
+      @include border-single(bottom, solid, 1, $searchborder);
+
+      .mychannel {
+        @include flex-center-vert;
+        gap: size(8);
+
+        .channelthumb {
+          @include square(40);
+          @include circle;
+          @include flex-center;
+          overflow: hidden;
+
+          img {
+            @include wh100;
+          }
+        }
+
+        .details {
+          @include flex-column;
+          gap: size(4);
+
+          .title {
+            color: $textdark;
+            font-size: size(14);
+            font-weight: 500;
+          }
+
+          .text {
+            color: $textprimary;
+            font-size: size(11);
+            font-weight: 400;
+            letter-spacing: size(-0.22);
+          }
+        }
+      }
+    }
+  }
+
+  &-body {
+    @include flex-column;
+    gap: size(24);
+    padding: size(0) size(14) size(0);
+
+    .mobilecommentbox {
+      @include flex-column;
+      gap: size(16);
+
+      .commentbox {
+        @include flex-column;
+        gap: size(8);
+
+        .commentcount {
+          color: $textprimary;
+          font-size: size(12);
+          font-weight: 400;
+        }
+      }
+
+      .commentdetail {
+        @include flex-center-vert;
+        gap: size(8);
+
+        .leftinfo {
+          width: calc(100% - size(32));
+          @include flex-center-vert;
+          gap: size(8);
+
+          .userthumb {
+            @include square(32);
+            @include circle;
+            @include flex-center;
+            overflow: hidden;
+
+            img {
+              @include wh100;
+            }
+          }
+
+          .detail {
+            width: calc(100% - size(40));
+
+            .commenttext {
+              color: $dropdowntext;
+              font-size: size(12);
+              font-weight: 400;
+              letter-spacing: size(-0.24);
+
+              span {
+                color: $textprimary;
+                font-size: size(12);
+                font-weight: 400;
+              }
+            }
+          }
+        }
+
+        .commentdropdown {
+          @include square(24);
+          position: relative;
+
+          .btn-dropdown {
+            @include square(24);
+            @include flex-center;
+            overflow: hidden;
+            pad: size(8);
+          }
+
+          .dropdownmenu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: $white;
+            box-sizing: $dropmenu;
+            padding: size(12);
+            min-width: size(136);
+            display: none;
+            @extend %animation;
+            @extend %slideUpIn;
+          }
+
+          .dropdownlist {
+            @include list-vertical;
+            gap: size(6);
+
+            &-link {
+              @include setBgColor($white, $labeltext);
+              @include flex-center-vert;
+              font-size: size(14);
+              font-weight: 500;
+              @include w100;
+              padding: size(10);
+              @include transitionsall;
+
+              @include hover {
+                @include setBgColor($iconbg, $labeltext);
+              }
+            }
+          }
+
+          @include hover {
+            .dropdownmenu {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    .relatedvideos {
+      @include flex-column;
+      gap: size(16);
+      padding-bottom: size(104);
+
+      &-header {
+        .title {
+          color: $textdark;
+          font-family: $clashDisplay;
+          font-size: size(20);
+          font-weight: 600;
+        }
+      }
+
+      &-body {
+        @include flex-column;
+        gap: size(16);
+      }
+    }
+  }
+}
+
+.commentform {
+  background: $white;
+  @include border(solid, 1, $searchborder);
+  @include radius(6);
+  @include flex-center-vert;
+  gap: size(16);
+  padding: size(12) size(9) size(12) size(16);
+  @include transitionsall;
+
+  .commentfield {
+    color: $textdark;
+    width: calc(100% - size(36));
+    font-size: size(12);
+    font-weight: 500;
+
+    &::placeholder {
+      color: $switchbg;
+    }
+  }
+
+  .btn-submit {
+    @include square(20);
+    @include flex-center;
+    overflow: hidden;
+    padding: size(2);
+
+    @include hover {
+      svg {
+        path {
+          fill: $primary;
+        }
+      }
+    }
+  }
+
+  &:focus-within {
+    border-color: $primary;
+  }
+}
+
+.notifybox {
+  @include flex-column;
+  gap: size(16);
+
+  .offcanvas {
+    min-height: size(280);
+    height: size(280);
+    max-height: size(280);
+    @include double-radius(top, left, 16, top, right, 16);
+    overflow: hidden;
+    padding-top: size(14);
+
+    &-header {
+      @include flex-center;
+      overflow: hidden;
+      padding: size(14) size(0) size(24);
+
+      .icon {
+        width: size(41);
+        height: size(4);
+        @include flex-center;
+        overflow: hidden;
+      }
+    }
+
+    &-body {
+      padding-bottom: size(48);
+
+      .notifytitle {
+        color: $textdark;
+        font-family: $clashDisplay;
+        font-size: size(20);
+        font-weight: 500;
+        text-align: center;
+      }
+
+      .selecttime {
+        @include flex-column;
+        gap: size(12);
+
+        &-header {
+          .selecttitle {
+            color: $textprimary;
+            font-size: size(12);
+            font-weight: 500;
+          }
+        }
+
+        &-body {
+          @include flex-center-vert;
+          gap: size(8);
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}
+
+.timebox {
+  @include flex-center-vert;
+  gap: size(12);
+
+  .timethumb {
+    background: $iconbg;
+    @include square(36);
+    @include circle;
+    @include flex-center;
+    overflow: hidden;
+    padding: size(10);
+  }
+
+  .detail {
+    width: calc(100% - size(48));
+    @include flex-column;
+    gap: size(2);
+
+    .subtitle {
+      color: $textprimary;
+      font-size: size(10);
+      font-weight: 500;
+    }
+
+    .title {
+      color: $dropdowntext;
+      font-size: size(16);
+      font-weight: 500;
+    }
+  }
+}
+
+.remainingbox {
+  background: $white;
+  @include radius(10);
+  @include flex-center-column;
+  gap: size(4);
+  text-align: center;
+
+  .title {
+    color: $dropdowntext;
+    font-size: size(18);
+    font-weight: 700;
+  }
+
+  .text {
+    color: $timetext;
+    font-size: size(13);
+    font-weight: 500;
+  }
+}
+
+.customradio {
+  .radioinput {
+    &:checked ~ .radiolabel {
+      @include setBgColor($labelbg, $primary);
+      border-color: $labelbg;
+      font-weight: 700;
+    }
+  }
+
+  .radiolabel {
+    @include setBgColor($white, $labelcolor);
+    @include border(solid, 1, $searchborder);
+    @include radius(4);
+    @include flex-center;
+    font-size: size(12);
+    font-weight: 500;
+    letter-spacing: size(-0.24);
+    padding: size(8) size(12);
+    text-align: center;
+
+    @include breakpoint(mobile576) {
+      padding: size(12) size(14);
+    }
+  }
+}

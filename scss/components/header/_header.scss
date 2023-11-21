@@ -7,6 +7,10 @@
   padding: size(17.75) size(14);
   margin-bottom: size(20);
 
+  @include breakpoint(tab992) {
+    padding-inline: size(0);
+  }
+
   &-nav {
     @include flex-center-between;
 

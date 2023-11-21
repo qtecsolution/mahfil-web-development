@@ -1146,9 +1146,8 @@ button:focus,
 .cardchannel-body .channelinfo .title {
   font-size: 0.875rem;
   font-weight: 600;
-  min-height: 2rem;
+  min-height: 2.0625rem;
   max-height: 2.5rem;
-  height: 2.125rem;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -1163,6 +1162,7 @@ button:focus,
 @media screen and (min-width: 62rem) {
   .cardchannel-body .channelinfo .title {
     font-size: 1.125rem;
+    min-height: 2.5rem;
   }
 }
 .cardchannel-body .channelinfo .text,
@@ -1624,6 +1624,11 @@ button:focus,
   border-bottom: solid 0.0625rem hsl(214, 17%, 92%);
   padding: 1.109375rem 0.875rem;
   margin-bottom: 1.25rem;
+}
+@media screen and (min-width: 62rem) {
+  .header {
+    padding-inline: 0rem;
+  }
 }
 .header-nav {
   display: flex;

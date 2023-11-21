@@ -5336,7 +5336,7 @@ input:checked + .slider:before {
   overflow: hidden;
 }
 .desktopsubscribe-left .subscribinfo .info {
-  width: calc(100% - 4.5rem);
+  width: calc(100% - 5.75rem);
 }
 .desktopsubscribe-left .subscribinfo .info .channelname {
   color: hsl(216, 17%, 12%);
@@ -5352,7 +5352,7 @@ input:checked + .slider:before {
   display: flex;
   align-items: center;
   gap: 0.625rem;
-  padding-left: 5.375rem;
+  padding-left: 5.75rem;
 }
 @media screen and (min-width: 112.5rem) {
   .desktopsubscribe-right {

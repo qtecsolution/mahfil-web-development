@@ -913,7 +913,7 @@
       }
 
       .info {
-        width: calc(100% - size(72));
+        width: calc(100% - size(92));
 
         .channelname {
           color: $headingtext;
@@ -933,7 +933,7 @@
   &-right {
     @include flex-center-vert;
     gap: size(10);
-    padding-left: size(86);
+    padding-left: size(92);
 
     @include breakpoint(desktop1800) {
       padding-left: size(0);

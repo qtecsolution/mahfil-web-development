@@ -58,7 +58,7 @@
 /**=====================================================**
                 ANIMATION-STYLES
 =======================================================**/
-.videoplay .comments-body .commenterbox-right .replydropdown, .videoplay .comments-body .myreplybox-right .replydropdown, .mobilevideoplay-body .mobilecommentbox .commentdetail .commentdropdown .dropdownmenu, .desktoplist .desktopdropdown-menu, .desktoplist .useritem .userdropdown, .cardvideo-body .videodropdown-info, .cardfavorite-details .favdropdown-info, .cardvid-info {
+.videoplay .comments-body .commenterbox-right .replydropdown, .videoplay .comments-body .myreplybox-right .replydropdown, .mobilevideoplay-body .mobilecommentbox .commentdetail .commentdropdown .dropdownmenu, .desktopsubscribe-right .moreinfo .replydropdown, .desktoplist .desktopdropdown-menu, .desktoplist .useritem .userdropdown, .cardvideo-body .videodropdown-info, .cardfavorite-details .favdropdown-info, .cardvid-info {
   animation-duration: 350ms;
   animation-fill-mode: both;
 }
@@ -96,7 +96,7 @@
     transform: translateY(1.25rem);
   }
 }
-.videoplay .comments-body .commenterbox-right .replydropdown, .videoplay .comments-body .myreplybox-right .replydropdown, .mobilevideoplay-body .mobilecommentbox .commentdetail .commentdropdown .dropdownmenu, .desktoplist .desktopdropdown-menu, .desktoplist .useritem .userdropdown, .cardvideo-body .videodropdown-info, .cardfavorite-details .favdropdown-info, .cardvid-info {
+.videoplay .comments-body .commenterbox-right .replydropdown, .videoplay .comments-body .myreplybox-right .replydropdown, .mobilevideoplay-body .mobilecommentbox .commentdetail .commentdropdown .dropdownmenu, .desktopsubscribe-right .moreinfo .replydropdown, .desktoplist .desktopdropdown-menu, .desktoplist .useritem .userdropdown, .cardvideo-body .videodropdown-info, .cardfavorite-details .favdropdown-info, .cardvid-info {
   animation-name: slideUpIn;
 }
 
@@ -719,6 +719,10 @@ button:focus,
 @media screen and (min-width: 62rem) {
   .btn-subscribe {
     height: 2.5rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .btn-subscribe {
     padding-inline: 1.5rem;
   }
 }
@@ -957,6 +961,55 @@ button:focus,
 }
 .btn-refresh:not([disabled]):hover svg path {
   fill: hsl(211, 97%, 60%);
+}
+
+.btn-action {
+  border: solid 0.0625rem hsl(214, 32%, 91%);
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.75rem;
+}
+@media screen and (min-width: 112.5rem) {
+  .btn-action {
+    flex-direction: column;
+  }
+}
+.btn-action .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.btn-action .text {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.btn-action.mashallah:not([disabled]):hover {
+  background: hsl(211, 97%, 60%);
+  border-color: hsl(211, 97%, 60%);
+}
+.btn-action.mashallah:not([disabled]):hover .icon svg path {
+  fill: hsl(0, 0%, 100%);
+}
+.btn-action.mashallah:not([disabled]):hover .text {
+  color: hsl(0, 0%, 100%);
+}
+.btn-action.likebtn:not([disabled]):hover {
+  background: hsl(211, 97%, 60%);
+  border-color: hsl(211, 97%, 60%);
+}
+.btn-action.likebtn:not([disabled]):hover .icon svg path {
+  fill: hsl(0, 0%, 100%);
+}
+.btn-action.likebtn:not([disabled]):hover .text {
+  color: hsl(0, 0%, 100%);
 }
 
 .cardvideo {
@@ -5244,6 +5297,112 @@ input:checked + .slider:before {
   .customradio .radiolabel {
     padding: 0.75rem 0.875rem;
   }
+}
+
+.desktopsubscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+@media screen and (min-width: 112.5rem) {
+  .desktopsubscribe {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.desktopsubscribe-left {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+.desktopsubscribe-left .subscribinfo {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.desktopsubscribe-left .subscribinfo .thumb {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.desktopsubscribe-left .subscribinfo .info {
+  width: calc(100% - 4.5rem);
+}
+.desktopsubscribe-left .subscribinfo .info .channelname {
+  color: hsl(216, 17%, 12%);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+.desktopsubscribe-left .subscribinfo .info .text {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.desktopsubscribe-right {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.desktopsubscribe-right .moreinfo {
+  position: relative;
+}
+.desktopsubscribe-right .moreinfo .replydropdown {
+  border-radius: 0.625rem;
+  position: absolute;
+  top: 100%;
+  right: 0rem;
+  padding-top: 0.5rem;
+  display: none;
+  min-width: 11.25rem;
+  z-index: 100;
+  overflow: hidden;
+}
+.desktopsubscribe-right .moreinfo .replydropdown .dropdownlist {
+  background: hsl(0, 0%, 100%);
+  border: solid 0.0625rem hsl(214, 17%, 92%);
+  border-radius: 0.625rem;
+  box-shadow: 0.25rem 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.04);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  overflow: hidden;
+}
+.desktopsubscribe-right .moreinfo .replydropdown .dropdownlist-link {
+  background: hsl(0, 0%, 100%);
+  color: hsl(210, 21%, 33%);
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+  width: 100%;
+  padding: 0.625rem;
+  transition: all 350ms ease-in-out;
+}
+.desktopsubscribe-right .moreinfo .replydropdown .dropdownlist-link .droplinkicon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.desktopsubscribe-right .moreinfo .replydropdown .dropdownlist-link .droplinktext {
+  color: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.desktopsubscribe-right .moreinfo .replydropdown .dropdownlist-link:not([disabled]):hover {
+  background: hsl(210, 38%, 95%);
+  color: hsl(210, 21%, 33%);
+}
+.desktopsubscribe-right .moreinfo:not([disabled]):hover .replydropdown {
+  display: block;
 }
 
 .myauth {

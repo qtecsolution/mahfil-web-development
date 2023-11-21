@@ -178,6 +178,9 @@ button,
 
   @include breakpoint(tab992) {
     height: size(40);
+  }
+
+  @include breakpoint(desktop1400) {
     padding-inline: size(24);
   }
 
@@ -407,6 +410,69 @@ button,
     svg {
       path {
         fill: $primary;
+      }
+    }
+  }
+}
+
+.btn-action {
+  @include border(solid, 1, $searchborder);
+  @include radius(10);
+  @include flex-center;
+  gap: size(8);
+  padding: size(6) size(12);
+
+  @include breakpoint(desktop1800) {
+    flex-direction: column;
+  }
+
+  .icon {
+    @include square(24);
+    @include flex-center;
+    overflow: hidden;
+  }
+
+  .text {
+    color: $textprimary;
+    font-size: size(14);
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &.mashallah {
+    @include hover {
+      background: $primary;
+      border-color: $primary;
+
+      .icon {
+        svg {
+          path {
+            fill: $white;
+          }
+        }
+      }
+
+      .text {
+        color: $white;
+      }
+    }
+  }
+
+  &.likebtn {
+    @include hover {
+      background: $primary;
+      border-color: $primary;
+
+      .icon {
+        svg {
+          path {
+            fill: $white;
+          }
+        }
+      }
+
+      .text {
+        color: $white;
       }
     }
   }

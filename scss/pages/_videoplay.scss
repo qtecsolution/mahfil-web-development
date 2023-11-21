@@ -881,3 +881,116 @@
     }
   }
 }
+
+.desktopsubscribe {
+  @include flex-column;
+  gap: size(12);
+
+  @include breakpoint(desktop1800) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &-left {
+    @include flex-center-vert;
+    gap: size(40);
+
+    .subscribinfo {
+      @include flex-center-vert;
+      gap: size(20);
+
+      @include breakpoint(desktop1400) {
+      }
+
+      .thumb {
+        @include square(72);
+        @include circle;
+        @include flex-center;
+        overflow: hidden;
+
+        @include breakpoint(desktop1400) {
+        }
+      }
+
+      .info {
+        width: calc(100% - size(72));
+
+        .channelname {
+          color: $headingtext;
+          font-size: size(18);
+          font-weight: 600;
+        }
+
+        .text {
+          color: $textprimary;
+          font-size: size(14);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  &-right {
+    @include flex-center-vert;
+    gap: size(10);
+
+    .moreinfo {
+      position: relative;
+
+      .replydropdown {
+        @include radius(10);
+        position: absolute;
+        top: 100%;
+        right: size(0);
+        padding-top: size(8);
+        display: none;
+        @extend %animation;
+        @extend %slideUpIn;
+        min-width: size(180);
+        z-index: 100;
+        overflow: hidden;
+
+        .dropdownlist {
+          background: $white;
+          @include border(solid, 1, $menudivider);
+          @include radius(10);
+          box-shadow: $dropdownshadow;
+          @include list-vertical;
+          gap: size(6);
+          overflow: hidden;
+
+          &-link {
+            @include setBgColor($white, $labeltext);
+            @include flex-center-vert;
+            gap: size(5);
+            @include w100;
+            padding: size(10);
+            @include transitionsall;
+
+            .droplinkicon {
+              @include square(24);
+              @include flex-center;
+              overflow: hidden;
+            }
+
+            .droplinktext {
+              color: inherit;
+              font-size: size(14);
+              font-weight: 500;
+            }
+
+            @include hover {
+              @include setBgColor($iconbg, $labeltext);
+            }
+          }
+        }
+      }
+
+      @include hover {
+        .replydropdown {
+          display: block;
+        }
+      }
+    }
+  }
+}

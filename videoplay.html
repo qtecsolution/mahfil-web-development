@@ -4930,7 +4930,7 @@
           </div>
 
           <div class="videoinfo">
-            <span class="livebadge">
+            <span class="livebadge d-none">
               <span class="icon">
                 <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="4" cy="4.5" r="4" fill="#FF1010" />
@@ -4939,9 +4939,36 @@
               <span class="text">Live</span>
             </span>
 
-            <h5 class="videotitle">
-              রমজানের আগে একবার শুনুন l নিজেকে পরিবর্তন করে নিন l আবু ত্বহা আদনান
-            </h5>
+            <div class="accordion" id="accordionVideo">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    রমজানের আগে একবার শুনুন l নিজেকে পরিবর্তন করে নিন l আবু ত্বহা আদনান
+                  </button>
+                </h2>
+
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p>
+                      বাংলা হাদিসের সমস্ত কন্টেন্ট যারা দাওয়াতি কাজ করে থাকেন (ফেসবুক, ইউটিউব, ব্লগ, আর্টিকেল ইত্যাদি)
+                      বা সর্ব সাধারন তাদের
+                      সকলের জন্য কপি পেস্ট (সোর্স সহ বা ছাড়া, [যদিও আমরা আশা করি যে আপনারা আমাদের সোর্স উল্লেখ করবেন
+                      কেননা তাতে অন্যরাও জানতে
+                      পারবে এবং দাওয়াতি কাজে উৎসাহী হবে]) উন্মুক্ত এবং এতে কোন ধরনের বাঁধা নেই।
+                    </p>
+
+                    <p>
+                      কোন ব্যাক্তি, প্রতিষ্ঠান বা গ্রুপ আমাদের কন্টেন্ট ব্যবহার করে আলাদাভাবে (পুরোপুরি বা আংশিক)
+                      পরিবর্তন/পরিবর্ধন করে নিজ
+                      নামে ব্লগ, ওয়েবসাইট, মোবাইল এপ, কম্পিউটার সফটওয়্যার বা বই প্রিন্ট ইত্যাদি তৈরি করতে পারবেন না।
+                      ভবিষ্যতে এপিআই
+                      সার্ভারের মাধ্যমে সকলের জন্য ডাটা শেয়ার করার পরিকল্পনা আছে ইন-শা-আল্লাহ।
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div class="watchertime">
               <span class="watcher">53,245 Watching</span>
@@ -5014,24 +5041,91 @@
               <span class="text">Share</span>
             </button>
 
-            <button type="button" class="btn-reaction">
+            <button type="button" class="btn-reaction" data-bs-toggle="offcanvas" data-bs-target="#moreDropdown">
               <span class="icon">
-                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g>
-                    <path
-                      d="M5.5 16V22H3.5V3H12.882C13.0677 3.0001 13.2496 3.05188 13.4075 3.14955C13.5654 3.24722 13.693 3.38692 13.776 3.553L14.5 5H20.5C20.7652 5 21.0196 5.10536 21.2071 5.29289C21.3946 5.48043 21.5 5.73478 21.5 6V17C21.5 17.2652 21.3946 17.5196 21.2071 17.7071C21.0196 17.8946 20.7652 18 20.5 18H14.118C13.9323 17.9999 13.7504 17.9481 13.5925 17.8504C13.4346 17.7528 13.307 17.6131 13.224 17.447L12.5 16H5.5ZM5.5 5V14H13.736L14.736 16H19.5V7H13.264L12.264 5H5.5Z"
-                      fill="#718096" />
-                  </g>
-                  <defs>
-                    <clipPath>
-                      <rect width="24" height="24" fill="white" transform="translate(0.5)" />
-                    </clipPath>
-                  </defs>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 6H12.0063M12 12H12.0063M12 18H12.0063" stroke="#191D23" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </span>
-
-              <span class="text">Report</span>
+              <span class="text">More</span>
             </button>
+          </div>
+
+          <div class="offcanvas offcanvas-bottom" tabindex="-1" id="moreDropdown" aria-labelledby="moreDropdown">
+            <div class="offcanvas-header">
+              <figure class="icon">
+                <svg width="41" height="4" viewBox="0 0 41 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="2.19653" y1="1.90796" x2="38.8035" y2="1.90796" stroke="#CBD5E0" stroke-width="3.5"
+                    stroke-linecap="round" />
+                </svg>
+              </figure>
+            </div>
+
+            <div class="offcanvas-body px-0">
+              <ul class="dropdownlist">
+                <li class="dropdownlist-item">
+                  <a href="#" class="dropdownlist-link">
+                    <span class="droplinkicon">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                          <path
+                            d="M11 2C13.0254 2 14.6667 3.66667 14.6667 6C14.6667 10.6667 9.66671 13.3333 8.00004 14.3333C6.33337 13.3333 1.33337 10.6667 1.33337 6C1.33337 3.66667 3.00004 2 5.00004 2C6.24004 2 7.33337 2.66667 8.00004 3.33333C8.66671 2.66667 9.76004 2 11 2ZM8.62271 12.4027C9.21004 12.032 9.74004 11.6633 10.236 11.2687C12.2234 9.68867 13.3334 7.962 13.3334 6C13.3334 4.42667 12.3087 3.33333 11 3.33333C10.2827 3.33333 9.50671 3.71333 8.94271 4.276L8.00004 5.21867L7.05737 4.276C6.49337 3.71333 5.71737 3.33333 5.00004 3.33333C3.70671 3.33333 2.66671 4.43733 2.66671 6C2.66671 7.96267 3.77737 9.68867 5.76337 11.2687C6.26004 11.6633 6.79004 12.032 7.37737 12.402C7.57671 12.528 7.77404 12.6487 8.00004 12.7833C8.22604 12.6487 8.42337 12.528 8.62271 12.4027Z"
+                            fill="#4A5568" />
+                        </g>
+                        <defs>
+                          <clipPath>
+                            <rect width="16" height="16" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                    <span class="droplinktext">Add to favourite</span>
+                  </a>
+                </li>
+
+                <li class="dropdownlist-item">
+                  <a href="#" class="dropdownlist-link">
+                    <span class="droplinkicon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                          <path
+                            d="M1 14.5C0.999385 13.3955 1.28042 12.309 1.81655 11.3433C2.35268 10.3776 3.1262 9.56457 4.064 8.98101C4.31151 7.0511 5.2538 5.27751 6.71452 3.99217C8.17524 2.70682 10.0543 1.9978 12 1.9978C13.9457 1.9978 15.8248 2.70682 17.2855 3.99217C18.7462 5.27751 19.6885 7.0511 19.936 8.98101C21.0992 9.7047 22.0041 10.7774 22.5213 12.046C23.0385 13.3146 23.1417 14.7141 22.8161 16.0449C22.4906 17.3756 21.7528 18.5694 20.7083 19.4559C19.6638 20.3423 18.366 20.8761 17 20.981L7 21C3.644 20.726 1 17.922 1 14.5ZM16.848 18.987C17.7938 18.9143 18.6925 18.5445 19.4156 17.9305C20.1387 17.3166 20.6493 16.4898 20.8745 15.5682C21.0996 14.6467 21.0278 13.6776 20.6692 12.7994C20.3107 11.9211 19.6837 11.1787 18.878 10.678L18.071 10.175L17.951 9.23301C17.7641 7.7867 17.0569 6.45795 15.9616 5.4951C14.8663 4.53225 13.4578 4.0012 11.9995 4.0012C10.5412 4.0012 9.13272 4.53225 8.03742 5.4951C6.94213 6.45795 6.23493 7.7867 6.048 9.23301L5.928 10.175L5.123 10.678C4.3173 11.1786 3.69038 11.921 3.3318 12.7992C2.97321 13.6773 2.90129 14.6463 3.12631 15.5678C3.35133 16.4893 3.86177 17.3161 4.58475 17.9302C5.30773 18.5442 6.20625 18.9141 7.152 18.987L7.325 19H16.675L16.848 18.987ZM13 12H16L12 17L8 12H11V8.00001H13V12Z"
+                            fill="#4A5568" />
+                        </g>
+                        <defs>
+                          <clipPath>
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+
+                    </span>
+                    <span class="droplinktext">Download</span>
+                  </a>
+                </li>
+
+                <li class="dropdownlist-item">
+                  <a href="#" class="dropdownlist-link">
+                    <span class="droplinkicon">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                          <path
+                            d="M3.33333 10.6667V14.6667H2V2H8.25467C8.37844 2.00007 8.49975 2.03459 8.60502 2.0997C8.71028 2.16481 8.79534 2.25795 8.85067 2.36867L9.33333 3.33333H13.3333C13.5101 3.33333 13.6797 3.40357 13.8047 3.5286C13.9298 3.65362 14 3.82319 14 4V11.3333C14 11.5101 13.9298 11.6797 13.8047 11.8047C13.6797 11.9298 13.5101 12 13.3333 12H9.07867C8.95489 11.9999 8.83358 11.9654 8.72832 11.9003C8.62305 11.8352 8.53799 11.7421 8.48267 11.6313L8 10.6667H3.33333ZM3.33333 3.33333V9.33333H8.824L9.49067 10.6667H12.6667V4.66667H8.50933L7.84267 3.33333H3.33333Z"
+                            fill="#4A5568" />
+                        </g>
+                        <defs>
+                          <clipPath>
+                            <rect width="16" height="16" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                    <span class="droplinktext">Report</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div class="subscriberbox">

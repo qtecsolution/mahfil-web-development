@@ -508,11 +508,49 @@
       gap: size(8);
       padding-inline: size(14);
 
-      .videotitle {
-        color: $textdark;
-        font-size: size(15);
-        font-weight: 600;
-        @include line-clamp;
+      .accordion {
+        background: transparent;
+        border: 0;
+        @include radius(0);
+
+        &-item {
+          background: transparent;
+          border: 0;
+          @include radius(0);
+
+          &:first-of-type,
+          &:last-of-type {
+            @include radius(0);
+
+            .accordion-button {
+              border: 0;
+              @include radius(0);
+            }
+          }
+        }
+
+        &-button {
+          color: $textdark;
+          font-size: size(15);
+          font-weight: 600;
+
+          &:not(.collapsed) {
+            box-shadow: none;
+            background: transparent;
+          }
+        }
+
+        &-body {
+          padding: size(10);
+          @include flex-column;
+          gap: size(16);
+
+          p {
+            color: $textdark;
+            font-size: size(12);
+            font-weight: 400;
+          }
+        }
       }
 
       .watchertime {
@@ -531,6 +569,66 @@
       @include flex-center-vert;
       gap: size(8);
       padding-inline: size(14);
+
+      .btn-reaction {
+        @include breakpoint(mobile576) {
+          width: calc(100% / 4);
+        }
+      }
+    }
+
+    .offcanvas {
+      min-height: size(280);
+      height: size(280);
+      max-height: size(280);
+      @include double-radius(top, left, 16, top, right, 16);
+      overflow: hidden;
+      padding-top: size(14);
+
+      &-header {
+        @include flex-center;
+        overflow: hidden;
+        padding: size(14) size(0) size(24);
+
+        .icon {
+          width: size(41);
+          height: size(4);
+          @include flex-center;
+          overflow: hidden;
+        }
+      }
+
+      &-body {
+        .dropdownlist {
+          @include list-vertical;
+          overflow: hidden;
+
+          &-link {
+            @include setBgColor($white, $labeltext);
+            @include flex-center-vert;
+            gap: size(5);
+            @include w100;
+            padding: size(10);
+            @include transitionsall;
+
+            .droplinkicon {
+              @include square(20);
+              @include flex-center;
+              overflow: hidden;
+            }
+
+            .droplinktext {
+              color: inherit;
+              font-size: size(12);
+              font-weight: 500;
+            }
+
+            @include hover {
+              @include setBgColor($iconbg, $labeltext);
+            }
+          }
+        }
+      }
     }
 
     .subscriberbox {

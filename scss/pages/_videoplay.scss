@@ -933,6 +933,11 @@
   &-right {
     @include flex-center-vert;
     gap: size(10);
+    padding-left: size(86);
+
+    @include breakpoint(desktop1800) {
+      padding-left: size(0);
+    }
 
     .moreinfo {
       position: relative;
@@ -956,7 +961,6 @@
           @include radius(10);
           box-shadow: $dropdownshadow;
           @include list-vertical;
-          gap: size(6);
           overflow: hidden;
 
           &-link {
@@ -968,14 +972,14 @@
             @include transitionsall;
 
             .droplinkicon {
-              @include square(24);
+              @include square(20);
               @include flex-center;
               overflow: hidden;
             }
 
             .droplinktext {
               color: inherit;
-              font-size: size(14);
+              font-size: size(12);
               font-weight: 500;
             }
 

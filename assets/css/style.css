@@ -972,24 +972,30 @@ button:focus,
   gap: 0.5rem;
   padding: 0.375rem 0.75rem;
 }
-@media screen and (min-width: 112.5rem) {
-  .btn-action {
-    flex-direction: column;
-  }
-}
 .btn-action .icon {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.125rem;
+  height: 1.125rem;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
+@media screen and (min-width: 87.5rem) {
+  .btn-action .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
 .btn-action .text {
   color: hsl(216, 15%, 52%);
-  font-size: 0.875rem;
+  font-size: 0.6875rem;
   font-weight: 500;
   text-transform: uppercase;
+}
+@media screen and (min-width: 87.5rem) {
+  .btn-action .text {
+    font-size: 0.875rem;
+  }
 }
 .btn-action.mashallah:not([disabled]):hover {
   background: hsl(211, 97%, 60%);
@@ -5346,6 +5352,12 @@ input:checked + .slider:before {
   display: flex;
   align-items: center;
   gap: 0.625rem;
+  padding-left: 5.375rem;
+}
+@media screen and (min-width: 112.5rem) {
+  .desktopsubscribe-right {
+    padding-left: 0rem;
+  }
 }
 .desktopsubscribe-right .moreinfo {
   position: relative;
@@ -5371,7 +5383,6 @@ input:checked + .slider:before {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.375rem;
   overflow: hidden;
 }
 .desktopsubscribe-right .moreinfo .replydropdown .dropdownlist-link {
@@ -5385,8 +5396,8 @@ input:checked + .slider:before {
   transition: all 350ms ease-in-out;
 }
 .desktopsubscribe-right .moreinfo .replydropdown .dropdownlist-link .droplinkicon {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5394,7 +5405,7 @@ input:checked + .slider:before {
 }
 .desktopsubscribe-right .moreinfo .replydropdown .dropdownlist-link .droplinktext {
   color: inherit;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 500;
 }
 .desktopsubscribe-right .moreinfo .replydropdown .dropdownlist-link:not([disabled]):hover {

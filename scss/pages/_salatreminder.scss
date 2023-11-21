@@ -258,3 +258,181 @@
     }
   }
 }
+
+.mobilesalatreminder {
+  background: $searchborder;
+  @include flex-column;
+  gap: size(48);
+  padding: size(20) size(14) size(64);
+  min-height: 100vh;
+
+  @include breakpoint(mobile768) {
+    padding: size(20) size(24) size(80);
+  }
+
+  .salattitle {
+    color: $dropdowntext;
+    font-family: $clashDisplay;
+    font-size: size(16);
+    font-weight: 600;
+    margin-left: size(32);
+  }
+
+  .locationicon {
+    @include square(16);
+    @include flex-center;
+    overflow: hidden;
+  }
+
+  .location {
+    color: $dropdowntext;
+    font-size: size(14);
+    font-weight: 600;
+  }
+
+  &-header {
+    @include flex-column;
+    gap: size(36);
+
+    .downcontent {
+      @include flex-center-column;
+      gap: size(12);
+      text-align: center;
+
+      .arbidate {
+        color: $dropdowntext;
+        font-size: size(18);
+        font-weight: 700;
+      }
+
+      .engdate {
+        color: $textprimary;
+        font-size: size(16);
+        font-weight: 500;
+      }
+    }
+  }
+
+  &-body {
+    background: $primarydark;
+    @include radius(12);
+    overflow: hidden;
+
+    .salat-time {
+      @include flex-center-column;
+      align-items: flex-start;
+      gap: size(8);
+      padding-inline: size(8);
+
+      @include breakpoint(mobile576) {
+        padding-inline: size(16);
+      }
+
+      .waqtname {
+        color: $white;
+        font-family: $clashDisplay;
+        font-size: size(24);
+        font-weight: 600;
+      }
+
+      .remainingend {
+        @include flex-column;
+        gap: size(8);
+
+        &-header {
+          @include flex-column;
+          gap: size(4);
+
+          .remainingtitle {
+            color: $white;
+            font-size: size(10);
+            font-weight: 500;
+            letter-spacing: size(-0.2);
+          }
+
+          .progress {
+            background: $progressbackground;
+            @include radius(48);
+            height: size(4);
+
+            &-bar {
+              background: $primary;
+              @include radius(48);
+            }
+          }
+        }
+
+        &-body {
+          @include flex-center-vert;
+          gap: size(8);
+
+          .timebox {
+            @include square(44);
+            background: $white;
+            @include radius(6);
+            @include flex-center-column;
+            gap: size(4);
+            text-align: center;
+            padding: size(8);
+
+            .time {
+              color: $dropdowntext;
+              font-size: size(12);
+              font-weight: 700;
+            }
+
+            .title {
+              color: $timetext;
+              font-size: size(10);
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+
+    .salatlist {
+      @include flex-column;
+      background: $white;
+
+      .waqtbox {
+        .waqtinput {
+          &:checked ~ .waqtlabel {
+            background: $primarydark;
+            border-color: $primarydark;
+
+            .waqtname,
+            .waqttime {
+              color: $white;
+            }
+          }
+        }
+
+        .waqtlabel {
+          background: $white;
+          @include border-single(bottom, solid, 1, $searchborder);
+          @include flex-column;
+          padding: size(8) size(24);
+
+          .waqtname {
+            color: $labelcolor;
+            font-size: size(14);
+            font-weight: 600;
+          }
+
+          .waqttime {
+            color: $labelcolor;
+            font-size: size(12);
+            font-weight: 400;
+          }
+        }
+
+        &:last-of-type {
+          .waqtlabel {
+            border-bottom: size(0);
+          }
+        }
+      }
+    }
+  }
+}

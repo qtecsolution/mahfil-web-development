@@ -1,10 +1,14 @@
-@use '../global' as *;
-@use '../partials' as *;
+@use "../global" as *;
+@use "../partials" as *;
 
 .channelsection {
   &-content {
     @include flex-column;
-    gap: size(48);
+    gap: size(0);
+
+    @include breakpoint(tab992) {
+      gap: size(48);
+    }
 
     .channel-thumbnail {
       @include w100;
@@ -61,6 +65,58 @@
         color: $dropdowntext;
         font-size: size(16);
         font-weight: 400;
+      }
+    }
+  }
+
+  .mobilethumb {
+    @include wh100;
+    height: size(210);
+    @include flex-center;
+    overflow: hidden;
+    margin-top: size(-20);
+
+    img {
+      @include wh100;
+    }
+  }
+
+  .subscriberbox {
+    @include flex-center-between;
+    padding: size(0) size(14) size(16);
+    @include border-single(bottom, solid, 1, $searchborder);
+
+    .mychannel {
+      @include flex-center-vert;
+      gap: size(8);
+
+      .channelthumb {
+        @include square(40);
+        @include circle;
+        @include flex-center;
+        overflow: hidden;
+
+        img {
+          @include wh100;
+        }
+      }
+
+      .details {
+        @include flex-column;
+        gap: size(4);
+
+        .title {
+          color: $textdark;
+          font-size: size(14);
+          font-weight: 500;
+        }
+
+        .text {
+          color: $textprimary;
+          font-size: size(11);
+          font-weight: 400;
+          letter-spacing: size(-0.22);
+        }
       }
     }
   }

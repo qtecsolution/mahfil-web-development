@@ -3,6 +3,7 @@
 
 .videoplay {
   // padding: size(20) size(0);
+  padding-bottom: size(160);
 
   &-rightcontent {
     @include flex-column;
@@ -167,7 +168,7 @@
         padding-bottom: size(24);
 
         &-left {
-          width: calc(100% - size(42));
+          width: calc(100% - size(96));
           @include flex;
           gap: size(16);
 
@@ -241,18 +242,20 @@
         }
 
         &-right {
-          @include square(32);
+          @include square(86);
           position: relative;
+          @include flex-end;
 
           .btn-dropdown {
             @include square(32);
             @include circle;
             padding: size(4);
+            position: relative;
           }
 
           .replydropdown {
             position: absolute;
-            top: 100%;
+            top: 40%;
             right: size(0);
             padding-top: size(8);
             display: none;
@@ -738,7 +741,7 @@
             @include square(24);
             @include flex-center;
             overflow: hidden;
-            pad: size(8);
+            padding-top: size(8);
           }
 
           .dropdownmenu {
@@ -847,6 +850,20 @@
 .notifybox {
   @include flex-column;
   gap: size(16);
+
+  &-content {
+    @include flex-column;
+    gap: size(16);
+
+    @include breakpoint(mobile768) {
+      flex-direction: row;
+
+      .notifybox-header,
+      .notifybox-body {
+        width: 50%;
+      }
+    }
+  }
 
   .offcanvas {
     min-height: size(280);
@@ -984,9 +1001,10 @@
   @include flex-column;
   gap: size(12);
 
-  @include breakpoint(desktop1800) {
+  @include breakpoint(desktop1920) {
     flex-direction: row;
     justify-content: space-between;
+    gap: size(0);
   }
 
   &-left {
@@ -997,17 +1015,11 @@
       @include flex-center-vert;
       gap: size(20);
 
-      @include breakpoint(desktop1400) {
-      }
-
       .thumb {
         @include square(72);
         @include circle;
         @include flex-center;
         overflow: hidden;
-
-        @include breakpoint(desktop1400) {
-        }
       }
 
       .info {
@@ -1033,7 +1045,7 @@
     gap: size(10);
     padding-left: size(92);
 
-    @include breakpoint(desktop1800) {
+    @include breakpoint(desktop1920) {
       padding-left: size(0);
     }
 

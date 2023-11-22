@@ -423,23 +423,35 @@ button,
   padding: size(6) size(12);
 
   .icon {
-    @include square(18);
+    @include square(16);
     @include flex-center;
     overflow: hidden;
 
+    @include breakpoint(desktop1367) {
+      @include square(18);
+    }
+
     @include breakpoint(desktop1400) {
+      @include square(20);
+    }
+
+    @include breakpoint(desktop1920) {
       @include square(24);
     }
   }
 
   .text {
     color: $textprimary;
-    font-size: size(11);
+    font-size: size(10);
     font-weight: 500;
     text-transform: uppercase;
 
-    @include breakpoint(desktop1400) {
-      font-size: size(14);
+    @include breakpoint(desktop1367) {
+      font-size: size(11);
+    }
+
+    @include breakpoint(desktop1920) {
+      font-size: size(12);
     }
   }
 

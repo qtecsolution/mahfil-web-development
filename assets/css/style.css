@@ -973,14 +973,26 @@ button:focus,
   padding: 0.375rem 0.75rem;
 }
 .btn-action .icon {
-  width: 1.125rem;
-  height: 1.125rem;
+  width: 1rem;
+  height: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
+@media screen and (min-width: 85.4375rem) {
+  .btn-action .icon {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+}
 @media screen and (min-width: 87.5rem) {
+  .btn-action .icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+@media screen and (min-width: 120rem) {
   .btn-action .icon {
     width: 1.5rem;
     height: 1.5rem;
@@ -988,13 +1000,18 @@ button:focus,
 }
 .btn-action .text {
   color: hsl(216, 15%, 52%);
-  font-size: 0.6875rem;
+  font-size: 0.625rem;
   font-weight: 500;
   text-transform: uppercase;
 }
-@media screen and (min-width: 87.5rem) {
+@media screen and (min-width: 85.4375rem) {
   .btn-action .text {
-    font-size: 0.875rem;
+    font-size: 0.6875rem;
+  }
+}
+@media screen and (min-width: 120rem) {
+  .btn-action .text {
+    font-size: 0.75rem;
   }
 }
 .btn-action.mashallah:not([disabled]):hover {
@@ -4446,6 +4463,9 @@ input:checked + .slider:before {
   font-weight: 400;
 }
 
+.videoplay {
+  padding-bottom: 10rem;
+}
 .videoplay-rightcontent {
   display: flex;
   flex-direction: column;
@@ -4609,7 +4629,7 @@ input:checked + .slider:before {
   padding-bottom: 1.5rem;
 }
 .videoplay .comments-body .commenterbox-left {
-  width: calc(100% - 2.625rem);
+  width: calc(100% - 6rem);
   display: flex;
   gap: 1rem;
 }
@@ -4680,19 +4700,22 @@ input:checked + .slider:before {
   color: hsl(207, 100%, 28%);
 }
 .videoplay .comments-body .commenterbox-right {
-  width: 2rem;
-  height: 2rem;
+  width: 5.375rem;
+  height: 5.375rem;
   position: relative;
+  display: flex;
+  justify-content: flex-end;
 }
 .videoplay .comments-body .commenterbox-right .btn-dropdown {
   width: 2rem;
   height: 2rem;
   border-radius: 100%;
   padding: 0.25rem;
+  position: relative;
 }
 .videoplay .comments-body .commenterbox-right .replydropdown {
   position: absolute;
-  top: 100%;
+  top: 40%;
   right: 0rem;
   padding-top: 0.5rem;
   display: none;
@@ -5166,7 +5189,7 @@ input:checked + .slider:before {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  pad: 0.5rem;
+  padding-top: 0.5rem;
 }
 .mobilevideoplay-body .mobilecommentbox .commentdetail .commentdropdown .dropdownmenu {
   position: absolute;
@@ -5264,6 +5287,20 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+.notifybox-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .notifybox-content {
+    flex-direction: row;
+  }
+  .notifybox-content .notifybox-header,
+  .notifybox-content .notifybox-body {
+    width: 50%;
+  }
 }
 .notifybox .offcanvas {
   min-height: 17.5rem;
@@ -5401,10 +5438,11 @@ input:checked + .slider:before {
   flex-direction: column;
   gap: 0.75rem;
 }
-@media screen and (min-width: 112.5rem) {
+@media screen and (min-width: 120rem) {
   .desktopsubscribe {
     flex-direction: row;
     justify-content: space-between;
+    gap: 0rem;
   }
 }
 .desktopsubscribe-left {
@@ -5445,7 +5483,7 @@ input:checked + .slider:before {
   gap: 0.625rem;
   padding-left: 5.75rem;
 }
-@media screen and (min-width: 112.5rem) {
+@media screen and (min-width: 120rem) {
   .desktopsubscribe-right {
     padding-left: 0rem;
   }

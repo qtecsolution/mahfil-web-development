@@ -695,12 +695,12 @@ button:focus,
   }
 }
 .btn-subscribed:not([disabled]):hover {
-  background: hsl(216, 15%, 52%);
-  color: hsl(214, 17%, 92%);
-  border-color: hsl(216, 15%, 52%);
+  background: hsl(211, 97%, 60%);
+  color: hsl(0, 0%, 100%);
+  border-color: hsl(211, 97%, 60%);
 }
 .btn-subscribed:not([disabled]):hover .icon svg path {
-  stroke: hsl(214, 17%, 92%);
+  stroke: hsl(0, 0%, 100%);
 }
 
 .btn-subscribe {
@@ -1032,6 +1032,66 @@ button:focus,
   fill: hsl(0, 0%, 100%);
 }
 .btn-action.likebtn:not([disabled]):hover .text {
+  color: hsl(0, 0%, 100%);
+}
+
+.btn-subscrib {
+  background: hsl(211, 97%, 60%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.875rem;
+}
+.btn-subscrib .icon {
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.btn-subscrib .text {
+  color: hsl(0, 0%, 100%);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: -0.0125rem;
+}
+.btn-subscrib:not([disabled]):hover {
+  background: hsl(207, 100%, 28%);
+}
+
+.btn-subscribd {
+  background: hsl(0, 0%, 100%);
+  border: solid 0.0625rem hsl(214, 20%, 69%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.875rem;
+}
+.btn-subscribd .icon {
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.btn-subscribd .text {
+  color: hsl(214, 20%, 69%);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: -0.0125rem;
+}
+.btn-subscribd:not([disabled]):hover {
+  background: hsl(211, 97%, 60%);
+  border-color: hsl(211, 97%, 60%);
+}
+.btn-subscribd:not([disabled]):hover svg path {
+  fill: hsl(0, 0%, 100%);
+}
+.btn-subscribd:not([disabled]):hover .text {
   color: hsl(0, 0%, 100%);
 }
 
@@ -3819,6 +3879,49 @@ input:checked + .slider:before {
   gap: 1.5rem;
 }
 
+.mobilesubscribelist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+.mobilesubscribelist .subscribebox {
+  background: hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+.mobilesubscribelist .subscribebox-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.mobilesubscribelist .subscribebox-left .subscribthumb {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.mobilesubscribelist .subscribebox-left .info {
+  display: flex;
+  flex-direction: column;
+}
+.mobilesubscribelist .subscribebox-left .info .channelname {
+  color: hsl(220, 26%, 14%);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.mobilesubscribelist .subscribebox-left .info .subscriber {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.6875rem;
+  font-weight: 400;
+  letter-spacing: -0.01375rem;
+}
+
 .popularsearch {
   display: flex;
   flex-direction: column;
@@ -4000,6 +4103,13 @@ input:checked + .slider:before {
   font-family: "Clash Display";
   font-size: 1rem;
   font-weight: 600;
+}
+
+.searchresult {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .notifications {

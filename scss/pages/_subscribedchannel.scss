@@ -64,3 +64,44 @@
     }
   }
 }
+
+.mobilesubscribelist {
+  @include flex-column;
+  gap: size(8);
+  @include w100;
+
+  .subscribebox {
+    background: $white;
+    @include flex-center-between;
+    padding: size(8);
+
+    &-left {
+      @include flex-center-vert;
+      gap: size(8);
+
+      .subscribthumb {
+        @include square(40);
+        @include circle;
+        @include flex-center;
+        overflow: hidden;
+      }
+
+      .info {
+        @include flex-column;
+
+        .channelname {
+          color: $textdark;
+          font-size: size(14);
+          font-weight: 500;
+        }
+
+        .subscriber {
+          color: $textprimary;
+          font-size: size(11);
+          font-weight: 400;
+          letter-spacing: size(-0.22);
+        }
+      }
+    }
+  }
+}

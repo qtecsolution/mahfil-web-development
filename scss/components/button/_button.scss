@@ -153,13 +153,13 @@ button,
   }
 
   @include hover {
-    @include setBgColor($textprimary, $menudivider);
-    border-color: $textprimary;
+    @include setBgColor($primary, $white);
+    border-color: $primary;
 
     .icon {
       svg {
         path {
-          stroke: $menudivider;
+          stroke: $white;
         }
       }
     }
@@ -490,6 +490,66 @@ button,
       .text {
         color: $white;
       }
+    }
+  }
+}
+
+.btn-subscrib {
+  background: $primary;
+  @include flex-center;
+  gap: size(8);
+  padding: size(8) size(14);
+
+  .icon {
+    @include square(16);
+    @include flex-center;
+    overflow: hidden;
+  }
+
+  .text {
+    color: $white;
+    font-size: size(12);
+    font-weight: 500;
+    letter-spacing: size(-0.2);
+  }
+
+  @include hover {
+    background: $primarydark;
+  }
+}
+
+.btn-subscribd {
+  background: $white;
+  @include border(solid, 1, $timetext);
+  @include flex-center;
+  gap: size(8);
+  padding: size(8) size(14);
+
+  .icon {
+    @include square(16);
+    @include flex-center;
+    overflow: hidden;
+  }
+
+  .text {
+    color: $timetext;
+    font-size: size(12);
+    font-weight: 500;
+    letter-spacing: size(-0.2);
+  }
+
+  @include hover {
+    background: $primary;
+    border-color: $primary;
+
+    svg {
+      path {
+        fill: $white;
+      }
+    }
+
+    .text {
+      color: $white;
     }
   }
 }

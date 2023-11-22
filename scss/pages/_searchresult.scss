@@ -185,3 +185,7 @@
     }
   }
 }
+
+.searchresult {
+  @include flex-center-column;
+}

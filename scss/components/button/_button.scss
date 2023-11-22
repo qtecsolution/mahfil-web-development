@@ -553,3 +553,19 @@ button,
     }
   }
 }
+
+.btn-mysubscribed {
+  @include setBgColor($white, $timetext);
+  @include border(solid, 1, $timetext);
+  font-size: size(12);
+  font-weight: 500;
+  @include flex-center;
+  letter-spacing: size(-0.24);
+  padding: size(6) size(12);
+  text-align: center;
+
+  @include hover {
+    @include setBgColor($primary, $white);
+    border-color: $primary;
+  }
+}

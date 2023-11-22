@@ -105,3 +105,52 @@
     }
   }
 }
+
+.mobilesubscribedlist {
+  @include flex-column;
+  gap: size(8);
+  @include w100;
+
+  .mobilesubscribed {
+    background: $white;
+    @include flex-center-between;
+    padding: size(8);
+
+    .leftcontent {
+      @include flex-center-vert;
+      gap: size(8);
+      width: calc(100% - size(96));
+
+      .thumb {
+        @include square(40);
+        @include circle;
+        @include flex-center;
+        overflow: hidden;
+      }
+
+      .info {
+        @include flex-column;
+        width: calc(100% - size(48));
+
+        .channelname {
+          color: $textdark;
+          font-size: size(14);
+          font-weight: 500;
+          @include text-overflow;
+        }
+
+        .subscriber {
+          color: $textprimary;
+          font-size: size(11);
+          font-weight: 400;
+          letter-spacing: size(-0.22);
+        }
+      }
+    }
+
+    .rightcontent {
+      @include flex-end;
+      width: size(96);
+    }
+  }
+}

@@ -1095,6 +1095,25 @@ button:focus,
   color: hsl(0, 0%, 100%);
 }
 
+.btn-mysubscribed {
+  background: hsl(0, 0%, 100%);
+  color: hsl(214, 20%, 69%);
+  border: solid 0.0625rem hsl(214, 20%, 69%);
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: -0.015rem;
+  padding: 0.375rem 0.75rem;
+  text-align: center;
+}
+.btn-mysubscribed:not([disabled]):hover {
+  background: hsl(211, 97%, 60%);
+  color: hsl(0, 0%, 100%);
+  border-color: hsl(211, 97%, 60%);
+}
+
 .cardvideo {
   display: flex;
   flex-direction: column;
@@ -3921,6 +3940,61 @@ input:checked + .slider:before {
   font-size: 0.6875rem;
   font-weight: 400;
   letter-spacing: -0.01375rem;
+}
+
+.mobilesubscribedlist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+.mobilesubscribedlist .mobilesubscribed {
+  background: hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+.mobilesubscribedlist .mobilesubscribed .leftcontent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: calc(100% - 6rem);
+}
+.mobilesubscribedlist .mobilesubscribed .leftcontent .thumb {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.mobilesubscribedlist .mobilesubscribed .leftcontent .info {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 3rem);
+}
+.mobilesubscribedlist .mobilesubscribed .leftcontent .info .channelname {
+  color: hsl(220, 26%, 14%);
+  font-size: 0.875rem;
+  font-weight: 500;
+  max-width: 99%;
+  width: 99%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mobilesubscribedlist .mobilesubscribed .leftcontent .info .subscriber {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.6875rem;
+  font-weight: 400;
+  letter-spacing: -0.01375rem;
+}
+.mobilesubscribedlist .mobilesubscribed .rightcontent {
+  display: flex;
+  justify-content: flex-end;
+  width: 6rem;
 }
 
 .popularsearch {

@@ -55,14 +55,14 @@
       @include flex-column;
       gap: size(12);
       width: calc(100% - size(72));
+      margin-top: size(-4);
 
       .videotitle {
         cursor: pointer;
         font-size: size(16);
         font-weight: 500;
-        min-height: size(38.4);
-        max-height: size(39);
         @include line-clamp;
+        padding-top: size(4);
         @include transitionscolor;
 
         @include hover {
@@ -320,7 +320,6 @@
         position: absolute;
         top: 100%;
         right: size(0);
-        padding-top: size(4);
         display: none;
         @extend %animation;
         @extend %slideUpIn;

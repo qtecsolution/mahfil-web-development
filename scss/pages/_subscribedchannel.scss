@@ -54,12 +54,33 @@
     }
 
     .rightinfo {
-      @include flex-column;
+      @include flex-center-vert;
       gap: size(32);
+
+      @include breakpoint(tab992) {
+        flex-direction: column;
+      }
+
+      .row {
+        width: 50%;
+        order: 1;
+
+        @include breakpoint(tab992) {
+          width: auto;
+          order: 0;
+        }
+      }
 
       .descriptions {
         @include flex-column;
         gap: size(24);
+        width: 50%;
+        order: 0;
+
+        @include breakpoint(tab992) {
+          width: auto;
+          order: 1;
+        }
       }
     }
   }
@@ -111,10 +132,19 @@
   gap: size(8);
   @include w100;
 
+  @include breakpoint(mobile768) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
   .mobilesubscribed {
     background: $white;
     @include flex-center-between;
     padding: size(8);
+
+    @include breakpoint(mobile768) {
+      width: calc((100% - size(8)) / 2);
+    }
 
     .leftcontent {
       @include flex-center-vert;

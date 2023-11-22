@@ -147,12 +147,33 @@
   }
 
   .rightinfo {
-    @include flex-column;
+    @include flex-center-vert;
     gap: size(32);
+
+    @include breakpoint(tab992) {
+      flex-direction: column;
+    }
+
+    .row {
+      width: 50%;
+      order: 1;
+
+      @include breakpoint(tab992) {
+        width: auto;
+        order: 0;
+      }
+    }
 
     .descriptions {
       @include flex-column;
       gap: size(24);
+      width: 50%;
+      order: 0;
+
+      @include breakpoint(tab992) {
+        width: auto;
+        order: 1;
+      }
     }
   }
 }

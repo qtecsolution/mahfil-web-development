@@ -3380,17 +3380,24 @@ input:checked + .slider:before {
 }
 .favorites-body .rightinfo {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 2rem;
+}
+@media screen and (min-width: 48rem) {
+  .favorites-body .rightinfo {
+    flex-direction: row;
+  }
 }
 @media screen and (min-width: 62rem) {
   .favorites-body .rightinfo {
     flex-direction: column;
   }
 }
-.favorites-body .rightinfo .row {
-  width: 50%;
-  order: 1;
+@media screen and (min-width: 48rem) {
+  .favorites-body .rightinfo .row {
+    width: 50%;
+    order: 1;
+  }
 }
 @media screen and (min-width: 62rem) {
   .favorites-body .rightinfo .row {
@@ -3402,8 +3409,12 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  width: 50%;
-  order: 0;
+}
+@media screen and (min-width: 48rem) {
+  .favorites-body .rightinfo .descriptions {
+    width: 50%;
+    order: 0;
+  }
 }
 @media screen and (min-width: 62rem) {
   .favorites-body .rightinfo .descriptions {
@@ -3419,7 +3430,7 @@ input:checked + .slider:before {
   justify-content: center;
   overflow: hidden;
 }
-@media screen and (min-width: 36rem) {
+@media screen and (min-width: 48rem) {
   .reminderthumb {
     width: 10.25rem;
     height: 17.125rem;
@@ -3688,17 +3699,24 @@ input:checked + .slider:before {
 }
 .salatreminder-body .rightinfo {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 2rem;
+}
+@media screen and (min-width: 48rem) {
+  .salatreminder-body .rightinfo {
+    flex-direction: row;
+  }
 }
 @media screen and (min-width: 62rem) {
   .salatreminder-body .rightinfo {
     flex-direction: column;
   }
 }
-.salatreminder-body .rightinfo .row {
-  width: 50%;
-  order: 1;
+@media screen and (min-width: 48rem) {
+  .salatreminder-body .rightinfo .row {
+    width: 50%;
+    order: 1;
+  }
 }
 @media screen and (min-width: 62rem) {
   .salatreminder-body .rightinfo .row {
@@ -3710,8 +3728,12 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  width: 50%;
-  order: 0;
+}
+@media screen and (min-width: 48rem) {
+  .salatreminder-body .rightinfo .descriptions {
+    width: 50%;
+    order: 0;
+  }
 }
 @media screen and (min-width: 62rem) {
   .salatreminder-body .rightinfo .descriptions {
@@ -3947,17 +3969,24 @@ input:checked + .slider:before {
 }
 .subscribedchannel-body .rightinfo {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 2rem;
+}
+@media screen and (min-width: 48rem) {
+  .subscribedchannel-body .rightinfo {
+    flex-direction: row;
+  }
 }
 @media screen and (min-width: 62rem) {
   .subscribedchannel-body .rightinfo {
     flex-direction: column;
   }
 }
-.subscribedchannel-body .rightinfo .row {
-  width: 50%;
-  order: 1;
+@media screen and (min-width: 48rem) {
+  .subscribedchannel-body .rightinfo .row {
+    width: 50%;
+    order: 1;
+  }
 }
 @media screen and (min-width: 62rem) {
   .subscribedchannel-body .rightinfo .row {
@@ -3969,8 +3998,12 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  width: 50%;
-  order: 0;
+}
+@media screen and (min-width: 48rem) {
+  .subscribedchannel-body .rightinfo .descriptions {
+    width: 50%;
+    order: 0;
+  }
 }
 @media screen and (min-width: 62rem) {
   .subscribedchannel-body .rightinfo .descriptions {
@@ -4279,17 +4312,24 @@ input:checked + .slider:before {
 }
 .searchresult .rightinfo {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 2rem;
+}
+@media screen and (min-width: 48rem) {
+  .searchresult .rightinfo {
+    flex-direction: row;
+  }
 }
 @media screen and (min-width: 62rem) {
   .searchresult .rightinfo {
     flex-direction: column;
   }
 }
-.searchresult .rightinfo .row {
-  width: 50%;
-  order: 1;
+@media screen and (min-width: 48rem) {
+  .searchresult .rightinfo .row {
+    width: 50%;
+    order: 1;
+  }
 }
 @media screen and (min-width: 62rem) {
   .searchresult .rightinfo .row {
@@ -4301,8 +4341,12 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  width: 50%;
-  order: 0;
+}
+@media screen and (min-width: 48rem) {
+  .searchresult .rightinfo .descriptions {
+    width: 50%;
+    order: 0;
+  }
 }
 @media screen and (min-width: 62rem) {
   .searchresult .rightinfo .descriptions {
@@ -4710,17 +4754,24 @@ input:checked + .slider:before {
 }
 .settingsection .rightinfo {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 2rem;
+}
+@media screen and (min-width: 48rem) {
+  .settingsection .rightinfo {
+    flex-direction: row;
+  }
 }
 @media screen and (min-width: 62rem) {
   .settingsection .rightinfo {
     flex-direction: column;
   }
 }
-.settingsection .rightinfo .row {
-  width: 50%;
-  order: 1;
+@media screen and (min-width: 48rem) {
+  .settingsection .rightinfo .row {
+    width: 50%;
+    order: 1;
+  }
 }
 @media screen and (min-width: 62rem) {
   .settingsection .rightinfo .row {
@@ -4732,8 +4783,12 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  width: 50%;
-  order: 0;
+}
+@media screen and (min-width: 48rem) {
+  .settingsection .rightinfo .descriptions {
+    width: 50%;
+    order: 0;
+  }
 }
 @media screen and (min-width: 62rem) {
   .settingsection .rightinfo .descriptions {

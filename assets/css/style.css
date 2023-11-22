@@ -4418,6 +4418,15 @@ input:checked + .slider:before {
   font-weight: 700;
 }
 
+.helpfeedback {
+  padding-bottom: 0;
+}
+@media screen and (min-width: 62rem) {
+  .helpfeedback {
+    padding-bottom: 5rem;
+  }
+}
+
 .feedbackform {
   display: flex;
   flex-direction: column;

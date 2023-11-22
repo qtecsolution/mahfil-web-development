@@ -99,6 +99,14 @@
   }
 }
 
+.helpfeedback {
+  padding-bottom: 0;
+
+  @include breakpoint(tab992) {
+    padding-bottom: size(80);
+  }
+}
+
 .feedbackform {
   @include flex-column;
   gap: size(16);

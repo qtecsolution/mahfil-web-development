@@ -2,9 +2,6 @@
 @use "../partials" as *;
 
 .videoplay {
-  // padding: size(20) size(0);
-  padding-bottom: size(160);
-
   &-rightcontent {
     @include flex-column;
     gap: size(20);

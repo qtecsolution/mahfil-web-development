@@ -2370,6 +2370,7 @@ input[type=search]::-webkit-search-results-decoration:focus {
   flex-direction: column;
   width: 100%;
   padding: 0rem;
+  padding-bottom: 8rem;
 }
 @media screen and (min-width: 62rem) {
   .main {
@@ -4111,6 +4112,16 @@ input:checked + .slider:before {
   justify-content: center;
   flex-direction: column;
 }
+.searchresult .rightinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.searchresult .rightinfo .descriptions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 
 .notifications {
   padding: 0rem 0.875rem 4rem;
@@ -4573,9 +4584,6 @@ input:checked + .slider:before {
   font-weight: 400;
 }
 
-.videoplay {
-  padding-bottom: 10rem;
-}
 .videoplay-rightcontent {
   display: flex;
   flex-direction: column;

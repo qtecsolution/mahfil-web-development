@@ -101,8 +101,12 @@
 
           .waqtduration {
             color: $headingtext;
-            font-size: size(12);
+            font-size: size(10);
             font-weight: 500;
+
+            @include breakpoint(desktop1100) {
+              font-size: size(12);
+            }
 
             @include breakpoint(desktop1400) {
               font-size: size(16);
@@ -121,12 +125,24 @@
 
           .remaining {
             @include flex-column;
-            gap: size(24);
+            gap: size(12);
+
+            @include breakpoint(desktop1400) {
+              gap: size(24);
+            }
 
             &-title {
               color: $headingtext;
-              font-size: size(16);
+              font-size: size(11);
               font-weight: 500;
+
+              @include breakpoint(desktop1200) {
+                font-size: size(13);
+              }
+
+              @include breakpoint(desktop1400) {
+                font-size: size(16);
+              }
             }
 
             .progress {
@@ -151,10 +167,19 @@
 
             .divide {
               color: $dropdowntext;
-              font-size: size(27);
+              font-size: size(20);
               font-weight: 700;
               @include flex-center-vert;
+              align-items: flex-start;
               height: size(40);
+
+              @include breakpoint(desktop1200) {
+                font-size: size(24);
+              }
+
+              @include breakpoint(desktop1400) {
+                font-size: size(27);
+              }
             }
 
             .hours,
@@ -166,8 +191,12 @@
 
               .time {
                 color: $dropdowntext;
-                font-size: size(24);
+                font-size: size(20);
                 font-weight: 700;
+
+                @include breakpoint(desktop1200) {
+                  font-size: size(24);
+                }
 
                 @include breakpoint(desktop1400) {
                   font-size: size(27);
@@ -176,8 +205,12 @@
 
               .title {
                 color: $timetext;
-                font-size: size(14);
+                font-size: size(12);
                 font-weight: 500;
+
+                @include breakpoint(desktop1200) {
+                  font-size: size(14);
+                }
 
                 @include breakpoint(desktop1400) {
                   font-size: size(16);

@@ -305,7 +305,7 @@
     @include flex-center-between;
     align-items: flex-start;
     gap: size(8);
-    padding: size(14);
+    padding: size(10) size(14) size(14);
 
     @include breakpoint(mobile576) {
       align-items: center;
@@ -321,6 +321,7 @@
         cursor: pointer;
         font-size: size(16);
         font-weight: 500;
+        padding-top: size(4);
         @include line-clamp;
         @include transitionscolor;
 

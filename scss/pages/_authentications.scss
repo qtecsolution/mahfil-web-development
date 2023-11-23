@@ -5,6 +5,8 @@
   @include flex-column;
   gap: size(36);
   padding: size(0) size(14) size(48);
+  max-width: size(345);
+  margin-inline: auto;
 
   @include breakpoint(mobile768) {
     padding: size(0) size(24) size(64);

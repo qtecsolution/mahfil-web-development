@@ -1002,6 +1002,8 @@
     flex-direction: row;
     justify-content: space-between;
     gap: size(0);
+    padding-top: size(14);
+    padding-bottom: size(14);
   }
 
   &-left {

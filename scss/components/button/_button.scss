@@ -420,10 +420,6 @@ button,
     @include breakpoint(desktop1400) {
       @include square(20);
     }
-
-    @include breakpoint(desktop1920) {
-      @include square(24);
-    }
   }
 
   .text {

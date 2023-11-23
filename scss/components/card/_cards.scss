@@ -161,6 +161,46 @@
       }
     }
   }
+  
+  .offcanvas {
+    min-height: size(280);
+    height: size(280);
+    max-height: size(280);
+    @include double-radius(top, left, 16, top, right, 16);
+    overflow: hidden;
+    padding-top: size(14);
+
+    &-header {
+      @include flex-center;
+      overflow: hidden;
+      padding: size(14) size(0) size(24);
+
+      .icon {
+        width: size(41);
+        height: size(4);
+        @include flex-center;
+        overflow: hidden;
+      }
+    }
+
+    &-body {
+      .dropdownlist {
+        border: none;
+        box-shadow: none;
+        @include w100;
+        @include radius(0);
+
+        &-link {
+          padding-left: size(24);
+          padding-right: size(24);
+
+          @include hover {
+            background: $modalbg;
+          }
+        }
+      }
+    }
+  }
 }
 
 .cardchannel {

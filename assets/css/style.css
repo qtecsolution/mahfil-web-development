@@ -1277,6 +1277,43 @@ button:focus,
 .cardvideo-body .dropdownicon:not([disabled]):hover {
   background: hsl(213, 39%, 95%);
 }
+.cardvideo .offcanvas {
+  min-height: 17.5rem;
+  height: 17.5rem;
+  max-height: 17.5rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  overflow: hidden;
+  padding-top: 0.875rem;
+}
+.cardvideo .offcanvas-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.875rem 0rem 1.5rem;
+}
+.cardvideo .offcanvas-header .icon {
+  width: 2.5625rem;
+  height: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.cardvideo .offcanvas-body .dropdownlist {
+  border: none;
+  box-shadow: none;
+  width: 100%;
+  border-radius: 0rem;
+}
+.cardvideo .offcanvas-body .dropdownlist-link {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.cardvideo .offcanvas-body .dropdownlist-link:not([disabled]):hover {
+  background: hsl(204, 45%, 98%);
+}
 
 .cardchannel {
   display: flex;

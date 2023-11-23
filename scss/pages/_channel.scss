@@ -36,6 +36,11 @@
     .nav-tabs {
       border-color: $menudivider;
       margin-bottom: size(24);
+      padding-inline: size(14);
+
+      @include breakpoint(tab992) {
+        padding-inline: size(0);
+      }
 
       .nav-link {
         color: $textprimary;

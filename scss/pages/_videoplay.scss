@@ -608,7 +608,7 @@
             @include flex-center-vert;
             gap: size(5);
             @include w100;
-            padding: size(10);
+            padding: size(12) size(14);
             @include transitionsall;
 
             .droplinkicon {
@@ -675,11 +675,12 @@
   &-body {
     @include flex-column;
     gap: size(24);
-    padding: size(0) size(14) size(0);
+    padding: size(0) size(0) size(0);
 
     .mobilecommentbox {
       @include flex-column;
       gap: size(16);
+      padding-inline: size(14);
 
       .commentbox {
         @include flex-column;
@@ -788,6 +789,12 @@
       padding-bottom: size(104);
 
       &-header {
+        padding-inline: size(14);
+
+        @include breakpoint(tab992) {
+          padding-inline: size(0);
+        }
+        
         .title {
           color: $textdark;
           font-family: $clashDisplay;
@@ -847,6 +854,7 @@
 .notifybox {
   @include flex-column;
   gap: size(16);
+  padding-inline: size(14);
 
   &-content {
     @include flex-column;

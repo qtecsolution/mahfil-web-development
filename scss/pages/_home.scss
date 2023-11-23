@@ -5,14 +5,14 @@
   @include flex-center-vert;
   gap: size(30) size(14);
   flex-wrap: wrap;
-  padding: size(0) size(0) size(64);
+  padding: size(0) size(0) size(48);
 
   @include breakpoint(mobile768) {
     padding: size(0) size(0) size(64);
   }
 
   @include breakpoint(tab992) {
-    padding: size(0) size(0) size(0);
+    padding: size(0) size(0) size(128);
   }
 
   .cardvideo {
@@ -144,7 +144,7 @@
 .trendingvideos {
   @include flex-column;
   gap: size(20);
-  padding: size(0) size(14) size(48);
+  padding: size(0) size(0) size(48);
 
   @include breakpoint(mobile768) {
     padding: size(0) size(24) size(48);
@@ -157,6 +157,11 @@
   &-header {
     @include flex-column;
     gap: size(16);
+    padding-inline: size(14);
+
+    @include breakpoint(tab992) {
+      padding-inline: size(0);
+    }
 
     .trending-title {
       font-size: size(20);

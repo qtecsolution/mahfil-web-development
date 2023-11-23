@@ -4,7 +4,7 @@
 .favorites {
   @include flex-column;
   gap: size(20);
-  padding: size(0) size(14) size(64);
+  padding: size(0) size(0) size(64);
 
   @include breakpoint(mobile768) {
     padding: size(0) size(24) size(80);
@@ -17,6 +17,11 @@
   &-header {
     @include flex-column;
     gap: size(16);
+    padding-inline: size(14);
+
+    @include breakpoint(tab992) {
+      padding-inline: size(0);
+    }
 
     .favorites-title {
       font-size: size(20);
@@ -57,13 +62,15 @@
     .rightinfo {
       @include flex-column;
       gap: size(32);
-
+      padding-inline: size(14);
+      
       @include breakpoint(mobile768) {
         flex-direction: row;
       }
-
+      
       @include breakpoint(tab992) {
         flex-direction: column;
+        padding-inline: size(0);
       }
 
       .row {
@@ -81,13 +88,15 @@
       .descriptions {
         @include flex-column;
         gap: size(24);
-
+        padding-inline: size(14);
+        
         @include breakpoint(mobile768) {
           width: 50%;
           order: 0;
         }
-
+        
         @include breakpoint(tab992) {
+          padding-inline: size(0);
           width: auto;
           order: 1;
         }

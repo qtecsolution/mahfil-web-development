@@ -1405,11 +1405,15 @@ button:focus,
 .cardfavorite .favoritethumb {
   width: 100%;
   height: 10.5rem;
-  border-radius: 0.625rem;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+@media screen and (min-width: 62rem) {
+  .cardfavorite .favoritethumb {
+    border-radius: 0.625rem;
+  }
 }
 @media screen and (min-width: 36rem) {
   .cardfavorite .favoritethumb {
@@ -1543,7 +1547,6 @@ button:focus,
   background: hsl(0, 0%, 100%);
   display: flex;
   flex-direction: column;
-  border-radius: 0.625rem;
   position: relative;
   transition: background 350ms ease-in-out;
 }
@@ -1553,10 +1556,14 @@ button:focus,
     align-items: flex-start;
   }
 }
+@media screen and (min-width: 62rem) {
+  .cardvid {
+    border-radius: 0.625rem;
+  }
+}
 .cardvid .videothumb {
   width: 100%;
   height: 10.5rem;
-  border-radius: 0.625rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1566,6 +1573,11 @@ button:focus,
   .cardvid .videothumb {
     width: 11.25rem;
     height: 7.5rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .cardvid .videothumb {
+    border-radius: 0.625rem;
   }
 }
 @media screen and (min-width: 87.5rem) {
@@ -1586,7 +1598,7 @@ button:focus,
   align-items: center;
   align-items: flex-start;
   gap: 0.5rem;
-  padding: 0.25rem 0.5rem;
+  padding: 0.875rem 0.875rem 0.5rem;
   position: relative;
 }
 @media screen and (min-width: 36rem) {
@@ -3002,7 +3014,7 @@ input:checked + .slider:before {
   align-items: center;
   gap: 1.875rem 0.875rem;
   flex-wrap: wrap;
-  padding: 0rem 0rem 4rem;
+  padding: 0rem 0rem 3rem;
 }
 @media screen and (min-width: 48rem) {
   .homevideos {
@@ -3011,7 +3023,7 @@ input:checked + .slider:before {
 }
 @media screen and (min-width: 62rem) {
   .homevideos {
-    padding: 0rem 0rem 0rem;
+    padding: 0rem 0rem 8rem;
   }
 }
 .homevideos .cardvideo {
@@ -3138,7 +3150,7 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  padding: 0rem 0.875rem 3rem;
+  padding: 0rem 0rem 3rem;
 }
 @media screen and (min-width: 48rem) {
   .trendingvideos {
@@ -3154,6 +3166,12 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding-inline: 0.875rem;
+}
+@media screen and (min-width: 62rem) {
+  .trendingvideos-header {
+    padding-inline: 0rem;
+  }
 }
 .trendingvideos-header .trending-title {
   font-size: 1.25rem;
@@ -3361,7 +3379,7 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  padding: 0rem 0.875rem 4rem;
+  padding: 0rem 0rem 4rem;
 }
 @media screen and (min-width: 48rem) {
   .favorites {
@@ -3377,6 +3395,12 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding-inline: 0.875rem;
+}
+@media screen and (min-width: 62rem) {
+  .favorites-header {
+    padding-inline: 0rem;
+  }
 }
 .favorites-header .favorites-title {
   font-size: 1.25rem;
@@ -3418,6 +3442,7 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding-inline: 0.875rem;
 }
 @media screen and (min-width: 48rem) {
   .favorites-body .rightinfo {
@@ -3427,6 +3452,7 @@ input:checked + .slider:before {
 @media screen and (min-width: 62rem) {
   .favorites-body .rightinfo {
     flex-direction: column;
+    padding-inline: 0rem;
   }
 }
 @media screen and (min-width: 48rem) {
@@ -3445,6 +3471,7 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  padding-inline: 0.875rem;
 }
 @media screen and (min-width: 48rem) {
   .favorites-body .rightinfo .descriptions {
@@ -3454,6 +3481,7 @@ input:checked + .slider:before {
 }
 @media screen and (min-width: 62rem) {
   .favorites-body .rightinfo .descriptions {
+    padding-inline: 0rem;
     width: auto;
     order: 1;
   }
@@ -4245,7 +4273,7 @@ input:checked + .slider:before {
 }
 
 .videoschannels {
-  padding: 0rem 0.875rem 4rem;
+  padding: 0rem 0rem 4rem;
 }
 @media screen and (min-width: 48rem) {
   .videoschannels {
@@ -4297,6 +4325,12 @@ input:checked + .slider:before {
 .videoschannels .nav-tabs {
   border-color: hsl(214, 17%, 92%);
   margin-bottom: 1rem;
+  padding-inline: 0.875rem;
+}
+@media screen and (min-width: 62rem) {
+  .videoschannels .nav-tabs {
+    padding-inline: 0rem;
+  }
 }
 .videoschannels .nav-tabs .nav-link {
   color: hsl(216, 15%, 52%);
@@ -4405,11 +4439,13 @@ input:checked + .slider:before {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-bottom: 3rem;
 }
 .searchresult .rightinfo {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding-inline: 0.875rem;
 }
 @media screen and (min-width: 48rem) {
   .searchresult .rightinfo {
@@ -4419,6 +4455,7 @@ input:checked + .slider:before {
 @media screen and (min-width: 62rem) {
   .searchresult .rightinfo {
     flex-direction: column;
+    padding-inline: 0rem;
   }
 }
 @media screen and (min-width: 48rem) {
@@ -4932,6 +4969,12 @@ input:checked + .slider:before {
 .channelsection .channeldescription .nav-tabs {
   border-color: hsl(214, 17%, 92%);
   margin-bottom: 1.5rem;
+  padding-inline: 0.875rem;
+}
+@media screen and (min-width: 62rem) {
+  .channelsection .channeldescription .nav-tabs {
+    padding-inline: 0rem;
+  }
 }
 .channelsection .channeldescription .nav-tabs .nav-link {
   color: hsl(216, 15%, 52%);
@@ -5606,7 +5649,7 @@ input:checked + .slider:before {
   align-items: center;
   gap: 0.3125rem;
   width: 100%;
-  padding: 0.625rem;
+  padding: 0.75rem 0.875rem;
   transition: all 350ms ease-in-out;
 }
 .mobilevideoplay-header .offcanvas-body .dropdownlist-link .droplinkicon {
@@ -5671,12 +5714,13 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  padding: 0rem 0.875rem 0rem;
+  padding: 0rem 0rem 0rem;
 }
 .mobilevideoplay-body .mobilecommentbox {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding-inline: 0.875rem;
 }
 .mobilevideoplay-body .mobilecommentbox .commentbox {
   display: flex;
@@ -5782,6 +5826,14 @@ input:checked + .slider:before {
   gap: 1rem;
   padding-bottom: 6.5rem;
 }
+.mobilevideoplay-body .relatedvideos-header {
+  padding-inline: 0.875rem;
+}
+@media screen and (min-width: 62rem) {
+  .mobilevideoplay-body .relatedvideos-header {
+    padding-inline: 0rem;
+  }
+}
 .mobilevideoplay-body .relatedvideos-header .title {
   color: hsl(220, 26%, 14%);
   font-family: "Clash Display";
@@ -5836,6 +5888,7 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding-inline: 0.875rem;
 }
 .notifybox-content {
   display: flex;

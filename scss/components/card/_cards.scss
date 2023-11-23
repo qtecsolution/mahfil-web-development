@@ -270,7 +270,6 @@
 .cardfavorite {
   background: $white;
   @include flex-column;
-  // @include radius(10);
   overflow: hidden;
   @include transitionsbackground;
 
@@ -286,9 +285,12 @@
   .favoritethumb {
     @include w100;
     height: size(168);
-    @include radius(10);
     @include flex-center;
     overflow: hidden;
+
+    @include breakpoint(tab992) {
+      @include radius(10);
+    }
 
     @include breakpoint(mobile576) {
       width: size(190);
@@ -419,7 +421,6 @@
 .cardvid {
   background: $white;
   @include flex-column;
-  @include radius(10);
   position: relative;
   @include transitionsbackground;
 
@@ -428,16 +429,23 @@
     align-items: flex-start;
   }
 
+  @include breakpoint(tab992) {
+    @include radius(10);
+  }
+
   .videothumb {
     @include w100;
     height: size(168);
-    @include radius(10);
     @include flex-center;
     overflow: hidden;
 
     @include breakpoint(mobile576) {
       width: size(180);
       height: size(120);
+    }
+
+    @include breakpoint(tab992) {
+      @include radius(10);
     }
 
     @include breakpoint(desktop1400) {
@@ -455,7 +463,7 @@
     @include flex-center-between;
     align-items: flex-start;
     gap: size(8);
-    padding: size(4) size(8);
+    padding: size(14) size(14) size(8);
     position: relative;
 
     @include breakpoint(mobile576) {

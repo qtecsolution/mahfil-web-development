@@ -1833,14 +1833,21 @@ button:focus,
 }
 .header-nav .reminder .prayer .prayericon {
   background: hsl(213, 39%, 95%);
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 0.625rem;
+  padding: 0.5rem;
+}
+@media screen and (min-width: 87.5rem) {
+  .header-nav .reminder .prayer .prayericon {
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0.625rem;
+  }
 }
 .header-nav .reminder .prayer .details {
   display: flex;
@@ -2533,14 +2540,21 @@ table tr td {
 }
 .desktoplist-link {
   background: hsl(213, 39%, 95%);
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 0.625rem;
+  padding: 0.5rem;
+}
+@media screen and (min-width: 87.5rem) {
+  .desktoplist-link {
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0.625rem;
+  }
 }
 .desktoplist .darkmodeitem:not([disabled]):hover .desktoplist-link,
 .desktoplist .useritem:not([disabled]):hover .desktoplist-link {
@@ -2976,16 +2990,6 @@ input:checked + .slider:before {
     width: calc(50% - 0.875rem);
   }
 }
-@media screen and (min-width: 48rem) {
-  .homevideos .cardvideo {
-    width: calc(33.3333333333% - 0.875rem);
-  }
-}
-@media screen and (min-width: 62rem) {
-  .homevideos .cardvideo {
-    width: calc(50% - 0.875rem);
-  }
-}
 @media screen and (min-width: 75rem) {
   .homevideos .cardvideo {
     width: calc(33.3333333333% - 0.875rem);
@@ -3102,16 +3106,16 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  padding: 0rem 0.875rem 7rem;
+  padding: 0rem 0.875rem 3rem;
 }
 @media screen and (min-width: 48rem) {
   .trendingvideos {
-    padding: 0rem 1.5rem 7rem;
+    padding: 0rem 1.5rem 3rem;
   }
 }
 @media screen and (min-width: 62rem) {
   .trendingvideos {
-    padding: 0rem;
+    padding: 0rem 0rem 7rem;
   }
 }
 .trendingvideos-header {

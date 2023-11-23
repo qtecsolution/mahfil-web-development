@@ -22,14 +22,6 @@
       width: calc((100% / 2) - size(14));
     }
 
-    @include breakpoint(mobile768) {
-      width: calc((100% / 3) - size(14));
-    }
-
-    @include breakpoint(tab992) {
-      width: calc((100% / 2) - size(14));
-    }
-
     @include breakpoint(desktop1200) {
       width: calc((100% / 3) - size(14));
     }
@@ -152,14 +144,14 @@
 .trendingvideos {
   @include flex-column;
   gap: size(20);
-  padding: size(0) size(14) size(112);
+  padding: size(0) size(14) size(48);
 
   @include breakpoint(mobile768) {
-    padding: size(0) size(24) size(112);
+    padding: size(0) size(24) size(48);
   }
 
   @include breakpoint(tab992) {
-    padding: size(0);
+    padding: size(0) size(0) size(112);
   }
 
   &-header {

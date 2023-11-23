@@ -87,11 +87,16 @@
 
   &-link {
     background: $linkhoverbg;
-    @include square(44);
+    @include square(32);
     @include circle;
     @include flex-center;
     overflow: hidden;
-    padding: size(10);
+    padding: size(8);
+
+    @include breakpoint(desktop1400) {
+      @include square(44);
+      padding: size(10);
+    }
   }
 
   .darkmodeitem,

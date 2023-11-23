@@ -102,12 +102,14 @@
   overflow: hidden;
 
   @include breakpoint(mobile768) {
-    width: size(164);
+    @include w100;
+    max-width: size(164);
     height: size(274);
   }
 
   @include breakpoint(tab992) {
     width: auto;
+    max-width: 100%;
     height: auto;
   }
 

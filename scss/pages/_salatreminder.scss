@@ -294,180 +294,194 @@
   }
 }
 
-.mobilesalatreminder {
-  background: $searchborder;
+.mobsaltreminder {
   @include flex-column;
-  gap: size(48);
-  padding: size(20) size(14) size(64);
-  min-height: 100vh;
-
-  @include breakpoint(mobile768) {
-    padding: size(20) size(24) size(80);
-  }
-
-  .salattitle {
-    color: $dropdowntext;
-    font-family: $clashDisplay;
-    font-size: size(16);
-    font-weight: 600;
-    margin-left: size(32);
-  }
-
-  .locationicon {
-    @include square(16);
-    @include flex-center;
-    overflow: hidden;
-  }
-
-  .location {
-    color: $dropdowntext;
-    font-size: size(14);
-    font-weight: 600;
-  }
+  gap: size(24);
+  padding: size(20) size(14) size(96);
 
   &-header {
     @include flex-column;
-    gap: size(36);
+    gap: size(24);
 
-    .downcontent {
-      @include flex-center-column;
-      gap: size(12);
-      text-align: center;
+    .start-title {
+      color: $dropdowntext;
+      font-family: $clashDisplay;
+      font-size: size(16);
+      font-weight: 600;
+    }
 
-      .arbidate {
-        color: $dropdowntext;
-        font-size: size(18);
-        font-weight: 700;
+    .location {
+      @include flex-center-vert;
+      gap: size(8);
+
+      .locicon {
+        @include square(16);
+        @include flex-center;
+        overflow: hidden;
       }
 
-      .engdate {
-        color: $textprimary;
-        font-size: size(16);
-        font-weight: 500;
+      .locname {
+        color: $dropdowntext;
+        font-size: size(13);
+        font-weight: 600;
+      }
+    }
+
+    .btn-refresh {
+      @include square(24);
+      @include flex-center;
+      overflow: hidden;
+      padding: 0;
+
+      @include hover {
+        svg {
+          path {
+            fill: $primary;
+            stroke: none;
+          }
+        }
+      }
+    }
+
+    .arbidate {
+      color: $dropdowntext;
+      font-size: size(16);
+      font-weight: 700;
+    }
+
+    .engdate {
+      color: $textprimary;
+      font-size: size(13);
+      font-weight: 500;
+    }
+
+    .remindbox {
+      @include flex-center-column;
+      gap: size(4);
+      text-align: center;
+
+      .remindtitle {
+        color: $dropdowntext;
+        font-size: size(14);
+        font-weight: 700;
       }
     }
   }
 
   &-body {
-    background: $primarydark;
-    @include radius(12);
-    overflow: hidden;
+    .remaining {
+      background: $primarydark;
+      @include radius(10);
+      @include flex-column;
+      gap: size(16);
+      padding: size(24);
+      overflow: hidden;
 
-    .salat-time {
-      @include flex-center-column;
-      align-items: flex-start;
-      gap: size(8);
-      padding-inline: size(8);
-
-      @include breakpoint(mobile576) {
-        padding-inline: size(16);
+      &-header {
+        .waqt {
+          color: $white;
+          font-family: $clashDisplay;
+          font-size: size(24);
+          font-weight: 600;
+        }
       }
-
-      .waqtname {
-        color: $white;
-        font-family: $clashDisplay;
-        font-size: size(24);
-        font-weight: 600;
-      }
-
-      .remainingend {
+      
+      &-body {
         @include flex-column;
         gap: size(8);
 
-        &-header {
-          @include flex-column;
-          gap: size(4);
+        .remainingtitle {
+          color: $white;
+          font-size: size(11);
+          font-weight: 500;
+          letter-spacing: size(-0.2);
+        }
 
-          .remainingtitle {
-            color: $white;
-            font-size: size(10);
-            font-weight: 500;
-            letter-spacing: size(-0.2);
-          }
+        .progress {
+          @include w100;
+          height: size(4);
+          @include radius(48);
 
-          .progress {
-            background: $progressbackground;
-            @include radius(48);
-            height: size(4);
-
-            &-bar {
-              background: $primary;
-              @include radius(48);
-            }
+          &-bar {
+            background: $primary;
           }
         }
 
-        &-body {
-          @include flex-center-vert;
-          gap: size(8);
+        .timebox {
+          background: $white;
+          @include flex-center-column;
+          gap: size(0);
+          @include radius(4);
+          text-align: center;
+          padding: size(8);
 
-          .timebox {
-            @include square(44);
-            background: $white;
-            @include radius(6);
-            @include flex-center-column;
-            gap: size(4);
-            text-align: center;
-            padding: size(8);
+          .time {
+            color: $dropdowntext;
+            font-size: size(14);
+            font-weight: 700;
+          }
 
-            .time {
-              color: $dropdowntext;
-              font-size: size(12);
-              font-weight: 700;
-            }
+          .title {
+            color: $timetext;
+            font-size: size(11);
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+  
+  &-footer {
+    .waqtlist {
+      background: $white;
+      @include radius(12);
+      @include list-vertical;
+      overflow: hidden;
 
-            .title {
-              color: $timetext;
-              font-size: size(10);
-              font-weight: 500;
+      &-item {
+        background: $white;
+        @include border-single(bottom, solid, 1, $searchborder);
+        @include flex-center-between;
+        align-items: flex-start;
+        padding: size(8) size(24);
+
+        .leftinfo {
+          @include flex-column;
+
+          .title {
+            color: $labelcolor;
+            font-size: size(16);
+            font-weight: 600;
+          }
+
+          .timedurations {
+            color: $labelcolor;
+            font-size: size(12);
+            font-weight: 500;
+          }
+        }
+
+        &.active {
+          background: $primarydark;
+
+          .leftinfo {
+            .title,
+            .timedurations {
+              color: $white;
             }
           }
         }
       }
     }
 
-    .salatlist {
-      @include flex-column;
-      background: $white;
-
-      .waqtbox {
-        .waqtinput {
-          &:checked ~ .waqtlabel {
-            background: $primarydark;
-            border-color: $primarydark;
-
-            .waqtname,
-            .waqttime {
-              color: $white;
-            }
-          }
-        }
-
-        .waqtlabel {
-          background: $white;
-          @include border-single(bottom, solid, 1, $searchborder);
-          @include flex-column;
-          padding: size(8) size(24);
-
-          .waqtname {
-            color: $labelcolor;
-            font-size: size(14);
-            font-weight: 600;
-          }
-
-          .waqttime {
-            color: $labelcolor;
-            font-size: size(12);
-            font-weight: 400;
-          }
-        }
-
-        &:last-of-type {
-          .waqtlabel {
-            border-bottom: size(0);
-          }
-        }
-      }
+    .toggle-switch > :checked + label::before, :checked + .toggle-switch-label::before {
+      background: $primary;
+      border-color: $primary;
+    }
+    
+    .toggle-switch > :checked + label::after, :checked + .toggle-switch-label::after {
+      background: $primary;
+      border-color: $primary;
     }
   }
 }

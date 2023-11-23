@@ -720,7 +720,7 @@
         <div class="d-lg-none d-block">
           <ul class="mobilelist">
             <li class="mobilelist-item">
-              <a href="#" class="mobilelist-link">
+              <a href="notification.html" class="mobilelist-link">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g>
                     <path
@@ -738,12 +738,22 @@
 
             <li class="mobilelist-item">
               <a href="#" class="mobilelist-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#718096" class="bi bi-person"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                </svg>
+              </a>
+            </li>
+
+            <li class="mobilelist-item">
+              <button type="button" class="mobilelist-link" data-bs-toggle="offcanvas" data-bs-target="#mobileSearch">
                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M18.689 17.4163L22.972 21.6983L21.557 23.1133L17.275 18.8303C15.6817 20.1075 13.7 20.8022 11.658 20.7993C6.68996 20.7993 2.65796 16.7673 2.65796 11.7993C2.65796 6.83132 6.68996 2.79932 11.658 2.79932C16.626 2.79932 20.658 6.83132 20.658 11.7993C20.6609 13.8413 19.9662 15.8231 18.689 17.4163ZM16.683 16.6743C17.9521 15.3692 18.6608 13.6197 18.658 11.7993C18.658 7.93132 15.525 4.79932 11.658 4.79932C7.78996 4.79932 4.65796 7.93132 4.65796 11.7993C4.65796 15.6663 7.78996 18.7993 11.658 18.7993C13.4784 18.8022 15.2278 18.0934 16.533 16.8243L16.683 16.6743Z"
                     fill="#718096" />
                 </svg>
-              </a>
+              </button>
             </li>
           </ul>
         </div>
@@ -999,6 +1009,86 @@
               </div>
             </li>
           </ul>
+        </div>
+
+        <!-- MOBILE-SEARCH -->
+        <div class="offcanvas offcanvas-top" tabindex="-1" id="mobileSearch" aria-labelledby="mobileSearch">
+          <div class="offcanvas-body p-0">
+            <section class="searchresults">
+              <div class="searchresults-header">
+                <button class="btn-back" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                      <path
+                        d="M7.828 11H20V13H7.828L13.192 18.364L11.778 19.778L4 12L11.778 4.222L13.192 5.636L7.828 11Z"
+                        fill="#4A5568" />
+                    </g>
+                    <defs>
+                      <clipPath>
+                        <rect width="24" height="24" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </button>
+
+                <div class="searchbox">
+                  <input type="search" placeholder="Search on Mahfil" class="searchfield" />
+                  <button class="btn-search">
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g>
+                        <path
+                          d="M18.689 17.4163L22.972 21.6983L21.557 23.1133L17.275 18.8303C15.6817 20.1075 13.7 20.8022 11.658 20.7993C6.68996 20.7993 2.65796 16.7673 2.65796 11.7993C2.65796 6.83132 6.68996 2.79932 11.658 2.79932C16.626 2.79932 20.658 6.83132 20.658 11.7993C20.6609 13.8413 19.9662 15.8231 18.689 17.4163ZM16.683 16.6743C17.9521 15.3692 18.6608 13.6197 18.658 11.7993C18.658 7.93132 15.525 4.79932 11.658 4.79932C7.78996 4.79932 4.65796 7.93132 4.65796 11.7993C4.65796 15.6663 7.78996 18.7993 11.658 18.7993C13.4784 18.8022 15.2278 18.0934 16.533 16.8243L16.683 16.6743Z"
+                          fill="#4A5568" />
+                      </g>
+                      <defs>
+                        <clipPath>
+                          <rect width="24" height="24" fill="white" transform="translate(0.657959 0.799316)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="searchresults-body">
+                <h5 class="searchtitle">Popular Search</h5>
+
+                <ul class="popularlist">
+                  <li class="popularlist-item">
+                    <button type="button" class="popularlist-link">azhari waz</button>
+                  </li>
+
+                  <li class="popularlist-item">
+                    <button type="button" class="popularlist-link">taheri waz</button>
+                  </li>
+
+                  <li class="popularlist-item">
+                    <button type="button" class="popularlist-link">Scholar</button>
+                  </li>
+
+                  <li class="popularlist-item">
+                    <button type="button" class="popularlist-link">Islamic</button>
+                  </li>
+
+                  <li class="popularlist-item">
+                    <button type="button" class="popularlist-link">Waz</button>
+                  </li>
+
+                  <li class="popularlist-item">
+                    <button type="button" class="popularlist-link">Bangla Waz</button>
+                  </li>
+
+                  <li class="popularlist-item">
+                    <button type="button" class="popularlist-link">Salat</button>
+                  </li>
+
+                  <li class="popularlist-item">
+                    <button type="button" class="popularlist-link">abu toha muhammad adnan</button>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
         </div>
       </nav>
     </header>

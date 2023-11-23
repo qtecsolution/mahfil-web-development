@@ -259,6 +259,12 @@
           display: -webkit-box;
         }
       }
+
+      .channelname {
+        @include hover {
+          color: $primary;
+        }
+      }
     }
 
     .subscribebox {
@@ -335,6 +341,10 @@
       .detail {
         .channelname {
           @include text-overflow;
+
+          @include hover {
+            color: $primary;
+          }
         }
 
         .channelname,
@@ -495,6 +505,10 @@
       .detail {
         .channelname {
           @include text-overflow;
+
+          @include hover {
+            color: $primary;
+          }
         }
 
         .channelname,

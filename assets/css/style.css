@@ -1380,6 +1380,9 @@ button:focus,
     display: -webkit-box;
   }
 }
+.cardchannel-body .channelinfo .channelname:not([disabled]):hover {
+  color: hsl(211, 97%, 60%);
+}
 .cardchannel-body .subscribebox {
   max-width: 7rem;
 }
@@ -1468,6 +1471,9 @@ button:focus,
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.cardfavorite-details .describe .detail .channelname:not([disabled]):hover {
+  color: hsl(211, 97%, 60%);
 }
 .cardfavorite-details .describe .detail .channelname,
 .cardfavorite-details .describe .detail .videotext {
@@ -1638,6 +1644,9 @@ button:focus,
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.cardvid-details .describe .detail .channelname:not([disabled]):hover {
+  color: hsl(211, 97%, 60%);
 }
 .cardvid-details .describe .detail .channelname,
 .cardvid-details .describe .detail .videotext {

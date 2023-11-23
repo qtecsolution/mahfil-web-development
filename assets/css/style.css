@@ -2862,6 +2862,11 @@ table tr td {
   padding: 0.5rem 1.25rem;
   text-align: center;
   overflow: hidden;
+  transition: all 350ms ease-in-out;
+}
+.popularlist-link:not([disabled]):hover {
+  background: hsl(211, 97%, 60%);
+  color: hsl(0, 0%, 100%);
 }
 
 .switch {

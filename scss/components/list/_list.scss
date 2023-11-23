@@ -372,5 +372,10 @@
     padding: size(8) size(20);
     text-align: center;
     overflow: hidden;
+    @include transitionsall;
+
+    @include hover {
+      @include setBgColor($primary, $white);
+    }
   }
 }

@@ -2510,6 +2510,7 @@ table tr td {
   align-items: center;
   gap: 0.75rem;
   padding: 0.75rem;
+  width: 100%;
 }
 .mainlist-link .icon {
   width: 1.25rem;
@@ -4996,6 +4997,12 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  padding: 0 0.875rem 3rem;
+}
+@media screen and (min-width: 62rem) {
+  .channelsection .channeldescription .aboutchannel {
+    padding: 0rem 0rem 4rem;
+  }
 }
 .channelsection .channeldescription .aboutchannel .text {
   color: hsl(218, 17%, 35%);

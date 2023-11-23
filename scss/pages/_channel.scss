@@ -65,6 +65,11 @@
     .aboutchannel {
       @include flex-column;
       gap: size(24);
+      padding: 0 size(14) size(48);
+
+      @include breakpoint(tab992) {
+        padding: size(0) size(0) size(64);
+      }
 
       .text {
         color: $dropdowntext;

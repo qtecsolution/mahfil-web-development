@@ -11,12 +11,15 @@
   }
 
   @include breakpoint(tab992) {
-    padding: size(0) size(0) size(0);
+    padding: size(0) size(0) size(80);
   }
 
   &-header {
+    background: $white;
     @include flex-column;
     gap: size(16);
+    position: sticky;
+    top: 0;
 
     .reminder-title {
       font-size: size(20);
@@ -30,6 +33,8 @@
       gap: size(24);
 
       .topinfo {
+        max-width: size(730);
+
         .datetitle {
           color: $dropdowntext;
           font-size: size(18);
@@ -59,7 +64,7 @@
         }
 
         .btn-refresh {
-          @include square(20);
+          @include square(26);
           @include flex-center;
           overflow: hidden;
 

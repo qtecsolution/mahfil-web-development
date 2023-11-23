@@ -951,18 +951,6 @@ button:focus,
   color: hsl(0, 0%, 100%);
 }
 
-.btn-refresh {
-  width: 2rem;
-  height: 2rem;
-  padding: 0.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.btn-refresh:not([disabled]):hover svg path {
-  fill: hsl(211, 97%, 60%);
-}
-
 .btn-action {
   border: solid 0.0625rem hsl(214, 32%, 91%);
   border-radius: 0.625rem;
@@ -1112,6 +1100,18 @@ button:focus,
   background: hsl(211, 97%, 60%);
   color: hsl(0, 0%, 100%);
   border-color: hsl(211, 97%, 60%);
+}
+
+.btn-refresh {
+  width: 2rem;
+  height: 2rem;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-refresh:not([disabled]):hover svg path {
+  stroke: hsl(211, 97%, 60%);
 }
 
 .cardvideo {
@@ -3501,13 +3501,16 @@ input:checked + .slider:before {
 }
 @media screen and (min-width: 62rem) {
   .salatreminder {
-    padding: 0rem 0rem 0rem;
+    padding: 0rem 0rem 5rem;
   }
 }
 .salatreminder-header {
+  background: hsl(0, 0%, 100%);
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  position: sticky;
+  top: 0;
 }
 .salatreminder-header .reminder-title {
   font-size: 1.25rem;
@@ -3517,6 +3520,9 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+.salatreminder-body .leftcontent .topinfo {
+  max-width: 45.625rem;
 }
 .salatreminder-body .leftcontent .topinfo .datetitle {
   color: hsl(218, 17%, 35%);
@@ -3546,8 +3552,8 @@ input:checked + .slider:before {
   font-weight: 600;
 }
 .salatreminder-body .leftcontent .topinfo .btn-refresh {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.625rem;
+  height: 1.625rem;
   display: flex;
   align-items: center;
   justify-content: center;

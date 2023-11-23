@@ -401,20 +401,6 @@ button,
   }
 }
 
-.btn-refresh {
-  @include square(32);
-  padding: size(4);
-  @include flex-center;
-
-  @include hover {
-    svg {
-      path {
-        fill: $primary;
-      }
-    }
-  }
-}
-
 .btn-action {
   @include border(solid, 1, $searchborder);
   @include radius(10);
@@ -567,5 +553,19 @@ button,
   @include hover {
     @include setBgColor($primary, $white);
     border-color: $primary;
+  }
+}
+
+.btn-refresh {
+  @include square(32);
+  padding: size(4);
+  @include flex-center;
+
+  @include hover {
+    svg {
+      path {
+        stroke: $primary;
+      }
+    }
   }
 }

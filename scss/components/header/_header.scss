@@ -7,16 +7,25 @@
   height: size(76);
 
   @include breakpoint(tab992) {
+    @include border-single(bottom, solid, 1, $menudivider);
+  }
+
+  @include breakpoint(tab992) {
     width: calc(100% - size(244));
     margin-left: auto;
     padding-inline: size(40);
     height: size(80);
+    border-bottom: 0;
   }
 
   &-nav {
-    @include border-single(bottom, solid, 1, $menudivider);
+    border-bottom: 0;
     padding: size(17) 0;
     @include flex-center-between;
+
+    @include breakpoint(tab992) {
+      @include border-single(bottom, solid, 1, $menudivider);
+    }
 
     .searchreminder {
       @include flex-center-vert;

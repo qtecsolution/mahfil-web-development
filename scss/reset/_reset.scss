@@ -118,11 +118,6 @@ body {
   text-rendering: optimizeSpeed;
   scroll-snap-type: y mandatory;
   overflow-x: hidden;
-  margin-top: size(96);
-  
-  @include breakpoint(tab992) {
-    margin-top: size(100);
-  }
 }
 
 h1,

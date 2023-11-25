@@ -306,6 +306,7 @@
 
     img {
       @include wh100;
+      object-fit: cover;
 
       @include breakpoint(tab992) {
         object-fit: fill;
@@ -470,7 +471,11 @@
 
     img {
       @include wh100;
-      object-fit: fill;
+      object-fit: cover;
+
+      @include breakpoint(tab992) {
+        object-fit: fill;
+      }
     }
   }
 

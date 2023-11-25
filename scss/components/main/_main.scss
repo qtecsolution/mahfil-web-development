@@ -6,11 +6,13 @@
   @include w100;
   padding: size(0);
   padding-bottom: size(80);
+  margin-top: size(96);
 
   @include breakpoint(tab992) {
     width: calc(100% - size(244));
     margin-left: auto;
-    padding: size(0) size(40) size(20);
+    margin-top: size(100);
+    padding: size(0) size(40) size(48);
   }
 }
 

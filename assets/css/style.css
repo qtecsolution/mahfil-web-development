@@ -389,12 +389,6 @@ body {
   text-rendering: optimizeSpeed;
   scroll-snap-type: y mandatory;
   overflow-x: hidden;
-  margin-top: 6rem;
-}
-@media screen and (min-width: 62rem) {
-  body {
-    margin-top: 6.25rem;
-  }
 }
 
 h1,
@@ -1435,6 +1429,8 @@ button:focus,
 .cardfavorite .favoritethumb img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media screen and (min-width: 62rem) {
   .cardfavorite .favoritethumb img {
@@ -1608,8 +1604,14 @@ button:focus,
 .cardvid .videothumb img {
   width: 100%;
   height: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 62rem) {
+  .cardvid .videothumb img {
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
 }
 .cardvid-details {
   display: flex;
@@ -1853,8 +1855,7 @@ button:focus,
 
 .header {
   background: hsl(0, 0%, 100%);
-  border-bottom: solid 0.0625rem hsl(214, 17%, 92%);
-  padding: 1.109375rem 0.875rem;
+  padding-inline: 0.875rem;
   height: 4.75rem;
 }
 @media screen and (min-width: 62rem) {
@@ -1866,6 +1867,8 @@ button:focus,
   }
 }
 .header-nav {
+  border-bottom: solid 0.0625rem hsl(214, 17%, 92%);
+  padding: 1.0625rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2468,12 +2471,14 @@ input[type=search]::-webkit-search-results-decoration:focus {
   width: 100%;
   padding: 0rem;
   padding-bottom: 5rem;
+  margin-top: 6rem;
 }
 @media screen and (min-width: 62rem) {
   .main {
     width: calc(100% - 15.25rem);
     margin-left: auto;
-    padding: 0rem 2.5rem 1.25rem;
+    margin-top: 6.25rem;
+    padding: 0rem 2.5rem 3rem;
   }
 }
 
@@ -4320,7 +4325,7 @@ input:checked + .slider:before {
 }
 @media screen and (min-width: 62rem) {
   .videoschannels {
-    padding: 0rem 0rem 10rem;
+    padding: 0rem 0rem 5rem;
   }
 }
 .videoschannels .emptysubscribed {
@@ -4624,7 +4629,7 @@ input:checked + .slider:before {
 }
 @media screen and (min-width: 62rem) {
   .privacysection {
-    padding: 0rem 1.5rem 5rem;
+    padding: 0rem 0rem 5rem;
   }
 }
 .privacysection-body {
@@ -4676,7 +4681,7 @@ input:checked + .slider:before {
 }
 @media screen and (min-width: 62rem) {
   .helpandfeedback {
-    padding: 0rem 1.5rem 5rem;
+    padding: 0rem 0rem 5rem;
   }
 }
 .helpandfeedback-body {

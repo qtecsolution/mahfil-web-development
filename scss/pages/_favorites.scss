@@ -30,6 +30,8 @@
   }
 
   &-body {
+    @include w100;
+    
     .emptyfavorites {
       @include flex-center-column;
       gap: size(24);
@@ -57,6 +59,7 @@
     .favoriteslist {
       @include flex-column;
       gap: size(12);
+      @include w100;
     }
 
     .rightinfo {

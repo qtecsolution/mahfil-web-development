@@ -5,10 +5,13 @@
   background: $white;
   @include border-single(bottom, solid, 1, $menudivider);
   padding: size(17.75) size(14);
-  margin-bottom: size(20);
+  height: size(76);
 
   @include breakpoint(tab992) {
-    padding-inline: size(0);
+    width: calc(100% - size(244));
+    margin-left: auto;
+    padding-inline: size(40);
+    height: size(80);
   }
 
   &-nav {
@@ -107,6 +110,10 @@
         margin-left: 0;
       }
     }
+  }
+
+  &.headercollapsed {
+    width: calc(100% - size(72));
   }
 }
 

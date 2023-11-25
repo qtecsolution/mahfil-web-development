@@ -276,6 +276,7 @@
 .cardfavorite {
   background: $white;
   @include flex-column;
+  @include w100;
   overflow: hidden;
   @include transitionsbackground;
 
@@ -305,7 +306,10 @@
 
     img {
       @include wh100;
-      object-fit: fill;
+
+      @include breakpoint(tab992) {
+        object-fit: fill;
+      }
     }
   }
 
@@ -313,6 +317,7 @@
     @include flex-center-between;
     align-items: flex-start;
     gap: size(8);
+    overflow: hidden;
     padding: size(10) size(14) size(14);
 
     @include breakpoint(mobile576) {

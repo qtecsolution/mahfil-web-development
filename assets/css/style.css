@@ -388,6 +388,13 @@ body {
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+  margin-top: 6rem;
+}
+@media screen and (min-width: 62rem) {
+  body {
+    margin-top: 6.25rem;
+  }
 }
 
 h1,
@@ -1391,6 +1398,7 @@ button:focus,
   background: hsl(0, 0%, 100%);
   display: flex;
   flex-direction: column;
+  width: 100%;
   overflow: hidden;
   transition: background 350ms ease-in-out;
 }
@@ -1427,8 +1435,12 @@ button:focus,
 .cardfavorite .favoritethumb img {
   width: 100%;
   height: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
+}
+@media screen and (min-width: 62rem) {
+  .cardfavorite .favoritethumb img {
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
 }
 .cardfavorite-details {
   display: flex;
@@ -1436,6 +1448,7 @@ button:focus,
   align-items: center;
   align-items: flex-start;
   gap: 0.5rem;
+  overflow: hidden;
   padding: 0.625rem 0.875rem 0.875rem;
 }
 @media screen and (min-width: 36rem) {
@@ -1842,11 +1855,14 @@ button:focus,
   background: hsl(0, 0%, 100%);
   border-bottom: solid 0.0625rem hsl(214, 17%, 92%);
   padding: 1.109375rem 0.875rem;
-  margin-bottom: 1.25rem;
+  height: 4.75rem;
 }
 @media screen and (min-width: 62rem) {
   .header {
-    padding-inline: 0rem;
+    width: calc(100% - 15.25rem);
+    margin-left: auto;
+    padding-inline: 2.5rem;
+    height: 5rem;
   }
 }
 .header-nav {
@@ -1947,6 +1963,9 @@ button:focus,
   .header-nav .logo {
     margin-left: 0;
   }
+}
+.header.headercollapsed {
+  width: calc(100% - 4.5rem);
 }
 
 .appmenu {
@@ -3421,6 +3440,9 @@ input:checked + .slider:before {
   font-size: 1.25rem;
   font-weight: 600;
 }
+.favorites-body {
+  width: 100%;
+}
 .favorites-body .emptyfavorites {
   display: flex;
   align-items: center;
@@ -3452,6 +3474,7 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  width: 100%;
 }
 .favorites-body .rightinfo {
   display: flex;

@@ -428,6 +428,18 @@
         }
       }
 
+      .downloadsinfo {
+        .dropdownlist {
+          width: size(230);
+
+          &-link {
+            .droplinkicon {
+              margin-top: size(-3);
+            }
+          }
+        }
+      }
+
       @include hover {
         .dropdownicon {
           @include breakpoint(tab992) {

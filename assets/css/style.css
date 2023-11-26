@@ -1576,6 +1576,12 @@ button:focus,
 .cardfavorite-details .favdropdown-info .dropdownlist-link:not([disabled]):hover {
   background: hsl(213, 39%, 95%);
 }
+.cardfavorite-details .favdropdown .downloadsinfo .dropdownlist {
+  width: 14.375rem;
+}
+.cardfavorite-details .favdropdown .downloadsinfo .dropdownlist-link .droplinkicon {
+  margin-top: -0.1875rem;
+}
 @media screen and (min-width: 62rem) {
   .cardfavorite-details .favdropdown:not([disabled]):hover .dropdownicon {
     background: hsl(213, 39%, 95%);

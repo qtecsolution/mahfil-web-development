@@ -837,8 +837,8 @@
         @include double-radius(top, left, 16, top, right, 16);
         overflow: hidden;
         padding-top: size(4);
-        min-height: size(320);
-        max-height: size(320);
+        min-height: size(480);
+        max-height: size(480);
 
         &-header {
           .commenttitle {
@@ -896,7 +896,7 @@
     .mycommentlist {
       @include flex-column;
       gap: size(16);
-      padding-bottom: size(48);
+      padding-bottom: size(24);
 
       .commentdetail {
         @include border-single(bottom, solid, 1, $searchborder);

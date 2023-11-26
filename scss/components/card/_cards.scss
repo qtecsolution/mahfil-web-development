@@ -308,17 +308,11 @@
 
   .favoritethumb {
     @include w100;
-    height: size(168);
     @include flex-center;
     overflow: hidden;
 
     @include breakpoint(tab992) {
       @include radius(10);
-    }
-
-    @include breakpoint(mobile576) {
-      width: size(190);
-      height: size(120);
     }
 
     img {

@@ -1444,7 +1444,6 @@ button:focus,
 }
 .cardfavorite .favoritethumb {
   width: 100%;
-  height: 10.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1453,12 +1452,6 @@ button:focus,
 @media screen and (min-width: 62rem) {
   .cardfavorite .favoritethumb {
     border-radius: 0.625rem;
-  }
-}
-@media screen and (min-width: 36rem) {
-  .cardfavorite .favoritethumb {
-    width: 11.875rem;
-    height: 7.5rem;
   }
 }
 .cardfavorite .favoritethumb img {

@@ -1322,11 +1322,22 @@ button:focus,
   border-radius: 0rem;
 }
 .cardvideo .offcanvas-body .dropdownlist-link {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding: 0.625rem 1.875rem;
+}
+.cardvideo .offcanvas-body .dropdownlist-link .droplinkicon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.cardvideo .offcanvas-body .dropdownlist-link .droplinktext {
+  color: hsl(220, 26%, 14%);
+  font-weight: 500;
 }
 .cardvideo .offcanvas-body .dropdownlist-link:not([disabled]):hover {
-  background: hsl(204, 45%, 98%);
+  background: hsl(213, 39%, 95%);
 }
 
 .cardchannel {
@@ -1801,11 +1812,22 @@ button:focus,
   border-radius: 0rem;
 }
 .cardvid .offcanvas-body .dropdownlist-link {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding: 0.625rem 1.875rem;
+}
+.cardvid .offcanvas-body .dropdownlist-link .droplinkicon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.cardvid .offcanvas-body .dropdownlist-link .droplinktext {
+  color: hsl(220, 26%, 14%);
+  font-weight: 500;
 }
 .cardvid .offcanvas-body .dropdownlist-link:not([disabled]):hover {
-  background: hsl(204, 45%, 98%);
+  background: hsl(213, 39%, 95%);
 }
 
 .cardsubscribed {
@@ -2190,7 +2212,7 @@ input[type=search]::-webkit-search-results-decoration:focus {
 }
 .offcanvas.offcanvas-start {
   border-right: 0;
-  width: 17.5rem;
+  width: 100%;
 }
 .offcanvas.offcanvas-end {
   border-left: 0;
@@ -3156,11 +3178,22 @@ input:checked + .slider:before {
   border-radius: 0rem;
 }
 .homevideos .cardvideo .offcanvas-body .dropdownlist-link {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding: 0.625rem 1.875rem;
+}
+.homevideos .cardvideo .offcanvas-body .dropdownlist-link .droplinkicon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.homevideos .cardvideo .offcanvas-body .dropdownlist-link .droplinktext {
+  color: hsl(220, 26%, 14%);
+  font-weight: 500;
 }
 .homevideos .cardvideo .offcanvas-body .dropdownlist-link:not([disabled]):hover {
-  background: hsl(204, 45%, 98%);
+  background: hsl(213, 39%, 95%);
 }
 
 .popularchannel {

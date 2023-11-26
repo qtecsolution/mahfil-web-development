@@ -15,7 +15,7 @@
 
   &.offcanvas-start {
     border-right: 0;
-    width: size(280);
+    @include w100;
   }
 
   &.offcanvas-end {

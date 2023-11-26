@@ -63,11 +63,21 @@
           @include radius(0);
 
           &-link {
-            padding-left: size(24);
-            padding-right: size(24);
+            padding: size(10) size(30);
+
+            .droplinkicon {
+              @include square(24);
+              @include flex-center;
+              overflow: hidden;
+            }
+
+            .droplinktext {
+              color: $textdark;
+              font-weight: 500;
+            }
 
             @include hover {
-              background: $modalbg;
+              background: $linkhoverbg;
             }
           }
         }

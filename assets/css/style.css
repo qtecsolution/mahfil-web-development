@@ -1124,6 +1124,35 @@ button:focus,
   stroke: hsl(211, 97%, 60%);
 }
 
+.btn-react {
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+}
+.btn-react .icon {
+  width: 0.75rem;
+  height: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.btn-react .text {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.625rem;
+  font-weight: 400;
+}
+
+.btn-replies {
+  color: hsl(211, 97%, 60%);
+  font-size: 0.625rem;
+  font-weight: 400;
+  letter-spacing: -0.0125rem;
+}
+.btn-replies:not([disabled]):hover {
+  color: hsl(207, 100%, 28%);
+}
+
 .cardvideo {
   display: flex;
   flex-direction: column;
@@ -5823,7 +5852,7 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  padding: 0rem 0rem 0rem;
+  padding: 0rem;
 }
 .mobilevideoplay-body .mobilecommentbox {
   display: flex;
@@ -5891,6 +5920,21 @@ input:checked + .slider:before {
   flex-direction: column;
   gap: 0.3125rem;
 }
+.mobilevideoplay-body .mobilecommentbox .commentdetail .leftinfo .detail .bottomdetail {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+.mobilevideoplay-body .mobilecommentbox .commentdetail .leftinfo .detail .bottomdetail .leftinfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 4rem;
+}
+.mobilevideoplay-body .mobilecommentbox .commentdetail .leftinfo .detail .bottomdetail .rightinfo {
+  display: flex;
+  align-items: center;
+}
 .mobilevideoplay-body .mobilecommentbox .commentdetail .commentdropdown {
   width: 1.5rem;
   height: 1.5rem;
@@ -5941,6 +5985,27 @@ input:checked + .slider:before {
 .mobilevideoplay-body .mobilecommentbox .commentdetail .commentdropdown:not([disabled]):hover .dropdownmenu {
   display: block;
 }
+.mobilevideoplay-body .mobilecommentbox .offcanvas {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  overflow: hidden;
+  padding-top: 0.25rem;
+  min-height: 20rem;
+  max-height: 20rem;
+}
+.mobilevideoplay-body .mobilecommentbox .offcanvas-header .commenttitle {
+  color: hsl(228, 11%, 46%);
+  font-size: 1rem;
+  font-weight: 600;
+}
+.mobilevideoplay-body .mobilecommentbox .offcanvas-header .btn-close i {
+  font-size: 1rem;
+}
+.mobilevideoplay-body .mobilecommentbox .offcanvas-body .mymobcomment {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 .mobilevideoplay-body .relatedvideos {
   display: flex;
   flex-direction: column;
@@ -5964,6 +6029,27 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+.mobilevideoplay-body .mycommentbox {
+  padding-inline: 0.875rem;
+}
+.mobilevideoplay-body .mycommentlist {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 3rem;
+}
+.mobilevideoplay-body .mycommentlist .commentdetail {
+  border-bottom: solid 0.0625rem hsl(214, 32%, 91%);
+  padding: 0rem 0.875rem 1rem;
+}
+.mobilevideoplay-body .topiconmob {
+  width: 2.5625rem;
+  height: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .commentform {

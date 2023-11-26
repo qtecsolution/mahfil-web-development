@@ -697,7 +697,7 @@
   &-body {
     @include flex-column;
     gap: size(24);
-    padding: size(0) size(0) size(0);
+    padding: size(0);
 
     .mobilecommentbox {
       @include flex-column;
@@ -763,7 +763,21 @@
             .topdetail {
               @include flex-column;
               gap: size(5);
+            }
 
+            .bottomdetail {
+              @include flex-center-vert;
+              gap: size(28);
+
+              .leftinfo {
+                @include flex-center-vert;
+                gap: size(12);
+                max-width: size(64);
+              }
+
+              .rightinfo {
+                @include flex-center-vert;
+              }
             }
           }
         }
@@ -818,6 +832,35 @@
           }
         }
       }
+
+      .offcanvas {
+        @include double-radius(top, left, 16, top, right, 16);
+        overflow: hidden;
+        padding-top: size(4);
+        min-height: size(320);
+        max-height: size(320);
+
+        &-header {
+          .commenttitle {
+            color: $linktext;
+            font-size: size(16);
+            font-weight: 600;
+          }
+
+          .btn-close {
+            i {
+              font-size: size(16);
+            }
+          }
+        }
+
+        &-body {
+          .mymobcomment {
+            @include flex-column;
+            gap: size(24);
+          }
+        }
+      }
     }
 
     .relatedvideos {
@@ -844,6 +887,28 @@
         @include flex-column;
         gap: size(16);
       }
+    }
+    
+    .mycommentbox {
+      padding-inline: size(14);
+    }
+      
+    .mycommentlist {
+      @include flex-column;
+      gap: size(16);
+      padding-bottom: size(48);
+
+      .commentdetail {
+        @include border-single(bottom, solid, 1, $searchborder);
+        padding: size(0) size(14) size(16);
+      }
+    }
+
+    .topiconmob {
+      width: size(41);
+      height: size(4);
+      @include flex-center;
+      overflow: hidden;
     }
   }
 }

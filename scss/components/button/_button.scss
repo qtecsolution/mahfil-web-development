@@ -575,3 +575,31 @@ button,
     }
   }
 }
+
+.btn-react {
+  @include flex-center-vert;
+  gap: size(5);
+
+  .icon {
+    @include square(12);
+    @include flex-center;
+    overflow: hidden;
+  }
+
+  .text {
+    color: $textprimary;
+    font-size: size(10);
+    font-weight: 400;
+  }
+}
+
+.btn-replies {
+  color: $primary;
+  font-size: size(10);
+  font-weight: 400;
+  letter-spacing: size(-0.2);
+  
+  @include hover {
+    color: $primarydark;
+  }
+}

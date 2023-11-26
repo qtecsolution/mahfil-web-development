@@ -5720,10 +5720,35 @@ input:checked + .slider:before {
 .mobilevideoplay-header .reactions {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.25rem;
   padding-inline: 0.875rem;
 }
-@media screen and (min-width: 36rem) {
+@media screen and (min-width: 25.875rem) {
+  .mobilevideoplay-header .reactions {
+    gap: 0.5rem;
+  }
+}
+.mobilevideoplay-header .reactions .reaction-1 {
+  width: 7.8125rem;
+}
+@media screen and (min-width: 25.875rem) {
+  .mobilevideoplay-header .reactions .reaction-1 {
+    width: auto;
+  }
+}
+.mobilevideoplay-header .reactions .reaction-2,
+.mobilevideoplay-header .reactions .reaction-3,
+.mobilevideoplay-header .reactions .reaction-4 {
+  width: calc((100% - 7.8125rem) / 3);
+}
+@media screen and (min-width: 25.875rem) {
+  .mobilevideoplay-header .reactions .reaction-2,
+  .mobilevideoplay-header .reactions .reaction-3,
+  .mobilevideoplay-header .reactions .reaction-4 {
+    width: auto;
+  }
+}
+@media screen and (min-width: 25.875rem) {
   .mobilevideoplay-header .reactions .btn-reaction {
     width: 25%;
   }

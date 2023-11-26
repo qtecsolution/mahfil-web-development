@@ -567,11 +567,34 @@
 
     .reactions {
       @include flex-center-vert;
-      gap: size(8);
+      gap: size(4);
       padding-inline: size(14);
 
+      @include breakpoint(mobile414) {
+        gap: size(8);
+      }
+
+      
+      .reaction-1 {
+        width: size(125);
+        
+        @include breakpoint(mobile414) {
+          width: auto;
+        }
+      }
+      
+      .reaction-2,
+      .reaction-3,
+      .reaction-4 {
+        width: calc((100% - size(125)) / 3);
+
+        @include breakpoint(mobile414) {
+          width: auto;
+        }
+      }
+
       .btn-reaction {
-        @include breakpoint(mobile576) {
+        @include breakpoint(mobile414) {
           width: calc(100% / 4);
         }
       }

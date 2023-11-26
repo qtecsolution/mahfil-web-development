@@ -2,6 +2,12 @@
 @use "../partials" as *;
 
 .settingsection {
+  padding-inline: size(8);
+
+  @include breakpoint(tab992) {
+    padding-inline: size(0);
+  }
+
   .settingdescription {
     .nav-tabs {
       border-color: $menudivider;

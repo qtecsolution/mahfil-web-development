@@ -449,26 +449,24 @@ button,
     }
   }
 
-  &.mashallah {
-    @include hover {
-      background: $primary;
-      border-color: $primary;
+  &:hover:not(.morebtn) {
+    background: $primary;
+    border-color: $primary;
 
-      .icon {
-        svg {
-          path {
-            fill: $white;
-          }
+    .icon {
+      svg {
+        path {
+          fill: $white;
         }
       }
+    }
 
-      .text {
-        color: $white;
-      }
+    .text {
+      color: $white;
     }
   }
 
-  &.likebtn {
+  &.morebtn {
     @include hover {
       background: $primary;
       border-color: $primary;
@@ -476,7 +474,7 @@ button,
       .icon {
         svg {
           path {
-            fill: $white;
+            stroke: $white;
           }
         }
       }

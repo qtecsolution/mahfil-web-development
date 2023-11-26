@@ -21,7 +21,7 @@
 
     .helpandfeedbacktitle {
       color: $textprimary;
-      font-family: $clashDisplay;
+      // font-family: $clashDisplay;
       font-size: size(16);
       font-weight: 600;
     }
@@ -33,7 +33,7 @@
 
     &-header {
       .helptitle {
-        font-family: $clashDisplay;
+        // font-family: $clashDisplay;
         color: $textprimary;
         font-size: size(20);
         font-weight: 700;
@@ -90,7 +90,7 @@
 
     &-header {
       .feedbacktitle {
-        font-family: $clashDisplay;
+        // font-family: $clashDisplay;
         color: $textprimary;
         font-size: size(20);
         font-weight: 700;

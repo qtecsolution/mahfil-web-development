@@ -1012,24 +1012,24 @@ button:focus,
     font-size: 0.75rem;
   }
 }
-.btn-action.mashallah:not([disabled]):hover {
+.btn-action:hover:not(.morebtn) {
   background: hsl(211, 97%, 60%);
   border-color: hsl(211, 97%, 60%);
 }
-.btn-action.mashallah:not([disabled]):hover .icon svg path {
+.btn-action:hover:not(.morebtn) .icon svg path {
   fill: hsl(0, 0%, 100%);
 }
-.btn-action.mashallah:not([disabled]):hover .text {
+.btn-action:hover:not(.morebtn) .text {
   color: hsl(0, 0%, 100%);
 }
-.btn-action.likebtn:not([disabled]):hover {
+.btn-action.morebtn:not([disabled]):hover {
   background: hsl(211, 97%, 60%);
   border-color: hsl(211, 97%, 60%);
 }
-.btn-action.likebtn:not([disabled]):hover .icon svg path {
-  fill: hsl(0, 0%, 100%);
+.btn-action.morebtn:not([disabled]):hover .icon svg path {
+  stroke: hsl(0, 0%, 100%);
 }
-.btn-action.likebtn:not([disabled]):hover .text {
+.btn-action.morebtn:not([disabled]):hover .text {
   color: hsl(0, 0%, 100%);
 }
 
@@ -3985,7 +3985,6 @@ input:checked + .slider:before {
 }
 .mobsaltreminder-header .start-title {
   color: hsl(218, 17%, 35%);
-  font-family: "Clash Display";
   font-size: 1rem;
   font-weight: 600;
 }
@@ -4054,7 +4053,6 @@ input:checked + .slider:before {
 }
 .mobsaltreminder-body .remaining-header .waqt {
   color: hsl(0, 0%, 100%);
-  font-family: "Clash Display";
   font-size: 1.5rem;
   font-weight: 600;
 }
@@ -4542,7 +4540,6 @@ input:checked + .slider:before {
 }
 .searchresults-body .searchtitle {
   color: hsl(216, 15%, 52%);
-  font-family: "Clash Display";
   font-size: 1rem;
   font-weight: 600;
 }
@@ -4622,7 +4619,6 @@ input:checked + .slider:before {
 }
 .notifications-body .notificationtitle {
   color: hsl(216, 15%, 52%);
-  font-family: "Clash Display";
   font-size: 1rem;
   font-weight: 600;
 }
@@ -4709,7 +4705,6 @@ input:checked + .slider:before {
 }
 .privacysection-body .privacytitle {
   color: hsl(216, 15%, 52%);
-  font-family: "Clash Display";
   font-size: 1rem;
   font-weight: 600;
 }
@@ -4724,7 +4719,6 @@ input:checked + .slider:before {
   gap: 1rem;
 }
 .privacysection-body .privacy-header .title {
-  font-family: "Clash Display";
   color: hsl(216, 15%, 52%);
   font-size: 1.25rem;
   font-weight: 700;
@@ -4762,7 +4756,6 @@ input:checked + .slider:before {
 }
 .helpandfeedback-body .helpandfeedbacktitle {
   color: hsl(216, 15%, 52%);
-  font-family: "Clash Display";
   font-size: 1rem;
   font-weight: 600;
 }
@@ -4772,7 +4765,6 @@ input:checked + .slider:before {
   gap: 1.5rem;
 }
 .helpandfeedback .help-header .helptitle {
-  font-family: "Clash Display";
   color: hsl(216, 15%, 52%);
   font-size: 1.25rem;
   font-weight: 700;
@@ -4816,7 +4808,6 @@ input:checked + .slider:before {
   gap: 1.5rem;
 }
 .helpandfeedback .feedback-header .feedbacktitle {
-  font-family: "Clash Display";
   color: hsl(216, 15%, 52%);
   font-size: 1.25rem;
   font-weight: 700;
@@ -4866,6 +4857,14 @@ input:checked + .slider:before {
   border-color: hsl(211, 97%, 60%);
 }
 
+.settingsection {
+  padding-inline: 0.5rem;
+}
+@media screen and (min-width: 62rem) {
+  .settingsection {
+    padding-inline: 0rem;
+  }
+}
 .settingsection .settingdescription .nav-tabs {
   border-color: hsl(214, 17%, 92%);
   margin-bottom: 1.5rem;
@@ -5768,25 +5767,23 @@ input:checked + .slider:before {
   align-items: center;
   gap: 0.3125rem;
   width: 100%;
-  padding: 0.75rem 0.875rem;
+  padding: 0.625rem 1.875rem;
   transition: all 350ms ease-in-out;
 }
 .mobilevideoplay-header .offcanvas-body .dropdownlist-link .droplinkicon {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 .mobilevideoplay-header .offcanvas-body .dropdownlist-link .droplinktext {
-  color: inherit;
-  font-size: 0.75rem;
+  color: hsl(220, 26%, 14%);
   font-weight: 500;
 }
 .mobilevideoplay-header .offcanvas-body .dropdownlist-link:not([disabled]):hover {
-  background: hsl(210, 38%, 95%);
-  color: hsl(210, 21%, 33%);
+  background: hsl(213, 39%, 95%);
 }
 .mobilevideoplay-header .subscriberbox {
   display: flex;
@@ -5955,7 +5952,6 @@ input:checked + .slider:before {
 }
 .mobilevideoplay-body .relatedvideos-header .title {
   color: hsl(220, 26%, 14%);
-  font-family: "Clash Display";
   font-size: 1.25rem;
   font-weight: 600;
 }
@@ -6052,7 +6048,6 @@ input:checked + .slider:before {
 }
 .notifybox .offcanvas-body .notifytitle {
   color: hsl(220, 26%, 14%);
-  font-family: "Clash Display";
   font-size: 1.25rem;
   font-weight: 500;
   text-align: center;

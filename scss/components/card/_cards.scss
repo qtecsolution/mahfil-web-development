@@ -105,7 +105,9 @@
 
       @include hover {
         .dropdownicon {
-          background: $linkhoverbg;
+          @include breakpoint(tab992) {
+            background: $linkhoverbg;
+          }
         }
 
         .videodropdown-info {
@@ -157,7 +159,9 @@
       @include transitionsbackground;
 
       @include hover {
-        background: $linkhoverbg;
+        @include breakpoint(tab992) {
+          background: $linkhoverbg;
+        }
       }
     }
   }
@@ -215,10 +219,14 @@
 
   &-header {
     .channelthumb {
-      @include square(72);
+      @include square(40);
       @include circle;
       @include flex-center;
       overflow: hidden;
+
+      @include breakpoint(tab992) {
+        @include square(72);
+      }
 
       img {
         @include wh100;
@@ -232,10 +240,9 @@
 
     .channelinfo {
       .title {
-        font-size: size(14);
+        font-size: size(13);
         font-weight: 600;
-        min-height: size(33);
-        max-height: size(40);
+        min-height: size(31);
         @include line-clamp;
 
         @include breakpoint(mobile768) {
@@ -419,7 +426,9 @@
 
       @include hover {
         .dropdownicon {
-          background: $linkhoverbg;
+          @include breakpoint(tab992) {
+            background: $linkhoverbg;
+          }
         }
 
         .favdropdown-info {
@@ -556,7 +565,9 @@
       }
 
       .dropdownicon {
-        background: $linkhoverbg;
+        @include breakpoint(tab992) {
+          background: $linkhoverbg;
+        }
       }
     }
   }

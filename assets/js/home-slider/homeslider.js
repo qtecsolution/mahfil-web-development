@@ -14,9 +14,6 @@ const popularSlider = new Swiper(".popularSlider", {
   },
   breakpoints: {
     0: {
-      slidesPerView: 2,
-    },
-    576: {
       slidesPerView: 3,
     },
     768: {

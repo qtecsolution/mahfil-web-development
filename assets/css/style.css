@@ -602,7 +602,12 @@ button:focus,
   gap: 0.25rem;
   transition: background 350ms ease-in-out;
   height: 2rem;
-  padding-inline: 1rem;
+  padding-inline: 0.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .btn-subscribe {
+    padding-inline: 1rem;
+  }
 }
 @media screen and (min-width: 62rem) {
   .btn-subscribe {
@@ -664,7 +669,12 @@ button:focus,
   justify-content: center;
   gap: 0.25rem;
   height: 2rem;
-  padding-inline: 1rem;
+  padding-inline: 0.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .btn-subscribed {
+    padding-inline: 1rem;
+  }
 }
 @media screen and (min-width: 62rem) {
   .btn-subscribed {
@@ -715,7 +725,12 @@ button:focus,
   justify-content: center;
   gap: 0.25rem;
   height: 2rem;
-  padding-inline: 1rem;
+  padding-inline: 0.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .btn-subscribe {
+    padding-inline: 1rem;
+  }
 }
 @media screen and (min-width: 62rem) {
   .btn-subscribe {
@@ -1215,8 +1230,10 @@ button:focus,
   padding-top: 0.5rem;
   display: none;
 }
-.cardvideo-body .videodropdown:not([disabled]):hover .dropdownicon {
-  background: hsl(213, 39%, 95%);
+@media screen and (min-width: 62rem) {
+  .cardvideo-body .videodropdown:not([disabled]):hover .dropdownicon {
+    background: hsl(213, 39%, 95%);
+  }
 }
 .cardvideo-body .videodropdown:not([disabled]):hover .videodropdown-info {
   display: block;
@@ -1269,8 +1286,10 @@ button:focus,
   padding: 0.25rem;
   transition: background 350ms ease-in-out;
 }
-.cardvideo-body .dropdownicon:not([disabled]):hover {
-  background: hsl(213, 39%, 95%);
+@media screen and (min-width: 62rem) {
+  .cardvideo-body .dropdownicon:not([disabled]):hover {
+    background: hsl(213, 39%, 95%);
+  }
 }
 .cardvideo .offcanvas {
   min-height: 17.5rem;
@@ -1325,13 +1344,19 @@ button:focus,
   }
 }
 .cardchannel-header .channelthumb {
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+@media screen and (min-width: 62rem) {
+  .cardchannel-header .channelthumb {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
 }
 .cardchannel-header .channelthumb img {
   width: 100%;
@@ -1343,10 +1368,9 @@ button:focus,
   gap: 0.875rem;
 }
 .cardchannel-body .channelinfo .title {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 600;
-  min-height: 2.0625rem;
-  max-height: 2.5rem;
+  min-height: 1.9375rem;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -1548,8 +1572,10 @@ button:focus,
 .cardfavorite-details .favdropdown-info .dropdownlist-link:not([disabled]):hover {
   background: hsl(213, 39%, 95%);
 }
-.cardfavorite-details .favdropdown:not([disabled]):hover .dropdownicon {
-  background: hsl(213, 39%, 95%);
+@media screen and (min-width: 62rem) {
+  .cardfavorite-details .favdropdown:not([disabled]):hover .dropdownicon {
+    background: hsl(213, 39%, 95%);
+  }
 }
 .cardfavorite-details .favdropdown:not([disabled]):hover .favdropdown-info {
   display: block;
@@ -1689,8 +1715,10 @@ button:focus,
 .cardvid .vidropdown:not([disabled]):hover .cardvid-info {
   display: block;
 }
-.cardvid .vidropdown:not([disabled]):hover .dropdownicon {
-  background: hsl(213, 39%, 95%);
+@media screen and (min-width: 62rem) {
+  .cardvid .vidropdown:not([disabled]):hover .dropdownicon {
+    background: hsl(213, 39%, 95%);
+  }
 }
 .cardvid .dropdownicon {
   background: hsl(0, 0%, 100%);
@@ -2597,10 +2625,8 @@ table tr td {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
 }
 .mobilelist-link {
-  background: hsl(213, 39%, 95%);
   width: 2rem;
   height: 2rem;
   border-radius: 100%;

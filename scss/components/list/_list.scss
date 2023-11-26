@@ -64,10 +64,8 @@
 
 .mobilelist {
   @include list-horizontal;
-  gap: size(8);
 
   &-link {
-    background: $linkhoverbg;
     @include square(32);
     @include circle;
     @include flex-center;

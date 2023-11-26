@@ -716,12 +716,12 @@
       }
 
       .commentdetail {
-        @include flex-center-vert;
+        @include flex;
         gap: size(8);
 
         .leftinfo {
           width: calc(100% - size(32));
-          @include flex-center-vert;
+          @include flex;
           gap: size(8);
 
           .userthumb {
@@ -737,18 +737,33 @@
 
           .detail {
             width: calc(100% - size(40));
+            @include flex-column;
+            gap: size(8);
+
+            .username {
+              color: $textprimary;
+              font-size: size(12);
+              font-weight: 400;
+              letter-spacing: size(-0.24);
+            }
+
+            .date {
+              color: $textprimary;
+              font-size: size(10);
+              font-weight: 400;
+            }
 
             .commenttext {
               color: $dropdowntext;
               font-size: size(12);
               font-weight: 400;
               letter-spacing: size(-0.24);
+            }
 
-              span {
-                color: $textprimary;
-                font-size: size(12);
-                font-weight: 400;
-              }
+            .topdetail {
+              @include flex-column;
+              gap: size(5);
+
             }
           }
         }

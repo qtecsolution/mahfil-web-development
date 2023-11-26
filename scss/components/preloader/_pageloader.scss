@@ -7,7 +7,7 @@
 }
 
 .preloader {
-  background: $linkhoverbg;
+  background: $white;
   @include flex-center;
   position: fixed;
   inset: size(0);
@@ -18,82 +18,22 @@
 
   .loader {
     @include flex-center;
-    @include square(300);
+    //@includesquare(300);
 
-    .reverse-spinner {
-      position: relative;
-      @include square(100);
-      @extend %border;
-      border-top-color: $primary;
-      border-left-color: $primary;
-      -webkit-animation: spin 1.5s linear infinite;
-      animation: spin 1.5s linear infinite;
-
-      &::before {
-        position: absolute;
-        top: size(15);
-        left: size(15);
-        right: size(15);
-        bottom: size(15);
-        content: "";
-        @extend %border;
-        border-top-color: $primarydark;
-        border-left-color: $primarydark;
-        -webkit-animation: spinBack 1s linear infinite;
-        animation: spinBack 1s linear infinite;
-      }
+    img {
+      @include wh100;
+      object-fit: cover;
+      animation: zoomin 1s ease-in forwards;
     }
   }
 }
 
-@-webkit-keyframes rotate {
+@keyframes zoomin {
+  0% {
+    @include scale(0);
+  }
+
   100% {
-    @include rotate(360);
-  }
-}
-
-@keyframes rotate {
-  100% {
-    @include rotate(360);
-  }
-}
-
-@-webkit-keyframes spin {
-  from {
-    @include rotate(0);
-  }
-
-  to {
-    @include rotate(360);
-  }
-}
-
-@keyframes spin {
-  from {
-    @include rotate(0);
-  }
-
-  to {
-    @include rotate(360);
-  }
-}
-
-@-webkit-keyframes spinBack {
-  from {
-    @include rotate(0);
-  }
-
-  to {
-    @include rotate(-720);
-  }
-}
-
-@keyframes spinBack {
-  from {
-    @include rotate(0);
-  }
-
-  to {
-    @include rotate(-720);
+    @include scale(1.5);
   }
 }

@@ -602,7 +602,7 @@ button:focus,
   gap: 0.25rem;
   transition: background 350ms ease-in-out;
   height: 2rem;
-  padding-inline: 0.5rem;
+  padding-inline: 0.75rem;
 }
 @media screen and (min-width: 48rem) {
   .btn-subscribe {
@@ -625,7 +625,7 @@ button:focus,
 }
 .btn-subscribe .text {
   color: hsl(0, 0%, 100%);
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   font-weight: 600;
 }
 @media screen and (min-width: 48rem) {
@@ -669,7 +669,7 @@ button:focus,
   justify-content: center;
   gap: 0.25rem;
   height: 2rem;
-  padding-inline: 0.5rem;
+  padding-inline: 0.75rem;
 }
 @media screen and (min-width: 48rem) {
   .btn-subscribed {
@@ -692,7 +692,7 @@ button:focus,
 }
 .btn-subscribed .text {
   color: inherit;
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   font-weight: 600;
 }
 @media screen and (min-width: 48rem) {
@@ -725,7 +725,7 @@ button:focus,
   justify-content: center;
   gap: 0.25rem;
   height: 2rem;
-  padding-inline: 0.5rem;
+  padding-inline: 0.75rem;
 }
 @media screen and (min-width: 48rem) {
   .btn-subscribe {
@@ -752,7 +752,7 @@ button:focus,
 }
 .btn-subscribe .text {
   color: inherit;
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   font-weight: 600;
 }
 @media screen and (min-width: 48rem) {
@@ -1165,6 +1165,7 @@ button:focus,
   justify-content: center;
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
 @media screen and (min-width: 62rem) {
   .cardvideo-header .video-thumbnail {
@@ -1184,6 +1185,15 @@ button:focus,
 }
 .cardvideo-header .video-thumbnail img:not([disabled]):hover {
   transform: scale(1.05);
+}
+.cardvideo-header .video-thumbnail .timeduration {
+  position: absolute;
+  bottom: 0.625rem;
+  right: 0.875rem;
+  color: hsl(0, 0%, 100%);
+  font-size: 0.875rem;
+  font-weight: 500;
+  z-index: 100;
 }
 .cardvideo-body {
   display: flex;
@@ -1383,6 +1393,11 @@ button:focus,
     text-align: left;
   }
 }
+.cardchannel-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .cardchannel-header .channelthumb {
   width: 2.5rem;
   height: 2.5rem;
@@ -1477,6 +1492,7 @@ button:focus,
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  position: relative;
 }
 @media screen and (min-width: 62rem) {
   .cardfavorite .favoritethumb {
@@ -1494,6 +1510,15 @@ button:focus,
     -o-object-fit: fill;
        object-fit: fill;
   }
+}
+.cardfavorite .favoritethumb .timeduration {
+  position: absolute;
+  bottom: 0.625rem;
+  right: 0.875rem;
+  color: hsl(0, 0%, 100%);
+  font-size: 0.875rem;
+  font-weight: 500;
+  z-index: 100;
 }
 .cardfavorite-details {
   display: flex;
@@ -1648,6 +1673,7 @@ button:focus,
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  position: relative;
 }
 @media screen and (min-width: 36rem) {
   .cardvid .videothumb {
@@ -1677,6 +1703,15 @@ button:focus,
     -o-object-fit: fill;
        object-fit: fill;
   }
+}
+.cardvid .videothumb .timeduration {
+  position: absolute;
+  bottom: 0.625rem;
+  right: 0.875rem;
+  color: hsl(0, 0%, 100%);
+  font-size: 0.875rem;
+  font-weight: 500;
+  z-index: 100;
 }
 .cardvid-details {
   display: flex;

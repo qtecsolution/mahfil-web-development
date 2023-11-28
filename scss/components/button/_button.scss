@@ -71,7 +71,7 @@ button,
   gap: size(4);
   @include transitionsbackground;
   height: size(32);
-  padding-inline: size(8);
+  padding-inline: size(12);
 
   @include breakpoint(mobile768) {
     padding-inline: size(16);
@@ -90,7 +90,7 @@ button,
 
   .text {
     color: $white;
-    font-size: size(12);
+    font-size: size(11);
     font-weight: 600;
 
     @include breakpoint(mobile768) {
@@ -129,7 +129,7 @@ button,
   @include flex-center;
   gap: size(4);
   height: size(32);
-  padding-inline: size(8);
+  padding-inline: size(12);
 
   @include breakpoint(mobile768) {
     padding-inline: size(16);
@@ -148,7 +148,7 @@ button,
 
   .text {
     color: inherit;
-    font-size: size(12);
+    font-size: size(11);
     font-weight: 600;
 
     @include breakpoint(mobile768) {
@@ -182,7 +182,7 @@ button,
   @include flex-center;
   gap: size(4);
   height: size(32);
-  padding-inline: size(8);
+  padding-inline: size(12);
 
   @include breakpoint(mobile768) {
     padding-inline: size(16);
@@ -204,7 +204,7 @@ button,
 
   .text {
     color: inherit;
-    font-size: size(12);
+    font-size: size(11);
     font-weight: 600;
 
     @include breakpoint(mobile768) {

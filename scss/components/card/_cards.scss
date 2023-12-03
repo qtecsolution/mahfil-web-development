@@ -797,12 +797,47 @@
   @include radius(10);
   padding: size(16) size(16);
   @include flex-column;
-  gap: size(24);
+  gap: size(10);
+  position: relative;
+  padding-bottom: size(40);
+  @include transitionsall;
+  @include breakpoint(mobile576) {
+    gap: size(22);
+  }
+  @include hover {
+    transform: translateY(-8px);
+  }
   .icon {
     @include square(58);
     display: block;
     svg {
       @include wh100;
     }
+  }
+  .title {
+    color: #170f49;
+    font-feature-settings: "clig" off, "liga" off;
+    @include font($primaryFont, 16, semibold, normal, 20);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .content {
+    @include line-clamp-3;
+    leading-trim: both;
+    text-edge: cap;
+    font-feature-settings: "clig" off, "liga" off;
+    line-height: normal;
+    @include font($primaryFont, 14, normal, normal, 20);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: url(../../../assets/images/donation/how-dontation-card.png);
+    height: 52px;
+    width: 52px;
+    background-size: cover;
   }
 }

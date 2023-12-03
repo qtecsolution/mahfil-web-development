@@ -128,5 +128,97 @@
     @include breakpoint(tab992) {
       padding-bottom: size(70);
     }
+    .howdonation-title {
+      color: #1a191e;
+      text-align: center;
+      letter-spacing: -1.92px;
+      @include font($primaryFont, 32, medium, normal, 42);
+
+      @include breakpoint(mobile576) {
+        @include font($primaryFont, 46, medium, normal, 60);
+      }
+    }
+    .howdonation-des {
+      color: #191d23;
+      text-align: center;
+      @include font($primaryFont, 16, normal, normal, 20);
+    }
+  }
+}
+
+.faq {
+  padding: size(50) size(0);
+  .left-content {
+    display: flex;
+    flex-direction: column;
+    @include h100;
+    justify-content: center;
+  }
+  #accordionExample {
+    .accordion-item {
+      margin-bottom: 10px;
+      border-right: none;
+      border-left: none;
+      border-radius: 0 !important;
+      .accordion-header {
+        cursor: pointer;
+
+        button {
+          /* Button styles */
+          width: 100%;
+          text-align: left;
+          padding: 10px;
+          background-color: transparent;
+          border: none;
+          outline: none;
+          padding: size(24) size(0);
+          color: #1a191e;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 120%; /* 24px */
+          letter-spacing: -0.6px;
+
+          &:hover {
+          }
+          &::after {
+            content: "";
+            font-weight: 900;
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23004D8D" d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"/></svg>');
+            transition: transform 0.3s ease-in-out;
+          }
+
+          &.collapsed::after {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23004D8D" d="M12 10.5857L16.95 5.63574L18.364 7.04974L13.414 11.9997L18.364 16.9497L16.95 18.3637L12 13.4137L7.04999 18.3637L5.63599 16.9497L10.586 11.9997L5.63599 7.04974L7.04999 5.63574L12 10.5857Z"/></svg>');
+            transform: translateY(-50%) rotate(90deg); /* Adjust rotation for the down arrow */
+          }
+        }
+
+        &.collapsed {
+          /* Styles for collapsed headers */
+          background-color: #ddd; /* Example background color for collapsed headers */
+        }
+      }
+
+      .accordion-collapse {
+        /* Collapse container styles */
+        transition: height 0.3s ease-in-out; /* Example transition for smooth animation */
+        overflow: hidden;
+
+        &.show {
+          /* Styles for the shown/collapsed content */
+          height: auto; /* Show content */
+        }
+
+        .accordion-body {
+          /* Body content styles */
+          padding: 10px;
+        }
+      }
+    }
   }
 }

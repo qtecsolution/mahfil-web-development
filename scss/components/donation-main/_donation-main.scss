@@ -1,0 +1,14 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+.donate-main {
+  @include flex-column;
+  @include w100;
+  padding: size(0);
+  padding-bottom: size(80);
+  margin-top: size(80);
+
+  @include breakpoint(tab992) {
+    // padding: size(0) size(40) size(48);
+  }
+}

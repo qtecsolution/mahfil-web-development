@@ -1,0 +1,132 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.donation-hero {
+  background: $donateherobg;
+  padding: size(80) size(0);
+  @include breakpoint(tab992) {
+    padding: size(120) size(0);
+  }
+  position: relative;
+  .hero-left {
+    @include flex-column;
+    gap: size(10);
+    text-align: center;
+    @include breakpoint(mobile576) {
+      text-align: left;
+    }
+    .welcome {
+      @include font($primaryFont, 14, medium, normal, 20);
+      color: $black;
+      leading-trim: both;
+      text-edge: cap;
+    }
+    .hero-heading {
+      color: #002f56;
+      @include font($primaryFont, 28, bold, normal, 36);
+      @include breakpoint(mobile768) {
+        @include font($primaryFont, 36, bold, normal, 46);
+      }
+      @include breakpoint(tab992) {
+        @include font($primaryFont, 42, bold, normal, 50);
+      }
+      @include breakpoint(desktop1200) {
+        @include font($primaryFont, 50, bold, normal, 62);
+      }
+      @include breakpoint(desktop1600) {
+        @include font($primaryFont, 62, bold, normal, 77);
+      }
+    }
+    .hero-des {
+      color: $black;
+      @include font($primaryFont, 16, normal, normal, 24);
+      @include breakpoint(tab992) {
+        @include font($primaryFont, 20, normal, normal, 24);
+      }
+    }
+    .hero-buttons {
+      @include flex;
+      gap: size(12);
+      margin-top: size(24);
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: size(30);
+      @include breakpoint(mobile768) {
+        justify-content: flex-start;
+      }
+      @include breakpoint(tab992) {
+        margin-bottom: 0;
+      }
+    }
+    .watch-btn {
+      @include flex;
+      padding: size(8) size(10);
+      @include radius(5);
+      background: #3898fc;
+      color: $white;
+      align-items: center;
+      gap: size(4);
+      @include breakpoint(mobile768) {
+        padding: size(10) size(15);
+      }
+    }
+    .play-btn {
+      padding: 0;
+      @include radius(5);
+      overflow: hidden;
+      @include breakpoint(mobile768) {
+      }
+      img {
+        @include wh100;
+      }
+    }
+  }
+  .hero-right {
+    @include flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: size(50);
+    @include breakpoint(mobile768) {
+      padding-left: 0;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 30%;
+      height: 100%;
+      background-image: url(../../assets/images/donation/donation-hero2.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 1; /* Adjust this to control stacking */
+      opacity: 0.5; /* Adjust opacity as needed */
+      display: none;
+      @include breakpoint(tab992) {
+        display: block;
+      }
+    }
+  }
+}
+
+.howdonation {
+  padding: size(24) size(0);
+  @include breakpoint(mobile576) {
+    padding: size(32) size(0);
+  }
+  @include breakpoint(tab992) {
+    padding: size(60) size(0);
+  }
+
+  .howdonation-top {
+    @include flex-column;
+    gap: size(16);
+    align-items: center;
+    text-align: center;
+    padding-bottom: size(24);
+    @include breakpoint(tab992) {
+      padding-bottom: size(70);
+    }
+  }
+}

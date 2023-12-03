@@ -176,7 +176,7 @@
       }
     }
   }
-  
+
   .offcanvas {
     min-height: size(280);
     height: size(280);
@@ -240,7 +240,7 @@
 
   &-header {
     @include flex-center;
-    
+
     .channelthumb {
       @include square(40);
       @include circle;
@@ -788,6 +788,21 @@
 
     img {
       @include w100;
+    }
+  }
+}
+
+.howdonationCard {
+  @include border(solid, 1, #d6eaff);
+  @include radius(10);
+  padding: size(16) size(16);
+  @include flex-column;
+  gap: size(24);
+  .icon {
+    @include square(58);
+    display: block;
+    svg {
+      @include wh100;
     }
   }
 }

@@ -186,7 +186,10 @@
   .cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 28px;
+    grid-gap: 20px;
+    @include breakpoint(mobile576) {
+      gap: size(28);
+    }
     .donation-card {
       // padding: size(30);
       @include border(solid, 1, $menudivider);
@@ -494,15 +497,25 @@
     }
   }
   .line {
-    width: size(50);
+    width: size(40);
     gap: size(12);
     height: size(6);
     background: #eff0f6;
     @include radius(40);
     position: relative;
+    @include breakpoint(mobile375) {
+      width: size(45);
+    }
+    @include breakpoint(mobile414) {
+      width: size(60);
+    }
     @include breakpoint(mobile576) {
-      width: size(80);
+      width: size(70);
       gap: size(18);
+    }
+
+    @include breakpoint(mobile768) {
+      width: size(90);
     }
 
     &::after {

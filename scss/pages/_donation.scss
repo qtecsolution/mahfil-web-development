@@ -146,11 +146,120 @@
   }
 }
 .donate {
+  .form-step {
+    padding: size(38) size(0);
+    @include flex-column;
+    gap: size(28);
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 28px;
+    .donation-card {
+      // padding: size(30);
+      @include border(solid, 1, $menudivider);
+      @include radius(16);
+      cursor: pointer;
+      position: relative;
+      transition: transform 0.3s ease-in-out;
+      label {
+        padding: size(30);
+        z-index: 100;
+        h5 {
+          color: $primarydark;
+          position: relative;
+          padding-left: size(20);
+          @include font($primaryFont, 14, medium, normal, 20);
+          @include breakpoint(mobile576) {
+            @include font($primaryFont, 16, medium, normal, 20);
+          }
+        }
+      }
+
+      input[type="radio"] {
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        position: absolute;
+        @include radius(16);
+        box-shadow: 7px 7px 15px rgba(2, 28, 53, 0.08);
+        cursor: pointer;
+        outline: none;
+        transition: border-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        &::before {
+          content: "";
+          position: absolute;
+          height: 22px;
+          width: 22px;
+          background-color: #f9fafd;
+          border: 1px solid #e2e6f3;
+          border-radius: 50%;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 20px;
+          transition: background-color 0.3s ease-in-out;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          height: 13px;
+          width: 13px;
+          background-color: transparent;
+          border-radius: 50%;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 24.5px;
+          transition: background-color 0.3s ease-in-out;
+        }
+        &:checked {
+          border: 1px solid $primarydark;
+          &::after {
+            background-color: $primarydark;
+          }
+        }
+      }
+    }
+  }
 }
 .donate .multistep-form {
   @include border(solid, 1, #e7eaee);
-  @include radius(34);
-  padding: size(32) size(46);
+  @include radius(24);
+  padding: size(18);
+  @include breakpoint(mobile576) {
+    padding: size(32) size(46);
+    @include radius(34);
+  }
+
+  .next-prev {
+    @include flex-between;
+    align-items: center;
+    button {
+      padding: size(12) size(30);
+      @include radius(10);
+      text-align: center;
+      font-feature-settings: "clig" off, "liga" off;
+      @include font($primaryFont, 16, bold, normal, 20);
+    }
+    .prev-step {
+      @include border(solid, 1, $primarydark);
+      color: $primarydark;
+      @include hover {
+        background: $primarydark;
+        color: $white;
+      }
+    }
+    .next-step {
+      background-color: $primarydark;
+      color: $white;
+      @include border(solid, 1, $primarydark);
+      @include hover {
+        @include setBgColor($white, $primarydark);
+      }
+    }
+  }
 }
 
 .faq {
@@ -263,11 +372,27 @@
 .step-section {
   @include flex;
   gap: size(18);
+  position: relative;
+  padding: size(20) size(0);
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #e7eaee;
+    bottom: 0;
+    border-radius: 40px;
+  }
 }
 .step {
   @include flex;
   align-items: center;
-  gap: size(18);
+  gap: size(12);
+  @include breakpoint(mobile576) {
+    gap: size(18);
+  }
+
   &.active {
     .number {
       background: #004d8d;
@@ -279,19 +404,42 @@
       }
     }
   }
+  &.completed {
+    .number {
+      background: #004d8d;
+      color: $white;
+    }
+    .line {
+      &::after {
+        background-color: #004d8d;
+        width: 100%;
+      }
+    }
+  }
   .number {
-    @include square(34);
+    @include square(24);
     @include flex-center;
     background: #eff0f6;
     @include circle;
+    font-feature-settings: "clig" off, "liga" off;
+    color: #6f6c90;
+    @include font($primaryFont, 14, normal, normal, 23);
+    @include breakpoint(mobile576) {
+      @include square(34);
+      font-size: 16px;
+    }
   }
   .line {
-    width: size(80);
-    gap: size(18);
+    width: size(50);
+    gap: size(12);
     height: size(6);
     background: #eff0f6;
     @include radius(40);
     position: relative;
+    @include breakpoint(mobile576) {
+      width: size(80);
+      gap: size(18);
+    }
 
     &::after {
       content: "";

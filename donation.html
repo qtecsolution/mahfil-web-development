@@ -881,11 +881,11 @@
                         <form class="multistep-form">
                             <div class="step-section">
 
-                                <div class="step active">
-                                    <span class="number">1</span>
+                                <div class="step completed">
+                                    <span class="number ">1</span>
                                     <div class="line"></div>
                                 </div>
-                                <div class="step">
+                                <div class="step active">
                                     <span class="number">2</span>
                                     <div class="line"></div>
                                 </div>
@@ -899,12 +899,48 @@
 
                             </div>
                             <div class="form-step">
-                                <h2>Step 1: Personal Information</h2>
-                                <label for="name">Name:</label>
-                                <input type="text" id="name" name="name" required><br><br>
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" required><br><br>
-                                <button class="next-btn">Next</button>
+                                <h3 class="title">How much you want to donate to Mahfil?</h3>
+                                <div class="cards">
+                                    <div class="donation-card">
+                                        <input type="radio" name="pricing" id="card1">
+                                        <label for="card1">
+                                            <h5>$500</h5>
+                                        </label>
+                                    </div>
+                                    <div class="donation-card">
+                                        <input type="radio" name="pricing" id="card2">
+                                        <label for="card2">
+                                            <h5>$100</h5>
+                                        </label>
+                                    </div>
+                                    <div class="donation-card">
+                                        <input type="radio" name="pricing" id="card3">
+                                        <label for="card3">
+                                            <h5>$50</h5>
+                                        </label>
+                                    </div>
+                                    <div class="donation-card">
+                                        <input type="radio" name="pricing" id="card4">
+                                        <label for="card4">
+                                            <h5>$10</h5>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="currency">
+                                    <div class="currency-dropdown">
+                                        <select name="" id="">
+                                            <option value="">$</option>
+                                            <option value="">$</option>
+                                            <option value="">$</option>
+                                            <option value="">$</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="next-prev">
+                                <button class="prev-step">Next step</button>
+                                <button class="next-step">Previous step</button>
                             </div>
                         </form>
                     </div>

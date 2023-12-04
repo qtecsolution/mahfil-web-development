@@ -280,6 +280,45 @@
       @include w100;
     }
   }
+
+  .form-step-top {
+    @include flex-column;
+    gap: size(16);
+    justify-content: center;
+    align-items: center;
+    .title {
+      color: #004d8d;
+      font-feature-settings: "clig" off, "liga" off;
+      @include font($primaryFont, 16, medium, normal, 30);
+      @include breakpoint(mobile576) {
+        @include font($primaryFont, 18, medium, normal, 30);
+      }
+    }
+    .value {
+      color: #170f49;
+      font-feature-settings: "clig" off, "liga" off;
+      @include font($primaryFont, 16, medium, normal, 20);
+      @include breakpoint(mobile576) {
+        @include font($primaryFont, 16, medium, normal, 20);
+      }
+    }
+  }
+  .input-group {
+    @include flex-column;
+    gap: size(14);
+
+    label {
+      color: #6f6c90;
+      font-feature-settings: "clig" off, "liga" off;
+      @include font($primaryFont, 16, normal, normal, 30);
+      @include breakpoint(mobile576) {
+        @include font($primaryFont, 18, normal, normal, 30);
+      }
+    }
+    textarea {
+      @include border(solid, 1, $menudivider);
+    }
+  }
 }
 .donate .multistep-form {
   @include border(solid, 1, #e7eaee);
@@ -315,6 +354,34 @@
       @include hover {
         @include setBgColor($white, $primarydark);
       }
+    }
+  }
+}
+
+// video
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (divide 9 by 16 = 0.5625 or 56.25%) */
+
+  .video-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .vjs-big-play-button {
+    &:before {
+      content: "";
+      // display: none;
+    }
+
+    &:hover {
+      background-color: transparent;
+      opacity: 0.7;
     }
   }
 }

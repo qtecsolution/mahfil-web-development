@@ -322,7 +322,47 @@
       border-radius: 16px !important;
     }
   }
+  .radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .select-text {
+      color: #6f6c90;
+      font-feature-settings: "clig" off, "liga" off;
+      font: 16px normal $primaryFont;
+
+      span {
+        color: #004d8d;
+        font-weight: 600;
+      }
+    }
+
+    .single-payment {
+      label {
+        border: 1px solid $menudivider;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 24px;
+        border-radius: 16px;
+        gap: size(24);
+        cursor: pointer;
+      }
+
+      input[type="radio"]:checked + label {
+        border: 2px solid $primarydark;
+      }
+    }
+  }
+  .donation-status {
+    @include flex-column;
+    align-items: center;
+    text-align: center;
+    gap: size(20);
+  }
 }
+
 .donate .multistep-form {
   @include border(solid, 1, #e7eaee);
   @include radius(24);

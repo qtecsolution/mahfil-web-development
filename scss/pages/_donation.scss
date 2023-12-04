@@ -266,6 +266,14 @@
     align-items: center;
     .currency-dropdown {
       border-right: 1px solid $menudivider;
+      select {
+        color: #170f49;
+        font-feature-settings: "clig" off, "liga" off;
+        @include font($primaryFont, 16, medium, normal, 20);
+        @include breakpoint(mobile576) {
+          @include font($primaryFont, 18, medium, normal, 20);
+        }
+      }
     }
     input {
       padding: size(16) size(10);
@@ -319,6 +327,7 @@
     @include h100;
     justify-content: center;
     text-align: center;
+    gap: size(30);
     @include breakpoint(mobile576) {
       text-align: left;
     }
@@ -335,6 +344,11 @@
       }
     }
     p {
+      color: #004d8d;
+      @include font($primaryFont, 16, normal, normal, 16);
+      @include breakpoint(mobile576) {
+        @include font($primaryFont, 18, normal, normal, 18);
+      }
     }
   }
   #accordionExample {

@@ -801,8 +801,12 @@
   position: relative;
   padding-bottom: size(40);
   @include transitionsall;
+  text-align: center;
+  align-items: center;
   @include breakpoint(mobile576) {
     gap: size(22);
+    text-align: left;
+    align-items: flex-start;
   }
   @include hover {
     transform: translateY(-8px);

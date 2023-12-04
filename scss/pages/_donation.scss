@@ -133,7 +133,6 @@
       text-align: center;
       letter-spacing: -1.92px;
       @include font($primaryFont, 32, medium, normal, 42);
-
       @include breakpoint(mobile576) {
         @include font($primaryFont, 46, medium, normal, 60);
       }
@@ -152,7 +151,16 @@
   .left-content {
     @include flex-column;
     gap: size(20);
+    text-align: center;
+    @include breakpoint(mobile576) {
+      text-align-last: left;
+    }
     p {
+      color: #191d23;
+      @include font($primaryFont, 16, normal, normal, 20);
+      @include breakpoint(mobile576) {
+        @include font($primaryFont, 18, normal, normal, 20);
+      }
     }
     h1 {
       @include font($primaryFont, 32, medium, normal, 42);
@@ -307,6 +315,24 @@
     flex-direction: column;
     @include h100;
     justify-content: center;
+    text-align: center;
+    @include breakpoint(mobile576) {
+      text-align: left;
+    }
+    h1 {
+      color: #1a191e;
+      letter-spacing: -1.92px;
+      @include font($primaryFont, 32, medium, normal, 42);
+
+      @include breakpoint(mobile576) {
+        @include font($primaryFont, 46, medium, normal, 60);
+      }
+      @include breakpoint(mobile576) {
+        @include font($primaryFont, 64, medium, normal, 76);
+      }
+    }
+    p {
+    }
   }
   #accordionExample {
     .accordion-item {

@@ -250,7 +250,7 @@
           transition: background-color 0.3s ease-in-out;
         }
         &:checked {
-          border: 1px solid $primarydark;
+          border: 2px solid $primarydark;
           &::after {
             background-color: $primarydark;
           }
@@ -321,6 +321,10 @@
 
 .faq {
   padding: size(50) size(0);
+  padding-bottom: size(80);
+  @include breakpoint(tab992) {
+    padding-bottom: size(120);
+  }
   .left-content {
     display: flex;
     flex-direction: column;
@@ -351,7 +355,7 @@
       }
     }
   }
-  #accordionExample {
+  #faqAccordion {
     .accordion-item {
       margin-bottom: 10px;
       border-right: none;
@@ -370,11 +374,15 @@
           outline: none;
           padding: size(24) size(0);
           color: #1a191e;
-          font-size: 18px;
+          font-size: 16px;
           font-style: normal;
           font-weight: 500;
           line-height: 120%; /* 24px */
           letter-spacing: -0.6px;
+          padding-right: size(20);
+          @include breakpoint(mobile576) {
+            font-size: size(18);
+          }
 
           &:hover {
           }

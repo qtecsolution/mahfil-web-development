@@ -137,6 +137,9 @@
       @include breakpoint(mobile576) {
         @include font($primaryFont, 46, medium, normal, 60);
       }
+      @include breakpoint(mobile576) {
+        @include font($primaryFont, 64, medium, normal, 76);
+      }
     }
     .howdonation-des {
       color: #191d23;
@@ -146,6 +149,27 @@
   }
 }
 .donate {
+  .left-content {
+    @include flex-column;
+    gap: size(20);
+    p {
+    }
+    h1 {
+      @include font($primaryFont, 32, medium, normal, 42);
+      letter-spacing: -1.92px;
+      color: #1a191e;
+
+      @include breakpoint(mobile576) {
+        @include font($primaryFont, 46, medium, normal, 60);
+      }
+      @include breakpoint(mobile576) {
+        @include font($primaryFont, 64, medium, normal, 76);
+      }
+    }
+    @include breakpoint(mobile576) {
+      gap: size(30);
+    }
+  }
   .form-step {
     padding: size(38) size(0);
     @include flex-column;
@@ -158,12 +182,12 @@
     .donation-card {
       // padding: size(30);
       @include border(solid, 1, $menudivider);
-      @include radius(16);
+      @include radius(14);
       cursor: pointer;
       position: relative;
       transition: transform 0.3s ease-in-out;
       label {
-        padding: size(30);
+        padding: size(20) size(30);
         z-index: 100;
         h5 {
           color: $primarydark;
@@ -221,6 +245,20 @@
           }
         }
       }
+    }
+  }
+  .currency {
+    @include flex;
+    @include border(solid, 1, $menudivider);
+    @include radius(16);
+    padding: size(0) size(20);
+    align-items: center;
+    .currency-dropdown {
+      border-right: 1px solid $menudivider;
+    }
+    input {
+      padding: size(16) size(10);
+      @include w100;
     }
   }
 }

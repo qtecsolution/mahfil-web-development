@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="assets/css/intlTelInput/intlTelInput.css">
     <!-- SWIPER-CSS -->
     <link rel="stylesheet" href="assets/css/swiper/swiper-bundle.min.css" />
+    <!-- VIDEOJS-CSS  -->
+    <link rel="stylesheet" href="https://vjs.zencdn.net/8.6.1/video-js.css" />
     <!-- BOOTSTRAP-CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
     <!-- CUSTOM-CSS -->
@@ -884,6 +886,84 @@
 
             </div>
         </section>
+        <section class="howdonation">
+            <div class="container">
+                <div class="row">
+                    <div class="howdonation-top">
+                        <h1 class="howdonation-title">How Your Donations Help</h1>
+                        <p class="howdonation-des">Support our cause for Islamic education! Your donation drives our
+                            commitment to <br> serving you better. Donate today and be a part of our success.</p>
+                    </div>
+                </div>
+                <div class="row g-2">
+                    <div class="col-12">
+                        <style>
+                            /* Ensure the video container takes full width and height */
+                            .video-container {
+                                position: relative;
+                                width: 100%;
+                                height: 0;
+                                padding-bottom: 56.25%;
+                                /* 16:9 aspect ratio (divide 9 by 16 = 0.5625 or 56.25%) */
+                            }
+
+                            /* Style the video element to cover the entire container */
+                            .video-js {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                            }
+
+                            /* Customize the play button */
+                            .vjs-big-play-button {
+                                background-color: transparent;
+                                width: 100%;
+                                height: 100%;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                background-image: url('assets/images/about/about-thumbnail.png');
+                                background-repeat: no-repeat;
+                                background-size: 46px;
+                                background-position: 50% calc(50% - 10px);
+                                border: none !important;
+                                box-shadow: none !important;
+
+                                &:before {
+                                    content: "";
+                                    display: none;
+                                }
+
+                                &:hover {
+                                    background-color: transparent;
+                                    opacity: .7;
+                                }
+                            }
+                        </style>
+                        <div class="video-container">
+                            <video id="my-video" class="video-js vjs-big-play-centered" controls preload="auto"
+                                width="100%" height="100%" poster="assets/images/home-slider/slider-thumbnail.png"
+                                data-setup="{}">
+                                <source src="./video.mp4" type="video/mp4" />
+                                <source
+                                    src="https://qtecsolution.com/static/homepage/assets/video-poster/video-poster.webp"
+                                    type="video/webm" />
+                                <p class="vjs-no-js">
+                                    To view this video please enable JavaScript, and consider upgrading to a
+                                    web browser that
+                                    <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5
+                                        video</a>
+                                </p>
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
         <section class="donate">
             <div class="container">
@@ -916,7 +996,7 @@
 
                             </div>
                             <!-- first step -->
-                            <div class="form-step">
+                            <div class="form-step d-none">
                                 <h3 class="title">How much you want to donate to Mahfil?</h3>
                                 <div class="cards">
                                     <div class="donation-card">
@@ -958,6 +1038,12 @@
                                         </select>
                                     </div>
                                     <input type="text">
+                                </div>
+                            </div>
+                            <div class="form-step">
+                                <div class="form-step-top">
+                                    <p class="title">One Time Donation</p>
+                                    <p class="value">$50 USD</p>
                                 </div>
                             </div>
 
@@ -2381,6 +2467,8 @@
     <script src="assets/js/sidebar/sidebar.js"></script>
     <!-- SWIPER-JS -->
     <script src="assets/js/swiper/swiper-bundle.min.js"></script>
+    <!-- VIDEO-JS -->
+    <script src="https://vjs.zencdn.net/8.6.1/video.min.js"></script>
     <!-- HOME-SLIDER-JS -->
     <script src="assets/js/home-slider/homeslider.js"></script>
     <!-- HOME-SLIDER-JS -->

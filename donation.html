@@ -883,11 +883,11 @@
 					<div class="col-lg-6">
 						<form class="multistep-form">
 							<div class="step-section">
-								<div class="step completed">
+								<div class="step active">
 									<span class="number ">1</span>
 									<div class="line"></div>
 								</div>
-								<div class="step active">
+								<div class="step ">
 									<span class="number">2</span>
 									<div class="line"></div>
 								</div>
@@ -901,7 +901,7 @@
 
 							</div>
 							<!-- first step -->
-							<div class="form-step d-none">
+							<div class="form-step">
 								<h3 class="title">How much you want to donate to Mahfil?</h3>
 								<div class="cards">
 									<div class="donation-card">
@@ -945,21 +945,13 @@
 									<input type="text">
 								</div>
 							</div>
-							<!-- form step 2 -->
-							<div class="form-step">
-								<div class="form-step-top">
-									<p class="title">One Time Donation</p>
-									<p class="value">$50 USD</p>
-								</div>
-								<div class="input-group">
-									<label for="comment">Leave a comment</label>
-									<textarea name="" placeholder="Write your comment here..."></textarea>
-								</div>
-							</div>
+
 
 							<div class="next-prev">
-								<button class="prev-step">Next step</button>
-								<button class="next-step">Previous step</button>
+								<!-- <button class="prev-step"> Previous step</button> -->
+								<span></span>
+								<button class="next-step"
+									onclick="event.preventDefault(); window.location.href = 'donation2.html';">Next step</button>
 							</div>
 						</form>
 					</div>

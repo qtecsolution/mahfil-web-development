@@ -317,6 +317,9 @@
     }
     textarea {
       @include border(solid, 1, $menudivider);
+      height: size(197);
+      padding: size(16) size(20);
+      border-radius: 16px !important;
     }
   }
 }

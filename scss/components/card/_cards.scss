@@ -845,3 +845,33 @@
     background-size: cover;
   }
 }
+
+.support-cart {
+  @include flex-column;
+  gap: size(26);
+  background-color: #4fa5ff;
+  background-image: url(../../../assets/images/modal/modal-bg.png);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  padding: size(22) size(0) size(16) size(12);
+  @include radius(10);
+  color: $white;
+  align-items: flex-start;
+  .support-title {
+    color: $white;
+  }
+  .support-des {
+  }
+  .support-donate-btn {
+    padding: size(8) size(14);
+    background: $white;
+    @include radius(40);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Hind Siliguri;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}

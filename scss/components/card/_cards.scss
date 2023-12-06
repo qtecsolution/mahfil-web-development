@@ -857,6 +857,10 @@
   @include radius(10);
   color: $white;
   align-items: flex-start;
+  margin-top: size(0);
+  @include breakpoint(tab992) {
+    margin-top: size(96);
+  }
   .support-title {
     color: $white;
     leading-trim: both;
@@ -879,6 +883,7 @@
     @include font($primaryFont, 14, medium, normal, 20);
     cursor: pointer;
     color: #3898fc;
+
     @include hover {
       @include setBgColor(darken($white, 10%), #3898fc);
     }

@@ -178,3 +178,21 @@
     }
   }
 }
+.support-mahfil {
+  @include flex-column;
+
+  .popup-modal {
+    @include border(solid, 1, #d6eaff);
+    border-left: 0;
+    border-right: 0;
+    @include radius(0);
+  }
+  .support-mahfil-text {
+    padding: size(16);
+    p {
+      @include line-clamp;
+      color: $textdark;
+      @include font($primaryFont, 16, medium, normal, 23);
+    }
+  }
+}

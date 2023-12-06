@@ -4398,8 +4398,8 @@
 			</div>
 
 			<div class="trendingvideos-body">
-				<a href="donation.html" class="support-mahfil">
-					<div class="popup-modal">
+				<a href="donation.html" class="support-mahfil d-lg-none">
+					<div class="popup-modal pb-4">
 						<div class="popup-modal-header">
 							<img src="assets/images//logo/logo.svg" alt="mahfil logo">
 							<span></span>
@@ -8318,7 +8318,8 @@
 	</div>
 	<!-- REGISTER-MODAL END -->
 
-	<div class="modal fade " tabindex="-1" id="exampleModal">
+	<!-- POPUP MODAL START -->
+	<div class="modal fade " tabindex="-1" id="popupModal">
 		<div class="modal-dialog border-0 modal-dialog-centered modal-bottom">
 			<div class=" modal-content border-0 custom-modal-content">
 				<div class="modal-body p-0 border-0">
@@ -8344,6 +8345,41 @@
 			</div>
 		</div>
 	</div>
+	<!-- POPUP MODAL END -->
+
+	<!-- FULL SCREEN MODAL START -->
+	<div class="modal fade " tabindex="-1" id="fullScreenModal">
+		<div class="modal-dialog border-0 modal-dialog-centered modal-bottom">
+			<div class=" modal-content border-0 custom-modal-content">
+				<div class="modal-body p-0 border-0">
+					<!-- modal design -->
+					<div class="popup-modal">
+						<div class="popup-modal-header">
+							<img src="assets/images//logo/logo.svg" alt="mahfil logo">
+							<button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Close">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M19.0005 5L5.00049 19M5.00049 5L19.0005 19" stroke="#1A202C" stroke-width="1.5"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</button>
+						</div>
+						<div class="popup-modal-body">
+							<figure class="popup-banner">
+								<img src="assets/images/modal/modal-banner.png" alt="modal banner" />
+							</figure>
+							<h3 class="title">Full screen modal</h3>
+							<p class="des">Your support matters! Help us grow and continue providing enriching Islamic content.
+								Consider donating today to empower our mission.</p>
+							<p class="des">Be a part of our community's growth! Your donations fuel our efforts in delivering quality
+								Islamic content. Contribute now and make an impact.</p>
+							<button class="btn-donate" onclick="window.location.href='donation.html'">Donate Now</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- FULL SCREEN MODAL END -->
 
 	<!-- PRELOADER-JS -->
 	<script src="assets/js/loader/loader.js"></script>
@@ -8364,18 +8400,27 @@
 	<!-- MODAL-JS -->
 	<script src="assets/js/modal/modal.js"></script>
 	<script>
-		// Function to open the modal after a delay
-		function openModal() {
+		function openPopupModal() {
 			setTimeout(function () {
-				var myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {
+				var popupModal = new bootstrap.Modal(document.getElementById('popupModal'), {
 					keyboard: false // Prevents closing modal with ESC key
 				});
-				myModal.show();
+				popupModal.show();
 			}, 1000); // Open modal after 1 second (1000 milliseconds)
 		}
 
-		// Call the function to open the modal after the page loads
-		document.addEventListener('DOMContentLoaded', openModal);
+		// Function to open the Full-Screen Modal after a delay
+		function openFullScreenModal() {
+			var fullScreenModal = new bootstrap.Modal(document.getElementById('fullScreenModal'), {
+				keyboard: false // Prevents closing modal with ESC key
+			});
+			fullScreenModal.show();
+		}
+
+		document.addEventListener('DOMContentLoaded', function () {
+			openPopupModal(); // Open the Popup Modal after the page loads
+			openFullScreenModal(); // Open the Full-Screen Modal after the page loads
+		});
 	</script>
 </body>
 

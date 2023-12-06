@@ -149,6 +149,13 @@
     @include flex-column;
     gap: size(18);
     align-items: start;
+    .popup-banner {
+      @include w100;
+      padding-right: size(20);
+      img {
+        @include w100;
+      }
+    }
     .title {
       color: #170f49;
       leading-trim: both;
@@ -180,6 +187,7 @@
 }
 .support-mahfil {
   @include flex-column;
+  padding: size(30) size(0);
 
   .popup-modal {
     @include border(solid, 1, #d6eaff);

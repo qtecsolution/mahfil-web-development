@@ -1,5 +1,5 @@
-@use '../../global' as *;
-@use '../../partials' as *;
+@use "../../global" as *;
+@use "../../partials" as *;
 
 .modal {
   &-content {
@@ -85,7 +85,8 @@
     gap: size(48);
 
     &-header {
-      .deletetext {}
+      .deletetext {
+      }
     }
 
     &-body {
@@ -115,5 +116,39 @@
         }
       }
     }
+  }
+}
+
+.popup-modal {
+  @include radius(10);
+  padding-left: size(20);
+  padding-right: size(15);
+  padding-block: size(15);
+  @include flex-column;
+  gap: size(22);
+  .popup-modal-header {
+    @include flex-between;
+  }
+  .modal-close-btn {
+    @include hover {
+      svg {
+        stroke: $danger;
+      }
+    }
+  }
+  .popup-modal-body {
+    @include flex-column;
+    gap: size(18);
+    .title {
+      color: #170f49;
+      leading-trim: both;
+      text-edge: cap;
+      font-feature-settings: "clig" off, "liga" off;
+      @include font($primaryFont, 14, semibold, normal, 20);
+    }
+    .des {
+    }
+  }
+  .btn-donate {
   }
 }

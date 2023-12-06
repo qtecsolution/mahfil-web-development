@@ -118,6 +118,9 @@
     }
   }
 }
+.custom-modal-content {
+  @include radius(10);
+}
 
 .popup-modal {
   @include radius(10);
@@ -125,7 +128,12 @@
   // padding-right: size(15);
   padding-block: size(15);
   @include flex-column;
+  background-image: url(../../../assets/images/modal/modal-bg.png);
   gap: size(22);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  overflow: hidden;
+
   .popup-modal-header {
     @include flex-between;
   }

@@ -74,6 +74,7 @@
   min-height: size(170);
   @include flex-center;
   margin: size(96) size(0) size(20);
+  margin-top: size(0);
 
   .publisherinfo {
     @include flex-center-column;

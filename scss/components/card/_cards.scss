@@ -850,7 +850,7 @@
   @include flex-column;
   gap: size(26);
   background-color: #4fa5ff;
-  background-image: url(../../../assets/images/modal/modal-bg.png);
+  background-image: url(../../../assets/images/modal/modal-bg.svg);
   background-position: bottom right;
   background-repeat: no-repeat;
   padding: size(22) size(0) size(16) size(12);
@@ -859,8 +859,16 @@
   align-items: flex-start;
   .support-title {
     color: $white;
+    leading-trim: both;
+    text-edge: cap;
+    font-feature-settings: "clig" off, "liga" off;
+    @include font($primaryFont, 16, semibold, normal, 20);
   }
   .support-des {
+    leading-trim: both;
+    text-edge: cap;
+    font-feature-settings: "clig" off, "liga" off;
+    @include font($primaryFont, 14, normal, normal, 20);
   }
   .support-donate-btn {
     padding: size(8) size(14);
@@ -868,10 +876,11 @@
     @include radius(40);
     leading-trim: both;
     text-edge: cap;
-    font-family: Hind Siliguri;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+    @include font($primaryFont, 14, medium, normal, 20);
+    cursor: pointer;
+    color: #3898fc;
+    @include hover {
+      @include setBgColor(darken($white, 10%), #3898fc);
+    }
   }
 }

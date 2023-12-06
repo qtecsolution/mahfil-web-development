@@ -8300,7 +8300,7 @@
 	</div>
 	<!-- REGISTER-MODAL END -->
 
-	<div class="modal " tabindex="-1" style="display: block;">
+	<div class="modal fade " tabindex="-1" id="exampleModal">
 		<div class="modal-dialog border-0 modal-dialog-centered modal-bottom">
 			<div class=" modal-content border-0">
 				<div class="modal-body p-0 border-0">
@@ -8345,6 +8345,20 @@
 	<script src="assets/js/intlTelInput/phone.js"></script>
 	<!-- MODAL-JS -->
 	<script src="assets/js/modal/modal.js"></script>
+	<script>
+		// Function to open the modal after a delay
+		function openModal() {
+			setTimeout(function () {
+				var myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {
+					keyboard: false // Prevents closing modal with ESC key
+				});
+				myModal.show();
+			}, 1000); // Open modal after 1 second (1000 milliseconds)
+		}
+
+		// Call the function to open the modal after the page loads
+		document.addEventListener('DOMContentLoaded', openModal);
+	</script>
 </body>
 
 </html>

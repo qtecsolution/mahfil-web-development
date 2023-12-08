@@ -1,0 +1,65 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+.bannerFullWidth {
+  background-image: url("../../../assets/images/banner/banner-full.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 100%;
+  @include border(solid, 1, #d6eaff);
+  padding: size(24) size(24);
+  @include radius(10);
+  position: relative;
+
+  &-content {
+    @include flex-column;
+    gap: size(18);
+    align-items: flex-start;
+    .logo {
+    }
+    .banner-title {
+      color: #170f49;
+      leading-trim: both;
+      text-edge: cap;
+      @include font($primaryFont, 20, semibold, normal, 20);
+    }
+    .banner-text {
+      color: var(--neutral-600, #6f6c90);
+      leading-trim: both;
+      text-edge: cap;
+      font-feature-settings: "clig" off, "liga" off;
+      @include font($primaryFont, 14, normal, normal, 21);
+    }
+    .donate-btn {
+      @include setBgColor($primary, $white);
+      padding: size(12) size(12);
+      @include radius(40);
+      leading-trim: both;
+      text-edge: cap;
+      @include font($primaryFont, 14, medium, normal, 14);
+      color: $white;
+      @include hover {
+        background: (darken($primary, 10%));
+      }
+    }
+  }
+
+  .hide-banner {
+    position: absolute;
+    top: size(25);
+    right: size(25);
+    cursor: pointer;
+    svg {
+      path {
+        @include transitionsall;
+      }
+    }
+    @include hover {
+      svg {
+        path {
+          stroke: $danger;
+        }
+      }
+    }
+  }
+}

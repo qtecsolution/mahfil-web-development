@@ -133,6 +133,16 @@
   background-repeat: no-repeat;
   background-position: bottom right;
   overflow: hidden;
+  @include breakpoint(tab992) {
+    padding-block: size(30);
+  }
+  &.desktop-view {
+    .popup-modal-body {
+      align-items: center;
+      text-align: center;
+    }
+    background-image: url(../images/modal/desktop-modal-bg.png);
+  }
 
   .popup-modal-header {
     @include flex-between;
@@ -162,6 +172,9 @@
       text-edge: cap;
       font-feature-settings: "clig" off, "liga" off;
       @include font($primaryFont, 14, semibold, normal, 20);
+      @include breakpoint(tab992) {
+        @include font($primaryFont, 18, semibold, normal, 20);
+      }
     }
     .des {
       color: #6f6c90;

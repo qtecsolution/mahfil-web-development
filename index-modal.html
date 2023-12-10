@@ -8444,23 +8444,22 @@
     function openPopupModal() {
       setTimeout(function () {
         var popupModal = new bootstrap.Modal(document.getElementById('popupModal'), {
-          keyboard: false // Prevents closing modal with ESC key
+          keyboard: false
         });
         popupModal.show();
-      }, 1000); // Open modal after 1 second (1000 milliseconds)
+      }, 1000);
     }
 
-    // Function to open the Full-Screen Modal after a delay
     function openFullScreenModal() {
       var fullScreenModal = new bootstrap.Modal(document.getElementById('fullScreenModal'), {
-        keyboard: false // Prevents closing modal with ESC key
+        keyboard: false
       });
       fullScreenModal.show();
     }
 
     document.addEventListener('DOMContentLoaded', function () {
-      openPopupModal(); // Open the Popup Modal after the page loads
-      openFullScreenModal(); // Open the Full-Screen Modal after the page loads
+      openPopupModal();
+      openFullScreenModal();
     });
   </script>
 </body>

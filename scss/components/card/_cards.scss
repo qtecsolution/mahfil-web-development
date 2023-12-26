@@ -830,8 +830,6 @@
   }
   .content {
     @include line-clamp-3;
-    leading-trim: both;
-    text-edge: cap;
     font-feature-settings: "clig" off, "liga" off;
     line-height: normal;
     @include font($primaryFont, 14, normal, normal, 20);
@@ -865,14 +863,10 @@
   }
   .support-title {
     color: $white;
-    leading-trim: both;
-    text-edge: cap;
     font-feature-settings: "clig" off, "liga" off;
     @include font($primaryFont, 16, semibold, normal, 20);
   }
   .support-des {
-    leading-trim: both;
-    text-edge: cap;
     font-feature-settings: "clig" off, "liga" off;
     @include font($primaryFont, 14, normal, normal, 20);
   }
@@ -880,8 +874,6 @@
     padding: size(8) size(14);
     background: $white;
     @include radius(40);
-    leading-trim: both;
-    text-edge: cap;
     @include font($primaryFont, 14, medium, normal, 20);
     cursor: pointer;
     color: #3898fc;

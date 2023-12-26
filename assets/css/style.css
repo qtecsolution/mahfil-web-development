@@ -2018,8 +2018,6 @@ button:focus,
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 3;
-  leading-trim: both;
-  text-edge: cap;
   font-feature-settings: "clig" off, "liga" off;
   line-height: normal;
   font-family: "Hind Siliguri", sans-serif;
@@ -2060,8 +2058,6 @@ button:focus,
 }
 .support-cart .support-title {
   color: hsl(0, 0%, 100%);
-  leading-trim: both;
-  text-edge: cap;
   font-feature-settings: "clig" off, "liga" off;
   font-family: "Hind Siliguri", sans-serif;
   font-size: 1rem;
@@ -2070,8 +2066,6 @@ button:focus,
   line-height: 1.25;
 }
 .support-cart .support-des {
-  leading-trim: both;
-  text-edge: cap;
   font-feature-settings: "clig" off, "liga" off;
   font-family: "Hind Siliguri", sans-serif;
   font-size: 0.875rem;
@@ -2083,8 +2077,6 @@ button:focus,
   padding: 0.5rem 0.875rem;
   background: hsl(0, 0%, 100%);
   border-radius: 2.5rem;
-  leading-trim: both;
-  text-edge: cap;
   font-family: "Hind Siliguri", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;

@@ -84,11 +84,6 @@
     @include flex-column;
     gap: size(48);
 
-    &-header {
-      .deletetext {
-      }
-    }
-
     &-body {
       @include flex-end;
 
@@ -168,8 +163,6 @@
     }
     .title {
       color: #170f49;
-      leading-trim: both;
-      text-edge: cap;
       font-feature-settings: "clig" off, "liga" off;
       @include font($primaryFont, 14, semibold, normal, 20);
       @include breakpoint(tab992) {
@@ -178,16 +171,12 @@
     }
     .des {
       color: #6f6c90;
-      leading-trim: both;
-      text-edge: cap;
       font-feature-settings: "clig" off, "liga" off;
       @include font($primaryFont, 11, normal, normal, 20);
     }
   }
   .btn-donate {
     color: $white;
-    leading-trim: both;
-    text-edge: cap;
     background: $primary;
     padding: size(8) size(14);
     @include radius(40);

@@ -2586,8 +2586,6 @@ input[type=search]::-webkit-search-results-decoration:focus {
 }
 .popup-modal .popup-modal-body .title {
   color: #170f49;
-  leading-trim: both;
-  text-edge: cap;
   font-feature-settings: "clig" off, "liga" off;
   font-family: "Hind Siliguri", sans-serif;
   font-size: 0.875rem;
@@ -2606,8 +2604,6 @@ input[type=search]::-webkit-search-results-decoration:focus {
 }
 .popup-modal .popup-modal-body .des {
   color: #6f6c90;
-  leading-trim: both;
-  text-edge: cap;
   font-feature-settings: "clig" off, "liga" off;
   font-family: "Hind Siliguri", sans-serif;
   font-size: 0.6875rem;
@@ -2617,8 +2613,6 @@ input[type=search]::-webkit-search-results-decoration:focus {
 }
 .popup-modal .btn-donate {
   color: hsl(0, 0%, 100%);
-  leading-trim: both;
-  text-edge: cap;
   background: hsl(211, 97%, 60%);
   padding: 0.5rem 0.875rem;
   border-radius: 2.5rem;
@@ -3323,8 +3317,6 @@ input:checked + .slider:before {
 }
 .bannerFullWidth-content .banner-title {
   color: #170f49;
-  leading-trim: both;
-  text-edge: cap;
   font-family: "Hind Siliguri", sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
@@ -3333,9 +3325,6 @@ input:checked + .slider:before {
 }
 .bannerFullWidth-content .banner-text {
   color: var(--neutral-600, #6f6c90);
-  leading-trim: both;
-  text-edge: cap;
-  font-feature-settings: "clig" off, "liga" off;
   font-family: "Hind Siliguri", sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
@@ -3347,8 +3336,6 @@ input:checked + .slider:before {
   color: hsl(0, 0%, 100%);
   padding: 0.75rem 0.75rem;
   border-radius: 2.5rem;
-  leading-trim: both;
-  text-edge: cap;
   font-family: "Hind Siliguri", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
@@ -6907,8 +6894,6 @@ input:checked + .slider:before {
   font-style: normal;
   line-height: 1.4285714286;
   color: hsl(0, 0%, 0%);
-  leading-trim: both;
-  text-edge: cap;
 }
 .donation-hero .hero-left .hero-heading {
   color: #002f56;
@@ -7273,7 +7258,6 @@ input:checked + .slider:before {
 }
 .donate .currency .currency-dropdown select {
   color: #170f49;
-  font-feature-settings: "clig" off, "liga" off;
   font-family: "Hind Siliguri", sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -7302,7 +7286,6 @@ input:checked + .slider:before {
 }
 .donate .form-step-top .title {
   color: #004d8d;
-  font-feature-settings: "clig" off, "liga" off;
   font-family: "Hind Siliguri", sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -7320,7 +7303,6 @@ input:checked + .slider:before {
 }
 .donate .form-step-top .value {
   color: #170f49;
-  font-feature-settings: "clig" off, "liga" off;
   font-family: "Hind Siliguri", sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -7343,7 +7325,6 @@ input:checked + .slider:before {
 }
 .donate .input-group label {
   color: #6f6c90;
-  font-feature-settings: "clig" off, "liga" off;
   font-family: "Hind Siliguri", sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -7372,7 +7353,6 @@ input:checked + .slider:before {
 }
 .donate .radio-group .select-text {
   color: #6f6c90;
-  font-feature-settings: "clig" off, "liga" off;
   font: 16px normal "Hind Siliguri", sans-serif;
 }
 .donate .radio-group .select-text span {
@@ -7402,7 +7382,6 @@ input:checked + .slider:before {
 .donate .donation-status .title {
   color: #170f49;
   text-align: center;
-  font-feature-settings: "clig" off, "liga" off;
   font-family: "Hind Siliguri", sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
@@ -7421,7 +7400,6 @@ input:checked + .slider:before {
 .donate .donation-status .text {
   color: var(--neutral-600, #6f6c90);
   text-align: center;
-  font-feature-settings: "clig" off, "liga" off;
   font-family: "Hind Siliguri", sans-serif;
   font-size: 1.125rem;
   font-weight: 400;
@@ -7440,7 +7418,6 @@ input:checked + .slider:before {
 .donate .support {
   text-align: right;
   color: #141b34;
-  font-feature-settings: "clig" off, "liga" off;
   font-family: "Hind Siliguri", sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -7477,7 +7454,6 @@ input:checked + .slider:before {
   padding: 0.75rem 1.875rem;
   border-radius: 0.625rem;
   text-align: center;
-  font-feature-settings: "clig" off, "liga" off;
   font-family: "Hind Siliguri", sans-serif;
   font-size: 1rem;
   font-weight: 700;
@@ -7669,8 +7645,7 @@ input:checked + .slider:before {
 .footer .footer-content p {
   color: #718096;
   text-align: center;
-  font-feature-settings: "clig" off, "liga" off;
-  font-family: Hind Siliguri;
+  font-family: "Hind Siliguri";
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -7731,7 +7706,6 @@ input:checked + .slider:before {
   justify-content: center;
   background: #eff0f6;
   border-radius: 100%;
-  font-feature-settings: "clig" off, "liga" off;
   color: #6f6c90;
   font-family: "Hind Siliguri", sans-serif;
   font-size: 0.875rem;

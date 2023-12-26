@@ -1614,7 +1614,7 @@ button:focus,
   display: flex;
   align-items: center;
   gap: 0.625rem;
-  padding: 0.5rem 1rem;
+  padding: 0.625rem 1.875rem;
   transition: background 350ms ease-in-out;
 }
 .cardfavorite-details .favdropdown-info .dropdownlist-link .droplinkicon {
@@ -1825,7 +1825,7 @@ button:focus,
   display: flex;
   align-items: center;
   gap: 0.625rem;
-  padding: 0.5rem 1rem;
+  padding: 0.625rem 1.875rem;
   transition: background 350ms ease-in-out;
 }
 .cardvid .dropdownlist-link .droplinkicon {

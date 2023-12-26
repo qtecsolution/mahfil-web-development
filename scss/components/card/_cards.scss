@@ -433,7 +433,7 @@
             background: $white;
             @include flex-center-vert;
             gap: size(10);
-            padding: size(8) size(16);
+            padding: size(10) size(30);
             @include transitionsbackground;
 
             .droplinkicon {
@@ -647,7 +647,7 @@
       background: $white;
       @include flex-center-vert;
       gap: size(10);
-      padding: size(8) size(16);
+      padding: size(10) size(30);
       @include transitionsbackground;
 
       .droplinkicon {

@@ -112,6 +112,7 @@
         display: none;
         @extend %animation;
         @extend %slideUpIn;
+        z-index: 1000;
       }
 
       @include hover {
@@ -417,6 +418,7 @@
         display: none;
         @extend %animation;
         @extend %slideUpIn;
+        z-index: 1000;
 
         .dropdownlist {
           background: $white;
@@ -597,7 +599,7 @@
     display: none;
     @extend %animation;
     @extend %slideUpIn;
-    z-index: 200;
+    z-index: 1000;
   }
 
   .vidropdown {

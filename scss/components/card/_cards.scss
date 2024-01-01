@@ -361,7 +361,7 @@
     align-items: flex-start;
     gap: size(8);
     overflow: hidden;
-    padding: size(10) size(14) size(14);
+    padding: size(4) size(14) size(8);
 
     @include breakpoint(mobile576) {
       align-items: center;

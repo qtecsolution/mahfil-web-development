@@ -1531,7 +1531,7 @@ button:focus,
   align-items: flex-start;
   gap: 0.5rem;
   overflow: hidden;
-  padding: 0.625rem 0.875rem 0.875rem;
+  padding: 0.25rem 0.875rem 0.5rem;
 }
 @media screen and (min-width: 36rem) {
   .cardfavorite-details {
@@ -3286,7 +3286,6 @@ input:checked + .slider:before {
 }
 
 .bannerFullWidth {
-  background-image: url("../../../assets/images/banner/banner-full.png");
   background-repeat: no-repeat;
   background-position: right;
   height: 100%;

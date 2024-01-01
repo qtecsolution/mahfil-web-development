@@ -388,7 +388,7 @@ body {
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   scroll-snap-type: y mandatory;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 h1,
@@ -399,7 +399,7 @@ h5,
 h6 {
   color: hsl(216, 17%, 12%);
   margin: 0;
-  font-family: inherit;
+  font-family: "Hind Siliguri", sans-serif;
 }
 h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection {
   background: hsl(211, 97%, 60%);
@@ -1157,7 +1157,6 @@ button:focus,
   display: flex;
   flex-direction: column;
   gap: 0.875rem;
-  height: 100%;
 }
 .cardvideo-header .video-thumbnail {
   display: flex;
@@ -3639,13 +3638,13 @@ input:checked + .slider:before {
 }
 .prayer-reminder-header .leftcontent .waqtname {
   color: hsl(0, 0%, 100%);
-  font-family: "Clash Display";
+  font-family: "Hind Siliguri", sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
 }
 .prayer-reminder-header .leftcontent .waqttitle {
   color: hsl(0, 0%, 100%);
-  font-family: "Clash Display";
+  font-family: "Hind Siliguri", sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
 }
@@ -3668,7 +3667,7 @@ input:checked + .slider:before {
 }
 .prayer-reminder-header .rightcontent .waqttitle {
   color: hsl(0, 0%, 100%);
-  font-family: "Clash Display";
+  font-family: "Hind Siliguri", sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
 }

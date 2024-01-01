@@ -117,7 +117,7 @@ body {
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   scroll-snap-type: y mandatory;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 h1,
@@ -128,7 +128,7 @@ h5,
 h6 {
   color: $headingtext;
   margin: 0;
-  font-family: inherit;
+  font-family: $primaryFont;
   // text-wrap: balance;
 
   &::selection {

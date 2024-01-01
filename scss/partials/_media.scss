@@ -23,6 +23,7 @@ $breakpoints: (
   break-1400: 1400,
   break-1600: 1600,
   break-1800: 1800,
+  break-1900: 1900,
   break-1920: 1920,
 );
 
@@ -133,6 +134,10 @@ $breakpoints: (
     @media screen and (min-width: break(break-1800)) {
       @content;
     }
+  } @else if $breakpoints==desktop1900 {
+    @media screen and (min-width: break(break-1900)) {
+      @content;
+    }
   } @else if $breakpoints==desktop1920 {
     @media screen and (min-width: break(break-1920)) {
       @content;
@@ -163,4 +168,5 @@ $breakpoints: (
 // @include breakpoint(desktop1400) {}
 // @include breakpoint(desktop1600) {}
 // @include breakpoint(desktop1800) {}
+// @include breakpoint(desktop1900) {}
 // @include breakpoint(desktop1920) {}

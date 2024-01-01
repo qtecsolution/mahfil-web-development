@@ -342,7 +342,7 @@
     .describe {
       width: calc(100% - size(40));
       @include flex-column;
-      gap: size(12);
+      gap: size(4);
 
       .videotitle {
         cursor: pointer;
@@ -401,7 +401,7 @@
           box-shadow: none;
           @include list-vertical;
           border: none;
-          width: size(240);
+          width: size(208);
           @include radius(0);
     
           &-link {
@@ -433,7 +433,7 @@
 
       .downloadsinfo {
         .dropdownlist {
-          width: size(230);
+          width: size(180);
 
           &-link {
             .droplinkicon {
@@ -522,7 +522,7 @@
     .describe {
       width: calc(100% - size(48));
       @include flex-column;
-      gap: size(12);
+      gap: size(4);
 
       .videotitle {
         cursor: pointer;
@@ -606,7 +606,7 @@
     @include radius(10);
     box-shadow: $dropdownshadow;
     @include list-vertical;
-    width: size(210);
+    width: size(200);
     overflow: hidden;
 
     &-link {

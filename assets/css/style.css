@@ -1489,14 +1489,17 @@ button:focus,
 }
 .cardfavorite .favoritethumb {
   width: 100%;
+  height: 10.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   position: relative;
 }
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 36rem) {
   .cardfavorite .favoritethumb {
+    width: 11.9375rem;
+    height: 6.6875rem;
     border-radius: 0.625rem;
   }
 }
@@ -1533,7 +1536,7 @@ button:focus,
 @media screen and (min-width: 36rem) {
   .cardfavorite-details {
     align-items: center;
-    width: calc(100% - 11.875rem);
+    width: calc(100% - 11.9375rem);
   }
 }
 .cardfavorite-details .describe {
@@ -1606,7 +1609,7 @@ button:focus,
   list-style: none;
   display: flex;
   flex-direction: column;
-  width: 13.125rem;
+  width: 15rem;
   overflow: hidden;
 }
 .cardfavorite-details .favdropdown-info .dropdownlist-link {
@@ -1679,8 +1682,8 @@ button:focus,
 }
 @media screen and (min-width: 36rem) {
   .cardvid .videothumb {
-    width: 11.25rem;
-    height: 7.5rem;
+    width: 11.9375rem;
+    height: 6.6875rem;
   }
 }
 @media screen and (min-width: 62rem) {
@@ -1688,23 +1691,11 @@ button:focus,
     border-radius: 0.625rem;
   }
 }
-@media screen and (min-width: 87.5rem) {
-  .cardvid .videothumb {
-    width: 10.75rem;
-    height: 6rem;
-  }
-}
 .cardvid .videothumb img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media screen and (min-width: 62rem) {
-  .cardvid .videothumb img {
-    -o-object-fit: fill;
-       object-fit: fill;
-  }
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 .cardvid .videothumb .timeduration {
   position: absolute;
@@ -1727,12 +1718,7 @@ button:focus,
 @media screen and (min-width: 36rem) {
   .cardvid-details {
     align-items: center;
-    width: calc(100% - 11.25rem);
-  }
-}
-@media screen and (min-width: 87.5rem) {
-  .cardvid-details {
-    width: calc(100% - 10.75rem);
+    width: calc(100% - 11.9375rem);
   }
 }
 .cardvid-details .describe {
@@ -3800,6 +3786,11 @@ input:checked + .slider:before {
   gap: 1.25rem;
   padding: 0rem 0rem 4rem;
 }
+@media screen and (min-width: 36rem) {
+  .favorites {
+    padding: 0rem 1.5rem 4rem;
+  }
+}
 @media screen and (min-width: 48rem) {
   .favorites {
     padding: 0rem 1.5rem 5rem;
@@ -3807,7 +3798,7 @@ input:checked + .slider:before {
 }
 @media screen and (min-width: 62rem) {
   .favorites {
-    padding: 0rem 0rem 0rem;
+    padding: 0rem;
   }
 }
 .favorites-header {

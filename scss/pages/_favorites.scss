@@ -6,12 +6,16 @@
   gap: size(20);
   padding: size(0) size(0) size(64);
 
+  @include breakpoint(mobile576) {
+    padding: size(0) size(24) size(64);
+  }
+
   @include breakpoint(mobile768) {
     padding: size(0) size(24) size(80);
   }
 
   @include breakpoint(tab992) {
-    padding: size(0) size(0) size(0);
+    padding: size(0);
   }
 
   &-header {

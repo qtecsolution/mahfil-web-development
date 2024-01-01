@@ -322,12 +322,18 @@
 
   .favoritethumb {
     @include w100;
+    height: size(168);
     @include flex-center;
     overflow: hidden;
     position: relative;
 
-    @include breakpoint(tab992) {
+    @include breakpoint(mobile576) {
+      width: size(191);
+      height: size(107);
       @include radius(10);
+    }
+
+    @include breakpoint(tab992) {
     }
 
     img {
@@ -359,7 +365,7 @@
 
     @include breakpoint(mobile576) {
       align-items: center;
-      width: calc(100% - size(190));
+      width: calc(100% - size(191));
     }
 
     .describe {
@@ -426,7 +432,7 @@
           @include radius(10);
           box-shadow: $dropdownshadow;
           @include list-vertical;
-          width: size(210);
+          width: size(240);
           overflow: hidden;
 
           &-link {
@@ -508,26 +514,17 @@
     position: relative;
 
     @include breakpoint(mobile576) {
-      width: size(180);
-      height: size(120);
+      width: size(191);
+      height: size(107);
     }
 
     @include breakpoint(tab992) {
       @include radius(10);
     }
 
-    @include breakpoint(desktop1400) {
-      width: size(172);
-      height: size(96);
-    }
-
     img {
       @include wh100;
-      object-fit: cover;
-
-      @include breakpoint(tab992) {
-        object-fit: fill;
-      }
+      object-fit: fill;
     }
 
     .timeduration {
@@ -550,11 +547,7 @@
 
     @include breakpoint(mobile576) {
       align-items: center;
-      width: calc(100% - size(180));
-    }
-
-    @include breakpoint(desktop1400) {
-      width: calc(100% - size(172));
+      width: calc(100% - size(191));
     }
 
     .describe {

@@ -44,6 +44,10 @@
         }
       }
     }
+
+    .icon {
+      margin-inline: auto;
+    }
   }
 
   &-body {
@@ -58,6 +62,38 @@
 
     &::-webkit-scrollbar-thumb {
       @include radius(8);
+    }
+    
+    .dropdownlist {
+      @include list-vertical;
+      border: none;
+      box-shadow: none;
+      @include w100;
+      @include radius(0);
+
+      &-link {
+        background: $white;
+        @include flex-center-vert;
+        gap: size(10);
+        padding: size(10) size(30);
+        @include transitionsbackground;
+  
+        .droplinkicon {
+          @include square(16);
+          @include flex-center;
+          overflow: hidden;
+        }
+  
+        .droplinktext {
+          color: $dropdowntext;
+          font-size: size(14);
+          font-weight: 500;
+        }
+  
+        @include hover {
+          background: $linkhoverbg;
+        }
+      }
     }
   }
 }

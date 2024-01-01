@@ -9,20 +9,22 @@
     .video-thumbnail {
       @include flex-center;
       @include w100;
+      height: size(175.5);
       overflow: hidden;
       position: relative;
 
-      @include breakpoint(tab992) {
+      @include breakpoint(mobile576) {
         @include radius(10);
       }
 
+      @include breakpoint(tab992) {
+        max-width: size(312);
+      }
+
       img {
+        object-fit: fill;
         @include wh100;
         @include transitiontransform;
-
-        @include breakpoint(desktop1367) {
-          object-fit: fill;
-        }
 
         @include hover {
           @include scale(1.05);
@@ -197,34 +199,6 @@
         overflow: hidden;
       }
     }
-
-    &-body {
-      .dropdownlist {
-        border: none;
-        box-shadow: none;
-        @include w100;
-        @include radius(0);
-
-        &-link {
-          padding: size(10) size(30);
-
-          .droplinkicon {
-            @include square(24);
-            @include flex-center;
-            overflow: hidden;
-          }
-
-          .droplinktext {
-            color: $textdark;
-            font-weight: 500;
-          }
-
-          @include hover {
-            background: $linkhoverbg;
-          }
-        }
-      }
-    }
   }
 }
 
@@ -266,21 +240,19 @@
         font-size: size(13);
         font-weight: 600;
         min-height: size(31);
+        max-height: size(31);
         @include line-clamp;
 
         @include breakpoint(mobile768) {
           font-size: size(16);
-        }
-
-        @include breakpoint(tab992) {
-          font-size: size(18);
-          min-height: size(40);
+          min-height: size(38.4);
+          max-height: size(38.4);
         }
       }
 
       .text,
       .channelname {
-        font-size: size(14);
+        font-size: size(13);
         font-weight: 500;
         display: none;
         @include text-overflow;
@@ -424,34 +396,34 @@
         @extend %animation;
         @extend %slideUpIn;
         z-index: 1000;
-
+    
         .dropdownlist {
-          background: $white;
-          @include border(solid, 1, $menudivider);
-          @include radius(10);
-          box-shadow: $dropdownshadow;
+          box-shadow: none;
           @include list-vertical;
+          border: none;
           width: size(240);
-          overflow: hidden;
-
+          @include radius(0);
+    
           &-link {
             background: $white;
+            @include radius(10);
             @include flex-center-vert;
             gap: size(10);
             padding: size(10) size(30);
             @include transitionsbackground;
-
+      
             .droplinkicon {
               @include square(16);
               @include flex-center;
               overflow: hidden;
             }
-
+      
             .droplinktext {
               color: $dropdowntext;
-              font-size: size(15);
+              font-size: size(14);
+              font-weight: 500;
             }
-
+      
             @include hover {
               background: $linkhoverbg;
             }
@@ -541,7 +513,7 @@
     @include flex-center-between;
     align-items: flex-start;
     gap: size(8);
-    padding: size(14) size(14) size(8);
+    padding: size(4) size(14) size(8);
     position: relative;
 
     @include breakpoint(mobile576) {
@@ -604,6 +576,10 @@
     top: 0;
     right: size(4);
 
+    .cardvid-info {
+      width: size(181);
+    }
+
     @include hover {
       .cardvid-info {
         display: block;
@@ -659,10 +635,6 @@
     }
   }
 
-  @include hover {
-    background: $favhoverbg;
-  }
-
   .offcanvas {
     min-height: size(280);
     height: size(280);
@@ -683,34 +655,10 @@
         overflow: hidden;
       }
     }
+  }
 
-    &-body {
-      .dropdownlist {
-        border: none;
-        box-shadow: none;
-        @include w100;
-        @include radius(0);
-
-        &-link {
-          padding: size(10) size(30);
-
-          .droplinkicon {
-            @include square(24);
-            @include flex-center;
-            overflow: hidden;
-          }
-
-          .droplinktext {
-            color: $textdark;
-            font-weight: 500;
-          }
-
-          @include hover {
-            background: $linkhoverbg;
-          }
-        }
-      }
-    }
+  @include hover {
+    background: $favhoverbg;
   }
 }
 

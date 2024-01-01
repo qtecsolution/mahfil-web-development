@@ -81,11 +81,24 @@
 .popularchannel {
   @include flex-column;
   gap: size(20);
-  padding: size(0) size(24) size(50);
+  padding: size(24) size(8) size(50);
+
+  @include breakpoint(mobile576) {
+    padding: size(24) size(24) size(50);
+  }
+
+  @include breakpoint(tab992) {
+    padding: size(0) size(24) size(50);
+  }
 
   &-header {
     @include flex-column;
     gap: size(16);
+    padding-inline: size(16);
+
+    @include breakpoint(mobile576) {
+      padding-inline: size(0);
+    }
 
     .popular-title {
       font-size: size(20);
@@ -154,10 +167,23 @@
       font-weight: 600;
     }
   }
+
+  &-body {
+    padding-inline: size(0);
+
+    @include breakpoint(mobile576) {
+      padding-inline: size(14);
+    }
+
+    @include breakpoint(tab992) {
+      padding-inline: size(0);
+    }
+  }
 }
 
 .homeslider {
   margin-top: size(-34);
+  position: relative;
   // padding: 0 size(0) size(32);
 
   @include breakpoint(mobile768) {

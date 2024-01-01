@@ -469,12 +469,9 @@
   @include transitionsbackground;
 
   @include breakpoint(mobile576) {
+    @include radius(10);
     flex-direction: row;
     align-items: flex-start;
-  }
-
-  @include breakpoint(tab992) {
-    @include radius(10);
   }
 
   .videothumb {
@@ -487,6 +484,7 @@
     @include breakpoint(mobile576) {
       width: size(191);
       height: size(107);
+      @include radius(10);
     }
 
     @include breakpoint(tab992) {

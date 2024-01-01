@@ -195,6 +195,14 @@
   @include flex-center-column;
   padding-bottom: size(48);
 
+  @include breakpoint(mobile576) {
+    padding: size(0) size(24) size(48);
+  }
+
+  @include breakpoint(tab992) {
+    padding-bottom: size(48);
+  }
+
   .rightinfo {
     @include flex-column;
     gap: size(32);

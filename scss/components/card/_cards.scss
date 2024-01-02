@@ -487,10 +487,6 @@
       @include radius(10);
     }
 
-    @include breakpoint(tab992) {
-      @include radius(10);
-    }
-
     img {
       @include wh100;
       object-fit: fill;
@@ -526,10 +522,14 @@
 
       .videotitle {
         cursor: pointer;
-        font-size: size(16);
+        font-size: size(14);
         font-weight: 500;
         @include line-clamp;
         @include transitionscolor;
+        
+        @include breakpoint(desktop1400) {
+          font-size: size(16);
+        }
 
         @include hover {
           color: $primary;
@@ -547,8 +547,12 @@
 
         .channelname,
         .videotext {
-          font-size: size(14);
+          font-size: size(12);
           font-weight: 500;
+          
+          @include breakpoint(desktop1400) {
+            font-size: size(14);
+          }
         }
       }
     }

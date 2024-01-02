@@ -2,7 +2,11 @@
 @use "../partials" as *;
 
 .videoplay {
-  padding-bottom: size(96);
+  padding-bottom: size(32);
+  
+  @include breakpoint(tab992) {
+    padding-bottom: size(96);
+  }
 
   &-rightcontent {
     @include flex-column;
@@ -903,7 +907,7 @@
 
       &-body {
         @include flex-column;
-        gap: size(16);
+        gap: size(10);
       }
     }
     
@@ -927,6 +931,30 @@
       height: size(4);
       @include flex-center;
       overflow: hidden;
+    }
+  }
+}
+
+.mobilevideoplay {
+  &-body {
+    .relatedvideos {
+      &-body {
+        @include breakpoint(mobile576) {
+          flex-direction: row;
+          flex-wrap: wrap;
+          padding-inline: size(14);
+        }
+
+        .cardvideo {
+          @include breakpoint(mobile576) {
+            width: calc((100% / 2) - size(10));
+          }
+  
+          @include breakpoint(tab992) {
+            @include w100;
+          }
+        }
+      }
     }
   }
 }

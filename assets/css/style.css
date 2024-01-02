@@ -1532,7 +1532,7 @@ button:focus,
   display: flex;
   flex-direction: column;
   border: none;
-  width: 13rem;
+  width: 14rem;
   border-radius: 0rem;
 }
 .cardfavorite-details .favdropdown-info .dropdownlist-link {

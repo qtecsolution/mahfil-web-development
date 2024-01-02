@@ -525,68 +525,6 @@
       }
     }
 
-    .videoinfo {
-      @include flex-column;
-      gap: size(8);
-      padding-inline: size(14);
-
-      .accordion {
-        background: transparent;
-        border: 0;
-        @include radius(0);
-
-        &-item {
-          background: transparent;
-          border: 0;
-          @include radius(0);
-
-          &:first-of-type,
-          &:last-of-type {
-            @include radius(0);
-
-            .accordion-button {
-              border: 0;
-              @include radius(0);
-            }
-          }
-        }
-
-        &-button {
-          color: $textdark;
-          font-size: size(15);
-          font-weight: 600;
-
-          &:not(.collapsed) {
-            box-shadow: none;
-            background: transparent;
-          }
-        }
-
-        &-body {
-          padding: size(10);
-          @include flex-column;
-          gap: size(16);
-
-          p {
-            color: $textdark;
-            font-size: size(12);
-            font-weight: 400;
-          }
-        }
-      }
-
-      .watchertime {
-        @include flex-center-vert;
-        gap: size(10);
-
-        span {
-          color: $textprimary;
-          font-size: size(12);
-          font-weight: 400;
-        }
-      }
-    }
-
     .reactions {
       @include flex-center-vert;
       gap: size(4);
@@ -1260,6 +1198,69 @@
           display: block;
         }
       }
+    }
+  }
+}
+
+.videoinfo {
+  @include flex-column;
+  gap: size(8);
+  padding-inline: size(14);
+
+  .accordion {
+    background: transparent;
+    border: 0;
+    @include radius(0);
+
+    &-item {
+      background: transparent;
+      border: 0;
+      @include radius(0);
+
+      &:first-of-type,
+      &:last-of-type {
+        @include radius(0);
+
+        .accordion-button {
+          border: 0;
+          @include radius(0);
+        }
+      }
+    }
+
+    &-button {
+      color: $textdark;
+      font-size: size(15);
+      font-weight: 600;
+
+      &:not(.collapsed) {
+        box-shadow: none;
+        background: transparent;
+      }
+    }
+
+    &-body {
+      padding: size(10);
+      @include flex-column;
+      gap: size(16);
+      overflow: hidden;
+
+      p {
+        color: $textdark;
+        font-size: size(12);
+        font-weight: 400;
+      }
+    }
+  }
+
+  .watchertime {
+    @include flex-center-vert;
+    gap: size(10);
+
+    span {
+      color: $textprimary;
+      font-size: size(12);
+      font-weight: 400;
     }
   }
 }

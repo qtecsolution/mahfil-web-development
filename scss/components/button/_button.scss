@@ -327,11 +327,15 @@ button,
 
   .text {
     color: $textprimary;
-    font-size: size(10);
+    font-size: size(9);
     font-weight: 500;
     text-transform: uppercase;
 
     @include breakpoint(mobile576) {
+      font-size: size(10);
+    }
+
+    @include breakpoint(mobile768) {
       font-size: size(12);
     }
   }

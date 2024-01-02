@@ -831,11 +831,16 @@ button:focus,
 }
 .btn-reaction .text {
   color: hsl(216, 15%, 52%);
-  font-size: 0.625rem;
+  font-size: 0.5625rem;
   font-weight: 500;
   text-transform: uppercase;
 }
 @media screen and (min-width: 36rem) {
+  .btn-reaction .text {
+    font-size: 0.625rem;
+  }
+}
+@media screen and (min-width: 48rem) {
   .btn-reaction .text {
     font-size: 0.75rem;
   }
@@ -5969,59 +5974,6 @@ input:checked + .slider:before {
 .mobilevideoplay-header .videobox img {
   width: 100%;
 }
-.mobilevideoplay-header .videoinfo {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding-inline: 0.875rem;
-}
-.mobilevideoplay-header .videoinfo .accordion {
-  background: transparent;
-  border: 0;
-  border-radius: 0rem;
-}
-.mobilevideoplay-header .videoinfo .accordion-item {
-  background: transparent;
-  border: 0;
-  border-radius: 0rem;
-}
-.mobilevideoplay-header .videoinfo .accordion-item:first-of-type, .mobilevideoplay-header .videoinfo .accordion-item:last-of-type {
-  border-radius: 0rem;
-}
-.mobilevideoplay-header .videoinfo .accordion-item:first-of-type .accordion-button, .mobilevideoplay-header .videoinfo .accordion-item:last-of-type .accordion-button {
-  border: 0;
-  border-radius: 0rem;
-}
-.mobilevideoplay-header .videoinfo .accordion-button {
-  color: hsl(220, 26%, 14%);
-  font-size: 0.9375rem;
-  font-weight: 600;
-}
-.mobilevideoplay-header .videoinfo .accordion-button:not(.collapsed) {
-  box-shadow: none;
-  background: transparent;
-}
-.mobilevideoplay-header .videoinfo .accordion-body {
-  padding: 0.625rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.mobilevideoplay-header .videoinfo .accordion-body p {
-  color: hsl(220, 26%, 14%);
-  font-size: 0.75rem;
-  font-weight: 400;
-}
-.mobilevideoplay-header .videoinfo .watchertime {
-  display: flex;
-  align-items: center;
-  gap: 0.625rem;
-}
-.mobilevideoplay-header .videoinfo .watchertime span {
-  color: hsl(216, 15%, 52%);
-  font-size: 0.75rem;
-  font-weight: 400;
-}
 .mobilevideoplay-header .reactions {
   display: flex;
   align-items: center;
@@ -6678,6 +6630,61 @@ input:checked + .slider:before {
 }
 .desktopsubscribe-right .moreinfo:not([disabled]):hover .replydropdown {
   display: block;
+}
+
+.videoinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-inline: 0.875rem;
+}
+.videoinfo .accordion {
+  background: transparent;
+  border: 0;
+  border-radius: 0rem;
+}
+.videoinfo .accordion-item {
+  background: transparent;
+  border: 0;
+  border-radius: 0rem;
+}
+.videoinfo .accordion-item:first-of-type, .videoinfo .accordion-item:last-of-type {
+  border-radius: 0rem;
+}
+.videoinfo .accordion-item:first-of-type .accordion-button, .videoinfo .accordion-item:last-of-type .accordion-button {
+  border: 0;
+  border-radius: 0rem;
+}
+.videoinfo .accordion-button {
+  color: hsl(220, 26%, 14%);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+.videoinfo .accordion-button:not(.collapsed) {
+  box-shadow: none;
+  background: transparent;
+}
+.videoinfo .accordion-body {
+  padding: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: hidden;
+}
+.videoinfo .accordion-body p {
+  color: hsl(220, 26%, 14%);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.videoinfo .watchertime {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.videoinfo .watchertime span {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.75rem;
+  font-weight: 400;
 }
 
 .myauth {

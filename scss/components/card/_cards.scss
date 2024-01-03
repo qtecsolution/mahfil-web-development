@@ -17,10 +17,6 @@
         @include radius(10);
       }
 
-      @include breakpoint(tab992) {
-        max-width: size(312);
-      }
-
       img {
         object-fit: fill;
         @include wh100;
@@ -75,6 +71,8 @@
         font-weight: 500;
         @include line-clamp;
         padding-top: size(4);
+        min-height: size(40);
+        max-height: size(40);
         @include transitionscolor;
 
         @include hover {

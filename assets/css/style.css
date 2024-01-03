@@ -1128,11 +1128,6 @@ button:focus,
     border-radius: 0.625rem;
   }
 }
-@media screen and (min-width: 62rem) {
-  .cardvideo-header .video-thumbnail {
-    max-width: 19.5rem;
-  }
-}
 .cardvideo-header .video-thumbnail img {
   -o-object-fit: fill;
      object-fit: fill;
@@ -1192,6 +1187,8 @@ button:focus,
   text-overflow: ellipsis;
   -webkit-line-clamp: 2;
   padding-top: 0.25rem;
+  min-height: 2.5rem;
+  max-height: 2.5rem;
   transition: color 350ms ease-in-out;
 }
 .cardvideo-body .details .videotitle:not([disabled]):hover {

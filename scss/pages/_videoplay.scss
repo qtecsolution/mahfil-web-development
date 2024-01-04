@@ -23,13 +23,6 @@
       gap: size(10);
 
       .cardvid {
-        .videothumb {
-          @include breakpoint(mobile576) {
-            width: size(172);
-            height: size(96);
-          }
-        }
-
         .cardvid-details {
           @include breakpoint(mobile576) {
             width: calc(100% - size(172));

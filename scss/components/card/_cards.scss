@@ -9,7 +9,7 @@
     .video-thumbnail {
       @include flex-center;
       @include w100;
-      height: size(175.5);
+      // height: size(175.5);
       overflow: hidden;
       position: relative;
 
@@ -31,9 +31,11 @@
         position: absolute;
         bottom: size(10);
         right: size(14);
-        color: $white;
+        @include setBgColor($durationbg, $white);
+        @include radius(4);
         font-size: size(14);
         font-weight: 500;
+        padding: size(4) size(8);
         z-index: 100;
       }
     }
@@ -318,9 +320,11 @@
       position: absolute;
       bottom: size(10);
       right: size(14);
-      color: $white;
+      @include setBgColor($durationbg, $white);
+      @include radius(4);
       font-size: size(14);
       font-weight: 500;
+      padding: size(4) size(8);
       z-index: 100;
     }
   }
@@ -474,14 +478,14 @@
 
   .videothumb {
     @include w100;
-    height: size(168);
+    // height: size(168);
     @include flex-center;
     overflow: hidden;
     position: relative;
 
     @include breakpoint(mobile576) {
       width: size(191);
-      height: size(107);
+      // height: size(107);
       @include radius(10);
     }
 
@@ -494,9 +498,11 @@
       position: absolute;
       bottom: size(10);
       right: size(14);
-      color: $white;
+      @include setBgColor($durationbg, $white);
+      @include radius(4);
       font-size: size(14);
       font-weight: 500;
+      padding: size(4) size(8);
       z-index: 100;
     }
   }
@@ -523,10 +529,14 @@
         font-size: size(14);
         font-weight: 500;
         @include line-clamp;
+        min-height: 2rem;
+        max-height: 2rem;
         @include transitionscolor;
         
         @include breakpoint(desktop1400) {
           font-size: size(16);
+          min-height: 2.25rem;
+          max-height: 2.25rem;
         }
 
         @include hover {
@@ -770,7 +780,6 @@
   }
   .content {
     @include line-clamp-3;
-    font-feature-settings: "clig" off, "liga" off;
     line-height: normal;
     @include font($primaryFont, 14, normal, normal, 20);
   }

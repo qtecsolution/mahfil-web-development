@@ -298,10 +298,8 @@
     position: relative;
 
     @include breakpoint(mobile576) {
+      width: size(191);
       @include radius(10);
-    }
-
-    @include breakpoint(tab992) {
     }
 
     img {

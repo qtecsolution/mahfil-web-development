@@ -293,14 +293,11 @@
 
   .favoritethumb {
     @include w100;
-    height: size(168);
     @include flex-center;
     overflow: hidden;
     position: relative;
 
     @include breakpoint(mobile576) {
-      width: size(191);
-      height: size(107);
       @include radius(10);
     }
 

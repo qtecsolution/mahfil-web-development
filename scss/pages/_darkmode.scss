@@ -1,0 +1,428 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+$darkbg-1: #191919;
+$darkcardbg: #1D1E22;
+$lightcolor: #cccccc;
+
+// @media (prefers-color-scheme: dark) {
+//   a,
+//   abbr,
+//   acronym,
+//   address,
+//   applet,
+//   article,
+//   aside,
+//   audio,
+//   b,
+//   big,
+//   blockquote,
+//   button,
+//   body,
+//   canvas,
+//   caption,
+//   center,
+//   cite,
+//   code,
+//   dd,
+//   del,
+//   details,
+//   dfn,
+//   div,
+//   dl,
+//   dt,
+//   em,
+//   embed,
+//   fieldset,
+//   figcaption,
+//   figure,
+//   footer,
+//   form,
+//   header,
+//   hgroup,
+//   html,
+//   i,
+//   input,
+//   iframe,
+//   img,
+//   ins,
+//   kbd,
+//   label,
+//   legend,
+//   li,
+//   mark,
+//   menu,
+//   main,
+//   nav,
+//   object,
+//   ol,
+//   output,
+//   option,
+//   p,
+//   pre,
+//   q,
+//   ruby,
+//   s,
+//   samp,
+//   section,
+//   small,
+//   span,
+//   strike,
+//   strong,
+//   sub,
+//   summary,
+//   select,
+//   sup,
+//   table,
+//   tbody,
+//   td,
+//   tfoot,
+//   th,
+//   thead,
+//   time,
+//   tr,
+//   tt,
+//   u,
+//   ul,
+//   var,
+//   video,
+//   h1, h2, h3, h4, h5, h6,
+//   button {
+//     color: $white;
+//   }
+// }
+
+// .dark-mode {
+//   @include setBgColor($darkbg-1, $white);
+  
+//   .cardvideo {
+//     &-header {
+//       .video-thumbnail {
+//         .timeduration {
+//           @include setBgColor($white, $durationbg);
+//         }
+//       }
+//     }
+  
+//     &-body {
+//       .details {
+//         .videotitle {
+//           color: $white;
+//         }
+  
+//         .detail {
+//           .channelname {
+//             color: $lightcolor;
+//           }
+  
+//           .channelname,
+//           .videotext {
+//             color: $lightcolor;
+//           }
+//         }
+//       }
+  
+//       .videodropdown {
+//         .dropdownicon {
+//           background: lighten($black, 10%);
+
+//           svg {
+//             stroke {
+//               fill: $lightcolor;
+//             }
+//           }
+//         }
+  
+//         &-info {
+          
+//         }
+  
+//         @include hover {
+//           .dropdownicon {
+//             @include breakpoint(tab992) {
+//               background: $linkhoverbg;
+//             }
+//           }
+  
+//           .videodropdown-info {
+//             display: block;
+//           }
+//         }
+//       }
+  
+//       .dropdownlist {
+//         background: $white;
+//         box-shadow: $dropdownshadow;
+  
+//         &-link {
+//           background: $white;
+  
+//           .droplinkicon {
+//           }
+  
+//           .droplinktext {
+//             color: $dropdowntext;
+//           }
+  
+//           @include hover {
+//             background: $linkhoverbg;
+//           }
+//         }
+//       }
+  
+//       .dropdownicon {
+//         background: $white;
+  
+//         @include hover {
+//           @include breakpoint(tab992) {
+//             background: $linkhoverbg;
+//           }
+//         }
+//       }
+//     }
+  
+//     .offcanvas {
+  
+//       &-header {
+  
+//         .icon {
+//         }
+//       }
+//     }
+//   }
+  
+//   .cardchannel {
+  
+//     &-body {
+  
+//       .channelinfo {
+//         .title {
+//         }
+  
+//         .text,
+//         .channelname {
+//         }
+  
+//         .channelname {
+//         }
+//       }
+//     }
+//   }
+  
+//   .cardfavorite {
+//     background: $white;
+  
+//     .favoritethumb {
+//       .timeduration {
+//         @include setBgColor($white, $durationbg);
+//       }
+//     }
+  
+//     &-details {
+//       .describe {
+  
+//         .videotitle {
+          
+//         }
+  
+//         .detail {
+//           .channelname {
+
+//           }
+  
+//           .channelname,
+//           .videotext {
+            
+//           }
+//         }
+//       }
+  
+//       .favdropdown {
+//         .dropdownicon {
+//           background: $white;
+//         }
+  
+//         &-info {
+//           .dropdownlist {      
+//             &-link {
+//               background: $white;
+        
+//               .droplinkicon {
+                
+//               }
+        
+//               .droplinktext {
+//                 color: $dropdowntext;
+//               }
+        
+//               @include hover {
+//                 background: $linkhoverbg;
+//               }
+//             }
+//           }
+//         }
+  
+//         .downloadsinfo {
+//           .dropdownlist {
+//             width: size(180);
+  
+//             &-link {
+//               .droplinkicon {
+//                 margin-top: size(-3);
+//               }
+//             }
+//           }
+//         }
+  
+//         @include hover {
+//           .dropdownicon {
+//             @include breakpoint(tab992) {
+//               background: $linkhoverbg;
+//             }
+//           }
+  
+//           .favdropdown-info {
+//             display: block;
+//           }
+//         }
+//       }
+//     }
+  
+//     @include hover {
+//       background: $favhoverbg;
+//     }
+//   }
+  
+//   .cardvid {
+//     background: $white;
+  
+//     .videothumb {
+//       .timeduration {
+//         @include setBgColor($white, $durationbg);
+//       }
+//     }
+  
+//     &-details {
+//       .describe {
+//         .videotitle {
+//         }
+  
+//         .detail {
+//           .channelname {
+//           }
+  
+//           .channelname,
+//           .videotext {
+            
+//           }
+//         }
+//       }
+//     }
+  
+//     .vidropdown {  
+//       @include hover {  
+//         .dropdownicon {
+//           @include breakpoint(tab992) {
+//             background: $linkhoverbg;
+//           }
+//         }
+//       }
+//     }
+  
+//     .dropdownicon {
+//       background: $white;
+//     }
+  
+//     .dropdownlist {
+//       background: $white;
+//       @include border(solid, 1, $menudivider);
+//       box-shadow: $dropdownshadow;
+  
+//       &-link {
+//         background: $white;
+  
+//         .droplinkicon {
+          
+//         }
+  
+//         .droplinktext {
+//           color: $dropdowntext;
+//         }
+  
+//         @include hover {
+//           background: $linkhoverbg;
+//         }
+//       }
+//     }
+  
+//     @include hover {
+//       background: $favhoverbg;
+//     }
+//   }
+  
+//   .cardsubscribed {  
+//     &-body {  
+//       .detail {  
+//         .title {
+//           color: $headingtext;
+//         }
+  
+//         .info {
+//           .text {
+//             color: $textprimary;
+  
+//             strong {
+//               color: $dropdowntext;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+  
+//   .howdonationCard {
+//     @include border(solid, 1, #d6eaff);
+    
+//     .title {
+//       color: #170f49;
+//     }
+
+//     .content {
+      
+//     }
+//   }
+  
+//   .support-cart {
+//     background-color: #4fa5ff;
+
+//     .support-title {
+//       color: $white;
+//     }
+//     .support-des {
+      
+//     }
+
+//     .support-donate-btn {
+//       background: $white;
+//       color: #3898fc;
+  
+//       @include hover {
+//         @include setBgColor(darken($white, 10%), #3898fc);
+//       }
+//     }
+//   }
+  
+//   .videoinfo .accordion-item:first-of-type .accordion-button, .videoinfo .accordion-item:last-of-type .accordion-button {
+//     color: $white;
+//   }
+
+//   .accordion-button {
+//     &:not(.collapsed)::after {
+//       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+//     }
+
+//     &::after {
+//       --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+//     }
+//   }
+// }

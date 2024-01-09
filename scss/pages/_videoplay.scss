@@ -757,6 +757,7 @@
             display: none;
             @extend %animation;
             @extend %slideUpIn;
+            z-index: 500;
           }
 
           .dropdownlist {
@@ -891,6 +892,46 @@
 }
 
 .commentform {
+  background: $white;
+  @include border(solid, 1, $searchborder);
+  @include radius(6);
+  @include flex-center-vert;
+  gap: size(16);
+  padding: size(12) size(9) size(12) size(16);
+  @include transitionsall;
+
+  .commentfield {
+    color: $textdark;
+    width: calc(100% - size(36));
+    font-size: size(12);
+    font-weight: 500;
+
+    &::placeholder {
+      color: $switchbg;
+    }
+  }
+
+  .btn-submit {
+    @include square(20);
+    @include flex-center;
+    overflow: hidden;
+    padding: size(2);
+
+    @include hover {
+      svg {
+        path {
+          fill: $primary;
+        }
+      }
+    }
+  }
+
+  &:focus-within {
+    border-color: $primary;
+  }
+}
+
+.mobcommentbuttoninfo {
   background: $white;
   @include border(solid, 1, $searchborder);
   @include radius(6);

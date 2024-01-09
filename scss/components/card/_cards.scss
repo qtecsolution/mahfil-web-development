@@ -1,6 +1,10 @@
 @use "../../global" as *;
 @use "../../partials" as *;
 
+.cardlink {
+  @include flex;
+}
+
 .cardvideo {
   @include flex-column;
   gap: size(14);
@@ -277,37 +281,35 @@
 
 .cardfavorite {
   background: $white;
-  @include flex-column;
+  @include flex;
   @include w100;
   overflow: hidden;
   @include transitionsbackground;
-
-  @include breakpoint(mobile576) {
-    flex-direction: row;
-    align-items: flex-start;
-  }
 
   @include breakpoint(tab992) {
     @include radius(10);
   }
 
   .favoritethumb {
-    @include w100;
+    width: size(151);
     @include flex-center;
     overflow: hidden;
     position: relative;
 
     @include breakpoint(mobile576) {
       width: size(191);
+    }
+
+    @include breakpoint(tab992) {
       @include radius(10);
     }
 
     img {
       @include wh100;
-      object-fit: cover;
+      object-fit: fill;
 
       @include breakpoint(tab992) {
-        object-fit: fill;
+        object-fit: cover;
       }
     }
 
@@ -326,13 +328,12 @@
 
   &-details {
     @include flex-center-between;
-    align-items: flex-start;
+    width: calc(100% - size(151));
     gap: size(8);
     overflow: hidden;
     padding: size(4) size(14) size(8);
 
     @include breakpoint(mobile576) {
-      align-items: center;
       width: calc(100% - size(191));
     }
 
@@ -375,6 +376,12 @@
       position: relative;
       @include square(32);
       cursor: pointer;
+      margin-top: size(-16);
+      z-index: 500;
+
+      @include breakpoint(tab992) {
+        margin-top: size(0);
+      }
 
       .dropdownicon {
         background: $white;
@@ -767,7 +774,6 @@
   }
   .title {
     color: #170f49;
-    font-feature-settings: "clig" off, "liga" off;
     @include font($primaryFont, 16, semibold, normal, 20);
     white-space: nowrap;
     overflow: hidden;
@@ -807,11 +813,9 @@
   }
   .support-title {
     color: $white;
-    font-feature-settings: "clig" off, "liga" off;
     @include font($primaryFont, 16, semibold, normal, 20);
   }
   .support-des {
-    font-feature-settings: "clig" off, "liga" off;
     @include font($primaryFont, 14, normal, normal, 20);
   }
   .support-donate-btn {

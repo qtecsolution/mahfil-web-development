@@ -93,939 +93,939 @@ $lightcolor: #cccccc;
 //   }
 // }
 
-.dark-mode {
-  @include setBgColor($darkbg-2, $white);
+// .dark-mode {
+//   @include setBgColor($darkbg-2, $white);
   
-  .cardvideo {
-    &-header {
-      .video-thumbnail {
-        .timeduration {
-          @include setBgColor($white, $durationbg);
-        }
-      }
-    }
+//   .cardvideo {
+//     &-header {
+//       .video-thumbnail {
+//         .timeduration {
+//           @include setBgColor($white, $durationbg);
+//         }
+//       }
+//     }
   
-    &-body {
-      .details {
-        .videotitle {
-          color: $white;
-        }
+//     &-body {
+//       .details {
+//         .videotitle {
+//           color: $white;
+//         }
   
-        .detail {
-          .channelname {
-            color: $lightcolor;
-          }
+//         .detail {
+//           .channelname {
+//             color: $lightcolor;
+//           }
   
-          .channelname,
-          .videotext {
-            color: $lightcolor;
-          }
-        }
-      }
+//           .channelname,
+//           .videotext {
+//             color: $lightcolor;
+//           }
+//         }
+//       }
   
-      .videodropdown {
-        .dropdownicon {
-          background: transparent;
+//       .videodropdown {
+//         .dropdownicon {
+//           background: transparent;
 
-          svg {
-            path {
-              stroke: $white;
-            }
-          }
-        }
+//           svg {
+//             path {
+//               stroke: $white;
+//             }
+//           }
+//         }
   
-        @include hover {
-          .dropdownicon {
-            background: darken($lightcolor, 40%);
-          }
-        }
-      }
+//         @include hover {
+//           .dropdownicon {
+//             background: darken($lightcolor, 40%);
+//           }
+//         }
+//       }
   
-      .dropdownlist {
-        background: $darkbg-2;
-        border-color: $darkbg-2;
-        box-shadow: $dropdownshadow;
+//       .dropdownlist {
+//         background: $darkbg-2;
+//         border-color: $darkbg-2;
+//         box-shadow: $dropdownshadow;
   
-        &-link {
-          background: $darkbg-1;
+//         &-link {
+//           background: $darkbg-1;
   
-          .droplinkicon {
-            svg {
-              path {
-                fill: $white;
-              }
-            }
-          }
+//           .droplinkicon {
+//             svg {
+//               path {
+//                 fill: $white;
+//               }
+//             }
+//           }
   
-          .droplinktext {
-            color: $white;
-          }
+//           .droplinktext {
+//             color: $white;
+//           }
   
-          @include hover {
-            background: lighten($darkbg-1, 25%);
-          }
-        }
-      }
+//           @include hover {
+//             background: lighten($darkbg-1, 25%);
+//           }
+//         }
+//       }
   
-      .dropdownicon {
-        background: transparent;
+//       .dropdownicon {
+//         background: transparent;
   
-        @include hover {
-          background: lighten($darkbg-1, 25%);
-        }
-      }
-    }
+//         @include hover {
+//           background: lighten($darkbg-1, 25%);
+//         }
+//       }
+//     }
   
-    .offcanvas {
-      background: $darkbg-1;
+//     .offcanvas {
+//       background: $darkbg-1;
   
-      &-header {
-        background: $darkbg-1;
+//       &-header {
+//         background: $darkbg-1;
   
-        .icon {
-          svg {
-            line {
-              stroke: lighten($darkbg-1, 60%); 
-            }
-          }
-        }
-      }
+//         .icon {
+//           svg {
+//             line {
+//               stroke: lighten($darkbg-1, 60%); 
+//             }
+//           }
+//         }
+//       }
 
-      &-body {
-        background: $darkbg-1;
+//       &-body {
+//         background: $darkbg-1;
 
-        .dropdownlist {
-          &-link {
-            background: $darkbg-1;
+//         .dropdownlist {
+//           &-link {
+//             background: $darkbg-1;
     
-            .droplinkicon {
-              svg {
-                path {
-                  fill: $white;
-                }
-              }
-            }
+//             .droplinkicon {
+//               svg {
+//                 path {
+//                   fill: $white;
+//                 }
+//               }
+//             }
     
-            .droplinktext {
-              color: $white;
-            }
+//             .droplinktext {
+//               color: $white;
+//             }
     
-            @include hover {
-              background: lighten($darkbg-1, 25%);
-            }
-          }
-        }
-      }
-    }
-  }
+//             @include hover {
+//               background: lighten($darkbg-1, 25%);
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
   
-  .cardchannel {
-    &-body {
-      .channelinfo {
-        .title {
-          color: $white;
-        }
+//   .cardchannel {
+//     &-body {
+//       .channelinfo {
+//         .title {
+//           color: $white;
+//         }
   
-        .text,
-        .channelname {
-          color: $lightcolor;
-        }
-      }
-    }
-  }
+//         .text,
+//         .channelname {
+//           color: $lightcolor;
+//         }
+//       }
+//     }
+//   }
   
-  .cardfavorite {
-    background: $white;
+//   .cardfavorite {
+//     background: $white;
   
-    .favoritethumb {
-      .timeduration {
-        @include setBgColor($white, $durationbg);
-      }
-    }
+//     .favoritethumb {
+//       .timeduration {
+//         @include setBgColor($white, $durationbg);
+//       }
+//     }
   
-    &-details {
-      .describe {
-        .videotitle {
-          color: $white;
-        }
+//     &-details {
+//       .describe {
+//         .videotitle {
+//           color: $white;
+//         }
   
-        .detail {  
-          .channelname,
-          .videotext {
-            color: $lightcolor;
-          }
-        }
-      }
+//         .detail {  
+//           .channelname,
+//           .videotext {
+//             color: $lightcolor;
+//           }
+//         }
+//       }
   
-      .favdropdown {
-        .dropdownicon {
-          background: transparent;
-        }
+//       .favdropdown {
+//         .dropdownicon {
+//           background: transparent;
+//         }
   
-        &-info {
-          .dropdownlist {      
-            &-link {
-              background: $white;
+//         &-info {
+//           .dropdownlist {      
+//             &-link {
+//               background: $white;
         
-              .droplinkicon {
+//               .droplinkicon {
                 
-              }
+//               }
         
-              .droplinktext {
-                color: $dropdowntext;
-              }
+//               .droplinktext {
+//                 color: $dropdowntext;
+//               }
         
-              @include hover {
-                background: $linkhoverbg;
-              }
-            }
-          }
-        }
+//               @include hover {
+//                 background: $linkhoverbg;
+//               }
+//             }
+//           }
+//         }
   
-        .downloadsinfo {
-          .dropdownlist {
-            width: size(180);
+//         .downloadsinfo {
+//           .dropdownlist {
+//             width: size(180);
   
-            &-link {
-              .droplinkicon {
-                margin-top: size(-3);
-              }
-            }
-          }
-        }
+//             &-link {
+//               .droplinkicon {
+//                 margin-top: size(-3);
+//               }
+//             }
+//           }
+//         }
   
-        @include hover {
-          .dropdownicon {
-            @include breakpoint(tab992) {
-              background: $linkhoverbg;
-            }
-          }
+//         @include hover {
+//           .dropdownicon {
+//             @include breakpoint(tab992) {
+//               background: $linkhoverbg;
+//             }
+//           }
   
-          .favdropdown-info {
-            display: block;
-          }
-        }
-      }
-    }
+//           .favdropdown-info {
+//             display: block;
+//           }
+//         }
+//       }
+//     }
   
-    @include hover {
-      background: $favhoverbg;
-    }
-  }
+//     @include hover {
+//       background: $favhoverbg;
+//     }
+//   }
   
-  .cardvid {
-    background: $white;
+//   .cardvid {
+//     background: $white;
   
-    .videothumb {
-      .timeduration {
-        @include setBgColor($white, $durationbg);
-      }
-    }
+//     .videothumb {
+//       .timeduration {
+//         @include setBgColor($white, $durationbg);
+//       }
+//     }
   
-    &-details {
-      .describe {
-        .videotitle {
-          color: $white;
-        }
+//     &-details {
+//       .describe {
+//         .videotitle {
+//           color: $white;
+//         }
   
-        .detail {
-          .channelname,
-          .videotext {
-            color: $lightcolor;
-          }
-        }
-      }
-    }
+//         .detail {
+//           .channelname,
+//           .videotext {
+//             color: $lightcolor;
+//           }
+//         }
+//       }
+//     }
   
-    .vidropdown {  
-      @include hover {  
-        .dropdownicon {
-          @include breakpoint(tab992) {
-            background: $linkhoverbg;
-          }
-        }
-      }
-    }
+//     .vidropdown {  
+//       @include hover {  
+//         .dropdownicon {
+//           @include breakpoint(tab992) {
+//             background: $linkhoverbg;
+//           }
+//         }
+//       }
+//     }
   
-    .dropdownicon {
-      background: transparent;
-    }
+//     .dropdownicon {
+//       background: transparent;
+//     }
   
-    .dropdownlist {
-      background: $white;
-      @include border(solid, 1, $menudivider);
-      box-shadow: $dropdownshadow;
+//     .dropdownlist {
+//       background: $white;
+//       @include border(solid, 1, $menudivider);
+//       box-shadow: $dropdownshadow;
   
-      &-link {
-        background: $white;
+//       &-link {
+//         background: $white;
   
-        .droplinktext {
-          color: $dropdowntext;
-        }
+//         .droplinktext {
+//           color: $dropdowntext;
+//         }
   
-        @include hover {
-          background: $linkhoverbg;
-        }
-      }
-    }
+//         @include hover {
+//           background: $linkhoverbg;
+//         }
+//       }
+//     }
   
-    @include hover {
-      background: $favhoverbg;
-    }
-  }
+//     @include hover {
+//       background: $favhoverbg;
+//     }
+//   }
   
-  .cardsubscribed {  
-    &-body {  
-      .detail {  
-        .title {
-          color: $headingtext;
-        }
+//   .cardsubscribed {  
+//     &-body {  
+//       .detail {  
+//         .title {
+//           color: $headingtext;
+//         }
   
-        .info {
-          .text {
-            color: $textprimary;
+//         .info {
+//           .text {
+//             color: $textprimary;
   
-            strong {
-              color: $dropdowntext;
-            }
-          }
-        }
-      }
-    }
-  }
+//             strong {
+//               color: $dropdowntext;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
   
-  .howdonationCard {
-    @include border(solid, 1, #d6eaff);
+//   .howdonationCard {
+//     @include border(solid, 1, #d6eaff);
     
-    .title {
-      color: #170f49;
-    }
+//     .title {
+//       color: #170f49;
+//     }
 
-    .content {
+//     .content {
       
-    }
-  }
+//     }
+//   }
   
-  .support-cart {
-    background-color: #4fa5ff;
+//   .support-cart {
+//     background-color: #4fa5ff;
 
-    .support-title {
-      color: $white;
-    }
-    .support-des {
+//     .support-title {
+//       color: $white;
+//     }
+//     .support-des {
       
-    }
+//     }
 
-    .support-donate-btn {
-      background: $white;
-      color: #3898fc;
+//     .support-donate-btn {
+//       background: $white;
+//       color: #3898fc;
   
-      @include hover {
-        @include setBgColor(darken($white, 10%), #3898fc);
-      }
-    }
-  }
+//       @include hover {
+//         @include setBgColor(darken($white, 10%), #3898fc);
+//       }
+//     }
+//   }
   
-  .videoinfo .accordion-item:first-of-type .accordion-button, .videoinfo .accordion-item:last-of-type .accordion-button {
-    color: $white;
-  }
+//   .videoinfo .accordion-item:first-of-type .accordion-button, .videoinfo .accordion-item:last-of-type .accordion-button {
+//     color: $white;
+//   }
 
-  .accordion-button {
-    &:not(.collapsed)::after {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-    }
+//   .accordion-button {
+//     &:not(.collapsed)::after {
+//       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+//     }
 
-    &::after {
-      --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-    }
-  }
+//     &::after {
+//       --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+//     }
+//   }
 
-  .popular-title,
-  .trending-title,
-  .notificationtitle,
-  .logtitle,
-  .publishertitle {
-    color: $white;
-  }
+//   .popular-title,
+//   .trending-title,
+//   .notificationtitle,
+//   .logtitle,
+//   .publishertitle {
+//     color: $white;
+//   }
 
-  .homeslider .swiper-pagination .swiper-pagination-bullet {
-    background: $lightcolor;
-  }
+//   .homeslider .swiper-pagination .swiper-pagination-bullet {
+//     background: $lightcolor;
+//   }
 
-  .homeslider .swiper-pagination .swiper-pagination-bullet-active {
-    background: $primary;
-  }
+//   .homeslider .swiper-pagination .swiper-pagination-bullet-active {
+//     background: $primary;
+//   }
 
-  .preloader {
-    background: $darkbg-1;
-  }
+//   .preloader {
+//     background: $darkbg-1;
+//   }
 
-  .appmenu {
-    background: $darkbg-1;
-    border-color: $darkbg-1;
-  }
+//   .appmenu {
+//     background: $darkbg-1;
+//     border-color: $darkbg-1;
+//   }
 
-  .applist {
-    &-link {  
-      .icon {
-        svg {
-          path {
-            fill: $lightcolor;
-          }
-        }
-      }
+//   .applist {
+//     &-link {  
+//       .icon {
+//         svg {
+//           path {
+//             fill: $lightcolor;
+//           }
+//         }
+//       }
   
-      .text {
-        color: $lightcolor;
-      }
+//       .text {
+//         color: $lightcolor;
+//       }
   
-      &:hover:not(.active) {
-        .icon {
-          svg {
-            path {
-              fill: $primary;
-            }
-          }
-        }
+//       &:hover:not(.active) {
+//         .icon {
+//           svg {
+//             path {
+//               fill: $primary;
+//             }
+//           }
+//         }
   
-        .text {
-          color: $primary;
-        }
-      }
+//         .text {
+//           color: $primary;
+//         }
+//       }
   
-      &.active {
-        .icon {
-          svg {
-            path {
-              fill: $primary;
-            }
-          }
-        }
+//       &.active {
+//         .icon {
+//           svg {
+//             path {
+//               fill: $primary;
+//             }
+//           }
+//         }
   
-        .text {
-          color: $primary;
-        }
-      }
-    }
-  }
+//         .text {
+//           color: $primary;
+//         }
+//       }
+//     }
+//   }
 
-  .header {
-    background: $darkbg-1;
+//   .header {
+//     background: $darkbg-1;
   
-    @include breakpoint(tab992) {
-      border-color: $darkbg-1;
-    }
+//     @include breakpoint(tab992) {
+//       border-color: $darkbg-1;
+//     }
   
-    &-nav {  
-      @include breakpoint(tab992) {
-        border-color: $darkbg-1;
-      }
+//     &-nav {  
+//       @include breakpoint(tab992) {
+//         border-color: $darkbg-1;
+//       }
   
-      .reminder {  
-        .prayer {  
-          .prayericon {
-            background: lighten($darkbg-1, 25%);
+//       .reminder {  
+//         .prayer {  
+//           .prayericon {
+//             background: lighten($darkbg-1, 25%);
 
-            svg {
-              path {
-                fill: $white;
-              }
-            }
-          }
+//             svg {
+//               path {
+//                 fill: $white;
+//               }
+//             }
+//           }
   
-          .details {  
-            .waqtname {
-              color: $white;
-            }
+//           .details {  
+//             .waqtname {
+//               color: $white;
+//             }
   
-            .waqtdurations {
-              color: $lightcolor;
-            }
-          }
-        }
+//             .waqtdurations {
+//               color: $lightcolor;
+//             }
+//           }
+//         }
   
-        .remaining {  
-          &-title,
-          &-text {
-            color: $textprimary;
-          }
+//         .remaining {  
+//           &-title,
+//           &-text {
+//             color: $textprimary;
+//           }
   
-          .progress {
-            background: lighten($darkbg-1, 25%);
+//           .progress {
+//             background: lighten($darkbg-1, 25%);
   
-            &-bar {
-              background: $primary;
-            }
-          }
-        }
-      }
-    }
-  }
+//             &-bar {
+//               background: $primary;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
 
-  .searchform {
-    background: transparent;
-    border-color: $lightcolor;
+//   .searchform {
+//     background: transparent;
+//     border-color: $lightcolor;
   
-    .searchfield {
-      @include setBgColor(transparent, $white);
+//     .searchfield {
+//       @include setBgColor(transparent, $white);
   
-      &::placeholder {
-        color: $textplaceholder;
-      }
-    }
+//       &::placeholder {
+//         color: $textplaceholder;
+//       }
+//     }
   
-    .btn-search {
-      @include square(24);
-      @include flex-center;
+//     .btn-search {
+//       @include square(24);
+//       @include flex-center;
   
-      @include hover {
-        svg {
-          path {
-            fill: $primary;
-          }
-        }
-      }
-    }
+//       @include hover {
+//         svg {
+//           path {
+//             fill: $primary;
+//           }
+//         }
+//       }
+//     }
   
-    &:focus-within {
-      border-color: $primary;
-    }
-  }
+//     &:focus-within {
+//       border-color: $primary;
+//     }
+//   }
 
-  .mainlist {
-    &-link {
-      background: $darkbg-1;
+//   .mainlist {
+//     &-link {
+//       background: $darkbg-1;
   
-      .icon {
-        svg {
-          path {
-            fill: $lightcolor;
-          }
-        }
-      }
+//       .icon {
+//         svg {
+//           path {
+//             fill: $lightcolor;
+//           }
+//         }
+//       }
   
-      .linktext {
-        color: $lightcolor;
-      }
+//       .linktext {
+//         color: $lightcolor;
+//       }
   
-      &:hover:not(.active) {
-        background: lighten($darkbg-1, 25%);
+//       &:hover:not(.active) {
+//         background: lighten($darkbg-1, 25%);
   
-        .icon {
-          svg {
-            path {
-              fill: $primary;
-            }
-          }
-        }
+//         .icon {
+//           svg {
+//             path {
+//               fill: $primary;
+//             }
+//           }
+//         }
   
-        .linktext {
-          color: $white;
-          font-weight: 600;
-        }
-      }
+//         .linktext {
+//           color: $white;
+//           font-weight: 600;
+//         }
+//       }
   
-      &.active {
-        background: lighten($darkbg-1, 25%);
+//       &.active {
+//         background: lighten($darkbg-1, 25%);
   
-        .icon {
-          svg {
-            path {
-              fill: $primary;
-            }
-          }
-        }
+//         .icon {
+//           svg {
+//             path {
+//               fill: $primary;
+//             }
+//           }
+//         }
   
-        .linktext {
-          color: $white;
-          font-weight: 600;
-        }
-      }
-    }
-  }
+//         .linktext {
+//           color: $white;
+//           font-weight: 600;
+//         }
+//       }
+//     }
+//   }
 
-  .mobilelist {
-    &-link {
-      svg {
-        path {
-          fill: $white;
-        }
-      }
+//   .mobilelist {
+//     &-link {
+//       svg {
+//         path {
+//           fill: $white;
+//         }
+//       }
 
-      @include hover {
-        svg {
-          path {
-            fill: $primary;
-          }
-        }
-      }
-    }
-  }
+//       @include hover {
+//         svg {
+//           path {
+//             fill: $primary;
+//           }
+//         }
+//       }
+//     }
+//   }
 
-  .btn-burger {
-    svg {
-      path {
-        fill: $white;
-      }
-    }
+//   .btn-burger {
+//     svg {
+//       path {
+//         fill: $white;
+//       }
+//     }
 
-    @include hover {
-      svg {
-        path {
-          fill: $primary;
-        }
-      }
-    }
-  }
+//     @include hover {
+//       svg {
+//         path {
+//           fill: $primary;
+//         }
+//       }
+//     }
+//   }
   
-  .desktoplist {
-    &-link {
-      background: lighten($darkbg-1, 25%);
+//   .desktoplist {
+//     &-link {
+//       background: lighten($darkbg-1, 25%);
 
-      svg {
-        path {
-          stroke: $white;
-        }
-      }
-    }
+//       svg {
+//         path {
+//           stroke: $white;
+//         }
+//       }
+//     }
 
-    .desktopdropdown {
-      .desktoplist-link {
-        svg {
-          path {
-            stroke: none;
-            fill: $white;
-          }
-        }
-      }
-    }
+//     .desktopdropdown {
+//       .desktoplist-link {
+//         svg {
+//           path {
+//             stroke: none;
+//             fill: $white;
+//           }
+//         }
+//       }
+//     }
   
-    .darkmodeitem,
-    .useritem {
-      @include hover {
-        .desktoplist-link {
-          background: $primary;
+//     .darkmodeitem,
+//     .useritem {
+//       @include hover {
+//         .desktoplist-link {
+//           background: $primary;
   
-          svg {
-            path {
-              stroke: $white;
-            }
-          }
-        }
-      }
-    }
+//           svg {
+//             path {
+//               stroke: $white;
+//             }
+//           }
+//         }
+//       }
+//     }
   
-    .desktopdropdown {  
-      @include hover {
-        .desktoplist-link {
-          background: $primary;
+//     .desktopdropdown {  
+//       @include hover {
+//         .desktoplist-link {
+//           background: $primary;
   
-          svg {
-            path {
-              fill: $white;
-            }
-          }
-        }
-      }
-    }
+//           svg {
+//             path {
+//               fill: $white;
+//             }
+//           }
+//         }
+//       }
+//     }
   
-    .useritem {
-      .userdropdown {
-        .userlist {
-          background: $darkbg-1;
-          border-color: $darkbg-1;
+//     .useritem {
+//       .userdropdown {
+//         .userlist {
+//           background: $darkbg-1;
+//           border-color: $darkbg-1;
   
-          &-link {
-            .icon {
-              svg {
-                path {
-                  fill: $white;
-                }
-              }
-            }
+//           &-link {
+//             .icon {
+//               svg {
+//                 path {
+//                   fill: $white;
+//                 }
+//               }
+//             }
   
-            .text {
-              color: $white;
-            }
+//             .text {
+//               color: $white;
+//             }
   
-            @include hover {
-              .icon {
-                svg {
-                  path {
-                    fill: $primary;
-                  }
-                }
-              }
+//             @include hover {
+//               .icon {
+//                 svg {
+//                   path {
+//                     fill: $primary;
+//                   }
+//                 }
+//               }
   
-              .text {
-                color: $primary;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+//               .text {
+//                 color: $primary;
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
 
-  .desktopdropdownlist {
-    background: $darkbg-1;
-    border-color: $darkbg-1;
+//   .desktopdropdownlist {
+//     background: $darkbg-1;
+//     border-color: $darkbg-1;
   
-    &-link {
-      .leftcontent {
-        .details {
-          .title {
-            color: $white;
+//     &-link {
+//       .leftcontent {
+//         .details {
+//           .title {
+//             color: $white;
   
-            @include hover {
-              color: $primary;
-            }
-          }
+//             @include hover {
+//               color: $primary;
+//             }
+//           }
   
-          .time {
-            color: $lightcolor;
-          }
-        }
-      }
+//           .time {
+//             color: $lightcolor;
+//           }
+//         }
+//       }
   
-      @include hover {
-        background: lighten($darkbg-1, 15%);
-      }
-    }
-  }
+//       @include hover {
+//         background: lighten($darkbg-1, 15%);
+//       }
+//     }
+//   }
 
-  .sidebar {
-    background: $darkbg-1;
+//   .sidebar {
+//     background: $darkbg-1;
 
-    &.sidecollapsed {
-      .publisher {
-        background: transparent;
-      }
-    }
-  }
+//     &.sidecollapsed {
+//       .publisher {
+//         background: transparent;
+//       }
+//     }
+//   }
   
-  hr {
-    border-color: $lightcolor;
-  }
+//   hr {
+//     border-color: $lightcolor;
+//   }
 
-  .publisher {
-    background: $darkbg-1;
-    border-color: $darkbg-1;
-    background: lighten($darkbg-1, 25%);
+//   .publisher {
+//     background: $darkbg-1;
+//     border-color: $darkbg-1;
+//     background: lighten($darkbg-1, 25%);
   
-    .publishertitle {
-      font-size: size(18);
-      font-weight: 600;
-    }
+//     .publishertitle {
+//       font-size: size(18);
+//       font-weight: 600;
+//     }
   
-    .publishericon {
-      svg {
-        path {
-          fill: $darkbg-1;
-        }
-      }
-    }
-  }
+//     .publishericon {
+//       svg {
+//         path {
+//           fill: $darkbg-1;
+//         }
+//       }
+//     }
+//   }
   
-  .offcanvas {
-    background: $darkbg-1;
+//   .offcanvas {
+//     background: $darkbg-1;
 
-    &-header {
-      background: $darkbg-1;
+//     &-header {
+//       background: $darkbg-1;
 
-      .icon {
-        svg {
-          line {
-            stroke: lighten($darkbg-1, 60%); 
-          }
-        }
-      }
+//       .icon {
+//         svg {
+//           line {
+//             stroke: lighten($darkbg-1, 60%); 
+//           }
+//         }
+//       }
 
-      .btn-close {
-        i {
-          color: $lightcolor;
-        }
-      }
-    }
+//       .btn-close {
+//         i {
+//           color: $lightcolor;
+//         }
+//       }
+//     }
 
-    &-body {
-      background: $darkbg-1;
-    }
-  }
+//     &-body {
+//       background: $darkbg-1;
+//     }
+//   }
 
-  .listmobile {
-    &-link {
-      background: lighten($darkcardbg, 20%);
+//   .listmobile {
+//     &-link {
+//       background: lighten($darkcardbg, 20%);
   
-      .icon {
-        background: $lightcolor;
-      }
+//       .icon {
+//         background: $lightcolor;
+//       }
   
-      .detail {
-        .title {
-          color: $white;
-        }
+//       .detail {
+//         .title {
+//           color: $white;
+//         }
   
-        .count {
-          color: $lightcolor;
-        }
-      }
-    }
-  }
+//         .count {
+//           color: $lightcolor;
+//         }
+//       }
+//     }
+//   }
 
-  .modal {
-    &-content {
-      background: $darkbg-1;
-    }
+//   .modal {
+//     &-content {
+//       background: $darkbg-1;
+//     }
   
-    &-header {
-      background: $darkbg-1;
+//     &-header {
+//       background: $darkbg-1;
   
-      .btn-close {
-        @include square(24);
-        @include flex-center;
-        overflow: hidden;
-        opacity: 1;
+//       .btn-close {
+//         @include square(24);
+//         @include flex-center;
+//         overflow: hidden;
+//         opacity: 1;
   
-        i {
-          color: $white;
-        }
+//         i {
+//           color: $white;
+//         }
   
-        svg {
-          @include wh100;
-          @include transitiontransform;
+//         svg {
+//           @include wh100;
+//           @include transitiontransform;
 
-          path {
-            stroke: $white;
-          }
-        }
+//           path {
+//             stroke: $white;
+//           }
+//         }
   
-        @include hover {
-          opacity: 1;
-          @include rotate(180);
+//         @include hover {
+//           opacity: 1;
+//           @include rotate(180);
   
-          i {
-            color: $danger;
-          }
+//           i {
+//             color: $danger;
+//           }
   
-          svg {
-            path {
-              stroke: $danger;
-            }
-          }
-        }
-      }
-    }
+//           svg {
+//             path {
+//               stroke: $danger;
+//             }
+//           }
+//         }
+//       }
+//     }
 
-    &-body {
-      background: $darkbg-1;
-    }
-  }
+//     &-body {
+//       background: $darkbg-1;
+//     }
+//   }
 
-  .myauth {
-    &-body {
-      .authtitle {
-        color: $white;
-      }
+//   .myauth {
+//     &-body {
+//       .authtitle {
+//         color: $white;
+//       }
   
-      .authbox {
-        label {
-          color: $lightcolor;
-        }
-      }
+//       .authbox {
+//         label {
+//           color: $lightcolor;
+//         }
+//       }
   
-      .iti {
-        input {
-          @include setBgColor(transparent, $white);
-          border-color: $textprimary;
+//       .iti {
+//         input {
+//           @include setBgColor(transparent, $white);
+//           border-color: $textprimary;
   
-          &::placeholder {
-            color: $textplaceholder;
-          }
+//           &::placeholder {
+//             color: $textplaceholder;
+//           }
   
-          &:focus {
-            border-color: $lightcolor;
-          }
-        }
-      }
+//           &:focus {
+//             border-color: $lightcolor;
+//           }
+//         }
+//       }
   
-      .otpbox {
-        .otpfield {
-          @include setBgColor(transparent, $white);
-          border-color: $textprimary;
+//       .otpbox {
+//         .otpfield {
+//           @include setBgColor(transparent, $white);
+//           border-color: $textprimary;
   
-          &:focus {
-            border-color: $lightcolor;
-          }
-        }
-      }
+//           &:focus {
+//             border-color: $lightcolor;
+//           }
+//         }
+//       }
   
-      .remainingtime {
-        color: $lightcolor;
-      }
-    }
+//       .remainingtime {
+//         color: $lightcolor;
+//       }
+//     }
   
-    &-footer {
-      .titlebox {  
-        .title {
-          color: $white;
-        }
+//     &-footer {
+//       .titlebox {  
+//         .title {
+//           color: $white;
+//         }
 
-        .bar {
-          svg {
-            line {
-              stroke: $lightcolor;
-            }
-          }
-        }
-      }
-    }
-  }
+//         .bar {
+//           svg {
+//             line {
+//               stroke: $lightcolor;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
 
-  .btn-skip,
-  .btn-resend {
-    color: $lightcolor;
-  }
+//   .btn-skip,
+//   .btn-resend {
+//     color: $lightcolor;
+//   }
 
-  .btn-subscribe {
-    &:hover {
-      background: transparent;
-    }
-  }
+//   .btn-subscribe {
+//     &:hover {
+//       background: transparent;
+//     }
+//   }
 
-  .swiper-button-prev,
-  .swiper-button-next {
-    background: $darkcardbg;
+//   .swiper-button-prev,
+//   .swiper-button-next {
+//     background: $darkcardbg;
 
-    svg {
-      path {
-        fill: $lightcolor;
-      }
-    }
-  }
+//     svg {
+//       path {
+//         fill: $lightcolor;
+//       }
+//     }
+//   }
 
-  .regform {
-    .inputbox {
-      label {
-        color: $white;
-      }
+//   .regform {
+//     .inputbox {
+//       label {
+//         color: $white;
+//       }
   
-      input {
-        @include setBgColor(transparent, $white);
-        border-color: $textprimary;
+//       input {
+//         @include setBgColor(transparent, $white);
+//         border-color: $textprimary;
   
-        &::placeholder {
-          color: $textplaceholder;
-        }
+//         &::placeholder {
+//           color: $textplaceholder;
+//         }
   
-        &:focus {
-          border-color: $lightcolor;
-        }
-      }
-    }
-  }
+//         &:focus {
+//           border-color: $lightcolor;
+//         }
+//       }
+//     }
+//   }
 
-  .customcheck .checklabel {
-    color: $lightcolor;
-  }
-}
+//   .customcheck .checklabel {
+//     color: $lightcolor;
+//   }
+// }

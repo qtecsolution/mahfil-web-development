@@ -128,20 +128,24 @@
   background-repeat: no-repeat;
   background-position: bottom right;
   overflow: hidden;
+  
   @include breakpoint(tab992) {
     padding-block: size(30);
   }
+
   &.desktop-view {
     .popup-modal-body {
       align-items: center;
       text-align: center;
     }
+
     background-image: url(../images/modal/desktop-modal-bg.png);
   }
 
   .popup-modal-header {
     @include flex-between;
   }
+
   .modal-close-btn {
     padding-right: size(15);
     @include hover {
@@ -150,6 +154,7 @@
       }
     }
   }
+
   .popup-modal-body {
     @include flex-column;
     gap: size(18);
@@ -175,6 +180,7 @@
       @include font($primaryFont, 11, normal, normal, 20);
     }
   }
+
   .btn-donate {
     color: $white;
     background: $primary;
@@ -187,6 +193,7 @@
     }
   }
 }
+
 .support-mahfil {
   @include flex-column;
   padding: size(30) size(0);

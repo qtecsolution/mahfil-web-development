@@ -70,7 +70,7 @@ button,
   @include radius(6);
   gap: size(4);
   @include transitionsbackground;
-  height: size(32);
+  height: size(40);
   padding-inline: size(12);
 
   @include breakpoint(mobile768) {
@@ -78,7 +78,6 @@ button,
   }
 
   @include breakpoint(tab992) {
-    height: size(40);
     padding-inline: size(24);
   }
 
@@ -128,7 +127,7 @@ button,
   @include radius(6);
   @include flex-center;
   gap: size(4);
-  height: size(32);
+  height: size(40);
   padding-inline: size(12);
 
   @include breakpoint(mobile768) {
@@ -136,7 +135,6 @@ button,
   }
 
   @include breakpoint(tab992) {
-    height: size(40);
     padding-inline: size(24);
   }
 
@@ -181,15 +179,11 @@ button,
   font-weight: 600;
   @include flex-center;
   gap: size(4);
-  height: size(32);
+  height: size(40);
   padding-inline: size(12);
 
   @include breakpoint(mobile768) {
     padding-inline: size(16);
-  }
-
-  @include breakpoint(tab992) {
-    height: size(40);
   }
 
   @include breakpoint(desktop1400) {

@@ -86,6 +86,7 @@
 
     &-body {
       @include flex-end;
+      gap: .75rem;
 
       button {
         @include radius(6);
@@ -113,6 +114,7 @@
     }
   }
 }
+
 .custom-modal-content {
   @include radius(10);
 }

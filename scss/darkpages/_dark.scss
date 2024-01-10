@@ -6,93 +6,6 @@ $darkbg-2: #333333;
 $darkcardbg: #1D1E22;
 $lightcolor: #cccccc;
 
-// @media (prefers-color-scheme: dark) {
-//   a,
-//   abbr,
-//   acronym,
-//   address,
-//   applet,
-//   article,
-//   aside,
-//   audio,
-//   b,
-//   big,
-//   blockquote,
-//   button,
-//   body,
-//   canvas,
-//   caption,
-//   center,
-//   cite,
-//   code,
-//   dd,
-//   del,
-//   details,
-//   dfn,
-//   div,
-//   dl,
-//   dt,
-//   em,
-//   embed,
-//   fieldset,
-//   figcaption,
-//   figure,
-//   footer,
-//   form,
-//   header,
-//   hgroup,
-//   html,
-//   i,
-//   input,
-//   iframe,
-//   img,
-//   ins,
-//   kbd,
-//   label,
-//   legend,
-//   li,
-//   mark,
-//   menu,
-//   main,
-//   nav,
-//   object,
-//   ol,
-//   output,
-//   option,
-//   p,
-//   pre,
-//   q,
-//   ruby,
-//   s,
-//   samp,
-//   section,
-//   small,
-//   span,
-//   strike,
-//   strong,
-//   sub,
-//   summary,
-//   select,
-//   sup,
-//   table,
-//   tbody,
-//   td,
-//   tfoot,
-//   th,
-//   thead,
-//   time,
-//   tr,
-//   tt,
-//   u,
-//   ul,
-//   var,
-//   video,
-//   h1, h2, h3, h4, h5, h6,
-//   button {
-//     color: $white;
-//   }
-// }
-
 .dark-mode {
   @include setBgColor($darkbg-2, $white);
   
@@ -235,7 +148,7 @@ $lightcolor: #cccccc;
   }
   
   .cardfavorite {
-    background: $white;
+    background: $darkbg-1;
   
     .favoritethumb {
       .timeduration {
@@ -260,16 +173,18 @@ $lightcolor: #cccccc;
       .favdropdown {
         .dropdownicon {
           background: transparent;
+
+          svg {
+            path {
+              stroke: $lightcolor;
+            }
+          }
         }
   
         &-info {
           .dropdownlist {      
             &-link {
               background: $white;
-        
-              .droplinkicon {
-                
-              }
         
               .droplinktext {
                 color: $dropdowntext;
@@ -297,7 +212,7 @@ $lightcolor: #cccccc;
         @include hover {
           .dropdownicon {
             @include breakpoint(tab992) {
-              background: $linkhoverbg;
+              background: $darkbg-2;
             }
           }
   
@@ -309,7 +224,7 @@ $lightcolor: #cccccc;
     }
   
     @include hover {
-      background: $favhoverbg;
+      background: lighten($darkbg-1, 20%);
     }
   }
   
@@ -374,20 +289,50 @@ $lightcolor: #cccccc;
     }
   }
   
-  .cardsubscribed {  
+  .cardsubscribed {
     &-body {  
       .detail {  
         .title {
-          color: $headingtext;
+          color: $white;
         }
   
         .info {
           .text {
-            color: $textprimary;
+            color: $lightcolor;
   
             strong {
-              color: $dropdowntext;
+              color: $lightcolor;
             }
+          }
+        }
+      }
+    }
+  }
+
+  .mobilesubscribedlist {
+    .mobilesubscribed {
+      background: $darkcardbg;
+  
+      .leftcontent {
+        .info {
+          .channelname {
+            color: $white;
+          }
+  
+          .subscriber {
+            color: $lightcolor;
+          }
+        }
+      }
+
+      .rightcontent {
+        .btn-mysubscribed {
+          @include setBgColor(lighten($darkbg-1, 25%), $white);
+          border-color: $darkcardbg;
+
+          @include hover {
+            background: $primary;
+            border-color: $primary;
           }
         }
       }
@@ -400,10 +345,6 @@ $lightcolor: #cccccc;
     .title {
       color: #170f49;
     }
-
-    .content {
-      
-    }
   }
   
   .support-cart {
@@ -411,9 +352,6 @@ $lightcolor: #cccccc;
 
     .support-title {
       color: $white;
-    }
-    .support-des {
-      
     }
 
     .support-donate-btn {
@@ -444,7 +382,10 @@ $lightcolor: #cccccc;
   .trending-title,
   .notificationtitle,
   .logtitle,
-  .publishertitle {
+  .publishertitle,
+  .subscribedchannel-title,
+  .favorites-title,
+  .deltitle {
     color: $white;
   }
 
@@ -1027,5 +968,484 @@ $lightcolor: #cccccc;
 
   .customcheck .checklabel {
     color: $lightcolor;
+  }
+
+  .notifications {
+    &-body {
+      .notification {
+        background: $darkcardbg;
+    
+        &-info {
+          .info {
+            .notifytitle {
+              color: $white;
+            }
+    
+            .notifytime {
+              color: $lightcolor;
+            }
+          }
+        }
+    
+        @include hover {
+          background: lighten($darkbg-1, 25%);
+        }
+      }
+    }
+  }
+
+  .searchresults {
+    &-header {
+      .btn-back {
+        svg {
+          path {
+            fill: $lightcolor;
+          }
+        }
+      }
+  
+      .searchbox {
+        background: $darkcardbg;
+        @include border(solid, 1, $searchborder);
+  
+        .searchfield {
+          color: $white;
+        }
+  
+        .btn-search {
+          svg {
+            path {
+              fill: $lightcolor;
+            }
+          }
+  
+          @include hover {
+            svg {
+              path {
+                fill: $primary;
+              }
+            }
+          }
+        }
+  
+        &:focus-within {
+          border-color: $primary;
+        }
+      }
+    }
+  
+    &-body {
+      .searchtitle {
+        color: $white;
+      }
+    }
+  }
+
+  .popularlist {
+    &-link {
+      @include setBgColor(lighten($darkbg-1, 25%), $white);
+  
+      @include hover {
+        @include setBgColor($primary, $white);
+      }
+    }
+  }
+
+  .salatreminder {
+    &-header {
+      background: $darkbg-2;
+  
+      .reminder-title {
+        color: $white;
+      }
+    }
+  
+    &-body {
+      .leftcontent {
+        .topinfo {
+          .datetitle {
+            color: $lightcolor;
+          }
+  
+          .date {
+            color: $lightcolor;
+          }
+  
+          .location {
+            .locicon {
+              svg {
+                path {
+                  stroke: $white;
+                }
+              }
+            }
+  
+            .locname {
+              color: $white;
+            }
+          }
+  
+          .btn-refresh {
+            svg {
+              path {
+                stroke: $white;
+              }
+            }
+  
+            @include hover {
+              svg {
+                path {
+                  stroke: $primary;
+                }
+              }
+            }
+          }
+        }
+  
+        .downinfo {
+          .salatremind {
+            background: $darkbg-1;
+  
+            .waqtname {
+              color: $white;
+            }
+  
+            .waqtduration {
+              color: $white;
+            }
+  
+            .upcomingprayer {
+              color: $lightcolor;
+            }
+  
+            .remaining {
+              &-title {
+                color: $white;
+              }
+  
+              .progress {
+                background: $darkbg-2;
+  
+                &-bar {
+                  background: $primary;
+                }
+              }
+            }
+  
+            .clock {
+              .divide {
+                color: $lightcolor;
+              }
+  
+              .hours,
+              .minutes,
+              .seconds {
+                .time {
+                  color: $white;
+                }
+  
+                .title {
+                  color: $lightcolor;
+                }
+              }
+            }
+          }
+  
+          .salatlist {
+            &-header {
+              .title {
+                color: $white;
+              }
+            }
+  
+            &-body {
+              .salatinfo {
+                .salatwaqt {
+                  .waqtname {
+                    color: $white;
+                  }
+  
+                  .waqtduration {
+                    color: $lightcolor;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .mobsaltreminder {
+    &-header {
+      .start-title {
+        color: $white;
+      }
+  
+      .location {
+        .locicon {
+          svg {
+            path {
+              stroke: $white;
+            }
+          }
+        }
+  
+        .locname {
+          color: $white;
+        }
+      }
+  
+      .btn-refresh {
+        svg {
+          path {
+            fill: $white;
+            stroke: none;
+          }
+        }
+
+        @include hover {
+          svg {
+            path {
+              fill: $primary;
+              stroke: none;
+            }
+          }
+        }
+      }
+  
+      .arbidate {
+        color: $lightcolor;
+      }
+  
+      .engdate {
+        color: $lightcolor;
+      }
+  
+      .remindbox {
+        .remindtitle {
+          color: $white;
+        }
+      }
+    }
+    
+    &-footer {
+      .waqtlist {
+        background: $darkcardbg;
+  
+        &-item {
+          background: $darkcardbg;
+          border-color: $lightcolor;
+  
+          .leftinfo {
+            .title {
+              color: $white;
+            }
+  
+            .timedurations {
+              color: $lightcolor;
+            }
+          }
+  
+          &.active {
+            background: $primarydark;
+            border-color: $primarydark;
+  
+            .leftinfo {
+              .title,
+              .timedurations {
+                color: $white;
+              }
+            }
+          }
+
+          &:last-of-type {
+            border-bottom: 0;
+          }
+        }
+      }
+  
+      .toggle-switch > :checked + label::before, :checked + .toggle-switch-label::before {
+        background: $primary;
+        border-color: $primary;
+      }
+      
+      .toggle-switch > :checked + label::after, :checked + .toggle-switch-label::after {
+        background: $primary;
+        border-color: $primary;
+      }
+    }
+  }
+
+  .deletebox {
+    &-body {
+      .btn-cancel {
+        @include setBgColor(transparent, $white);
+
+        @include hover {
+          color: $red;
+        }
+      }
+    }
+  }
+
+  .settingsection {
+    .settingdescription {
+      .nav-tabs {
+        border-color: $lightcolor;
+  
+        .nav-link {
+          color: $white;
+  
+          &.active {
+            background: $darkbg-1;
+            color: $white;
+            border-color: $primary;
+          }
+  
+          &:hover:not(.active) {
+            color: $lightcolor;
+          }
+        }
+      }
+  
+      .form-label {
+        color: $lightcolor;
+      }
+  
+      .form-control {
+        background: transparent;
+        color: $white;
+  
+        &::placeholder {
+          color: $textplaceholder;
+        }
+  
+        &:focus {
+          border-color: $primary;
+        }
+      }
+    }
+  
+    .deleteacc {
+      &-header {
+        .title {
+          color: $white;
+        }
+      }
+  
+      &-body {
+        .deleteinfo {
+          .text {
+            color: $lightcolor;
+          }
+        }
+      }
+    }
+  
+    .notificationlist {
+      .notificationsingle {
+        .leftinfo {
+          .title {
+            color: $white;
+          }
+  
+          .brows {
+            &-text {
+              color: $white;
+            }
+          }
+  
+          .text {
+            color: $lightcolor;
+          }
+        }
+      }
+    }
+  }
+
+  .privacysection {
+    &-body {
+      .privacytitle {
+        color: $white;
+      }
+  
+      .privacy {
+        &-header {
+          .title {
+            color: $white;
+          }
+        }
+  
+        &-body {
+          .privacytext {
+            color: $lightcolor;
+          }
+        }
+      }
+    }
+  }
+
+  .helpandfeedback {
+    &-body {
+      .helpandfeedbacktitle {
+        color: $white;
+      }
+    }
+  
+    .help {
+      &-header {
+        .helptitle {
+          color: $white;
+        }
+      }
+  
+      &-body {
+        .accordion {
+          &-button {
+            color: $lightcolor;
+  
+            &:not(.collapsed) {
+              @include setBgColor(transparent, $white);
+            }
+          }
+  
+          &-body {
+            .faqtext {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  
+    .feedback {
+      &-header {
+        .feedbacktitle {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .feedbackform {
+    .inputbox {
+      .inputlabel {
+        color: $lightcolor;
+      }
+  
+      .inputfield {
+        @include setBgColor(transparent, $white);
+  
+        &::placeholder {
+          color: $textplaceholder;
+        }
+  
+        &:focus {
+          border-color: $primary;
+        }
+      }
+    }
   }
 }

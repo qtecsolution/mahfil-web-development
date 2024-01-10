@@ -215,7 +215,7 @@
   color: #cccccc;
 }
 .dark-mode .cardfavorite {
-  background: hsl(0, 0%, 100%);
+  background: #191919;
 }
 .dark-mode .cardfavorite .favoritethumb .timeduration {
   background: hsl(0, 0%, 100%);
@@ -230,6 +230,9 @@
 }
 .dark-mode .cardfavorite-details .favdropdown .dropdownicon {
   background: transparent;
+}
+.dark-mode .cardfavorite-details .favdropdown .dropdownicon svg path {
+  stroke: #cccccc;
 }
 .dark-mode .cardfavorite-details .favdropdown-info .dropdownlist-link {
   background: hsl(0, 0%, 100%);
@@ -248,14 +251,14 @@
 }
 @media screen and (min-width: 62rem) {
   .dark-mode .cardfavorite-details .favdropdown:not([disabled]):hover .dropdownicon {
-    background: hsl(213, 39%, 95%);
+    background: #333333;
   }
 }
 .dark-mode .cardfavorite-details .favdropdown:not([disabled]):hover .favdropdown-info {
   display: block;
 }
 .dark-mode .cardfavorite:not([disabled]):hover {
-  background: hsl(214, 100%, 99%);
+  background: #4c4c4c;
 }
 .dark-mode .cardvid {
   background: hsl(0, 0%, 100%);
@@ -297,13 +300,31 @@
   background: hsl(214, 100%, 99%);
 }
 .dark-mode .cardsubscribed-body .detail .title {
-  color: hsl(216, 17%, 12%);
+  color: hsl(0, 0%, 100%);
 }
 .dark-mode .cardsubscribed-body .detail .info .text {
-  color: hsl(216, 15%, 52%);
+  color: #cccccc;
 }
 .dark-mode .cardsubscribed-body .detail .info .text strong {
-  color: hsl(218, 17%, 35%);
+  color: #cccccc;
+}
+.dark-mode .mobilesubscribedlist .mobilesubscribed {
+  background: #1D1E22;
+}
+.dark-mode .mobilesubscribedlist .mobilesubscribed .leftcontent .info .channelname {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .mobilesubscribedlist .mobilesubscribed .leftcontent .info .subscriber {
+  color: #cccccc;
+}
+.dark-mode .mobilesubscribedlist .mobilesubscribed .rightcontent .btn-mysubscribed {
+  background: #595959;
+  color: hsl(0, 0%, 100%);
+  border-color: #1D1E22;
+}
+.dark-mode .mobilesubscribedlist .mobilesubscribed .rightcontent .btn-mysubscribed:not([disabled]):hover {
+  background: hsl(211, 97%, 60%);
+  border-color: hsl(211, 97%, 60%);
 }
 .dark-mode .howdonationCard {
   border: solid 0.0625rem #d6eaff;
@@ -338,7 +359,10 @@
 .dark-mode .trending-title,
 .dark-mode .notificationtitle,
 .dark-mode .logtitle,
-.dark-mode .publishertitle {
+.dark-mode .publishertitle,
+.dark-mode .subscribedchannel-title,
+.dark-mode .favorites-title,
+.dark-mode .deltitle {
   color: hsl(0, 0%, 100%);
 }
 .dark-mode .homeslider .swiper-pagination .swiper-pagination-bullet {
@@ -688,4 +712,267 @@
 }
 .dark-mode .customcheck .checklabel {
   color: #cccccc;
+}
+.dark-mode .notifications-body .notification {
+  background: #1D1E22;
+}
+.dark-mode .notifications-body .notification-info .info .notifytitle {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .notifications-body .notification-info .info .notifytime {
+  color: #cccccc;
+}
+.dark-mode .notifications-body .notification:not([disabled]):hover {
+  background: #595959;
+}
+.dark-mode .searchresults-header .btn-back svg path {
+  fill: #cccccc;
+}
+.dark-mode .searchresults-header .searchbox {
+  background: #1D1E22;
+  border: solid 0.0625rem hsl(214, 32%, 91%);
+}
+.dark-mode .searchresults-header .searchbox .searchfield {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .searchresults-header .searchbox .btn-search svg path {
+  fill: #cccccc;
+}
+.dark-mode .searchresults-header .searchbox .btn-search:not([disabled]):hover svg path {
+  fill: hsl(211, 97%, 60%);
+}
+.dark-mode .searchresults-header .searchbox:focus-within {
+  border-color: hsl(211, 97%, 60%);
+}
+.dark-mode .searchresults-body .searchtitle {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .popularlist-link {
+  background: #595959;
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .popularlist-link:not([disabled]):hover {
+  background: hsl(211, 97%, 60%);
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .salatreminder-header {
+  background: #333333;
+}
+.dark-mode .salatreminder-header .reminder-title {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .salatreminder-body .leftcontent .topinfo .datetitle {
+  color: #cccccc;
+}
+.dark-mode .salatreminder-body .leftcontent .topinfo .date {
+  color: #cccccc;
+}
+.dark-mode .salatreminder-body .leftcontent .topinfo .location .locicon svg path {
+  stroke: hsl(0, 0%, 100%);
+}
+.dark-mode .salatreminder-body .leftcontent .topinfo .location .locname {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .salatreminder-body .leftcontent .topinfo .btn-refresh svg path {
+  stroke: hsl(0, 0%, 100%);
+}
+.dark-mode .salatreminder-body .leftcontent .topinfo .btn-refresh:not([disabled]):hover svg path {
+  stroke: hsl(211, 97%, 60%);
+}
+.dark-mode .salatreminder-body .leftcontent .downinfo .salatremind {
+  background: #191919;
+}
+.dark-mode .salatreminder-body .leftcontent .downinfo .salatremind .waqtname {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .salatreminder-body .leftcontent .downinfo .salatremind .waqtduration {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .salatreminder-body .leftcontent .downinfo .salatremind .upcomingprayer {
+  color: #cccccc;
+}
+.dark-mode .salatreminder-body .leftcontent .downinfo .salatremind .remaining-title {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .salatreminder-body .leftcontent .downinfo .salatremind .remaining .progress {
+  background: #333333;
+}
+.dark-mode .salatreminder-body .leftcontent .downinfo .salatremind .remaining .progress-bar {
+  background: hsl(211, 97%, 60%);
+}
+.dark-mode .salatreminder-body .leftcontent .downinfo .salatremind .clock .divide {
+  color: #cccccc;
+}
+.dark-mode .salatreminder-body .leftcontent .downinfo .salatremind .clock .hours .time,
+.dark-mode .salatreminder-body .leftcontent .downinfo .salatremind .clock .minutes .time,
+.dark-mode .salatreminder-body .leftcontent .downinfo .salatremind .clock .seconds .time {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .salatreminder-body .leftcontent .downinfo .salatremind .clock .hours .title,
+.dark-mode .salatreminder-body .leftcontent .downinfo .salatremind .clock .minutes .title,
+.dark-mode .salatreminder-body .leftcontent .downinfo .salatremind .clock .seconds .title {
+  color: #cccccc;
+}
+.dark-mode .salatreminder-body .leftcontent .downinfo .salatlist-header .title {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .salatreminder-body .leftcontent .downinfo .salatlist-body .salatinfo .salatwaqt .waqtname {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .salatreminder-body .leftcontent .downinfo .salatlist-body .salatinfo .salatwaqt .waqtduration {
+  color: #cccccc;
+}
+.dark-mode .mobsaltreminder-header .start-title {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .mobsaltreminder-header .location .locicon svg path {
+  stroke: hsl(0, 0%, 100%);
+}
+.dark-mode .mobsaltreminder-header .location .locname {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .mobsaltreminder-header .btn-refresh svg path {
+  fill: hsl(0, 0%, 100%);
+  stroke: none;
+}
+.dark-mode .mobsaltreminder-header .btn-refresh:not([disabled]):hover svg path {
+  fill: hsl(211, 97%, 60%);
+  stroke: none;
+}
+.dark-mode .mobsaltreminder-header .arbidate {
+  color: #cccccc;
+}
+.dark-mode .mobsaltreminder-header .engdate {
+  color: #cccccc;
+}
+.dark-mode .mobsaltreminder-header .remindbox .remindtitle {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .mobsaltreminder-footer .waqtlist {
+  background: #1D1E22;
+}
+.dark-mode .mobsaltreminder-footer .waqtlist-item {
+  background: #1D1E22;
+  border-color: #cccccc;
+}
+.dark-mode .mobsaltreminder-footer .waqtlist-item .leftinfo .title {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .mobsaltreminder-footer .waqtlist-item .leftinfo .timedurations {
+  color: #cccccc;
+}
+.dark-mode .mobsaltreminder-footer .waqtlist-item.active {
+  background: hsl(207, 100%, 28%);
+  border-color: hsl(207, 100%, 28%);
+}
+.dark-mode .mobsaltreminder-footer .waqtlist-item.active .leftinfo .title,
+.dark-mode .mobsaltreminder-footer .waqtlist-item.active .leftinfo .timedurations {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .mobsaltreminder-footer .waqtlist-item:last-of-type {
+  border-bottom: 0;
+}
+.dark-mode .mobsaltreminder-footer .toggle-switch > :checked + label::before, .dark-mode .mobsaltreminder-footer :checked + .toggle-switch-label::before {
+  background: hsl(211, 97%, 60%);
+  border-color: hsl(211, 97%, 60%);
+}
+.dark-mode .mobsaltreminder-footer .toggle-switch > :checked + label::after, .dark-mode .mobsaltreminder-footer :checked + .toggle-switch-label::after {
+  background: hsl(211, 97%, 60%);
+  border-color: hsl(211, 97%, 60%);
+}
+.dark-mode .deletebox-body .btn-cancel {
+  background: transparent;
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .deletebox-body .btn-cancel:not([disabled]):hover {
+  color: hsl(0, 100%, 63%);
+}
+.dark-mode .settingsection .settingdescription .nav-tabs {
+  border-color: #cccccc;
+}
+.dark-mode .settingsection .settingdescription .nav-tabs .nav-link {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .settingsection .settingdescription .nav-tabs .nav-link.active {
+  background: #191919;
+  color: hsl(0, 0%, 100%);
+  border-color: hsl(211, 97%, 60%);
+}
+.dark-mode .settingsection .settingdescription .nav-tabs .nav-link:hover:not(.active) {
+  color: #cccccc;
+}
+.dark-mode .settingsection .settingdescription .form-label {
+  color: #cccccc;
+}
+.dark-mode .settingsection .settingdescription .form-control {
+  background: transparent;
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .settingsection .settingdescription .form-control::-moz-placeholder {
+  color: hsl(240, 6%, 73%);
+}
+.dark-mode .settingsection .settingdescription .form-control::placeholder {
+  color: hsl(240, 6%, 73%);
+}
+.dark-mode .settingsection .settingdescription .form-control:focus {
+  border-color: hsl(211, 97%, 60%);
+}
+.dark-mode .settingsection .deleteacc-header .title {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .settingsection .deleteacc-body .deleteinfo .text {
+  color: #cccccc;
+}
+.dark-mode .settingsection .notificationlist .notificationsingle .leftinfo .title {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .settingsection .notificationlist .notificationsingle .leftinfo .brows-text {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .settingsection .notificationlist .notificationsingle .leftinfo .text {
+  color: #cccccc;
+}
+.dark-mode .privacysection-body .privacytitle {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .privacysection-body .privacy-header .title {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .privacysection-body .privacy-body .privacytext {
+  color: #cccccc;
+}
+.dark-mode .helpandfeedback-body .helpandfeedbacktitle {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .helpandfeedback .help-header .helptitle {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .helpandfeedback .help-body .accordion-button {
+  color: #cccccc;
+}
+.dark-mode .helpandfeedback .help-body .accordion-button:not(.collapsed) {
+  background: transparent;
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .helpandfeedback .help-body .accordion-body .faqtext {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .helpandfeedback .feedback-header .feedbacktitle {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .feedbackform .inputbox .inputlabel {
+  color: #cccccc;
+}
+.dark-mode .feedbackform .inputbox .inputfield {
+  background: transparent;
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .feedbackform .inputbox .inputfield::-moz-placeholder {
+  color: hsl(240, 6%, 73%);
+}
+.dark-mode .feedbackform .inputbox .inputfield::placeholder {
+  color: hsl(240, 6%, 73%);
+}
+.dark-mode .feedbackform .inputbox .inputfield:focus {
+  border-color: hsl(211, 97%, 60%);
 }

@@ -2452,6 +2452,7 @@ input[type=search]::-webkit-search-results-decoration:focus {
 .deletemodal .deletebox-body {
   display: flex;
   justify-content: flex-end;
+  gap: 0.75rem;
 }
 .deletemodal .deletebox-body button {
   border-radius: 0.375rem;
@@ -5069,7 +5070,7 @@ input:checked + .slider:before {
 .helpandfeedback .help-body .accordion {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0rem;
 }
 .helpandfeedback .help-body .accordion-item {
   background: transparent;

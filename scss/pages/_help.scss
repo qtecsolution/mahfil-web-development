@@ -43,7 +43,7 @@
     &-body {
       .accordion {
         @include flex-column;
-        gap: size(8);
+        gap: size(0);
 
         &-item {
           background: transparent;

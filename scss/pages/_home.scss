@@ -228,6 +228,7 @@
 
   &-header {
     @include flex;
+    justify-content: center;
     gap: size(40);
     padding: size(16) size(16) size(20) size(48);
 

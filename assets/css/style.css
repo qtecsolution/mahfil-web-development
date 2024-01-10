@@ -3618,6 +3618,7 @@ input:checked + .slider:before {
 }
 .prayer-reminder-header {
   display: flex;
+  justify-content: center;
   gap: 2.5rem;
   padding: 1rem 1rem 1.25rem 3rem;
 }

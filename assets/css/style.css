@@ -2018,7 +2018,6 @@ button:focus,
   }
 }
 .header-nav {
-  background: inherit;
   border-bottom: 0;
   padding: 1.125rem 0 1.25rem;
   display: flex;
@@ -2027,6 +2026,7 @@ button:focus,
 }
 @media screen and (min-width: 62rem) {
   .header-nav {
+    background: inherit;
     border-bottom: solid 0.0625rem hsl(214, 17%, 92%);
   }
 }
@@ -3417,7 +3417,6 @@ input:checked + .slider:before {
 @media screen and (min-width: 36rem) {
   .homevideos .cardvideo {
     width: calc(50% - 0.875rem);
-    flex: 1 0 auto;
   }
 }
 @media screen and (min-width: 75rem) {
@@ -3432,6 +3431,7 @@ input:checked + .slider:before {
 }
 @media screen and (min-width: 118.75rem) {
   .homevideos .cardvideo {
+    flex: 1 0 auto;
     width: calc(20% - 0.875rem);
   }
 }

@@ -13,14 +13,15 @@
   @include breakpoint(tab992) {
     width: calc(100% - size(244));
     margin-left: auto;
-    padding-inline: size(40);
-    height: size(80);
+    padding-left: size(20);
+    padding-right: size(40);
     border-bottom: 0;
   }
 
   &-nav {
+    background: inherit;
     border-bottom: 0;
-    padding: size(17) 0;
+    padding: size(18) 0 size(20);
     @include flex-center-between;
 
     @include breakpoint(tab992) {
@@ -41,7 +42,7 @@
         }
 
         @include breakpoint(desktop1600) {
-          min-width: size(740);
+          min-width: size(735);
         }
       }
     }

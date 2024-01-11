@@ -13,7 +13,7 @@
     .video-thumbnail {
       @include flex-center;
       @include w100;
-      // height: size(175.5);
+      // height: size(176);
       overflow: hidden;
       position: relative;
 
@@ -75,11 +75,12 @@
         cursor: pointer;
         font-size: size(16);
         font-weight: 500;
-        @include line-clamp;
         padding-top: size(4);
-        min-height: size(40);
-        max-height: size(40);
+        padding-bottom: size(4);
+        @include line-clamp;
         @include transitionscolor;
+        min-height: size(38.4);
+        max-height: size(42.4);
 
         @include hover {
           color: $primary;
@@ -243,14 +244,10 @@
       .title {
         font-size: size(13);
         font-weight: 600;
-        min-height: size(31);
-        max-height: size(31);
-        @include line-clamp;
+        @include text-overflow;
 
         @include breakpoint(mobile768) {
           font-size: size(16);
-          min-height: size(38.4);
-          max-height: size(38.4);
         }
       }
 
@@ -291,21 +288,18 @@
   }
 
   .favoritethumb {
-    width: size(151);
+    width: size(191);
     @include flex-center;
     overflow: hidden;
     position: relative;
-
-    @include breakpoint(mobile576) {
-      width: size(191);
-    }
 
     @include breakpoint(tab992) {
       @include radius(10);
     }
 
     img {
-      @include wh100;
+      @include w100;
+      max-width: 100%;
       object-fit: fill;
 
       @include breakpoint(tab992) {
@@ -328,14 +322,10 @@
 
   &-details {
     @include flex-center-between;
-    width: calc(100% - size(151));
+    width: calc(100% - size(191));
     gap: size(8);
     overflow: hidden;
     padding: size(4) size(14) size(8);
-
-    @include breakpoint(mobile576) {
-      width: calc(100% - size(191));
-    }
 
     .describe {
       width: calc(100% - size(40));
@@ -347,8 +337,11 @@
         font-size: size(16);
         font-weight: 500;
         padding-top: size(4);
+        padding-bottom: size(4);
         @include line-clamp;
         @include transitionscolor;
+        min-height: size(38.4);
+        max-height: size(52);
 
         @include hover {
           color: $primary;
@@ -376,7 +369,7 @@
       position: relative;
       @include square(32);
       cursor: pointer;
-      margin-top: size(-16);
+      margin-top: size(-32);
       z-index: 500;
 
       @include breakpoint(tab992) {
@@ -521,25 +514,25 @@
       width: calc(100% - size(191));
     }
 
+    .channelthumb {
+      width: size(40);
+    }
+
     .describe {
-      width: calc(100% - size(48));
+      // width: calc(100% - size(48));
       @include flex-column;
       gap: size(4);
 
       .videotitle {
         cursor: pointer;
-        font-size: size(14);
+        font-size: size(16);
         font-weight: 500;
         @include line-clamp;
-        min-height: 2rem;
-        max-height: 2rem;
+        padding-top: size(4);
         @include transitionscolor;
-        
-        @include breakpoint(desktop1400) {
-          font-size: size(16);
-          min-height: 2.25rem;
-          max-height: 2.25rem;
-        }
+        min-height: size(38.4);
+        max-height: size(52);
+        // max-height: size(40.4);
 
         @include hover {
           color: $primary;
@@ -582,7 +575,6 @@
     cursor: pointer;
     width: size(48);
     @include h100;
-    // min-height: size(120);
     @include flex-center;
     position: absolute;
     top: 0;

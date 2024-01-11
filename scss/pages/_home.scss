@@ -12,6 +12,7 @@
 
     @include breakpoint(mobile576) {
       width: calc((100% / 2) - size(14));
+      flex: 1 0 auto;
     }
 
     @include breakpoint(desktop1200) {

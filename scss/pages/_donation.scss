@@ -4,9 +4,11 @@
 .donation-hero {
   background: $donateherobg;
   padding: size(80) size(0);
+  
   @include breakpoint(tab992) {
     padding: size(120) size(0);
   }
+
   position: relative;
   .hero-left {
     @include flex-column;
@@ -145,6 +147,7 @@
     }
   }
 }
+
 .donate {
   .left-content {
     @include flex-column;
@@ -155,6 +158,7 @@
     }
     p {
       color: #191d23;
+      text-align: left;
       @include font($primaryFont, 16, normal, normal, 20);
       @include breakpoint(mobile576) {
         @include font($primaryFont, 18, normal, normal, 20);
@@ -387,9 +391,14 @@
   @include border(solid, 1, #e7eaee);
   @include radius(24);
   padding: size(18);
+
   @include breakpoint(mobile576) {
     padding: size(32) size(46);
     @include radius(34);
+  }
+  
+  @include breakpoint(tab992) {
+    padding-inline: size(20);
   }
 
   .next-prev {
@@ -583,6 +592,7 @@
     }
   }
 }
+
 .step-section {
   @include flex;
   gap: size(18);
@@ -599,6 +609,7 @@
     border-radius: 40px;
   }
 }
+
 .step {
   @include flex;
   align-items: center;

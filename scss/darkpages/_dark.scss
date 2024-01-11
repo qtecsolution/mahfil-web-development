@@ -5,6 +5,7 @@ $darkbg-1: #191919;
 $darkbg-2: #333333;
 $darkcardbg: #1D1E22;
 $lightcolor: #cccccc;
+$titlecolor: #002f56;
 
 .dark-mode {
   @include setBgColor($darkbg-2, $white);
@@ -340,10 +341,10 @@ $lightcolor: #cccccc;
   }
   
   .howdonationCard {
-    @include border(solid, 1, #d6eaff);
+    border-color: $lightcolor;
     
     .title {
-      color: #170f49;
+      color: $white;
     }
   }
   
@@ -385,7 +386,9 @@ $lightcolor: #cccccc;
   .publishertitle,
   .subscribedchannel-title,
   .favorites-title,
-  .deltitle {
+  .deltitle,
+  .themetitle,
+  .modetitle {
     color: $white;
   }
 
@@ -1448,4 +1451,253 @@ $lightcolor: #cccccc;
       }
     }
   }
+
+  .donation-hero {
+    background: lighten($darkbg-2, 20%);
+    
+    .hero-left {
+      .welcome {
+        color: $white;
+      }
+
+      .hero-heading {
+        color: $titlecolor;
+      }
+
+      .hero-des {
+        color: $lightcolor;
+      }
+    }
+  }
+  
+  .howdonation { 
+    .howdonation-top {
+      .howdonation-title {
+        color: $white;
+      }
+      
+      .howdonation-des {
+        color: $lightcolor;
+      }
+    }
+  }
+  
+  .donate {
+    .left-content {
+      p {
+        color: $lightcolor;
+      }
+
+      h1 {
+        color: $white;
+      }
+    }
+
+    .cards {
+      .donation-card {
+        @include border(solid, 1, $menudivider);
+        
+        label {
+          
+          h5 {
+            color: $primarydark;
+          }
+        }
+  
+        input[type="radio"] {
+          background-color: white;
+
+          &::before {
+            background-color: #f9fafd;
+            border: 1px solid #e2e6f3;
+          }
+
+          &:checked {
+            border: 2px solid $primarydark;
+
+            &::after {
+              background: $primarydark;
+            }
+          }
+        }
+      }
+    }
+
+    .currency {
+      @include border(solid, 1, $menudivider);
+      
+      .currency-dropdown {
+        border-right: 1px solid $menudivider;
+
+        select {
+          color: #170f49;
+        }
+      }
+    }
+  
+    .form-step-top {
+      .title {
+        color: #004d8d;
+      }
+
+      .value {
+        color: #170f49;
+      }
+    }
+
+    .input-group {
+      label {
+        color: #6f6c90;
+      }
+
+      textarea {
+        @include border(solid, 1, $menudivider);
+      }
+    }
+
+    .radio-group {
+      .select-text {
+        color: #6f6c90;
+        font: 16px normal $primaryFont;
+  
+        span {
+          color: #004d8d;
+          font-weight: 600;
+        }
+      }
+  
+      .single-payment {
+        label {
+          border: 1px solid $menudivider;
+        }
+  
+        input[type="radio"]:checked + label {
+          border: 2px solid $primarydark;
+        }
+      }
+    }
+
+    .donation-status {
+      .title {
+        color: #170f49;
+      }
+
+      .text {
+        color: var(--neutral-600, #6f6c90);
+      }
+    }
+
+    .support {
+      color: #141b34;
+    }
+  }
+  
+  .donate .multistep-form {
+    @include border(solid, 1, #e7eaee);
+  
+    .next-prev {
+      .prev-step {
+        @include border(solid, 1, $primarydark);
+        color: $primarydark;
+
+        @include hover {
+          background: $primarydark;
+          color: $white;
+        }
+      }
+      
+      .next-step {
+        background-color: $primarydark;
+        color: $white;
+        @include border(solid, 1, $primarydark);
+
+        @include hover {
+          @include setBgColor($white, $primarydark);
+        }
+      }
+    }
+  }
+  
+  .faq {
+    .left-content {
+      h1 {
+        color: #1a191e;
+      }
+
+      p {
+        color: #004d8d;
+      }
+    }
+    
+    #faqAccordion {
+      .accordion-item {
+        .accordion-header {
+          cursor: pointer;
+          button {
+            color: #1a191e;
+          }
+  
+          &.collapsed {
+            background-color: #ddd;
+          }
+        }
+      }
+    }
+  }
+  
+  .footer {
+    &::after {
+      background-color: #e7eaee;
+    }
+
+    .footer-content {
+      p {
+        color: #718096;
+      }
+    }
+  }
+  
+  .step-section {
+    &::after {
+      background-color: #e7eaee;
+    }
+  }
+  
+  .step {
+    &.active {
+      .number {
+        background: #004d8d;
+        color: $white;
+      }
+      
+      .line {
+        &::after {
+          background-color: #004d8d;
+        }
+      }
+    }
+
+    &.completed {
+      .number {
+        background: #004d8d;
+        color: $white;
+      }
+
+      .line {
+        &::after {
+          background-color: #004d8d;
+          width: 100%;
+        }
+      }
+    }
+
+    .number {
+      background: #eff0f6;
+      color: #6f6c90;
+    }
+
+    .line {
+      background: #eff0f6;
+    }
+  }  
 }

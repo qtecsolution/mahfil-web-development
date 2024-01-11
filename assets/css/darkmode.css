@@ -327,10 +327,10 @@
   border-color: hsl(211, 97%, 60%);
 }
 .dark-mode .howdonationCard {
-  border: solid 0.0625rem #d6eaff;
+  border-color: #cccccc;
 }
 .dark-mode .howdonationCard .title {
-  color: #170f49;
+  color: hsl(0, 0%, 100%);
 }
 .dark-mode .support-cart {
   background-color: #4fa5ff;
@@ -362,7 +362,9 @@
 .dark-mode .publishertitle,
 .dark-mode .subscribedchannel-title,
 .dark-mode .favorites-title,
-.dark-mode .deltitle {
+.dark-mode .deltitle,
+.dark-mode .themetitle,
+.dark-mode .modetitle {
   color: hsl(0, 0%, 100%);
 }
 .dark-mode .homeslider .swiper-pagination .swiper-pagination-bullet {
@@ -975,4 +977,157 @@
 }
 .dark-mode .feedbackform .inputbox .inputfield:focus {
   border-color: hsl(211, 97%, 60%);
+}
+.dark-mode .donation-hero {
+  background: #666666;
+}
+.dark-mode .donation-hero .hero-left .welcome {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .donation-hero .hero-left .hero-heading {
+  color: #002f56;
+}
+.dark-mode .donation-hero .hero-left .hero-des {
+  color: #cccccc;
+}
+.dark-mode .howdonation .howdonation-top .howdonation-title {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .howdonation .howdonation-top .howdonation-des {
+  color: #cccccc;
+}
+.dark-mode .donate .left-content p {
+  color: #cccccc;
+}
+.dark-mode .donate .left-content h1 {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .donate .cards .donation-card {
+  border: solid 0.0625rem hsl(214, 17%, 92%);
+}
+.dark-mode .donate .cards .donation-card label h5 {
+  color: hsl(207, 100%, 28%);
+}
+.dark-mode .donate .cards .donation-card input[type=radio] {
+  background-color: white;
+}
+.dark-mode .donate .cards .donation-card input[type=radio]::before {
+  background-color: #f9fafd;
+  border: 1px solid #e2e6f3;
+}
+.dark-mode .donate .cards .donation-card input[type=radio]:checked {
+  border: 2px solid hsl(207, 100%, 28%);
+}
+.dark-mode .donate .cards .donation-card input[type=radio]:checked::after {
+  background: hsl(207, 100%, 28%);
+}
+.dark-mode .donate .currency {
+  border: solid 0.0625rem hsl(214, 17%, 92%);
+}
+.dark-mode .donate .currency .currency-dropdown {
+  border-right: 1px solid hsl(214, 17%, 92%);
+}
+.dark-mode .donate .currency .currency-dropdown select {
+  color: #170f49;
+}
+.dark-mode .donate .form-step-top .title {
+  color: #004d8d;
+}
+.dark-mode .donate .form-step-top .value {
+  color: #170f49;
+}
+.dark-mode .donate .input-group label {
+  color: #6f6c90;
+}
+.dark-mode .donate .input-group textarea {
+  border: solid 0.0625rem hsl(214, 17%, 92%);
+}
+.dark-mode .donate .radio-group .select-text {
+  color: #6f6c90;
+  font: 16px normal "Hind Siliguri", sans-serif;
+}
+.dark-mode .donate .radio-group .select-text span {
+  color: #004d8d;
+  font-weight: 600;
+}
+.dark-mode .donate .radio-group .single-payment label {
+  border: 1px solid hsl(214, 17%, 92%);
+}
+.dark-mode .donate .radio-group .single-payment input[type=radio]:checked + label {
+  border: 2px solid hsl(207, 100%, 28%);
+}
+.dark-mode .donate .donation-status .title {
+  color: #170f49;
+}
+.dark-mode .donate .donation-status .text {
+  color: var(--neutral-600, #6f6c90);
+}
+.dark-mode .donate .support {
+  color: #141b34;
+}
+.dark-mode .donate .multistep-form {
+  border: solid 0.0625rem #e7eaee;
+}
+.dark-mode .donate .multistep-form .next-prev .prev-step {
+  border: solid 0.0625rem hsl(207, 100%, 28%);
+  color: hsl(207, 100%, 28%);
+}
+.dark-mode .donate .multistep-form .next-prev .prev-step:not([disabled]):hover {
+  background: hsl(207, 100%, 28%);
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .donate .multistep-form .next-prev .next-step {
+  background-color: hsl(207, 100%, 28%);
+  color: hsl(0, 0%, 100%);
+  border: solid 0.0625rem hsl(207, 100%, 28%);
+}
+.dark-mode .donate .multistep-form .next-prev .next-step:not([disabled]):hover {
+  background: hsl(0, 0%, 100%);
+  color: hsl(207, 100%, 28%);
+}
+.dark-mode .faq .left-content h1 {
+  color: #1a191e;
+}
+.dark-mode .faq .left-content p {
+  color: #004d8d;
+}
+.dark-mode .faq #faqAccordion .accordion-item .accordion-header {
+  cursor: pointer;
+}
+.dark-mode .faq #faqAccordion .accordion-item .accordion-header button {
+  color: #1a191e;
+}
+.dark-mode .faq #faqAccordion .accordion-item .accordion-header.collapsed {
+  background-color: #ddd;
+}
+.dark-mode .footer::after {
+  background-color: #e7eaee;
+}
+.dark-mode .footer .footer-content p {
+  color: #718096;
+}
+.dark-mode .step-section::after {
+  background-color: #e7eaee;
+}
+.dark-mode .step.active .number {
+  background: #004d8d;
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .step.active .line::after {
+  background-color: #004d8d;
+}
+.dark-mode .step.completed .number {
+  background: #004d8d;
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .step.completed .line::after {
+  background-color: #004d8d;
+  width: 100%;
+}
+.dark-mode .step .number {
+  background: #eff0f6;
+  color: #6f6c90;
+}
+.dark-mode .step .line {
+  background: #eff0f6;
 }

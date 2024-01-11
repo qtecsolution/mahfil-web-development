@@ -46,7 +46,7 @@ button,
   @include transitionsbackground;
 
   .icon {
-    @include square(17);
+    @include square(16);
     @include circle;
     @include flex-center;
     overflow: hidden;
@@ -70,7 +70,7 @@ button,
   @include radius(6);
   gap: size(4);
   @include transitionsbackground;
-  height: size(40);
+  height: size(28);
   padding-inline: size(12);
 
   @include breakpoint(mobile768) {
@@ -79,6 +79,7 @@ button,
 
   @include breakpoint(tab992) {
     padding-inline: size(24);
+    height: size(40);
   }
 
   .icon {
@@ -127,7 +128,7 @@ button,
   @include radius(6);
   @include flex-center;
   gap: size(4);
-  height: size(40);
+  height: size(28);
   padding-inline: size(12);
 
   @include breakpoint(mobile768) {
@@ -136,6 +137,7 @@ button,
 
   @include breakpoint(tab992) {
     padding-inline: size(24);
+    height: size(40);
   }
 
   .icon {
@@ -179,11 +181,15 @@ button,
   font-weight: 600;
   @include flex-center;
   gap: size(4);
-  height: size(40);
+  height: size(28);
   padding-inline: size(12);
 
   @include breakpoint(mobile768) {
     padding-inline: size(16);
+  }
+
+  @include breakpoint(tab992) {
+    height: size(40);
   }
 
   @include breakpoint(desktop1400) {

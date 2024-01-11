@@ -10,7 +10,7 @@
     @include radius(10);
     @include flex-center-vert;
     gap: size(12);
-    padding: size(12);
+    padding: size(8) size(10);
     @include w100;
 
     .icon {

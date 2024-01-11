@@ -93,9 +93,11 @@
 @mixin text-overflow {
   max-width: 99%;
   width: 99%;
-  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
 }
 
 @mixin w100 {

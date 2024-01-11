@@ -6,12 +6,17 @@
   @include border(solid, 1, $searchborder);
   @include radius(10);
   @include flex-center-vert;
-  padding: size(8) size(16);
+  gap: size(10);
+  padding: size(10) size(16.34) size(12) size(16);
+  // padding: size(8) size(16);
   @include transitionsall;
 
   .searchfield {
     @include setBgColor(transparent, $headingtext);
-    width: calc(100% - size(24));
+    font-size: size(17);
+    line-height: .9375;
+    width: calc(100% - size(34));
+    height: size(16);
 
     &::placeholder {
       color: $textplaceholder;

@@ -120,7 +120,7 @@
   @include breakpoint(mobile768) {
     @include w100;
     max-width: size(164);
-    height: size(274);
+    min-height: size(274);
   }
 
   @include breakpoint(tab992) {

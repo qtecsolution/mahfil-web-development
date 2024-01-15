@@ -229,7 +229,7 @@
   }
 
   &-link {
-    @include flex;
+    @include flex-center-vert;
     gap: size(12);
     @include radius(6);
     padding: size(10);

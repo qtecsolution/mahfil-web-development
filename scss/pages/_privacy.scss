@@ -56,3 +56,33 @@
     }
   }
 }
+
+.c4 {
+  color: $textprimary;
+  font-family: $primaryFont !important;
+  font-size: 0.875rem !important;
+}
+
+.c7.title {
+  border-color: $menudivider !important;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.c6 {
+  color: $headingtext;
+  font-family: $primaryFont !important;
+  font-size: 1.5rem !important;
+  font-weight: 600;
+}
+
+.c3 {
+  font-family: $primaryFont !important;
+  font-size: 1.25rem !important;
+}
+
+.c1 {
+  font-family: $primaryFont !important;
+  font-size: 1.125rem !important;
+  margin-bottom: .5rem;
+}

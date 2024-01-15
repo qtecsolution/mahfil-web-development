@@ -140,6 +140,7 @@
       @include radius(10);
       box-shadow: $dropdownshadow;
       @include list-vertical;
+      gap: size(0);
       width: size(180);
       min-height: size(110);
       overflow: hidden;
@@ -397,6 +398,7 @@
         .dropdownlist {
           box-shadow: none;
           @include list-vertical;
+          gap: size(0);
           border: none;
           width: size(224);
           @include radius(0);
@@ -612,6 +614,7 @@
     @include radius(10);
     box-shadow: $dropdownshadow;
     @include list-vertical;
+    gap: size(0);
     width: size(200);
     overflow: hidden;
 

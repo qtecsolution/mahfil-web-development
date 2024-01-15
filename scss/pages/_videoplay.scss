@@ -413,49 +413,6 @@
             @include circle;
           }
 
-          .replydropdown {
-            position: absolute;
-            top: 100%;
-            right: size(0);
-            padding-top: size(8);
-            display: none;
-            @extend %animation;
-            @extend %slideUpIn;
-
-            .replylist {
-              background: $white;
-              @include border(solid, 1, $menudivider);
-              @include radius(10);
-              box-shadow: $dropdownshadow;
-              @include list-vertical;
-              overflow: hidden;
-
-              &-link {
-                background: $white;
-                @include flex-center-vert;
-                gap: size(10);
-                padding: size(8) size(16);
-                @include w100;
-                @include transitionsbackground;
-
-                .icon {
-                  @include square(16);
-                  @include flex-center;
-                  overflow: hidden;
-                }
-
-                .text {
-                  color: $dropdowntext;
-                  font-size: size(15);
-                }
-
-                @include hover {
-                  background: $linkhoverbg;
-                }
-              }
-            }
-          }
-
           @include hover {
             .btn-dropdown {
               background: $linkhoverbg;
@@ -467,6 +424,75 @@
           }
         }
       }
+    }
+  }
+}
+
+.replydropdown {
+  position: absolute;
+  top: 100%;
+  right: size(0);
+  padding-top: size(8);
+  display: none;
+  @extend %animation;
+  @extend %slideUpIn;
+}
+
+.replylist {
+  background: $white;
+  @include border(solid, 1, $menudivider);
+  @include radius(10);
+  box-shadow: $dropdownshadow;
+  @include list-vertical;
+  overflow: hidden;
+
+  &-link {
+    background: $white;
+    @include flex-center-vert;
+    gap: size(10);
+    padding: size(8) size(16);
+    @include w100;
+    @include transitionsbackground;
+
+    .icon {
+      @include square(16);
+      @include flex-center;
+      overflow: hidden;
+    }
+
+    .text {
+      color: $dropdowntext;
+      font-size: size(15);
+    }
+
+    @include hover {
+      background: $linkhoverbg;
+    }
+  }
+}
+
+.dropdown-menu {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  border: 0;
+}
+
+.dropdownlist {
+  @include list-vertical;
+  gap: size(6);
+
+  &-link {
+    @include setBgColor($white, $labeltext);
+    @include flex-center-vert;
+    font-size: size(14);
+    font-weight: 500;
+    @include w100;
+    padding: size(10);
+    @include transitionsall;
+
+    @include hover {
+      @include setBgColor($iconbg, $labeltext);
     }
   }
 }
@@ -758,25 +784,6 @@
             @extend %animation;
             @extend %slideUpIn;
             z-index: 500;
-          }
-
-          .dropdownlist {
-            @include list-vertical;
-            gap: size(6);
-
-            &-link {
-              @include setBgColor($white, $labeltext);
-              @include flex-center-vert;
-              font-size: size(14);
-              font-weight: 500;
-              @include w100;
-              padding: size(10);
-              @include transitionsall;
-
-              @include hover {
-                @include setBgColor($iconbg, $labeltext);
-              }
-            }
           }
 
           @include hover {

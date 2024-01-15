@@ -55,32 +55,6 @@ $titlecolor: #002f56;
         }
       }
   
-      .dropdownlist {
-        background: $darkbg-2;
-        border-color: $darkbg-2;
-        box-shadow: $dropdownshadow;
-  
-        &-link {
-          background: $darkbg-1;
-  
-          .droplinkicon {
-            svg {
-              path {
-                fill: $white;
-              }
-            }
-          }
-  
-          .droplinktext {
-            color: $white;
-          }
-  
-          @include hover {
-            background: lighten($darkbg-1, 25%);
-          }
-        }
-      }
-  
       .dropdownicon {
         background: transparent;
   
@@ -130,6 +104,14 @@ $titlecolor: #002f56;
           }
         }
       }
+    }
+  }
+
+  .btn-cancel {
+    color: $lightcolor;
+
+    &:hover {
+      color: $danger;
     }
   }
   
@@ -230,7 +212,7 @@ $titlecolor: #002f56;
   }
   
   .cardvid {
-    background: $white;
+    background: $darkbg-1;
   
     .videothumb {
       .timeduration {
@@ -257,7 +239,7 @@ $titlecolor: #002f56;
       @include hover {  
         .dropdownicon {
           @include breakpoint(tab992) {
-            background: $linkhoverbg;
+            background: lighten($darkbg-1, 20%);
           }
         }
       }
@@ -265,28 +247,48 @@ $titlecolor: #002f56;
   
     .dropdownicon {
       background: transparent;
+
+      svg {
+        path {
+          stroke: $white;
+        }
+      }
     }
   
     .dropdownlist {
-      background: $white;
-      @include border(solid, 1, $menudivider);
+      gap: 0;
+      background: $darkbg-2;
+      border-color: $darkbg-2;
       box-shadow: $dropdownshadow;
   
       &-link {
-        background: $white;
+        background: $darkbg-1;
+        
+        .droplinkicon {
+          svg {
+            path {
+              fill: $white;
+            }
+          }
+        }
   
         .droplinktext {
-          color: $dropdowntext;
+          color: $white;
         }
   
         @include hover {
-          background: $linkhoverbg;
+          background: lighten($darkbg-1, 25%);
+
         }
       }
     }
   
     @include hover {
-      background: $favhoverbg;
+      background: transparent;
+
+      .dropdownicon {
+        background: $darkbg-1;
+      }
     }
   }
   
@@ -392,8 +394,417 @@ $titlecolor: #002f56;
   .favorites-title,
   .deltitle,
   .themetitle,
-  .modetitle {
+  .modetitle,
+  .videotitle,
+  .username,
+  .channelname,
+  .report-title,
+  .popularsearch-title {
     color: $white;
+  }
+
+  .popularsearch {
+    &-body {
+      .btn-searchtag {
+        @include setBgColor($darkbg-1, $white);
+        border-color: $darkbg-1;
+    
+        &:hover:not(.active) {
+          background: $primary !important;
+          color: $white !important;
+          border-color: $primary !important;
+        }
+    
+        &.active {
+          @include setBgColor($primary, $white);
+          border-color: $primary;
+        }
+      }
+    }
+  }
+
+  .videoschannels {
+    .nav-tabs {
+      border-color: $lightcolor;
+
+      .nav-link {
+        color: $lightcolor;
+
+        &:hover:not(.active) {
+          color: $primary;
+        }
+
+        &.active {
+          @include setBgColor($darkbg-1, $white);
+        }
+      }
+    }
+  }
+
+  .videoplay .videoheader .details .info .text,
+  .videoplay .videoheader .details .info .time,
+  .desktopsubscribe-left .subscribinfo .info .text,
+  .videoplay .comments-body .myreplybox-left .myreplydetails .topinfo .textcomment,
+  .videoplay .comments-body .commenterbox-left .commenterdetails .topinfo .textcomment,
+  .videoplay .comments-body .commenterbox-left .commenterdetails .topinfo .user .time {
+    color: $lightcolor !important;
+  }
+
+  .desktopsubscribe-left .subscribinfo .info .channelname,
+  .videoplay .comments-body .commenterbox-left .commenterdetails .topinfo .user .username,
+  .videoplay .comments-body .commenterbox-left .commenterdetails .commentlist .btnlike .text {
+    color: $white !important;
+  }
+
+  .time,
+  .text {
+    color: $lightcolor;
+  }
+
+  .seemore {
+    color: $lightcolor;
+  }
+
+  .btn-action {
+    .icon {
+      svg {
+        path {
+          fill: $lightcolor;
+        }
+      }
+    }
+  }
+
+  .modal-header h4 {
+    color: $white;
+  }
+
+  .btn-action.morebtn {
+    .icon {
+      svg {
+        path {
+          stroke: $lightcolor;
+        }
+      }
+    }
+  }
+
+  .videoplay {
+    .comments {
+      &-header {
+        .commenttitle {
+          color: $white;
+        }
+      }
+  
+      &-body {
+        .commentbox {
+          .commentinput {
+            .commentfield {
+              @include setBgColor(transparent, $white);
+            }
+          }
+        }
+  
+        .commenterbox {
+          @include border-single(bottom, solid, 1, $menudivider);
+          font-size: size(14);
+          @include flex;
+          gap: size(10);
+          padding-bottom: size(24);
+  
+          &-left {
+            width: calc(100% - size(96));
+            @include flex;
+            gap: size(16);
+  
+            .replyer {
+              @include square(40);
+              @include circle;
+              @include flex-center;
+              overflow: hidden;
+            }
+  
+            .commenterdetails {
+              width: calc(100% - size(56));
+              @include flex-column;
+              gap: size(10);
+  
+              .topinfo {
+                @include flex-column;
+                gap: size(10);
+  
+                .user {
+                  @include flex-center-vert;
+                  gap: size(16);
+  
+                  .username {
+                    color: $headingtext;
+                    font-size: size(14);
+                    font-weight: 500;
+                  }
+  
+                  .time {
+                    color: $textprimary;
+                    font-size: size(12);
+                  }
+                }
+  
+                .textcomment {
+                  color: $textprimary;
+                  font-size: size(14);
+                }
+              }
+  
+              .commentlist {
+                @include flex-center-vert;
+                gap: size(16);
+  
+                .btnlike {
+                  @include flex-center-vert;
+                  gap: size(4);
+  
+                  .icon {
+                    @include square(14);
+                    @include flex-center;
+                  }
+  
+                  .text {
+                    color: $textprimary;
+                    font-size: size(14);
+                  }
+                }
+  
+                .btn-replies {
+                  color: $primary;
+                  font-size: size(14);
+  
+                  @include hover {
+                    color: $primarydark;
+                  }
+                }
+              }
+            }
+          }
+  
+          &-right {  
+            .btn-dropdown {
+              svg {
+                path {
+                  stroke: $white;
+                }
+              }
+            }
+  
+            .replydropdown {  
+              .replylist {
+                background: $darkbg-1;
+                border-color: $darkbg-1;
+                gap: 0;
+  
+                &-link {
+                  background: $darkbg-1;
+  
+                  .icon {
+                    svg {
+                      path {
+                        stroke: $white;
+                      }
+                    }
+                  }
+  
+                  .text {
+                    color: $white;
+                  }
+  
+                  @include hover {
+                    background: lighten($darkbg-1, 25%);
+                  }
+                }
+  
+                .dropdownlist-link {
+                  background: $darkbg-1;
+  
+                  .droplinkicon {
+                    svg {
+                      path {
+                        stroke: $white;
+                      }
+                    }
+                  }
+  
+                  .droplinktext {
+                    color: $white;
+                  }
+  
+                  @include hover {
+                    background: lighten($darkbg-1, 25%);
+                  }
+                }
+              }
+            }
+  
+            @include hover {
+              .btn-dropdown {
+                background: lighten($darkbg-1, 25%);
+              }
+  
+              .replydropdown {
+                display: block;
+              }
+            }
+          }
+        }
+  
+        .myreply {
+          @include flex-column;
+          gap: size(24);
+        }
+  
+        .myreplybox {
+          font-size: size(14);
+          @include flex;
+          gap: size(10);
+  
+          &-left {
+            width: calc(100% - size(42));
+            @include flex;
+            gap: size(16);
+  
+            .replyer {
+              @include square(40);
+              @include circle;
+              @include flex-center;
+              overflow: hidden;
+            }
+  
+            .myreplydetails {
+              width: calc(100% - size(56));
+              @include flex-column;
+              gap: size(10);
+  
+              .topinfo {
+                @include flex-column;
+                gap: size(10);
+  
+                .user {
+                  @include flex-center-vert;
+                  gap: size(16);
+  
+                  .username {
+                    color: $headingtext;
+                    font-size: size(14);
+                    font-weight: 500;
+                  }
+  
+                  .time {
+                    color: $textprimary;
+                    font-size: size(12);
+                  }
+                }
+  
+                .textcomment {
+                  color: $textprimary;
+                  font-size: size(14);
+                }
+              }
+  
+              .commentlist {
+                @include flex-center-vert;
+                gap: size(16);
+  
+                .btnlike {
+                  @include flex-center-vert;
+                  gap: size(4);
+  
+                  .icon {
+                    @include square(14);
+                    @include flex-center;
+                  }
+  
+                  .text {
+                    color: $textprimary;
+                    font-size: size(14);
+                  }
+                }
+  
+                .btn-replies {
+                  color: $primary;
+                  font-size: size(14);
+  
+                  @include hover {
+                    color: $primarydark;
+                  }
+                }
+              }
+            }
+          }
+  
+          &-right {
+            @include square(32);
+            position: relative;
+  
+            .btn-dropdown {
+              @include square(24);
+              @include circle;
+            }
+  
+            .replydropdown {
+              .replylist {
+                background: $darkbg-1;
+                border-color: $darkbg-1;
+  
+                &-link {
+                  background: $darkbg-1;
+  
+                  .icon {
+                    svg {
+                      path {
+                        stroke: $white;
+                      }
+                    }
+                  }
+  
+                  .text {
+                    color: $white;
+                  }
+  
+                  @include hover {
+                    background: lighten($darkbg-1, 25%);
+                  }
+                }
+  
+                .dropdownlist-link {
+                  background: $darkbg-1;
+  
+                  .droplinkicon {
+                    svg {
+                      path {
+                        stroke: $white;
+                      }
+                    }
+                  }
+  
+                  .droplinktext {
+                    color: $white;
+                  }
+  
+                  @include hover {
+                    background: lighten($darkbg-1, 25%);
+                  }
+                }
+              }
+            }
+  
+            @include hover {
+              .btn-dropdown {
+                background: lighten($darkbg-1, 25%);
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   .homeslider .swiper-pagination .swiper-pagination-bullet {
@@ -464,7 +875,9 @@ $titlecolor: #002f56;
       border-color: $darkbg-1;
     }
   
-    &-nav {  
+    &-nav {
+      padding-bottom: size(0);
+
       @include breakpoint(tab992) {
         border-color: $darkbg-1;
       }
@@ -1281,6 +1694,33 @@ $titlecolor: #002f56;
       .toggle-switch > :checked + label::after, :checked + .toggle-switch-label::after {
         background: $primary;
         border-color: $primary;
+      }
+    }
+  }
+  
+  .dropdownlist {
+    background: $darkbg-2;
+    border-color: $darkbg-2;
+    box-shadow: $dropdownshadow;
+    gap: size(0);
+
+    &-link {
+      background: $darkbg-1;
+
+      .droplinkicon {
+        svg {
+          path {
+            fill: $white;
+          }
+        }
+      }
+
+      .droplinktext {
+        color: $white;
+      }
+
+      @include hover {
+        background: lighten($darkbg-1, 25%);
       }
     }
   }

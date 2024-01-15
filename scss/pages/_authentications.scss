@@ -88,6 +88,9 @@
     .otpbox {
       @include flex-center;
       gap: size(24);
+      max-width: size(320);
+      margin-inline: auto;
+      overflow: hidden;
 
       .otpfield {
         @include setBgColor($white, $headingtext);
@@ -96,6 +99,32 @@
         @include circle;
         @include flex-center;
         text-align: center;
+        overflow: hidden;
+        @include transitionsall;
+
+        &:focus {
+          border-color: $textprimary;
+        }
+      }
+    }
+
+    .foreignotpbox {
+      @include flex-center;
+      gap: size(8);
+      max-width: size(340);
+      margin-inline: auto;
+      overflow: hidden;
+
+      .foreignotpfield {
+        @include setBgColor($white, $headingtext);
+        @include square(48);
+        @include border(solid, 1, $white);
+        flex: 1;
+        font-size: size(15);
+        @include circle;
+        @include flex-center;
+        text-align: center;
+        overflow: hidden;
         @include transitionsall;
 
         &:focus {

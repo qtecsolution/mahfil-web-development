@@ -160,23 +160,6 @@
 .dark-mode .cardvideo-body .videodropdown:not([disabled]):hover .dropdownicon {
   background: #666666;
 }
-.dark-mode .cardvideo-body .dropdownlist {
-  background: #333333;
-  border-color: #333333;
-  box-shadow: 0.25rem 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.04);
-}
-.dark-mode .cardvideo-body .dropdownlist-link {
-  background: #191919;
-}
-.dark-mode .cardvideo-body .dropdownlist-link .droplinkicon svg path {
-  fill: hsl(0, 0%, 100%);
-}
-.dark-mode .cardvideo-body .dropdownlist-link .droplinktext {
-  color: hsl(0, 0%, 100%);
-}
-.dark-mode .cardvideo-body .dropdownlist-link:not([disabled]):hover {
-  background: #595959;
-}
 .dark-mode .cardvideo-body .dropdownicon {
   background: transparent;
 }
@@ -206,6 +189,12 @@
 }
 .dark-mode .cardvideo .offcanvas-body .dropdownlist-link:not([disabled]):hover {
   background: #595959;
+}
+.dark-mode .btn-cancel {
+  color: #cccccc;
+}
+.dark-mode .btn-cancel:hover {
+  color: hsl(0, 91%, 54%);
 }
 .dark-mode .cardchannel-body .channelinfo .title {
   color: hsl(0, 0%, 100%);
@@ -261,7 +250,7 @@
   background: #4c4c4c;
 }
 .dark-mode .cardvid {
-  background: hsl(0, 0%, 100%);
+  background: #191919;
 }
 .dark-mode .cardvid .videothumb .timeduration {
   background: hsl(0, 0%, 100%);
@@ -276,28 +265,38 @@
 }
 @media screen and (min-width: 62rem) {
   .dark-mode .cardvid .vidropdown:not([disabled]):hover .dropdownicon {
-    background: hsl(213, 39%, 95%);
+    background: #4c4c4c;
   }
 }
 .dark-mode .cardvid .dropdownicon {
   background: transparent;
 }
+.dark-mode .cardvid .dropdownicon svg path {
+  stroke: hsl(0, 0%, 100%);
+}
 .dark-mode .cardvid .dropdownlist {
-  background: hsl(0, 0%, 100%);
-  border: solid 0.0625rem hsl(214, 17%, 92%);
+  gap: 0;
+  background: #333333;
+  border-color: #333333;
   box-shadow: 0.25rem 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.04);
 }
 .dark-mode .cardvid .dropdownlist-link {
-  background: hsl(0, 0%, 100%);
+  background: #191919;
+}
+.dark-mode .cardvid .dropdownlist-link .droplinkicon svg path {
+  fill: hsl(0, 0%, 100%);
 }
 .dark-mode .cardvid .dropdownlist-link .droplinktext {
-  color: hsl(218, 17%, 35%);
+  color: hsl(0, 0%, 100%);
 }
 .dark-mode .cardvid .dropdownlist-link:not([disabled]):hover {
-  background: hsl(213, 39%, 95%);
+  background: #595959;
 }
 .dark-mode .cardvid:not([disabled]):hover {
-  background: hsl(214, 100%, 99%);
+  background: transparent;
+}
+.dark-mode .cardvid:not([disabled]):hover .dropdownicon {
+  background: #191919;
 }
 .dark-mode .cardsubscribed-body .detail .title {
   color: hsl(0, 0%, 100%);
@@ -367,8 +366,310 @@
 .dark-mode .favorites-title,
 .dark-mode .deltitle,
 .dark-mode .themetitle,
-.dark-mode .modetitle {
+.dark-mode .modetitle,
+.dark-mode .videotitle,
+.dark-mode .username,
+.dark-mode .channelname,
+.dark-mode .report-title,
+.dark-mode .popularsearch-title {
   color: hsl(0, 0%, 100%);
+}
+.dark-mode .btn-searchtag {
+  background: #191919;
+  color: hsl(0, 0%, 100%);
+  border-color: #191919;
+}
+.dark-mode .btn-searchtag.active {
+  background: hsl(211, 97%, 60%);
+  color: hsl(0, 0%, 100%);
+  border-color: hsl(211, 97%, 60%);
+}
+.dark-mode .videoschannels .nav-tabs {
+  border-color: #cccccc;
+}
+.dark-mode .videoschannels .nav-tabs .nav-link {
+  color: #cccccc;
+}
+.dark-mode .videoschannels .nav-tabs .nav-link:hover:not(.active) {
+  color: hsl(211, 97%, 60%);
+}
+.dark-mode .videoschannels .nav-tabs .nav-link.active {
+  background: #191919;
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .videoplay .videoheader .details .info .text,
+.dark-mode .videoplay .videoheader .details .info .time,
+.dark-mode .desktopsubscribe-left .subscribinfo .info .text,
+.dark-mode .videoplay .comments-body .myreplybox-left .myreplydetails .topinfo .textcomment,
+.dark-mode .videoplay .comments-body .commenterbox-left .commenterdetails .topinfo .textcomment,
+.dark-mode .videoplay .comments-body .commenterbox-left .commenterdetails .topinfo .user .time {
+  color: #cccccc !important;
+}
+.dark-mode .desktopsubscribe-left .subscribinfo .info .channelname,
+.dark-mode .videoplay .comments-body .commenterbox-left .commenterdetails .topinfo .user .username,
+.dark-mode .videoplay .comments-body .commenterbox-left .commenterdetails .commentlist .btnlike .text {
+  color: hsl(0, 0%, 100%) !important;
+}
+.dark-mode .time,
+.dark-mode .text {
+  color: #cccccc;
+}
+.dark-mode .seemore {
+  color: #cccccc;
+}
+.dark-mode .btn-action .icon svg path {
+  fill: #cccccc;
+}
+.dark-mode .modal-header h4 {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .btn-action.morebtn .icon svg path {
+  stroke: #cccccc;
+}
+.dark-mode .videoplay .comments-header .commenttitle {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .videoplay .comments-body .commentbox .commentinput .commentfield {
+  background: transparent;
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .videoplay .comments-body .commenterbox {
+  border-bottom: solid 0.0625rem hsl(214, 17%, 92%);
+  font-size: 0.875rem;
+  display: flex;
+  gap: 0.625rem;
+  padding-bottom: 1.5rem;
+}
+.dark-mode .videoplay .comments-body .commenterbox-left {
+  width: calc(100% - 6rem);
+  display: flex;
+  gap: 1rem;
+}
+.dark-mode .videoplay .comments-body .commenterbox-left .replyer {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.dark-mode .videoplay .comments-body .commenterbox-left .commenterdetails {
+  width: calc(100% - 3.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.dark-mode .videoplay .comments-body .commenterbox-left .commenterdetails .topinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.dark-mode .videoplay .comments-body .commenterbox-left .commenterdetails .topinfo .user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.dark-mode .videoplay .comments-body .commenterbox-left .commenterdetails .topinfo .user .username {
+  color: hsl(216, 17%, 12%);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.dark-mode .videoplay .comments-body .commenterbox-left .commenterdetails .topinfo .user .time {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.75rem;
+}
+.dark-mode .videoplay .comments-body .commenterbox-left .commenterdetails .topinfo .textcomment {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.875rem;
+}
+.dark-mode .videoplay .comments-body .commenterbox-left .commenterdetails .commentlist {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.dark-mode .videoplay .comments-body .commenterbox-left .commenterdetails .commentlist .btnlike {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.dark-mode .videoplay .comments-body .commenterbox-left .commenterdetails .commentlist .btnlike .icon {
+  width: 0.875rem;
+  height: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dark-mode .videoplay .comments-body .commenterbox-left .commenterdetails .commentlist .btnlike .text {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.875rem;
+}
+.dark-mode .videoplay .comments-body .commenterbox-left .commenterdetails .commentlist .btn-replies {
+  color: hsl(211, 97%, 60%);
+  font-size: 0.875rem;
+}
+.dark-mode .videoplay .comments-body .commenterbox-left .commenterdetails .commentlist .btn-replies:not([disabled]):hover {
+  color: hsl(207, 100%, 28%);
+}
+.dark-mode .videoplay .comments-body .commenterbox-right .btn-dropdown svg path {
+  stroke: hsl(0, 0%, 100%);
+}
+.dark-mode .videoplay .comments-body .commenterbox-right .replydropdown .replylist {
+  background: #191919;
+  border-color: #191919;
+  gap: 0;
+}
+.dark-mode .videoplay .comments-body .commenterbox-right .replydropdown .replylist-link {
+  background: #191919;
+}
+.dark-mode .videoplay .comments-body .commenterbox-right .replydropdown .replylist-link .icon svg path {
+  stroke: hsl(0, 0%, 100%);
+}
+.dark-mode .videoplay .comments-body .commenterbox-right .replydropdown .replylist-link .text {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .videoplay .comments-body .commenterbox-right .replydropdown .replylist-link:not([disabled]):hover {
+  background: #595959;
+}
+.dark-mode .videoplay .comments-body .commenterbox-right .replydropdown .replylist .dropdownlist-link {
+  background: #191919;
+}
+.dark-mode .videoplay .comments-body .commenterbox-right .replydropdown .replylist .dropdownlist-link .droplinkicon svg path {
+  stroke: hsl(0, 0%, 100%);
+}
+.dark-mode .videoplay .comments-body .commenterbox-right .replydropdown .replylist .dropdownlist-link .droplinktext {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .videoplay .comments-body .commenterbox-right .replydropdown .replylist .dropdownlist-link:not([disabled]):hover {
+  background: #595959;
+}
+.dark-mode .videoplay .comments-body .commenterbox-right:not([disabled]):hover .btn-dropdown {
+  background: #595959;
+}
+.dark-mode .videoplay .comments-body .commenterbox-right:not([disabled]):hover .replydropdown {
+  display: block;
+}
+.dark-mode .videoplay .comments-body .myreply {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.dark-mode .videoplay .comments-body .myreplybox {
+  font-size: 0.875rem;
+  display: flex;
+  gap: 0.625rem;
+}
+.dark-mode .videoplay .comments-body .myreplybox-left {
+  width: calc(100% - 2.625rem);
+  display: flex;
+  gap: 1rem;
+}
+.dark-mode .videoplay .comments-body .myreplybox-left .replyer {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.dark-mode .videoplay .comments-body .myreplybox-left .myreplydetails {
+  width: calc(100% - 3.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.dark-mode .videoplay .comments-body .myreplybox-left .myreplydetails .topinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.dark-mode .videoplay .comments-body .myreplybox-left .myreplydetails .topinfo .user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.dark-mode .videoplay .comments-body .myreplybox-left .myreplydetails .topinfo .user .username {
+  color: hsl(216, 17%, 12%);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.dark-mode .videoplay .comments-body .myreplybox-left .myreplydetails .topinfo .user .time {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.75rem;
+}
+.dark-mode .videoplay .comments-body .myreplybox-left .myreplydetails .topinfo .textcomment {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.875rem;
+}
+.dark-mode .videoplay .comments-body .myreplybox-left .myreplydetails .commentlist {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.dark-mode .videoplay .comments-body .myreplybox-left .myreplydetails .commentlist .btnlike {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.dark-mode .videoplay .comments-body .myreplybox-left .myreplydetails .commentlist .btnlike .icon {
+  width: 0.875rem;
+  height: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dark-mode .videoplay .comments-body .myreplybox-left .myreplydetails .commentlist .btnlike .text {
+  color: hsl(216, 15%, 52%);
+  font-size: 0.875rem;
+}
+.dark-mode .videoplay .comments-body .myreplybox-left .myreplydetails .commentlist .btn-replies {
+  color: hsl(211, 97%, 60%);
+  font-size: 0.875rem;
+}
+.dark-mode .videoplay .comments-body .myreplybox-left .myreplydetails .commentlist .btn-replies:not([disabled]):hover {
+  color: hsl(207, 100%, 28%);
+}
+.dark-mode .videoplay .comments-body .myreplybox-right {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+}
+.dark-mode .videoplay .comments-body .myreplybox-right .btn-dropdown {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+}
+.dark-mode .videoplay .comments-body .myreplybox-right .replydropdown .replylist {
+  background: #191919;
+  border-color: #191919;
+}
+.dark-mode .videoplay .comments-body .myreplybox-right .replydropdown .replylist-link {
+  background: #191919;
+}
+.dark-mode .videoplay .comments-body .myreplybox-right .replydropdown .replylist-link .icon svg path {
+  stroke: hsl(0, 0%, 100%);
+}
+.dark-mode .videoplay .comments-body .myreplybox-right .replydropdown .replylist-link .text {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .videoplay .comments-body .myreplybox-right .replydropdown .replylist-link:not([disabled]):hover {
+  background: #595959;
+}
+.dark-mode .videoplay .comments-body .myreplybox-right .replydropdown .replylist .dropdownlist-link {
+  background: #191919;
+}
+.dark-mode .videoplay .comments-body .myreplybox-right .replydropdown .replylist .dropdownlist-link .droplinkicon svg path {
+  stroke: hsl(0, 0%, 100%);
+}
+.dark-mode .videoplay .comments-body .myreplybox-right .replydropdown .replylist .dropdownlist-link .droplinktext {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .videoplay .comments-body .myreplybox-right .replydropdown .replylist .dropdownlist-link:not([disabled]):hover {
+  background: #595959;
+}
+.dark-mode .videoplay .comments-body .myreplybox-right:not([disabled]):hover .btn-dropdown {
+  background: #595959;
 }
 .dark-mode .homeslider .swiper-pagination .swiper-pagination-bullet {
   background: #cccccc;
@@ -408,6 +709,9 @@
   .dark-mode .header {
     border-color: #191919;
   }
+}
+.dark-mode .header-nav {
+  padding-bottom: 0rem;
 }
 @media screen and (min-width: 62rem) {
   .dark-mode .header-nav {
@@ -884,6 +1188,24 @@
 .dark-mode .mobsaltreminder-footer .toggle-switch > :checked + label::after, .dark-mode .mobsaltreminder-footer :checked + .toggle-switch-label::after {
   background: hsl(211, 97%, 60%);
   border-color: hsl(211, 97%, 60%);
+}
+.dark-mode .dropdownlist {
+  background: #333333;
+  border-color: #333333;
+  box-shadow: 0.25rem 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.04);
+  gap: 0rem;
+}
+.dark-mode .dropdownlist-link {
+  background: #191919;
+}
+.dark-mode .dropdownlist-link .droplinkicon svg path {
+  fill: hsl(0, 0%, 100%);
+}
+.dark-mode .dropdownlist-link .droplinktext {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .dropdownlist-link:not([disabled]):hover {
+  background: #595959;
 }
 .dark-mode .deletebox-body .btn-cancel {
   background: transparent;

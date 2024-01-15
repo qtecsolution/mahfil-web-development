@@ -5529,7 +5529,7 @@
                           </div>
                         </div>
   
-                        <div class="commentdropdown">
+                        <div class="commentdropdown dropdown">
                           <button class="btn-dropdown">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -5544,14 +5544,14 @@
                             </svg>
                           </button>
   
-                          <div class="dropdownmenu">
+                          <div class="dropdownmenu dropdown-menu">
                             <ul class="dropdownlist">
                               <li class="dropdownlist-item">
-                                <a href="#" class="dropdownlist-link">Edit</a>
+                                <a href="#" class="dropdownlist-link dropdown-item">Edit</a>
                               </li>
   
                               <li class="dropdownlist-item">
-                                <a href="#" class="dropdownlist-link">Delete</a>
+                                <a href="#" class="dropdownlist-link dropdown-item">Delete</a>
                               </li>
                             </ul>
                           </div>
@@ -8715,8 +8715,7 @@
         <div class="modal-header justify-content-end">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M19 5L5 19M5 5L19 19" stroke="#1A202C" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
+              <path d="M19 5L5 19M5 5L19 19" stroke="#1A202C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </button>
         </div>
@@ -9333,11 +9332,13 @@
             <div class="myauth-body">
               <h2 class="authtitle">OTP has been sent to your phone. Please check!</h2>
 
-              <div class="otpbox">
-                <input type="number" placeholder="1" class="otpfield">
-                <input type="number" placeholder="2" class="otpfield">
-                <input type="number" placeholder="3" class="otpfield">
-                <input type="number" placeholder="4" class="otpfield">
+              <div class="foreignotpbox">
+                <input type="number" placeholder="1" class="foreignotpfield">
+                <input type="number" placeholder="2" class="foreignotpfield">
+                <input type="number" placeholder="3" class="foreignotpfield">
+                <input type="number" placeholder="4" class="foreignotpfield">
+                <input type="number" placeholder="5" class="foreignotpfield">
+                <input type="number" placeholder="6" class="foreignotpfield">
               </div>
 
               <div class="d-flex flex-column gap-2">
@@ -9688,6 +9689,13 @@
   <script src="assets/js/modal/modal.js"></script>
   <!-- DARKMODE-JS -->
   <script src="assets/js/darkmode/darkmode.js"></script>
+
+  <script>
+    // function hexCodeGenerator() {
+    //   return Math.floor(Math.random() * 16).toString(16);
+    // }
+    // alert(hexCodeGenerator())
+  </script>
 </body>
 
 </html>

@@ -34,7 +34,7 @@
       background: $white;
       @include radius(15);
       box-shadow: $linkshadow;
-      @include flex;
+      @include flex-center-vert;
       gap: size(8);
       padding: size(16) size(14);
       @include transitionsall;

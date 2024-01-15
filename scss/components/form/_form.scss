@@ -14,9 +14,8 @@
   .searchfield {
     @include setBgColor(transparent, $headingtext);
     font-size: size(17);
-    line-height: .9375;
+    line-height: 1;
     width: calc(100% - size(34));
-    height: size(16);
 
     &::placeholder {
       color: $textplaceholder;

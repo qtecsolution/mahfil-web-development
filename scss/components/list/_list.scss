@@ -307,7 +307,11 @@
       overflow: hidden;
     }
 
-    @include hover {
+    &:hover:not(.active) {
+      background: $linkhoverbg;
+    }
+
+    &.active {
       background: $linkhoverbg;
     }
   }

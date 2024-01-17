@@ -637,29 +637,18 @@ $titlecolor: #002f56;
                         stroke: $white;
                       }
                     }
-                  }
-  
-                  .text {
-                    color: $white;
-                  }
-  
-                  @include hover {
-                    background: lighten($darkbg-1, 25%);
-                  }
-                }
-  
-                .dropdownlist-link {
-                  background: $darkbg-1;
-  
-                  .droplinkicon {
-                    svg {
-                      path {
-                        stroke: $white;
+
+                    &.reporticon {
+                      svg {
+                        path {
+                          stroke: none;
+                          fill: $white;
+                        }
                       }
                     }
                   }
   
-                  .droplinktext {
+                  .text {
                     color: $white;
                   }
   
@@ -789,6 +778,15 @@ $titlecolor: #002f56;
                         stroke: $white;
                       }
                     }
+
+                    &.reporticon {
+                      svg {
+                        path {
+                          stroke: none;
+                          fill: $white;
+                        }
+                      }
+                    }
                   }
   
                   .text {
@@ -845,6 +843,15 @@ $titlecolor: #002f56;
         svg {
           path {
             stroke: $white;
+          }
+        }
+
+        &.reporticon {
+          svg {
+            path {
+              stroke: none;
+              fill: $white;
+            }
           }
         }
       }
@@ -1242,7 +1249,11 @@ $titlecolor: #002f56;
         }
       }
   
-      @include hover {
+      &:hover:not(.active) {
+        background: lighten($darkbg-1, 15%);
+      }
+  
+      &.active {
         background: lighten($darkbg-1, 15%);
       }
     }
@@ -1500,7 +1511,11 @@ $titlecolor: #002f56;
           }
         }
     
-        @include hover {
+        &:hover:not(.active) {
+          background: lighten($darkbg-1, 25%);
+        }
+    
+        &.active {
           background: lighten($darkbg-1, 25%);
         }
       }

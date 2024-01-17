@@ -79,7 +79,11 @@
         overflow: hidden;
       }
 
-      @include hover {
+      &:hover:not(.active) {
+        background: $notificationhoverbg;
+      }
+
+      &.active {
         background: $notificationhoverbg;
       }
     }

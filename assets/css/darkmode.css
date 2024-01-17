@@ -544,22 +544,14 @@
 .dark-mode .videoplay .comments-body .commenterbox-right .replydropdown .replylist-link .icon svg path {
   stroke: hsl(0, 0%, 100%);
 }
+.dark-mode .videoplay .comments-body .commenterbox-right .replydropdown .replylist-link .icon.reporticon svg path {
+  stroke: none;
+  fill: hsl(0, 0%, 100%);
+}
 .dark-mode .videoplay .comments-body .commenterbox-right .replydropdown .replylist-link .text {
   color: hsl(0, 0%, 100%);
 }
 .dark-mode .videoplay .comments-body .commenterbox-right .replydropdown .replylist-link:not([disabled]):hover {
-  background: #595959;
-}
-.dark-mode .videoplay .comments-body .commenterbox-right .replydropdown .replylist .dropdownlist-link {
-  background: #191919;
-}
-.dark-mode .videoplay .comments-body .commenterbox-right .replydropdown .replylist .dropdownlist-link .droplinkicon svg path {
-  stroke: hsl(0, 0%, 100%);
-}
-.dark-mode .videoplay .comments-body .commenterbox-right .replydropdown .replylist .dropdownlist-link .droplinktext {
-  color: hsl(0, 0%, 100%);
-}
-.dark-mode .videoplay .comments-body .commenterbox-right .replydropdown .replylist .dropdownlist-link:not([disabled]):hover {
   background: #595959;
 }
 .dark-mode .videoplay .comments-body .commenterbox-right:not([disabled]):hover .btn-dropdown {
@@ -669,6 +661,10 @@
 .dark-mode .videoplay .comments-body .myreplybox-right .replydropdown .replylist-link .icon svg path {
   stroke: hsl(0, 0%, 100%);
 }
+.dark-mode .videoplay .comments-body .myreplybox-right .replydropdown .replylist-link .icon.reporticon svg path {
+  stroke: none;
+  fill: hsl(0, 0%, 100%);
+}
 .dark-mode .videoplay .comments-body .myreplybox-right .replydropdown .replylist-link .text {
   color: hsl(0, 0%, 100%);
 }
@@ -700,6 +696,10 @@
 }
 .dark-mode .replylist-link .icon svg path {
   stroke: hsl(0, 0%, 100%);
+}
+.dark-mode .replylist-link .icon.reporticon svg path {
+  stroke: none;
+  fill: hsl(0, 0%, 100%);
 }
 .dark-mode .replylist-link .text {
   color: hsl(0, 0%, 100%);
@@ -925,7 +925,10 @@
 .dark-mode .desktopdropdownlist-link .leftcontent .details .time {
   color: #cccccc;
 }
-.dark-mode .desktopdropdownlist-link:not([disabled]):hover {
+.dark-mode .desktopdropdownlist-link:hover:not(.active) {
+  background: #3f3f3f;
+}
+.dark-mode .desktopdropdownlist-link.active {
   background: #3f3f3f;
 }
 .dark-mode .sidebar {
@@ -1096,7 +1099,10 @@
 .dark-mode .notifications-body .notification-info .info .notifytime {
   color: #cccccc;
 }
-.dark-mode .notifications-body .notification:not([disabled]):hover {
+.dark-mode .notifications-body .notification:hover:not(.active) {
+  background: #595959;
+}
+.dark-mode .notifications-body .notification.active {
   background: #595959;
 }
 .dark-mode .searchresults-header .btn-back svg path {

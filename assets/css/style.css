@@ -3126,7 +3126,10 @@ table tr td {
   justify-content: center;
   overflow: hidden;
 }
-.desktopdropdownlist-link:not([disabled]):hover {
+.desktopdropdownlist-link:hover:not(.active) {
+  background: hsl(213, 39%, 95%);
+}
+.desktopdropdownlist-link.active {
   background: hsl(213, 39%, 95%);
 }
 
@@ -5037,7 +5040,10 @@ input:checked + .slider:before {
   justify-content: center;
   overflow: hidden;
 }
-.notifications-body .notification:not([disabled]):hover {
+.notifications-body .notification:hover:not(.active) {
+  background: hsl(201, 41%, 93%);
+}
+.notifications-body .notification.active {
   background: hsl(201, 41%, 93%);
 }
 

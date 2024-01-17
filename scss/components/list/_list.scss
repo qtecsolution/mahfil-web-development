@@ -69,13 +69,27 @@
     @include square(32);
     @include circle;
     @include flex-center;
-    overflow: hidden;
     padding: size(8);
+    position: relative;
 
     @include breakpoint(mobile768) {
       @include square(44);
       padding: size(10);
       gap: size(10);
+    }
+
+    .notificationcounter {
+      @include setBgColor($red, $white);
+      position: absolute;
+      top: size(-3);
+      right: size(-2);
+      @include square(20);
+      @include circle;
+      @include flex-center;
+      font-size: size(10);
+      font-weight: 600;
+      overflow: hidden;
+      text-align: center;
     }
   }
 }
@@ -89,12 +103,26 @@
     @include square(32);
     @include circle;
     @include flex-center;
-    overflow: hidden;
     padding: size(8);
+    position: relative;
 
     @include breakpoint(desktop1400) {
       @include square(44);
       padding: size(10);
+    }
+
+    .notificationcounter {
+      @include setBgColor($red, $white);
+      position: absolute;
+      top: size(-3);
+      right: size(-2);
+      @include square(20);
+      @include circle;
+      @include flex-center;
+      font-size: size(10);
+      font-weight: 600;
+      overflow: hidden;
+      text-align: center;
     }
   }
 
@@ -376,4 +404,12 @@
       @include setBgColor($primary, $white);
     }
   }
+}
+
+.dropdown-menu {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  min-width: auto;
 }

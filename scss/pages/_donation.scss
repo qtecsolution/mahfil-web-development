@@ -200,6 +200,7 @@
       position: relative;
       transition: transform 0.3s ease-in-out;
       label {
+        cursor: pointer;
         padding: size(20) size(30);
         z-index: 100;
         h5 {

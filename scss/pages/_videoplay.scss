@@ -23,10 +23,18 @@
       gap: size(10);
 
       .cardvid {
-        .cardvid-details {
+        &-details {
           @include breakpoint(mobile576) {
             width: calc(100% - size(172));
             padding: size(4) size(8);
+          }
+
+          .describe {  
+            .videotitle {
+              @include breakpoint(tab992) {
+                max-width: 90%;
+              }
+            }
           }
         }
       }

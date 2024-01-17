@@ -23,7 +23,6 @@
     }
 
     @include breakpoint(desktop1900) {
-      flex: 1 0 auto;
       width: calc((100% / 5) - size(14));
     }
 

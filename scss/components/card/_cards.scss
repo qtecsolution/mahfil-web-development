@@ -401,7 +401,7 @@
           gap: size(0);
           border: none;
           width: size(224);
-          @include radius(0);
+          @include radius(10);
     
           &-link {
             background: $white;
@@ -534,7 +534,6 @@
         @include transitionscolor;
         min-height: size(38.4);
         max-height: size(52);
-        // max-height: size(40.4);
 
         @include hover {
           color: $primary;

@@ -8,7 +8,7 @@ $lightcolor: #cccccc;
 $titlecolor: #002f56;
 
 .dark-mode {
-  @include setBgColor($darkbg-2, $white);
+  @include setBgColor($darkbg-1, $white);
   
   .cardvideo {
     &-header {
@@ -969,14 +969,12 @@ $titlecolor: #002f56;
     background: $darkbg-1;
   
     @include breakpoint(tab992) {
-      border-color: $darkbg-1;
+      border-color: lighten($darkbg-1, 25%);
     }
   
     &-nav {
-      padding-bottom: size(0);
-
       @include breakpoint(tab992) {
-        border-color: $darkbg-1;
+        border-color: lighten($darkbg-1, 25%);
       }
   
       .reminder {  

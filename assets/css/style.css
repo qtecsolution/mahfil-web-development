@@ -1259,7 +1259,7 @@ button:focus,
   flex-direction: column;
   gap: 0rem;
   width: 11.25rem;
-  min-height: 6.875rem;
+  min-height: 6.5rem;
   overflow: hidden;
 }
 .cardvideo-body .dropdownlist-link {

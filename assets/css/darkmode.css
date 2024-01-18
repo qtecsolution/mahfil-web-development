@@ -134,7 +134,7 @@
   }
 }
 .dark-mode {
-  background: #333333;
+  background: #191919;
   color: hsl(0, 0%, 100%);
 }
 .dark-mode .cardvideo-header .video-thumbnail .timeduration {
@@ -769,15 +769,12 @@
 }
 @media screen and (min-width: 62rem) {
   .dark-mode .header {
-    border-color: #191919;
+    border-color: #595959;
   }
-}
-.dark-mode .header-nav {
-  padding-bottom: 0rem;
 }
 @media screen and (min-width: 62rem) {
   .dark-mode .header-nav {
-    border-color: #191919;
+    border-color: #595959;
   }
 }
 .dark-mode .header-nav .reminder .prayer .prayericon {

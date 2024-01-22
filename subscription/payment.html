@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mahfil | Subscription Payments</title>
+	<!-- FAVICON-ICON -->
+	<link rel="shortcut icon" href="../assets/images/logo/favicon.ico" type="image/x-icon" />
+	<!-- BOOTSTRAP-CSS -->
+	<link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css" />
+	<!-- CUSTOM-CSS -->
+	<link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/darkmode.css" />
+</head>
+<body>
+	<!-- PRELOADER-START -->
+	<div class="preloader" id="preloader">
+		<div class="loader">
+			<img src="../assets/images/logo/logo.svg" alt="brand-logo" />
+		</div>
+	</div>
+	<!-- PRELOADER-END -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-12 mx-md-auto">
+        <div class="subscribtionpayment">
+          <div class="subscribtionpayment-header">
+            <h6 class="feetitle">সাবস্ক্রিপশন ফি</h6>
+            <div class="priceduration">
+              <span class="price">৳ ৬00/ </span>
+              <span class="duration">১ মাস</span>
+            </div>
+            <p class="fromtodate">১৮ জানু, ২০২৪ - ১৭ ফেব্রু, ২০২৪</p>
+          </div>
+
+          <div class="subscribtionpayment-body">
+            <form class="paymentform">
+              <div class="inputbox">
+                <label for="mobilenumber" class="inputlabel">মোবাইল নম্বর</label>
+                <input type="tel" class="inputfield" placeholder="01890405960" id="mobilenumber" />
+              </div>
+
+              <div class="inputbox">
+                <label for="mailaddress" class="inputlabel">ইমেইল এড্রেস</label>
+                <input type="text" class="inputfield" placeholder="Ex@gmail.com" id="mailaddress" />
+              </div>
+
+              <div class="paymentbox">
+                <label class="inputlabel">
+                  পেমেন্ট মেথড সিলেক্ট করুন
+                </label>
+                
+                <div class="selectpayments">
+                  <div class="mypayment">
+                    <input type="radio" name="paymentmethod" class="paymentinput" id="sslcommerz" hidden checked />
+                  
+                    <label for="sslcommerz" class="paymentlabel">
+                      <img src="../assets/images/subscription/sslcommerz.svg" alt="sslcommerz" class="img-fluid" />
+                    </label>
+                  </div>
+
+                  <div class="mypayment">
+                    <input type="radio" name="paymentmethod" class="paymentinput" id="stripe" hidden />
+                  
+                    <label for="stripe" class="paymentlabel">
+                      <img src="../assets/images/subscription/stripe.svg" alt="stripe" class="img-fluid" />
+                    </label>
+                  </div>
+
+                  <div class="checkterms">
+                    <input type="checkbox" class="checkinput" id="checkterm" hidden checked/>
+                    <label for="checkterm" class="checklabel">
+                      By clicking here,I state that I have read and understand the <a href="#" class="link">Terms & Conditions</a> of Mahfil
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="submitbox">
+                <button class="btn-subscribe">Continue</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+	<script src="../assets/js/loader/loader.js"></script>
+	<!-- BOOTSTRAP-JS -->
+	<script src="../assets/js/bootsrap/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

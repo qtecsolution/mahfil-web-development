@@ -523,3 +523,100 @@
     height: size(56);
   }
 }
+
+.mypayments {
+  height: 100vh;
+  position: relative;
+  background: $subscriptionbg;
+  @include w100;
+  @include flex-column;
+  gap: size(16);
+  padding: size(16) size(16) size(0);
+
+  .paymentsinfo {
+    position: relative;
+    padding: size(32) size(24);
+    background: $white;
+    @include border(solid, 1, $infoborder);
+    @include radius(10);
+    @include flex-column;
+    gap: size(24);
+    z-index: 200;
+    margin-bottom: size(120);
+
+    &-header {
+      @include flex-center;
+
+      .faildicon {
+        @include flex-center;
+        width: size(150);
+        height: size(92);
+        overflow: hidden;
+      }
+
+      .successicon {
+        @include flex-center;
+        width: size(104);
+        height: size(92);
+        overflow: hidden;
+      }
+    }
+
+    &-body {
+      @include flex-center-column;
+      text-align: center;
+      gap: size(4);
+      position: relative;
+      z-index: 100;
+
+      .title {
+        color: $labelcolor;
+        font-size: size(24);
+        font-weight: 700;
+        line-height: 1.5;
+      }
+
+      .text {
+        color: $dropdowntext;
+        font-size: size(14);
+        font-weight: 400;
+        line-height: 1.3;
+      }
+    }
+
+    &-footer {
+      position: relative;
+      z-index: 100;
+    }
+
+    .bottomicon {
+      position: absolute;
+      bottom: size(20);
+      left: 50%;
+      @include translateX(-50%);
+    }
+  }
+
+  .btn-subscribe {
+    @include radius(8);
+    font-size: size(16);
+    font-weight: 600;
+    @include w100;
+    height: size(56);
+  }
+
+  .bottomthumb {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include w100;
+    height: size(289);
+    @include flex-center;
+    overflow: hidden;
+
+    img {
+      @include wh100;
+      object-fit: cover;
+    }
+  }
+}

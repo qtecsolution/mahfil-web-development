@@ -1,0 +1,299 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+.subscribtion {
+  background: $subscriptionbg;
+  @include w100;
+  @include flex-column;
+  gap: size(16);
+  padding: size(16) size(16) size(32);
+
+  &-header {
+    @include flex-column;
+    gap: size(16);
+
+    .subscribtiontitle {
+      color: $dropdowntext;
+      font-size: size(16);
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+  
+  &-body {
+    @include flex-column;
+    gap: size(16);
+  }
+
+  &-footer {
+    @include flex-center-column;
+
+    .btn-subscribe {
+      @include radius(8);
+      font-size: size(16);
+      font-weight: 600;
+      @include w100;
+      height: size(56);
+    }
+
+    .btn-applycoupon {
+      color: $labelcolor;
+      font-size: size(14);
+      font-weight: 500;
+      line-height: 3.75;
+      letter-spacing: size(-0.28);
+      text-decoration-line: underline;
+      text-transform: capitalize;
+
+      @include hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.subscribtionnfo {
+  background-color: $primarydark;
+  @include radius(12);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @include flex-column;
+  gap: size(12);
+  overflow: hidden;
+  padding: size(12);
+
+  &-header {
+    @include flex-center;
+    text-align: center;
+
+    .infotitle {
+      color: $white;
+      font-size: size(18);
+      font-weight: 700;
+    }
+  }
+
+  &-body {
+    .featurelist {
+      @include flex-column;
+      gap: size(5);
+      padding-left: size(16);
+
+      &-item {
+        color: $white;
+        font-size: size(12);
+        font-weight: 500;
+        line-height: normal;
+      }
+    }
+
+    .conditiontext {
+      color: $white;
+      font-size: size(12);
+      font-weight: 500;
+      line-height: normal;
+      text-align: right;
+    }
+  }
+}
+
+.subscribtionform {
+  @include flex-center-vert;
+  gap: size(16);
+}
+
+.subscribtioninput {
+  .subscribinput {
+    &:checked {
+      ~ .subscriblabel {
+        border-color: $primarydark;
+
+        &::before {
+          background: $primarydark;
+          box-shadow: none;
+        }
+
+        &::after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  .subscriblabel {
+    width: size(89);
+    height: size(36);
+    background: $white;
+    @include border(solid, 1.5, $inputborder);
+    @include radius(4);
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    padding: size(8) size(16);
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: size(16);
+      @include translateY(-50%);
+      z-index: 100;
+      @include transitionsall;
+    }
+
+    &::before {
+      @include square(16);
+      background: $white;
+      @include border(solid, 1.2, $menudivider);
+      @include circle;
+      box-shadow: 0 -0.1875rem .4375rem 0 rgba(20, 20, 43, 0.08) inset;
+    }
+
+    &::after {
+      @include square(8);
+      @include circle;
+      left: size(20);
+      background: $white;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .labeltitle {
+      color: $primarydark;
+      display: block;
+      font-size: size(16);
+      font-weight: 500;
+      line-height: 1.2;
+      padding-left: size(24);
+
+      &::selection {
+        background: transparent;
+        color: $primarydark;
+      }
+    }
+  }
+}
+
+.subscribtionlist {
+  @include flex-column;
+  gap: size(16);
+  max-height: size(223);
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    background: transparent;
+    width: size(0);
+  }
+}
+
+.cardsubscribtion {
+  background: $white;
+  @include border(solid, 1.5, transparent);
+  @include radius(15);
+  padding: size(12) size(16);
+  @include h100;
+  @include transitionsall;
+
+  &-header {
+    @include flex-center-between;
+
+    .pricedurations {
+      @include flex-center-vert;
+      gap: size(3);
+
+      .packageprice {
+        color: $primary;
+        font-size: size(24);
+        font-weight: 700;
+        letter-spacing: size(0.48);
+      }
+
+      .duration {
+        color: $labelcolor;
+        font-size: size(16);
+        font-weight: 600;
+        letter-spacing: size(-0.32);
+      }
+    }
+
+    .promobadge {
+      @include setBgColor($badgebg-2, $primarydark);
+      @include radius(4);
+      @include flex-center;
+      font-size: size(12);
+      font-weight: 600;
+      width: size(104);
+      height: size(28);
+      text-align: center;
+    }
+  }
+
+  &-body {
+    .text {
+      color: $textprimary;
+      font-size: size(13);
+      font-weight: 400;
+      letter-spacing: size(-0.26);
+      line-height: 1.75;
+    }
+  }
+
+  &:hover:not(.active) {
+    border-color: $primary;
+    box-shadow: 0 .625rem 3.75rem 0 rgba(43, 39, 41, 0.08)
+  }
+
+  &.active {
+    border-color: $primary;
+    box-shadow: 0 .625rem 3.75rem 0 rgba(43, 39, 41, 0.08)
+  }
+}
+
+.couponapply.offcanvas.offcanvas-bottom {
+  border-radius: size(15);
+  height: size(220);
+  min-height: auto;
+  margin-inline: auto;
+
+  .offcanvas-title {
+    color: rgba(26, 32, 44, 0.92);
+    font-size: size(20);
+    font-weight: 600;
+  }
+
+  .couponform {
+    @include flex-center-column;
+    gap: size(20);
+    @include w100;
+
+    .couponfield {
+      color: $black;
+      @include border(solid, 1, $searchborder);
+      @include radius(8);
+      @include w100;
+      height: size(56);
+      padding: size(15);
+      @include transitionsall;
+
+      &:focus {
+        border-color: $primary;
+      }
+
+      &::placeholder {
+        color: $labeltext;
+      }
+    }
+
+    .btn-subscribe {
+      @include radius(8);
+      font-size: size(16);
+      font-weight: 600;
+      @include w100;
+      height: size(56);
+    }
+  }
+}

@@ -654,3 +654,21 @@
     }
   }
 }
+
+.btn-myback {
+  @include square(24);
+  @include flex-center;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  @include translateY(-50%);
+
+  @include hover {
+    svg {
+      path {
+        fill: $primary;
+      }
+    }
+  }
+}

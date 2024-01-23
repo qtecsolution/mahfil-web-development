@@ -8557,6 +8557,22 @@ input:checked + .slider:before {
      object-fit: cover;
 }
 
+.btn-myback {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.btn-myback:not([disabled]):hover svg path {
+  fill: hsl(211, 97%, 60%);
+}
+
 .errormain {
   display: flex;
   align-items: center;

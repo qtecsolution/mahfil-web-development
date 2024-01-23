@@ -383,8 +383,12 @@
 .dark-mode .username,
 .dark-mode .channelname,
 .dark-mode .report-title,
-.dark-mode .popularsearch-title {
+.dark-mode .popularsearch-title,
+.dark-mode .channelsection .subscriberbox .mychannel .details .title {
   color: hsl(0, 0%, 100%);
+}
+.dark-mode .channelsection .subscriberbox .mychannel .details .text {
+  color: #cccccc;
 }
 .dark-mode .popularsearch-body .btn-searchtag {
   background: #191919;
@@ -445,6 +449,26 @@
 }
 .dark-mode .btn-action.morebtn .icon svg path {
   stroke: #cccccc;
+}
+.dark-mode .btn-subscribd {
+  background: #333333;
+  border-color: hsl(0, 0%, 100%);
+}
+.dark-mode .btn-subscribd svg path {
+  fill: hsl(0, 0%, 100%);
+}
+.dark-mode .btn-subscribd .text {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .btn-subscribd:not([disabled]):hover {
+  background: hsl(211, 97%, 60%);
+  border-color: hsl(211, 97%, 60%);
+}
+.dark-mode .btn-subscribd:not([disabled]):hover svg path {
+  fill: hsl(0, 0%, 100%);
+}
+.dark-mode .btn-subscribd:not([disabled]):hover .text {
+  color: hsl(0, 0%, 100%);
 }
 .dark-mode .videoplay .comments-header .commenttitle {
   color: hsl(0, 0%, 100%);
@@ -721,8 +745,8 @@
   background: #595959;
 }
 .dark-mode .btn-subscribed {
-  background: #191919;
-  border-color: #191919;
+  background: #333333;
+  border-color: #333333;
 }
 .dark-mode .btn-subscribed .text {
   color: hsl(0, 0%, 100%);
@@ -733,6 +757,9 @@
 }
 .dark-mode .btn-subscribed:not([disabled]):hover .text {
   color: hsl(0, 0%, 100%);
+}
+.dark-mode .btn-subscribed:not([disabled]):hover svg path {
+  fill: hsl(0, 0%, 100%);
 }
 .dark-mode .homeslider .swiper-pagination .swiper-pagination-bullet {
   background: #cccccc;

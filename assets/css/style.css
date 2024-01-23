@@ -663,7 +663,7 @@ button:focus,
   border-color: hsl(211, 97%, 60%);
 }
 .btn-subscribed:not([disabled]):hover .icon svg path {
-  stroke: hsl(0, 0%, 100%);
+  fill: hsl(0, 0%, 100%);
 }
 
 .btn-subscribe {

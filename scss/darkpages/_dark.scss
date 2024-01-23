@@ -421,8 +421,13 @@ $titlecolor: #002f56;
   .username,
   .channelname,
   .report-title,
-  .popularsearch-title {
+  .popularsearch-title,
+  .channelsection .subscriberbox .mychannel .details .title {
     color: $white;
+  }
+
+  .channelsection .subscriberbox .mychannel .details .text {
+    color: $lightcolor;
   }
 
   .popularsearch {
@@ -511,6 +516,36 @@ $titlecolor: #002f56;
         path {
           stroke: $lightcolor;
         }
+      }
+    }
+  }
+
+  .btn-subscribd {
+    background: $darkbg-2;
+    border-color: $white;
+
+    svg {
+      path {
+        fill: $white;
+      }
+    }
+  
+    .text {
+      color: $white;
+    }
+  
+    @include hover {
+      background: $primary;
+      border-color: $primary;
+  
+      svg {
+        path {
+          fill: $white;
+        }
+      }
+  
+      .text {
+        color: $white;
       }
     }
   }
@@ -887,8 +922,8 @@ $titlecolor: #002f56;
   }
 
   .btn-subscribed {
-    background: $darkbg-1;
-    border-color: $darkbg-1;
+    background: $darkbg-2;
+    border-color: $darkbg-2;
 
     .text {
       color: $white;
@@ -900,6 +935,12 @@ $titlecolor: #002f56;
 
       .text {
         color: $white;
+      }
+
+      svg {
+        path {
+          fill: $white;
+        }
       }
     }
   }

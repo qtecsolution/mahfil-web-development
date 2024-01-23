@@ -6,6 +6,7 @@
 ================================= */
 @import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /**=====================================================**
                 ANIMATION-STYLES
 =======================================================**/
@@ -7960,6 +7961,7 @@ input:checked + .slider:before {
 }
 .subscribtion-footer .btn-subscribe {
   border-radius: 0.5rem;
+  font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   width: 100%;
@@ -7967,6 +7969,7 @@ input:checked + .slider:before {
 }
 .subscribtion-footer .btn-applycoupon {
   color: hsl(218, 23%, 23%);
+  font-family: "Poppins", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 3.75;
@@ -8005,6 +8008,7 @@ input:checked + .slider:before {
 }
 .subscribtionnfo-header .infotitle {
   color: hsl(0, 0%, 100%);
+  font-family: "Baloo Da 2", "Poppins", sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
 }
@@ -8016,12 +8020,14 @@ input:checked + .slider:before {
 }
 .subscribtionnfo-body .featurelist-item {
   color: hsl(0, 0%, 100%);
+  font-family: "Baloo Da 2", "Poppins", sans-serif;
   font-size: 0.8125rem;
   font-weight: 500;
   line-height: normal;
 }
 .subscribtionnfo-body .conditiontext {
   color: hsl(0, 0%, 100%);
+  font-family: "Baloo Da 2", "Poppins", sans-serif;
   font-size: 0.75rem;
   font-weight: 500;
   line-height: normal;
@@ -8085,6 +8091,7 @@ input:checked + .slider:before {
 .subscribtioninput .subscriblabel .labeltitle {
   color: hsl(207, 100%, 28%);
   display: block;
+  font-family: "Baloo Da 2", "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.25;
@@ -8132,12 +8139,14 @@ input:checked + .slider:before {
 }
 .cardsubscribtion-header .pricedurations .packageprice {
   color: hsl(211, 97%, 60%);
+  font-family: "Baloo Da 2", "Poppins", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 0.03rem;
 }
 .cardsubscribtion-header .pricedurations .duration {
   color: hsl(218, 23%, 23%);
+  font-family: "Baloo Da 2", "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: -0.02rem;
@@ -8149,6 +8158,7 @@ input:checked + .slider:before {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "Poppins", sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   width: 6.5rem;
@@ -8158,6 +8168,7 @@ input:checked + .slider:before {
 }
 .cardsubscribtion-body .text {
   color: hsl(216, 15%, 52%);
+  font-family: "Baloo Da 2", "Poppins", sans-serif;
   font-size: 0.8125rem;
   font-weight: 400;
   letter-spacing: -0.01625rem;
@@ -8180,6 +8191,7 @@ input:checked + .slider:before {
 }
 .couponapply.offcanvas.offcanvas-bottom .offcanvas-title {
   color: rgba(26, 32, 44, 0.92);
+  font-family: "Baloo Da 2", "Poppins", sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
 }
@@ -8211,6 +8223,7 @@ input:checked + .slider:before {
 }
 .couponapply.offcanvas.offcanvas-bottom .couponform .btn-subscribe {
   border-radius: 0.5rem;
+  font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   width: 100%;
@@ -8236,6 +8249,7 @@ input:checked + .slider:before {
 }
 .subscribtionpayment-header .feetitle {
   color: hsl(0, 0%, 100%);
+  font-family: "Baloo Da 2", "Poppins", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -8246,6 +8260,7 @@ input:checked + .slider:before {
 }
 .subscribtionpayment-header .priceduration .price {
   color: hsl(211, 100%, 65%);
+  font-family: "Baloo Da 2", "Poppins", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 0.03rem;
@@ -8253,12 +8268,14 @@ input:checked + .slider:before {
 }
 .subscribtionpayment-header .priceduration .duration {
   color: hsl(0, 0%, 100%);
+  font-family: "Baloo Da 2", "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: -0.02rem;
 }
 .subscribtionpayment-header .fromtodate {
   color: rgba(255, 255, 255, 0.8);
+  font-family: "Baloo Da 2", "Poppins", sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   letter-spacing: -0.0175rem;
@@ -8288,6 +8305,7 @@ input:checked + .slider:before {
 }
 .paymentform .inputbox .inputlabel {
   color: hsl(210, 21%, 33%);
+  font-family: "Baloo Da 2", "Poppins", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   line-height: normal;
@@ -8296,6 +8314,7 @@ input:checked + .slider:before {
   border: solid 0.0625rem hsl(214, 32%, 91%);
   border-radius: 0.375rem;
   color: hsl(0, 0%, 0%);
+  font-family: "Baloo Da 2", "Poppins", sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.1;
@@ -8320,6 +8339,7 @@ input:checked + .slider:before {
 }
 .paymentform .paymentbox .inputlabel {
   color: hsl(210, 21%, 33%);
+  font-family: "Baloo Da 2", "Poppins", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   line-height: normal;
@@ -8340,6 +8360,7 @@ input:checked + .slider:before {
   height: 3.75rem;
   display: flex;
   align-items: center;
+  font-family: "Baloo Da 2", "Poppins", sans-serif;
   padding: 0.9375rem;
   cursor: pointer;
   transition: all 350ms ease-in-out;
@@ -8358,6 +8379,7 @@ input:checked + .slider:before {
 .paymentform .paymentbox .selectpayments .checkterms .checklabel {
   cursor: pointer;
   color: hsl(0, 0%, 25%);
+  font-family: "Poppins", sans-serif;
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1.3;
@@ -8375,6 +8397,7 @@ input:checked + .slider:before {
 }
 .paymentform .paymentbox .selectpayments .checkterms .checklabel .link {
   color: hsl(211, 97%, 60%);
+  font-family: "Poppins", sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   line-height: 1.3;
@@ -8418,6 +8441,7 @@ input:checked + .slider:before {
 }
 .paymentform .btn-subscribe {
   border-radius: 0.5rem;
+  font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   width: 100%;
@@ -8426,6 +8450,7 @@ input:checked + .slider:before {
 
 .paymenttext {
   color: hsl(207, 83%, 25%);
+  font-family: "Baloo Da 2", "Poppins", sans-serif;
   font-weight: 600;
   display: inline-block;
 }
@@ -8479,18 +8504,19 @@ input:checked + .slider:before {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  gap: 0.25rem;
   position: relative;
   z-index: 100;
 }
 .mypayments .paymentsinfo-body .title {
   color: hsl(218, 23%, 23%);
+  font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.5;
 }
 .mypayments .paymentsinfo-body .text {
   color: hsl(218, 17%, 35%);
+  font-family: "Poppins", sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.3;
@@ -8507,6 +8533,7 @@ input:checked + .slider:before {
 }
 .mypayments .btn-subscribe {
   border-radius: 0.5rem;
+  font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   width: 100%;

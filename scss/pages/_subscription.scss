@@ -23,6 +23,7 @@
 
     .btn-subscribe {
       @include radius(8);
+      font-family: $poppins;
       font-size: size(16);
       font-weight: 600;
       @include w100;
@@ -31,6 +32,7 @@
 
     .btn-applycoupon {
       color: $labelcolor;
+      font-family: $poppins;
       font-size: size(14);
       font-weight: 500;
       line-height: 3.75;
@@ -47,6 +49,7 @@
 
 .subscribtiontitle {
   color: $dropdowntext;
+  // font-family: $balodapoppins;
   font-size: size(16);
   font-weight: 600;
   text-align: center;
@@ -69,6 +72,7 @@
 
     .infotitle {
       color: $white;
+      font-family: $balodapoppins;
       font-size: size(18);
       font-weight: 700;
     }
@@ -82,6 +86,7 @@
 
       &-item {
         color: $white;
+        font-family: $balodapoppins;
         font-size: size(13);
         font-weight: 500;
         line-height: normal;
@@ -90,6 +95,7 @@
 
     .conditiontext {
       color: $white;
+      font-family: $balodapoppins;
       font-size: size(12);
       font-weight: 500;
       line-height: normal;
@@ -164,6 +170,7 @@
     .labeltitle {
       color: $primarydark;
       display: block;
+      font-family: $balodapoppins;
       font-size: size(16);
       font-weight: 500;
       line-height: 1.25;
@@ -207,6 +214,7 @@
 
       .packageprice {
         color: $primary;
+        font-family: $balodapoppins;
         font-size: size(24);
         font-weight: 700;
         letter-spacing: size(0.48);
@@ -214,6 +222,7 @@
 
       .duration {
         color: $labelcolor;
+        font-family: $balodapoppins;
         font-size: size(16);
         font-weight: 600;
         letter-spacing: size(-0.32);
@@ -224,6 +233,7 @@
       @include setBgColor($badgebg-2, $primarydark);
       @include radius(4);
       @include flex-center;
+      font-family: $poppins;
       font-size: size(12);
       font-weight: 600;
       width: size(104);
@@ -236,6 +246,7 @@
   &-body {
     .text {
       color: $textprimary;
+      font-family: $balodapoppins;
       font-size: size(13);
       font-weight: 400;
       letter-spacing: size(-0.26);
@@ -262,6 +273,7 @@
 
   .offcanvas-title {
     color: rgba(26, 32, 44, 0.92);
+    font-family: $balodapoppins;
     font-size: size(20);
     font-weight: 600;
   }
@@ -291,6 +303,7 @@
 
     .btn-subscribe {
       @include radius(8);
+      font-family: $poppins;
       font-size: size(16);
       font-weight: 600;
       @include w100;
@@ -314,6 +327,7 @@
 
     .feetitle {
       color: $white;
+      font-family: $balodapoppins;
       font-size: size(24);
       font-weight: 700;
     }
@@ -324,6 +338,7 @@
 
       .price {
         color: $textblue;
+        font-family: $balodapoppins;
         font-size: size(24);
         font-weight: 700;
         letter-spacing: size(0.48);
@@ -332,6 +347,7 @@
 
       .duration {
         color: $white;
+        font-family: $balodapoppins;
         font-size: size(16);
         font-weight: 600;
         letter-spacing: size(-0.32);
@@ -340,6 +356,7 @@
 
     .fromtodate {
       color: rgba($white, 0.8);
+      font-family: $balodapoppins;
       font-size: size(14);
       font-weight: 400;
       letter-spacing: size(-0.28);
@@ -369,6 +386,7 @@
     
     .inputlabel {
       color: $labeltext;
+      font-family: $balodapoppins;
       font-size: size(14);
       font-weight: 600;
       line-height: normal;
@@ -378,6 +396,7 @@
       @include border(solid, 1, $inputbg);
       @include radius(6);
       color: $black;
+      font-family: $balodapoppins;
       font-size: size(14);
       font-weight: 400;
       line-height: 1.1;
@@ -402,6 +421,7 @@
 
     .inputlabel {
       color: $labeltext;
+      font-family: $balodapoppins;
       font-size: size(14);
       font-weight: 500;
       line-height: normal;
@@ -427,6 +447,7 @@
           @include w100;
           height: size(60);
           @include flex-center-vert;
+          font-family: $balodapoppins;
           padding: size(15);
           cursor: pointer;
           @include transitionsall;
@@ -455,6 +476,7 @@
         .checklabel {
           cursor: pointer;
           color: $linkcolor;
+          font-family: $poppins;
           font-size: size(12);
           font-weight: 400;
           line-height: 1.3;
@@ -469,6 +491,7 @@
 
           .link {
             color: $primary;
+            font-family: $poppins;
             font-size: size(12);
             font-weight: 600;
             line-height: 1.3;
@@ -518,6 +541,7 @@
 
   .btn-subscribe {
     @include radius(8);
+    font-family: $poppins;
     font-size: size(16);
     font-weight: 600;
     @include w100;
@@ -527,8 +551,9 @@
 
 .paymenttext {
   color: $labelcol;
+  font-family: $balodapoppins;
   font-weight: 600;
-  display: inline-block
+  display: inline-block;
 }
 
 .mypayments {
@@ -572,12 +597,12 @@
     &-body {
       @include flex-center-column;
       text-align: center;
-      gap: size(4);
       position: relative;
       z-index: 100;
 
       .title {
         color: $labelcolor;
+        font-family: $poppins;
         font-size: size(24);
         font-weight: 700;
         line-height: 1.5;
@@ -585,6 +610,7 @@
 
       .text {
         color: $dropdowntext;
+        font-family: $poppins;
         font-size: size(14);
         font-weight: 400;
         line-height: 1.3;
@@ -606,6 +632,7 @@
 
   .btn-subscribe {
     @include radius(8);
+    font-family: $poppins;
     font-size: size(16);
     font-weight: 600;
     @include w100;

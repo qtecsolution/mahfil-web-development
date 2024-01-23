@@ -6786,6 +6786,23 @@ input:checked + .slider:before {
 .desktopsubscribe-right .moreinfo:not([disabled]):hover .replydropdown {
   display: block;
 }
+.desktopsubscribe .btn-subscribed {
+  border-color: hsl(216, 15%, 52%);
+}
+.desktopsubscribe .btn-subscribed .icon svg g path {
+  stroke: none;
+  fill: hsl(216, 15%, 52%);
+}
+.desktopsubscribe .btn-subscribed:not([disabled]):hover {
+  background: hsl(216, 15%, 52%);
+  border-color: hsl(216, 15%, 52%);
+}
+.desktopsubscribe .btn-subscribed:not([disabled]):hover .text {
+  color: hsl(0, 0%, 100%);
+}
+.desktopsubscribe .btn-subscribed:not([disabled]):hover .icon svg g path {
+  fill: hsl(0, 0%, 100%);
+}
 
 .videoinfo {
   display: flex;

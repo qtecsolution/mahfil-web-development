@@ -1249,6 +1249,40 @@
       }
     }
   }
+  
+  .btn-subscribed {
+    border-color: $textprimary;
+
+    .icon {
+      svg {
+        g {
+          path {
+            stroke: none;
+            fill: $textprimary;
+          }
+        }
+      }
+    }
+  
+    @include hover {
+      background: $textprimary;
+      border-color: $textprimary;
+
+      .text {
+        color: $white;
+      }
+
+      .icon {
+        svg {
+          g {
+            path {
+              fill: $white;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .videoinfo {

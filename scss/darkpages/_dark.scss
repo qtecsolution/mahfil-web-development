@@ -1012,6 +1012,65 @@ $titlecolor: #002f56;
     }
   }
 
+  .desktopsubscribe {
+    .btn-subscribe {
+      background: $primary;
+    
+      .text {
+        color: $white;
+      }
+    
+      @include hover {
+        background: transparent;
+    
+        .text {
+          color: $primary;
+        }
+
+        .icon {
+          svg {
+            g {
+              path {
+                stroke: none;
+                fill: $primary;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    .btn-subscribed {
+      .icon {
+        svg {
+          g {
+            path {
+              stroke: none;
+              fill: $white;
+            }
+          }
+        }
+      }
+    
+      .text {
+        color: $white;
+      }
+    
+      @include hover {
+        .icon {
+          svg {
+            g {
+              path {
+                stroke: none;
+                fill: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   .homeslider .swiper-pagination .swiper-pagination-bullet {
     background: $lightcolor;
   }

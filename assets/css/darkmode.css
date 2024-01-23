@@ -794,6 +794,33 @@
 .dark-mode .mobilesubscribelist .subscribebox-right .btn-subscrib .text {
   color: hsl(0, 0%, 100%);
 }
+.dark-mode .desktopsubscribe .btn-subscribe {
+  background: hsl(211, 97%, 60%);
+}
+.dark-mode .desktopsubscribe .btn-subscribe .text {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .desktopsubscribe .btn-subscribe:not([disabled]):hover {
+  background: transparent;
+}
+.dark-mode .desktopsubscribe .btn-subscribe:not([disabled]):hover .text {
+  color: hsl(211, 97%, 60%);
+}
+.dark-mode .desktopsubscribe .btn-subscribe:not([disabled]):hover .icon svg g path {
+  stroke: none;
+  fill: hsl(211, 97%, 60%);
+}
+.dark-mode .desktopsubscribe .btn-subscribed .icon svg g path {
+  stroke: none;
+  fill: hsl(0, 0%, 100%);
+}
+.dark-mode .desktopsubscribe .btn-subscribed .text {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .desktopsubscribe .btn-subscribed:not([disabled]):hover .icon svg g path {
+  stroke: none;
+  fill: hsl(0, 0%, 100%);
+}
 .dark-mode .homeslider .swiper-pagination .swiper-pagination-bullet {
   background: #cccccc;
 }

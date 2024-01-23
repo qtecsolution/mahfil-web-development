@@ -11,13 +11,6 @@
   &-header {
     @include flex-column;
     gap: size(16);
-
-    .subscribtiontitle {
-      color: $dropdowntext;
-      font-size: size(16);
-      font-weight: 600;
-      text-align: center;
-    }
   }
   
   &-body {
@@ -52,6 +45,13 @@
   }
 }
 
+.subscribtiontitle {
+  color: $dropdowntext;
+  font-size: size(16);
+  font-weight: 600;
+  text-align: center;
+}
+
 .subscribtionnfo {
   background-color: $primarydark;
   @include radius(12);
@@ -82,7 +82,7 @@
 
       &-item {
         color: $white;
-        font-size: size(12);
+        font-size: size(13);
         font-weight: 500;
         line-height: normal;
       }
@@ -166,7 +166,7 @@
       display: block;
       font-size: size(16);
       font-weight: 500;
-      line-height: 1.2;
+      line-height: 1.25;
       padding-left: size(24);
 
       &::selection {
@@ -229,6 +229,7 @@
       width: size(104);
       height: size(28);
       text-align: center;
+      text-transform: capitalize;
     }
   }
 
@@ -338,7 +339,7 @@
     }
 
     .fromtodate {
-      color: $white;
+      color: rgba($white, 0.8);
       font-size: size(14);
       font-weight: 400;
       letter-spacing: size(-0.28);
@@ -367,7 +368,7 @@
     gap: size(8);
     
     .inputlabel {
-      color: $labelcol;
+      color: $labeltext;
       font-size: size(14);
       font-weight: 600;
       line-height: normal;
@@ -400,7 +401,7 @@
     gap: size(8);
 
     .inputlabel {
-      color: $labelcol;
+      color: $labeltext;
       font-size: size(14);
       font-weight: 600;
       line-height: normal;

@@ -7947,12 +7947,6 @@ input:checked + .slider:before {
   flex-direction: column;
   gap: 1rem;
 }
-.subscribtion-header .subscribtiontitle {
-  color: hsl(218, 17%, 35%);
-  font-size: 1rem;
-  font-weight: 600;
-  text-align: center;
-}
 .subscribtion-body {
   display: flex;
   flex-direction: column;
@@ -7982,6 +7976,13 @@ input:checked + .slider:before {
 }
 .subscribtion-footer .btn-applycoupon:not([disabled]):hover {
   color: hsl(211, 97%, 60%);
+}
+
+.subscribtiontitle {
+  color: hsl(218, 17%, 35%);
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
 }
 
 .subscribtionnfo {
@@ -8015,7 +8016,7 @@ input:checked + .slider:before {
 }
 .subscribtionnfo-body .featurelist-item {
   color: hsl(0, 0%, 100%);
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   line-height: normal;
 }
@@ -8086,7 +8087,7 @@ input:checked + .slider:before {
   display: block;
   font-size: 1rem;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.25;
   padding-left: 1.5rem;
 }
 .subscribtioninput .subscriblabel .labeltitle::-moz-selection {
@@ -8153,6 +8154,7 @@ input:checked + .slider:before {
   width: 6.5rem;
   height: 1.75rem;
   text-align: center;
+  text-transform: capitalize;
 }
 .cardsubscribtion-body .text {
   color: hsl(216, 15%, 52%);
@@ -8256,7 +8258,7 @@ input:checked + .slider:before {
   letter-spacing: -0.02rem;
 }
 .subscribtionpayment-header .fromtodate {
-  color: hsl(0, 0%, 100%);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 0.875rem;
   font-weight: 400;
   letter-spacing: -0.0175rem;
@@ -8285,7 +8287,7 @@ input:checked + .slider:before {
   gap: 0.5rem;
 }
 .paymentform .inputbox .inputlabel {
-  color: hsl(207, 83%, 25%);
+  color: hsl(210, 21%, 33%);
   font-size: 0.875rem;
   font-weight: 600;
   line-height: normal;
@@ -8317,7 +8319,7 @@ input:checked + .slider:before {
   gap: 0.5rem;
 }
 .paymentform .paymentbox .inputlabel {
-  color: hsl(207, 83%, 25%);
+  color: hsl(210, 21%, 33%);
   font-size: 0.875rem;
   font-weight: 600;
   line-height: normal;

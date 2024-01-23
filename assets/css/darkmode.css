@@ -821,6 +821,12 @@
   stroke: none;
   fill: hsl(0, 0%, 100%);
 }
+.dark-mode .myauth .btn-subscribe {
+  width: 100%;
+}
+.dark-mode .myauth .btn-subscribe .text {
+  color: hsl(0, 0%, 100%);
+}
 .dark-mode .homeslider .swiper-pagination .swiper-pagination-bullet {
   background: #cccccc;
 }

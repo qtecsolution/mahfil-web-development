@@ -1071,6 +1071,16 @@ $titlecolor: #002f56;
     }
   }
 
+  .myauth {
+    .btn-subscribe {
+      @include w100;
+      
+      .text {
+        color: $white;
+      }
+    }
+  }
+
   .homeslider .swiper-pagination .swiper-pagination-bullet {
     background: $lightcolor;
   }

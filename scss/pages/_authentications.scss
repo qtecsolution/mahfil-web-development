@@ -149,6 +149,20 @@
       }
     }
   }
+
+  .btn-subscribe {
+    @include w100;
+    
+    .text {
+      color: $white;
+    }
+
+    @include hover {
+      .text {
+        color: $primary;
+      }
+    }
+  }
 }
 
 .regform {

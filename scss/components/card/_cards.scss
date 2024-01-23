@@ -302,6 +302,7 @@
       @include w100;
       max-width: 100%;
       object-fit: fill;
+      height: auto;
 
       @include breakpoint(tab992) {
         object-fit: cover;
@@ -329,7 +330,7 @@
     padding: size(4) size(14) size(8);
 
     .describe {
-      width: calc(100% - size(40));
+      width: calc(100% - size(24));
       @include flex-column;
       gap: size(4);
 
@@ -368,9 +369,10 @@
 
     .favdropdown {
       position: relative;
-      @include square(32);
+      width: size(16);
+      height: size(32);
       cursor: pointer;
-      margin-top: size(-32);
+      margin-top: size(-48);
       z-index: 500;
 
       @include breakpoint(tab992) {

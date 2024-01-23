@@ -1445,6 +1445,7 @@ button:focus,
   max-width: 100%;
   -o-object-fit: fill;
      object-fit: fill;
+  height: auto;
 }
 @media screen and (min-width: 62rem) {
   .cardfavorite .favoritethumb img {
@@ -1474,7 +1475,7 @@ button:focus,
   padding: 0.25rem 0.875rem 0.5rem;
 }
 .cardfavorite-details .describe {
-  width: calc(100% - 2.5rem);
+  width: calc(100% - 1.5rem);
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
@@ -1516,10 +1517,10 @@ button:focus,
 }
 .cardfavorite-details .favdropdown {
   position: relative;
-  width: 2rem;
+  width: 1rem;
   height: 2rem;
   cursor: pointer;
-  margin-top: -2rem;
+  margin-top: -3rem;
   z-index: 500;
 }
 @media screen and (min-width: 62rem) {
@@ -3829,6 +3830,11 @@ input:checked + .slider:before {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+.subscribebox .btn-subscribe,
+.subscribebox .btn-subscribed {
+  width: auto;
 }
 
 .favorites {
@@ -7016,6 +7022,15 @@ input:checked + .slider:before {
 }
 .myauth-footer .titlebox .title {
   font-size: 1rem;
+}
+.myauth .btn-subscribe {
+  width: 100%;
+}
+.myauth .btn-subscribe .text {
+  color: hsl(0, 0%, 100%);
+}
+.myauth .btn-subscribe:not([disabled]):hover .text {
+  color: hsl(211, 97%, 60%);
 }
 
 .regform {

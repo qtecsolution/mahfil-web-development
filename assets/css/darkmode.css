@@ -464,12 +464,6 @@
   background: hsl(211, 97%, 60%);
   border-color: hsl(211, 97%, 60%);
 }
-.dark-mode .btn-subscribd:not([disabled]):hover svg path {
-  fill: hsl(0, 0%, 100%);
-}
-.dark-mode .btn-subscribd:not([disabled]):hover .text {
-  color: hsl(0, 0%, 100%);
-}
 .dark-mode .videoplay .comments-header .commenttitle {
   color: hsl(0, 0%, 100%);
 }
@@ -760,6 +754,45 @@
 }
 .dark-mode .btn-subscribed:not([disabled]):hover svg path {
   fill: hsl(0, 0%, 100%);
+}
+.dark-mode .subscribedbtn .btn-subscribe .icon svg path {
+  stroke: none;
+  fill: hsl(0, 0%, 100%);
+}
+.dark-mode .subscribedbtn .btn-subscribe .text {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .subscribedbtn .btn-subscribe:not([disabled]):hover .icon svg path {
+  fill: hsl(211, 97%, 60%);
+}
+.dark-mode .subscribedbtn .btn-subscribe:not([disabled]):hover .text {
+  color: hsl(211, 97%, 60%);
+}
+.dark-mode .subscribedbtn .btn-subscribed {
+  background: #333333;
+}
+.dark-mode .subscribedbtn .btn-subscribed .icon svg path {
+  fill: none;
+  stroke: hsl(0, 0%, 100%);
+}
+.dark-mode .subscribedbtn .btn-subscribed .text {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .subscribedbtn .btn-subscribed:not([disabled]):hover {
+  background: #4c4c4c;
+  border-color: #4c4c4c;
+}
+.dark-mode .mobilesubscribelist .subscribebox {
+  background: #333333;
+}
+.dark-mode .mobilesubscribelist .subscribebox-left .info .channelname {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .mobilesubscribelist .subscribebox-left .info .subscriber {
+  color: #cccccc;
+}
+.dark-mode .mobilesubscribelist .subscribebox-right .btn-subscrib .text {
+  color: hsl(0, 0%, 100%);
 }
 .dark-mode .homeslider .swiper-pagination .swiper-pagination-bullet {
   background: #cccccc;

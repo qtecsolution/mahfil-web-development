@@ -537,16 +537,6 @@ $titlecolor: #002f56;
     @include hover {
       background: $primary;
       border-color: $primary;
-  
-      svg {
-        path {
-          fill: $white;
-        }
-      }
-  
-      .text {
-        color: $white;
-      }
     }
   }
 
@@ -940,6 +930,83 @@ $titlecolor: #002f56;
       svg {
         path {
           fill: $white;
+        }
+      }
+    }
+  }
+  
+  .subscribedbtn {
+    .btn-subscribe {
+      .icon {
+        svg {
+          path {
+            stroke: none;
+            fill: $white;
+          }
+        }
+      }
+      .text {
+        color: $white;
+      }
+
+      @include hover {
+        .icon {
+          svg {
+            path {
+              fill: $primary;
+            }
+          }
+        }
+        .text {
+          color: $primary;
+        }
+      }
+    }
+
+    .btn-subscribed {
+      background: $darkbg-2;
+  
+      .icon {
+        svg {
+          path {
+            fill: none;
+            stroke: $white;
+          }
+        }
+      }
+    
+      .text {
+        color: $white;
+      }
+    
+      @include hover {
+        background: lighten($darkbg-1, 20%);
+        border-color: lighten($darkbg-1, 20%);
+      }
+    }
+  }
+
+  .mobilesubscribelist {
+    .subscribebox {
+      background: $darkbg-2;
+
+      &-left {
+        .info {
+          .channelname {
+            color: $white;
+          }
+
+          .subscriber {
+            color: $lightcolor;
+          }
+        }
+      }
+
+      &-right {
+        .btn-subscrib {
+          .text {
+            color: $white;
+          }
         }
       }
     }

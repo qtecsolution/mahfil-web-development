@@ -70,6 +70,7 @@ button,
   @include radius(6);
   gap: size(4);
   @include transitionsbackground;
+  width: size(150);
   height: size(28);
   padding-inline: size(12);
 
@@ -128,6 +129,7 @@ button,
   @include radius(6);
   @include flex-center;
   gap: size(4);
+  width: size(150);
   height: size(28);
   padding-inline: size(12);
 
@@ -167,7 +169,7 @@ button,
     .icon {
       svg {
         path {
-          fill: $white;
+          stroke: $white;
         }
       }
     }
@@ -181,6 +183,7 @@ button,
   font-weight: 600;
   @include flex-center;
   gap: size(4);
+  width: size(150);
   height: size(28);
   padding-inline: size(12);
 

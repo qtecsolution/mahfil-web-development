@@ -403,7 +403,7 @@
     .inputlabel {
       color: $labeltext;
       font-size: size(14);
-      font-weight: 600;
+      font-weight: 500;
       line-height: normal;
     }
 
@@ -523,6 +523,12 @@
     @include w100;
     height: size(56);
   }
+}
+
+.paymenttext {
+  color: $labelcol;
+  font-weight: 600;
+  display: inline-block
 }
 
 .mypayments {

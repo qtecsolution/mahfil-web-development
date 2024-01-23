@@ -190,10 +190,16 @@
   max-height: size(223);
   overflow-x: hidden;
   overflow-y: scroll;
+  padding-right: size(8);
 
   &::-webkit-scrollbar {
     background: transparent;
-    width: size(0);
+    width: size(8);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $textplaceholder;
+    @include radius(8);
   }
 }
 

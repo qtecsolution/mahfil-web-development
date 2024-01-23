@@ -8113,10 +8113,15 @@ input:checked + .slider:before {
   max-height: 13.9375rem;
   overflow-x: hidden;
   overflow-y: scroll;
+  padding-right: 0.5rem;
 }
 .subscribtionlist::-webkit-scrollbar {
   background: transparent;
-  width: 0rem;
+  width: 0.5rem;
+}
+.subscribtionlist::-webkit-scrollbar-thumb {
+  background: hsl(240, 6%, 73%);
+  border-radius: 0.5rem;
 }
 
 .cardsubscribtion {

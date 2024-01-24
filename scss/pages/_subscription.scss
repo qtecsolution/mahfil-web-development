@@ -8,7 +8,11 @@
   gap: size(16);
   padding: size(16) size(16) size(32);
   min-height: 100vh;
-  // height: 100vh;
+  
+  @include breakpoint(desktop1367) {
+    height: 100vh;
+    min-height: auto;
+  }
 
   &-header {
     @include flex-column;
@@ -327,7 +331,11 @@
   @include flex-column;
   padding: size(16) size(16) size(32);
   min-height: 100vh;
-  // height: 100vh;
+  
+  @include breakpoint(desktop1367) {
+    height: 100vh;
+    min-height: auto;
+  }
 
   &-header {
     background: $primarydark;

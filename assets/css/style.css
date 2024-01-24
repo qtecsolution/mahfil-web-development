@@ -8332,6 +8332,9 @@ input:checked + .slider:before {
   z-index: 100;
   margin-top: -3.375rem;
 }
+.subscribtionpayment-body.paymentbody {
+  height: calc(100% + 3.375rem);
+}
 
 .paymentform {
   background: hsl(0, 0%, 100%);

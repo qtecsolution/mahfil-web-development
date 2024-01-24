@@ -7,8 +7,8 @@
   @include flex-column;
   gap: size(16);
   padding: size(16) size(16) size(32);
-  // min-height: 100vh;
-  height: 100vh;
+  min-height: 100vh;
+  // height: 100vh;
 
   &-header {
     @include flex-column;
@@ -326,8 +326,8 @@
   @include w100;
   @include flex-column;
   padding: size(16) size(16) size(32);
-  height: 100vh;
-  // min-height: 100vh;
+  min-height: 100vh;
+  // height: 100vh;
 
   &-header {
     background: $primarydark;

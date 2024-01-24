@@ -7,6 +7,7 @@
   @include flex-column;
   gap: size(16);
   padding: size(16) size(16) size(32);
+  height: 100vh;
 
   &-header {
     @include flex-column;
@@ -187,7 +188,7 @@
 .subscribtionlist {
   @include flex-column;
   gap: size(16);
-  max-height: size(150);
+  max-height: size(225);
   overflow-x: hidden;
   overflow-y: scroll;
   padding-right: size(8);
@@ -323,6 +324,7 @@
   @include w100;
   @include flex-column;
   padding: size(16) size(16) size(32);
+  height: 100vh;
 
   &-header {
     background: $primarydark;
@@ -382,7 +384,7 @@
 
 .paymentform {
   background: $white;
-  padding: size(24) size(15) size(64);
+  padding: size(24) size(15) size(32);
   @include flex-column;
   gap: size(20);
 

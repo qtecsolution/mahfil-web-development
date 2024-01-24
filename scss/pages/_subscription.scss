@@ -189,7 +189,8 @@
 .subscribtionlist {
   @include flex-column;
   gap: size(16);
-  max-height: size(225);
+  // max-height: size(225);
+  max-height: size(365);
   overflow-x: hidden;
   overflow-y: scroll;
   padding-right: size(8);
